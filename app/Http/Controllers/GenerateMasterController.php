@@ -20,13 +20,16 @@ class GenerateMasterController extends Controller
 		);
 
 		$api = new SpotifyWebAPI\SpotifyWebAPI();
+		
+		\Log::debug('generateMaster/index');
+		\Log::debug($_GET);
 
 		if (isset($_GET['code'])) {
 		    $session->requestAccessToken($_GET['code']);
 		    $api->setAccessToken($session->getAccessToken());
 
-		    //print_r($api->me());
-		    //print_r($session->getAccessToken());
+		    print_r($api->me());
+		    print_r($session->getAccessToken());
 			
 			// 検索アーティスト名
 			$targetName = "GARNiDELiA";
@@ -109,6 +112,7 @@ class GenerateMasterController extends Controller
 			}
 			
 		} else {
+			\Log::debug('error occured.');
 		    header('Location: ' . $session->getAuthorizeUrl(array(
 		        'scope' => array(
 		          'playlist-read-private', // プレイリスト取得
