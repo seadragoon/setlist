@@ -5,6 +5,7 @@
 @section('content')
 
     <div class="panel panel-default">
+        {{ link_to_action('ArtistsController@add', 'アーティスト追加', ['class' => 'btn btn-sm btn-default']) }}
         <div class="panel-heading">
             アーティスト一覧
             （アーティスト名をタップすると曲一覧が表示されます）

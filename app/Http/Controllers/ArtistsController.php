@@ -54,4 +54,26 @@ class ArtistsController extends Controller
 		
 		return redirect()->route('artists.index');
 	}
+	
+	// add
+	public function add(Request $request)
+	{
+		$param = array();
+		$param['artist'] = new Artist();
+		
+		//echo '<pre>' . var_export($param, true) . '</pre>';
+		
+		return view('artists/add')->with('param', $param);
+	}
+	
+	// store
+	public function store(Request $request)
+	{
+		//echo '<pre>' . var_export($request, true) . '</pre>';
+		
+		$artist = new Artist();
+		$artist->fill($request->all());
+		$artist->save();
+		return redirect()->route('artists.index');
+	}
 }
