@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSetlistGroupTable extends Migration
+class CreateSetlistGroupsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,14 @@ class CreateSetlistGroupTable extends Migration
      */
     public function up()
     {
-        Schema::create('setlist_group', function (Blueprint $table) {
-            $table->bigIncrements('setlist_group_seq');
+        Schema::create('setlist_groups', function (Blueprint $table) {
             $table->bigInteger('setlist_id');
+            $table->bigInteger('setlist_group_seq');
             $table->integer('setlist_group_type')->default(0);
             $table->timestamps();
+            
+            // プライマリキー設定
+            $table->unique(['setlist_id', 'setlist_group_seq']);
         });
     }
 
