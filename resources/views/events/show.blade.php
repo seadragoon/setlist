@@ -25,7 +25,7 @@
         <h5>・通常</h5>
         @foreach ($param['song_list'] as $key => $song)
         	<div>
-        		{{ $song['seq'] }}.　{{ $song['name'] }}
+	        	{{ $song['seq'] }}.　{{ $song['name'] }}{{ empty($song['is_short']) ? "" : "（short.ver）"}}{{ $song['arrange_type'] === 1 ? "（Acostic）" : "" }}
         	</div>
         @endforeach
         <br>
@@ -33,7 +33,7 @@
 	        <h5>・アンコール</h5>
 	        @foreach ($param['encore_song_list'] as $key => $song)
 	        	<div>
-	        		{{ $song['seq'] }}.　{{ $song['name'] }}
+	        		{{ $song['seq'] }}.　{{ $song['name'] }}{{ empty($song['is_short']) ? "" : "(short.ver)"}}{{ $song['arrange_type'] === 1 ? "(Acostic)" : "" }}
 	        	</div>
 	        @endforeach
         	<br>

@@ -95,32 +95,38 @@
                 <h5>・通常</h5>
                 <button type="button" id="addButton">追加</button>
                 <button type="button" id="removeButton">削除</button>
+				<div class="row col-sm-8 col-xs-12">
+                	<div class="col-sm-2">楽曲番号</div>
+                	<div class="col-sm-6">楽曲名</div>
+                	<div class="col-sm-2">ショートVerか</div>
+                	<div class="col-sm-2">アレンジタイプ</div>
+				</div>
                 <div id="songListArea">
-                	@if(!empty(old('song_names', $params['song_names'])))
-	                	@foreach (old('song_names', $params['song_names']) as $index => $old_name)
+                	@if(!empty(old('songs', $params['songs'])))
+	                	@foreach (old('songs', $params['songs']) as $index => $oldSong)
 						<div class="form-group" id="song_{{$index + 1}}">
 		                	<div class="row col-sm-8 col-xs-12">
-			                	<div class="col-sm-3">
-				                    {!! Form::label('song_seq_title', '楽曲番号', ['class' => 'control-label']) !!}
-			                    </div>
-			                    <div class="col-sm-1">
+			                    <div class="col-sm-2">
 			                        {!! Form::label('song_seq', ($index + 1), ['id' => 'song_seq_label', 'class' => 'control-label']) !!}
-			                    </div>
-			                	<div class="col-sm-2">
-			                    	{!! Form::label('song_name', '楽曲名', ['class' => 'control-label']) !!}
 			                    </div>
 			                    <div class="col-sm-6">
 			                    	<div class="dropdown">
-				                        {!! Form::text('song_names['.$index.']', $old_name, ['id' => 'song_'.($index + 1), 'class' => 'form-control dropdown-toggle', 'autocomplete' => 'off', 'list' => 'test']) !!}
+				                        {!! Form::text('songs['.$index.'][name]', $oldSong['name'], ['id' => 'song_name', 'class' => 'form-control dropdown-toggle', 'autocomplete' => 'off', 'list' => 'test']) !!}
 				                        <datalist id="test">
-					                        @foreach ($params['songs'] as $song)
+					                        @foreach ($params['songMasters'] as $song)
 												<option value="{{ $song->name }}">
 											@endforeach
 										</datalist>
 								    </div>
 			                    </div>
+			                	<div class="col-sm-2">
+			                		{!! Form::checkbox('songs['.$index.'][is_short]', true, !empty($oldSong['is_short']), ['id' => 'song_is_short', 'class' => 'form-control']) !!}
+			                    </div>
+			                	<div class="col-sm-2">
+			                		{!! Form::select('songs['.$index.'][arrange_type]', ['通常', 'Acostic', 'その他'], $oldSong['arrange_type'], ['id' => 'song_arrange_type', 'class' => 'form-control']) !!}
+			                    </div>
 		                    </div>
-		                    @if(!empty($errors->first('song_names.'.$index)))
+		                    @if(!empty($errors->first('songs.'.$index)))
 		                    	<span class="text-danger">※曲名が入力されていないか、正しくありません</span>
 		                    @endif
 		                </div>
@@ -128,24 +134,24 @@
 		            @else
 		                <div class="form-group" id="song_1">
 		                	<div class="row col-sm-8 col-xs-12">
-			                	<div class="col-sm-3">
-				                    {!! Form::label('song_seq_title', '楽曲番号', ['class' => 'control-label']) !!}
-			                    </div>
-			                    <div class="col-sm-1">
+			                    <div class="col-sm-2">
 			                        {!! Form::label('song_seq', 1, ['id' => 'song_seq_label', 'class' => 'control-label']) !!}
-			                    </div>
-			                	<div class="col-sm-2">
-			                    	{!! Form::label('song_name', '楽曲名', ['class' => 'control-label']) !!}
 			                    </div>
 			                    <div class="col-sm-6">
 			                    	<div class="dropdown">
-				                        {!! Form::text('song_names[0]', '', ['id' => 'song_1', 'class' => 'form-control dropdown-toggle', 'autocomplete' => 'off', 'list' => 'test']) !!}
+				                        {!! Form::text('songs[0][name]', '', ['id' => 'song_name', 'class' => 'form-control dropdown-toggle', 'autocomplete' => 'off', 'list' => 'test']) !!}
 				                        <datalist id="test">
-					                        @foreach ($params['songs'] as $song)
+					                        @foreach ($params['songMasters'] as $song)
 												<option value="{{ $song->name }}">
 											@endforeach
 										</datalist>
 								    </div>
+			                    </div>
+			                	<div class="col-sm-2">
+			                		{!! Form::checkbox('songs[0][is_short]', true, !empty($oldSong['is_short']), ['id' => 'song_is_short', 'class' => 'form-control']) !!}
+			                    </div>
+			                	<div class="col-sm-2">
+			                		{!! Form::select('songs[0][arrange_type]', ['通常', 'Acostic', 'その他'], $oldSong['arrange_type'], ['id' => 'song_arrange_type', 'class' => 'form-control']) !!}
 			                    </div>
 		                    </div>
 		                </div>
@@ -155,32 +161,38 @@
                 <h5>・アンコール</h5>
                 <button type="button" id="addButtonEncore">追加</button>
                 <button type="button" id="removeButtonEncore">削除</button>
+				<div class="row col-sm-8 col-xs-12">
+                	<div class="col-sm-2">楽曲番号</div>
+                	<div class="col-sm-6">楽曲名</div>
+                	<div class="col-sm-2">ショートVerか</div>
+                	<div class="col-sm-2">アレンジタイプ</div>
+				</div>
                 <div id="encoreSongListArea">
-                	@if(!empty(old('encore_song_names', $params['encore_song_names'])))
-	                	@foreach (old('encore_song_names', $params['encore_song_names']) as $index => $old_name)
+                	@if(!empty(old('encore_songs', $params['encore_songs'])))
+	                	@foreach (old('encore_songs', $params['encore_songs']) as $index => $oldSong)
 						<div class="form-group" id="encore_song_{{$index + 1}}">
 		                	<div class="row col-sm-8 col-xs-12">
-			                	<div class="col-sm-3">
-				                    {!! Form::label('encore_song_seq_title', '楽曲番号', ['class' => 'control-label']) !!}
-			                    </div>
-			                    <div class="col-sm-1">
+			                    <div class="col-sm-2">
 			                        {!! Form::label('encore_song_seq', ($index + 1), ['id' => 'encore_song_seq_label', 'class' => 'control-label']) !!}
-			                    </div>
-			                	<div class="col-sm-2">
-			                    	{!! Form::label('encore_song_name', '楽曲名', ['class' => 'control-label']) !!}
 			                    </div>
 			                    <div class="col-sm-6">
 			                    	<div class="dropdown">
-				                        {!! Form::text('encore_song_names['.$index.']', $old_name, ['id' => 'encore_song_'.($index + 1), 'class' => 'form-control dropdown-toggle', 'autocomplete' => 'off', 'list' => 'test']) !!}
+				                        {!! Form::text('encore_songs['.$index.'][name]', $oldSong['name'], ['id' => 'encore_song_name', 'class' => 'form-control dropdown-toggle', 'autocomplete' => 'off', 'list' => 'test']) !!}
 				                        <datalist id="test">
-					                        @foreach ($params['songs'] as $song)
+					                        @foreach ($params['songMasters'] as $song)
 												<option value="{{ $song->name }}">
 											@endforeach
 										</datalist>
 								    </div>
 			                    </div>
+			                	<div class="col-sm-2">
+			                		{!! Form::checkbox('encore_songs['.$index.'][is_short]', true, !empty($oldSong['is_short']), ['id' => 'encore_song_is_short', 'class' => 'form-control']) !!}
+			                    </div>
+			                	<div class="col-sm-2">
+			                		{!! Form::select('encore_songs['.$index.'][arrange_type]', ['通常', 'Acostic', 'その他'], $oldSong['arrange_type'], ['id' => 'encore_song_arrange_type', 'class' => 'form-control']) !!}
+			                    </div>
 		                    </div>
-		                    @if(!empty($errors->first('encore_song_names.'.$index)))
+		                    @if(!empty($errors->first('encore_songs.'.$index)))
 		                    	<span class="text-danger">※曲名が入力されていないか、正しくありません</span>
 		                    @endif
 		                </div>
@@ -188,24 +200,24 @@
 		            @else
 		                <div class="form-group" id="encore_song_1">
 		                	<div class="row col-sm-8 col-xs-12">
-			                	<div class="col-sm-3">
-				                    {!! Form::label('encore_song_seq_title', '楽曲番号', ['class' => 'control-label']) !!}
-			                    </div>
-			                    <div class="col-sm-1">
+			                    <div class="col-sm-2">
 			                        {!! Form::label('encore_song_seq', 1, ['id' => 'encore_song_seq_label', 'class' => 'control-label']) !!}
-			                    </div>
-			                	<div class="col-sm-2">
-			                    	{!! Form::label('encore_song_name', '楽曲名', ['class' => 'control-label']) !!}
 			                    </div>
 			                    <div class="col-sm-6">
 			                    	<div class="dropdown">
-				                        {!! Form::text('encore_song_names[0]', '', ['id' => 'encore_song_1', 'class' => 'form-control dropdown-toggle', 'autocomplete' => 'off', 'list' => 'test']) !!}
+				                        {!! Form::text('encore_songs[0][name]', '', ['id' => 'encore_song_name', 'class' => 'form-control dropdown-toggle', 'autocomplete' => 'off', 'list' => 'test']) !!}
 				                        <datalist id="test">
-					                        @foreach ($params['songs'] as $song)
+					                        @foreach ($params['songMasters'] as $song)
 												<option value="{{ $song->name }}">
 											@endforeach
 										</datalist>
 								    </div>
+			                    </div>
+			                	<div class="col-sm-2">
+			                		{!! Form::checkbox('encore_songs[0][is_short]', true, null, ['id' => 'encore_song_is_short', 'class' => 'form-control']) !!}
+			                    </div>
+			                	<div class="col-sm-2">
+			                		{!! Form::select('encore_songs[0][arrange_type]', ['通常', 'Acostic', 'その他'], 0, ['id' => 'encore_song_arrange_type', 'class' => 'form-control']) !!}
 			                    </div>
 		                    </div>
 		                </div>
@@ -215,7 +227,6 @@
                 <!-- hidden parameter -->
                 {{Form::hidden('event_id', $params['event_id'], ['id' => 'event_id'])}}
                 {{Form::hidden('artist_id', $params['artist']['artist_id'], ['id' => 'artist_id'])}}
-                {{Form::hidden('setlist_group_type', 0, ['id' => 'setlist_group_type'])}}
                 
                 <div class="form-group">
                 	<div class="row justify-content-end">
@@ -235,8 +246,8 @@
     <script>
 	$(function(){
 		// --- 通常セットリスト --- //
-		@if(!empty(old('song_names')))
-		var index = {{count(old('song_names'))}};
+		@if(!empty(old('songs')))
+		var index = {{count(old('songs'))}};
 		@else
 		var index = 1;
 		@endif
@@ -258,11 +269,20 @@
 				.text(index)
 				.end()
 				// テキストボックスのID変更
-				.find("#song_1")
-				.attr("id", "song_" + index)
-				.attr("name", "song_names[" + (index - 1) + "]")
-				// テキストを空に
+				.find("#song_name")
+				.attr("name", "songs[" + (index - 1) + "][name]")
+				// -> テキストを空に
 				.val("")
+				.end()
+				// ショートフラグのID変更
+				.find("#song_is_short")
+				.attr("name", "songs[" + (index - 1) + "][is_short]")
+				.prop("checked", false)
+				.end()
+				// アレンジタイプのID変更
+				.find("#song_arrange_type")
+				.attr("name", "songs[" + (index - 1) + "][arrange_type]")
+				.val(0)
 				.end()
 				// 追加処理
 				.appendTo("div#songListArea");
@@ -282,8 +302,8 @@
 		});
 		
 		// --- アンコールセットリスト --- //
-		@if(!empty(old('encore_song_names')))
-		var encoreIndex = {{count(old('encore_song_names'))}};
+		@if(!empty(old('encore_songs')))
+		var encoreIndex = {{count(old('encore_songs'))}};
 		@else
 		var encoreIndex = 1;
 		@endif
@@ -305,11 +325,20 @@
 				.text(encoreIndex)
 				.end()
 				// テキストボックスのID変更
-				.find("#encore_song_1")
-				.attr("id", "encore_song_" + encoreIndex)
-				.attr("name", "encore_song_names[" + (encoreIndex - 1) + "]")
-				// テキストを空に
+				.find("#encore_song_name")
+				.attr("name", "encore_songs[" + (encoreIndex - 1) + "][name]")
+				// -> テキストを空に
 				.val("")
+				.end()
+				// ショートフラグのID変更
+				.find("#encore_song_is_short")
+				.attr("name", "encore_songs[" + (encoreIndex - 1) + "][is_short]")
+				.prop("checked", false)
+				.end()
+				// アレンジタイプのID変更
+				.find("#encore_song_arrange_type")
+				.attr("name", "encore_songs[" + (encoreIndex - 1) + "][arrange_type]")
+				.val(0)
 				.end()
 				// 追加処理
 				.appendTo("div#encoreSongListArea");
