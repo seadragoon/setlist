@@ -148,10 +148,10 @@
 								    </div>
 			                    </div>
 			                	<div class="col-sm-2">
-			                		{!! Form::checkbox('songs[0][is_short]', true, !empty($oldSong['is_short']), ['id' => 'song_is_short', 'class' => 'form-control']) !!}
+			                		{!! Form::checkbox('songs[0][is_short]', true, null, ['id' => 'song_is_short', 'class' => 'form-control']) !!}
 			                    </div>
 			                	<div class="col-sm-2">
-			                		{!! Form::select('songs[0][arrange_type]', ['通常', 'Acostic', 'その他'], $oldSong['arrange_type'], ['id' => 'song_arrange_type', 'class' => 'form-control']) !!}
+			                		{!! Form::select('songs[0][arrange_type]', ['通常', 'Acostic', 'その他'], 0, ['id' => 'song_arrange_type', 'class' => 'form-control']) !!}
 			                    </div>
 		                    </div>
 		                </div>
