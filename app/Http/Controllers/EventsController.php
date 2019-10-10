@@ -31,27 +31,34 @@ class EventsController extends Controller
 		//TODO : 複数アーティストのデータを登録すると複数取れるが、ひとまず一旦最初に見つかったもので実装
 		$setlist = Setlist::where('event_id', $event_id)->first();
 		
-		//TODO : 複数のセットリストタイプが取れるが、ひとまず最初に見つかったもので実装
-		$setlistGroup = SetlistGroup::where('setlist_id', $setlist->setlist_id)->first();
-		
-		$setlistSongs = SetlistSong::where('setlist_id', $setlist->setlist_id)->where('setlist_group_seq', $setlistGroup->setlist_group_seq)->get();
+		$songDataList = array();
 		
 		// 曲マスタリストを取得
 		$song_master = Song::where('artist_id', $setlist->artist_id)->get();
 		
-		// セトリ楽曲
-		$song_list = array();
-		foreach ($setlistSongs as $value)
-		{
-			$song_list[$value->seq] = $song_master->where('song_id', $value->song_id)->first()->toArray();
-			$song_list[$value->seq]['seq'] = $value->seq + 1;
+		// セトリグループを取得
+		$setlistGroups = SetlistGroup::where('setlist_id', $setlist->setlist_id)->get();
+		foreach ($setlistGroups as $group) {
+			// セトリ曲一覧
+			$setlistSongs = SetlistSong::where('setlist_id', $setlist->setlist_id)->where('setlist_group_seq', $group->setlist_group_seq)->get();
+			
+			// セトリグループの種類ごとに曲名リストを作成する
+			foreach ($setlistSongs as $value)
+			{
+				$songDataList[$group->setlist_group_seq][$value->seq] = $song_master->where('song_id', $value->song_id)->first()->toArray();
+				$songDataList[$group->setlist_group_seq][$value->seq]['seq'] = $value->seq + 1;
+			}
 		}
+		
+		$song_list			= empty($songDataList[0]) ? null : $songDataList[0];		// 通常セトリ
+		$encore_song_list	= empty($songDataList[1]) ? null : $songDataList[1];		// アンコールセトリ
 		
 		// イベントデータを取得
 		$event_data = Event::where('event_id', $event_id)->first();
 		
 		$param = array();
 		$param['song_list'] = $song_list;
+		$param['encore_song_list'] = $encore_song_list;
 		$param['event_data'] = $event_data;
 		
 		//echo '<pre>' . var_export($param, true) . '</pre>';
@@ -77,6 +84,7 @@ class EventsController extends Controller
 		$params['event_venue'] = null;
 		$params['event_summary'] = null;
 		$params['song_names'] = null;
+		$params['encore_song_names'] = null;
 		
 		return view('events/create')->with('params', $params);
 	}
@@ -97,6 +105,8 @@ class EventsController extends Controller
 			'setlist_group_type'	=>'required|numeric',				// セットリストグループタイプ
 			'song_names'			=>'required|array|min:1',			// 曲名リスト
 			'song_names.*'			=>'string|max:100',					// 曲名
+			'encore_song_names'		=>'required|array|min:1',			// アンコール曲名リスト
+			'encore_song_names.*'	=>'string|max:100',					// アンコール曲名
 		];
 		
 		// リストの後ろに曲名が空の要素がある場合は予め弾いておく
@@ -105,6 +115,18 @@ class EventsController extends Controller
 			if (empty($data['song_names'][$i]))
 			{
 				unset($data['song_names'][$i]);
+			}
+			else
+			{
+				// 空じゃない要素が来たら終了
+				break;
+			}
+		}
+		for($i = count($data['encore_song_names']) - 1; $i >= 0; $i--)
+		{
+			if (empty($data['encore_song_names'][$i]))
+			{
+				unset($data['encore_song_names'][$i]);
 			}
 			else
 			{
@@ -124,6 +146,14 @@ class EventsController extends Controller
 			{
 				// 含まれなかったらエラー追加
 				$validation->errors()->add('song_names.'.$key, '指定された楽曲データが存在しません');
+			}
+		}
+		foreach($data['encore_song_names'] as $key => $name)
+		{
+			if (array_search($name, array_column($songs, 'name')) === false)
+			{
+				// 含まれなかったらエラー追加
+				$validation->errors()->add('encore_song_names.'.$key, '指定された楽曲データが存在しません');
 			}
 		}
 		
@@ -173,14 +203,16 @@ class EventsController extends Controller
 			// setlist_group登録
 			$setlist_id = empty($setlist->setlist_id) ? $setlist->id : $setlist->setlist_id;
 			
-			$setlistGroup = SetlistGroup::where('setlist_id', $setlist_id)->first();
-			if (empty($setlistGroup)) {
-				$setlistGroup = new SetlistGroup();
-				$setlistGroup->setlist_id = $setlist_id;
+			for($i = 0;$i <= 1;$i++){
+				$setlistGroup = SetlistGroup::where('setlist_id', $setlist_id)->where('setlist_group_type', $i)->first();
+				if (empty($setlistGroup)) {
+					$setlistGroup = new SetlistGroup();
+					$setlistGroup->setlist_id = $setlist_id;
+				}
+				$setlistGroup->setlist_group_seq = $i;
+				$setlistGroup->setlist_group_type = $i;
+				$setlistGroup->save();
 			}
-			$setlistGroup->setlist_group_seq = 0;
-			$setlistGroup->setlist_group_type = 0;
-			$setlistGroup->save();
 			
 			// setlist_songs登録
 			SetlistSong::where('setlist_id', $setlist_id)->delete(); // 登録前に削除しておく
@@ -207,7 +239,30 @@ class EventsController extends Controller
 				$songData['created_at'] = new DateTime();
 				$songData['updated_at'] = new DateTime();
 				
-				$setlistSongs[$key] = $songData;
+				array_push($setlistSongs, $songData);
+			}
+			foreach($data['encore_song_names'] as $key => $name)
+			{
+				$song_index = array_search($name, array_column($songs, 'name'));
+				if ($song_index === false) {
+					// TODO: 曲名からIDが取れなかった(上で確認してるからありえない)
+					echo '<pre>' . var_export($data['encore_song_names'], true) . '</pre>';
+					throw new Exception();
+				}
+				$song_id = $songs[$song_index]['song_id'];
+				
+				$songData = array();
+				$songData['setlist_id'] = $setlistGroup->setlist_id;
+				$songData['setlist_group_seq'] = 1;
+				$songData['seq'] = $key;
+				$songData['song_id'] = $song_id;
+				$songData['is_medley'] = false;
+				$songData['collabo_artist_ids'] = "";
+				$songData['arrange_type'] = 0;
+				$songData['created_at'] = new DateTime();
+				$songData['updated_at'] = new DateTime();
+				
+				array_push($setlistSongs, $songData);
 			}
 			// 保存
 			SetlistSong::insert($setlistSongs);
@@ -236,20 +291,27 @@ class EventsController extends Controller
 		//TODO : 複数アーティストのデータを登録すると複数取れるが、ひとまず一旦最初に見つかったもので実装
 		$setlist = Setlist::where('event_id', $event_id)->first();
 		
-		//TODO : 複数のセットリストタイプが取れるが、ひとまず最初に見つかったもので実装
-		$setlistGroup = SetlistGroup::where('setlist_id', $setlist->setlist_id)->first();
-		
-		$setlistSongs = SetlistSong::where('setlist_id', $setlist->setlist_id)->where('setlist_group_seq', $setlistGroup->setlist_group_seq)->get();
-		
 		// 曲マスタリストを取得
 		$song_master = Song::where('artist_id', $setlist->artist_id)->get();
 		
-		// セトリ楽曲
-		$song_names = array();
-		foreach ($setlistSongs as $value)
-		{
-			$song_names[$value->seq] = $song_master->where('song_id', $value->song_id)->first()->name;
+		$songNamesList = array();
+		
+		// セットリストグループを取得(通常、アンコールなど取得できる)
+		$setlistGroups = SetlistGroup::where('setlist_id', $setlist->setlist_id)->get();
+		foreach ($setlistGroups as $group) {
+			// セトリ曲一覧
+			$setlistSongs = SetlistSong::where('setlist_id', $setlist->setlist_id)->where('setlist_group_seq', $group->setlist_group_seq)->get();
+			
+			// セトリグループの種類ごとに曲名リストを作成する
+			foreach ($setlistSongs as $value)
+			{
+				$songNamesList[$group->setlist_group_seq][$value->seq] = $song_master->where('song_id', $value->song_id)->first()->name;
+			}
 		}
+		
+		$song_names			= empty($songNamesList[0]) ? null : $songNamesList[0];		// 通常セトリ
+		$encore_song_names	= empty($songNamesList[1]) ? null : $songNamesList[1];		// アンコールセトリ
+		
 		
 		$params = array();
 		
@@ -260,6 +322,7 @@ class EventsController extends Controller
 		$params['event_venue'] = $event_data->venue_name;
 		$params['event_summary'] = $event_data->summary;
 		$params['song_names'] = $song_names;
+		$params['encore_song_names'] = $encore_song_names;
 		
 		//echo '<pre>' . var_export($params, true) . '</pre>';
 		

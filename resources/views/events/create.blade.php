@@ -92,6 +92,7 @@
                 
                 <hr>
                 <h4>セットリスト</h4>
+                <h5>・通常</h5>
                 <button type="button" id="addButton">追加</button>
                 <button type="button" id="removeButton">削除</button>
                 <div id="songListArea">
@@ -150,12 +151,72 @@
 		                </div>
 		            @endif
                 </div>
+                <hr>
+                <h5>・アンコール</h5>
+                <button type="button" id="addButtonEncore">追加</button>
+                <button type="button" id="removeButtonEncore">削除</button>
+                <div id="encoreSongListArea">
+                	@if(!empty(old('encore_song_names', $params['encore_song_names'])))
+	                	@foreach (old('encore_song_names', $params['encore_song_names']) as $index => $old_name)
+						<div class="form-group" id="encore_song_{{$index + 1}}">
+		                	<div class="row col-sm-8 col-xs-12">
+			                	<div class="col-sm-3">
+				                    {!! Form::label('encore_song_seq_title', '楽曲番号', ['class' => 'control-label']) !!}
+			                    </div>
+			                    <div class="col-sm-1">
+			                        {!! Form::label('encore_song_seq', ($index + 1), ['id' => 'encore_song_seq_label', 'class' => 'control-label']) !!}
+			                    </div>
+			                	<div class="col-sm-2">
+			                    	{!! Form::label('encore_song_name', '楽曲名', ['class' => 'control-label']) !!}
+			                    </div>
+			                    <div class="col-sm-6">
+			                    	<div class="dropdown">
+				                        {!! Form::text('encore_song_names['.$index.']', $old_name, ['id' => 'encore_song_'.($index + 1), 'class' => 'form-control dropdown-toggle', 'autocomplete' => 'off', 'list' => 'test']) !!}
+				                        <datalist id="test">
+					                        @foreach ($params['songs'] as $song)
+												<option value="{{ $song->name }}">
+											@endforeach
+										</datalist>
+								    </div>
+			                    </div>
+		                    </div>
+		                    @if(!empty($errors->first('encore_song_names.'.$index)))
+		                    	<span class="text-danger">※曲名が入力されていないか、正しくありません</span>
+		                    @endif
+		                </div>
+		                @endforeach
+		            @else
+		                <div class="form-group" id="encore_song_1">
+		                	<div class="row col-sm-8 col-xs-12">
+			                	<div class="col-sm-3">
+				                    {!! Form::label('encore_song_seq_title', '楽曲番号', ['class' => 'control-label']) !!}
+			                    </div>
+			                    <div class="col-sm-1">
+			                        {!! Form::label('encore_song_seq', 1, ['id' => 'encore_song_seq_label', 'class' => 'control-label']) !!}
+			                    </div>
+			                	<div class="col-sm-2">
+			                    	{!! Form::label('encore_song_name', '楽曲名', ['class' => 'control-label']) !!}
+			                    </div>
+			                    <div class="col-sm-6">
+			                    	<div class="dropdown">
+				                        {!! Form::text('encore_song_names[0]', '', ['id' => 'encore_song_1', 'class' => 'form-control dropdown-toggle', 'autocomplete' => 'off', 'list' => 'test']) !!}
+				                        <datalist id="test">
+					                        @foreach ($params['songs'] as $song)
+												<option value="{{ $song->name }}">
+											@endforeach
+										</datalist>
+								    </div>
+			                    </div>
+		                    </div>
+		                </div>
+		            @endif
+                </div>
+                <hr>
                 <!-- hidden parameter -->
                 {{Form::hidden('event_id', $params['event_id'], ['id' => 'event_id'])}}
                 {{Form::hidden('artist_id', $params['artist']['artist_id'], ['id' => 'artist_id'])}}
                 {{Form::hidden('setlist_group_type', 0, ['id' => 'setlist_group_type'])}}
                 
-                <hr>
                 <div class="form-group">
                 	<div class="row justify-content-end">
 	                    <div class="col-sm-6">
@@ -173,12 +234,12 @@
     
     <script>
 	$(function(){
+		// --- 通常セットリスト --- //
 		@if(!empty(old('song_names')))
 		var index = {{count(old('song_names'))}};
 		@else
 		var index = 1;
 		@endif
-		
 		// 追加ボタン押下時のイベント
 		$('button#addButton').on('click', function(){
 			
@@ -207,7 +268,6 @@
 				.appendTo("div#songListArea");
 			
 		});
-		
 		// 削除ボタン押下時イベント
 		$('button#removeButton').on('click',function(){
 			// 最初の一つは削除させない
@@ -218,6 +278,53 @@
 			if($('div#song_' + index).length) {
 				$('div#song_' + index).remove();
 				index--;
+			}
+		});
+		
+		// --- アンコールセットリスト --- //
+		@if(!empty(old('encore_song_names')))
+		var encoreIndex = {{count(old('encore_song_names'))}};
+		@else
+		var encoreIndex = 1;
+		@endif
+		// 追加ボタン押下時のイベント
+		$('button#addButtonEncore').on('click', function(){
+			
+			// インデックス加算
+			encoreIndex++;
+			
+			// テンプレート複製
+			$('div#encore_song_1')
+				// コピー処理
+				.clone(true)
+				// IDを付ける
+				.removeAttr("id")
+				.attr("id", "encore_song_" + encoreIndex)
+				// 楽曲番号の変更
+				.find("#encore_song_seq_label")
+				.text(encoreIndex)
+				.end()
+				// テキストボックスのID変更
+				.find("#encore_song_1")
+				.attr("id", "encore_song_" + encoreIndex)
+				.attr("name", "encore_song_names[" + (encoreIndex - 1) + "]")
+				// テキストを空に
+				.val("")
+				.end()
+				// 追加処理
+				.appendTo("div#encoreSongListArea");
+			
+		});
+		// 削除ボタン押下時イベント
+		$('button#removeButtonEncore').on('click',function(){
+			// 最初の一つは削除させない
+			if (encoreIndex == 1) {
+				return;
+			}
+			// 存在する場合のみ削除する
+			if($('div#encore_song_' + encoreIndex).length) {
+				$('div#encore_song_' + encoreIndex).remove();
+				encoreIndex--;
 			}
 		});
 		
