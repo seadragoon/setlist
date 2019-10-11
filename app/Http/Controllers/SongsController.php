@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Artist;
 use App\Song;
+use App\Event;
+use App\Setlist;
+use App\SetlistSong;
 
 class SongsController extends Controller
 {
@@ -23,9 +26,30 @@ class SongsController extends Controller
 		$song = Song::where('song_id', $song_id)->first();
 		$artist = Artist::where('artist_id', $song->artist_id)->first();
 		
+		// 対象の歌をセトリに含むイベントを検索
+		$eventDataList = array();
+		$setlistSongs = SetlistSong::where('song_id', $song_id)->get();
+		foreach ($setlistSongs as $setlistSong)
+		{
+			// セットリストIDの等しいセットリストを取得
+			$setlist = Setlist::where('setlist_id', $setlistSong->setlist_id)->first();
+			
+			// イベントIDの等しいイベントを取得
+			$event = Event::where('event_id', $setlist->event_id)->first();
+			
+			// イベントデータを配列に詰める
+			array_push($eventDataList, $event);
+		}
+		
+		// 日付でソート
+		usort($eventDataList, function ($a, $b) {
+			return $a->datetime < $b->datetime ? 1 : -1;
+		});
+		
 		$param = array();
 		$param['artist'] = $artist;
 		$param['song'] = $song;
+		$param['eventDataList'] = $eventDataList;
 		return view('songs/show')->with('param', $param);
 	}
 	

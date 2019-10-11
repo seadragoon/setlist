@@ -49,6 +49,7 @@ class EventsController extends Controller
 				
 				$songData = array();
 				$songData['seq']			= $value->seq + 1;
+				$songData['song_id']		= $master['song_id'];
 				$songData['name']			= $master['name'];
 				$songData['is_short']		= $value['is_medley'];
 				$songData['arrange_type']	= $value['arrange_type'];
