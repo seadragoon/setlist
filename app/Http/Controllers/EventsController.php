@@ -33,8 +33,8 @@ class EventsController extends Controller
 		
 		$songDataList = array();
 		
-		// 曲マスタリストを取得
-		$song_master = Song::where('artist_id', $setlist->artist_id)->get();
+		// 曲マスタリストを全件取得
+		$song_master = Song::get();
 		
 		// セトリグループを取得
 		$setlistGroups = SetlistGroup::where('setlist_id', $setlist->setlist_id)->get();
@@ -81,8 +81,8 @@ class EventsController extends Controller
 		// アーティスト最初の1件だけ取得
 		$artist = Artist::orderBy('artist_id', 'asc')->first();
 		$params['artist'] = $artist;
-		// アーティストIDが等しいアーティストの楽曲をすべて取得
-		$songMasters = Song::where('artist_id', $artist['artist_id'])->orderby('name', 'asc')->get();
+		// 楽曲をすべて取得 TODO: 他アーティストの楽曲を沢山登録していった場合負荷が掛かり過ぎる恐れがある
+		$songMasters = Song::orderby('name', 'asc')->get();
 		$params['songMasters'] = $songMasters;
 		
 		$params['event_id'] = null;
@@ -156,7 +156,7 @@ class EventsController extends Controller
 		$validation = \Validator::make($data, $rules);
 		
 		// 曲名リストがちゃんと含まれているかを確認
-		$songs = Song::where('artist_id', $data['artist_id'])->orderby('name', 'asc')->get()->toArray();
+		$songs = Song::get()->toArray();
 		foreach($data['songs'] as $key => $value)
 		{
 			if (array_search($value['name'], array_column($songs, 'name')) === false)
