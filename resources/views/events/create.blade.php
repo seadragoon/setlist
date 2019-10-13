@@ -107,18 +107,19 @@
                 <h5>・通常</h5>
                 <button type="button" id="addButton">追加</button>
                 <button type="button" id="removeButton">削除</button>
-				<div class="row col-sm-8 col-xs-12">
-                	<div class="col-sm-2">楽曲番号</div>
+				<div class="row col-sm-12 col-xs-12">
+                	<div class="col-sm-1">楽曲番号</div>
                 	<div class="col-sm-6">楽曲名</div>
-                	<div class="col-sm-2">ショートVerか</div>
+                	<div class="col-sm-1">ショートVerか</div>
                 	<div class="col-sm-2">アレンジタイプ</div>
+                	<div class="col-sm-2">コラボアーティスト</div>
 				</div>
                 <div id="songListArea">
                 	@if(!empty(old('songs', $params['songs'])))
 	                	@foreach (old('songs', $params['songs']) as $index => $oldSong)
 						<div class="form-group" id="song_{{$index + 1}}">
-		                	<div class="row col-sm-8 col-xs-12">
-			                    <div class="col-sm-2">
+		                	<div class="row col-sm-12 col-xs-12">
+			                    <div class="col-sm-1">
 			                        {!! Form::label('song_seq', ($index + 1), ['id' => 'song_seq_label', 'class' => 'control-label']) !!}
 			                    </div>
 			                    <div class="col-sm-6">
@@ -131,22 +132,28 @@
 										</datalist>
 								    </div>
 			                    </div>
-			                	<div class="col-sm-2">
+			                	<div class="col-sm-1">
 			                		{!! Form::checkbox('songs['.$index.'][is_short]', true, !empty($oldSong['is_short']), ['id' => 'song_is_short', 'class' => 'form-control']) !!}
 			                    </div>
 			                	<div class="col-sm-2">
 			                		{!! Form::select('songs['.$index.'][arrange_type]', ['通常', 'Acostic', 'その他'], $oldSong['arrange_type'], ['id' => 'song_arrange_type', 'class' => 'form-control']) !!}
 			                    </div>
+			                	<div class="col-sm-2">
+			                        {!! Form::text('songs['.$index.'][collabo_artists]', $oldSong['collabo_artists'], ['id' => 'collabo_artists', 'class' => 'form-control']) !!}
+			                    </div>
 		                    </div>
-		                    @if(!empty($errors->first('songs.'.$index)))
-		                    	<span class="text-danger">※曲名が入力されていないか、正しくありません</span>
+		                    @if(!empty($errors->first('songs.'.$index.'.name')))
+		                    	<span class="text-danger">{{ $errors->first('songs.'.$index.'.name') }}</span>
+		                    @endif
+		                    @if(!empty($errors->first('songs.'.$index.'.collabo_artists')))
+		                    	<span class="text-danger">{{ $errors->first('songs.'.$index.'.collabo_artists') }}</span>
 		                    @endif
 		                </div>
 		                @endforeach
 		            @else
 		                <div class="form-group" id="song_1">
-		                	<div class="row col-sm-8 col-xs-12">
-			                    <div class="col-sm-2">
+		                	<div class="row col-sm-12 col-xs-12">
+			                    <div class="col-sm-1">
 			                        {!! Form::label('song_seq', 1, ['id' => 'song_seq_label', 'class' => 'control-label']) !!}
 			                    </div>
 			                    <div class="col-sm-6">
@@ -159,11 +166,14 @@
 										</datalist>
 								    </div>
 			                    </div>
-			                	<div class="col-sm-2">
+			                	<div class="col-sm-1">
 			                		{!! Form::checkbox('songs[0][is_short]', true, null, ['id' => 'song_is_short', 'class' => 'form-control']) !!}
 			                    </div>
 			                	<div class="col-sm-2">
 			                		{!! Form::select('songs[0][arrange_type]', ['通常', 'Acostic', 'その他'], 0, ['id' => 'song_arrange_type', 'class' => 'form-control']) !!}
+			                    </div>
+			                	<div class="col-sm-2">
+			                        {!! Form::text('songs[0][collabo_artists]', null, ['id' => 'collabo_artists', 'class' => 'form-control']) !!}
 			                    </div>
 		                    </div>
 		                </div>
@@ -183,8 +193,8 @@
                 	@if(!empty(old('encore_songs', $params['encore_songs'])))
 	                	@foreach (old('encore_songs', $params['encore_songs']) as $index => $oldSong)
 						<div class="form-group" id="encore_song_{{$index + 1}}">
-		                	<div class="row col-sm-8 col-xs-12">
-			                    <div class="col-sm-2">
+		                	<div class="row col-sm-12 col-xs-12">
+			                    <div class="col-sm-1">
 			                        {!! Form::label('encore_song_seq', ($index + 1), ['id' => 'encore_song_seq_label', 'class' => 'control-label']) !!}
 			                    </div>
 			                    <div class="col-sm-6">
@@ -197,22 +207,28 @@
 										</datalist>
 								    </div>
 			                    </div>
-			                	<div class="col-sm-2">
+			                	<div class="col-sm-1">
 			                		{!! Form::checkbox('encore_songs['.$index.'][is_short]', true, !empty($oldSong['is_short']), ['id' => 'encore_song_is_short', 'class' => 'form-control']) !!}
 			                    </div>
 			                	<div class="col-sm-2">
 			                		{!! Form::select('encore_songs['.$index.'][arrange_type]', ['通常', 'Acostic', 'その他'], $oldSong['arrange_type'], ['id' => 'encore_song_arrange_type', 'class' => 'form-control']) !!}
 			                    </div>
+			                	<div class="col-sm-2">
+			                        {!! Form::text('encore_songs['.$index.'][collabo_artists]', $oldSong['collabo_artists'], ['id' => 'collabo_artists', 'class' => 'form-control']) !!}
+			                    </div>
 		                    </div>
-		                    @if(!empty($errors->first('encore_songs.'.$index)))
-		                    	<span class="text-danger">※曲名が入力されていないか、正しくありません</span>
+		                    @if(!empty($errors->first('encore_songs.'.$index.'.name')))
+		                    	<span class="text-danger">{{ $errors->first('encore_songs.'.$index.'.name') }}</span>
+		                    @endif
+		                    @if(!empty($errors->first('encore_songs.'.$index.'.collabo_artists')))
+		                    	<span class="text-danger">{{ $errors->first('encore_songs.'.$index.'.collabo_artists') }}</span>
 		                    @endif
 		                </div>
 		                @endforeach
 		            @else
 		                <div class="form-group" id="encore_song_1">
-		                	<div class="row col-sm-8 col-xs-12">
-			                    <div class="col-sm-2">
+		                	<div class="row col-sm-12 col-xs-12">
+			                    <div class="col-sm-1">
 			                        {!! Form::label('encore_song_seq', 1, ['id' => 'encore_song_seq_label', 'class' => 'control-label']) !!}
 			                    </div>
 			                    <div class="col-sm-6">
@@ -225,11 +241,14 @@
 										</datalist>
 								    </div>
 			                    </div>
-			                	<div class="col-sm-2">
+			                	<div class="col-sm-1">
 			                		{!! Form::checkbox('encore_songs[0][is_short]', true, null, ['id' => 'encore_song_is_short', 'class' => 'form-control']) !!}
 			                    </div>
 			                	<div class="col-sm-2">
 			                		{!! Form::select('encore_songs[0][arrange_type]', ['通常', 'Acostic', 'その他'], 0, ['id' => 'encore_song_arrange_type', 'class' => 'form-control']) !!}
+			                    </div>
+			                	<div class="col-sm-2">
+			                        {!! Form::text('encore_songs[0][collabo_artists]', null, ['id' => 'collabo_artists', 'class' => 'form-control']) !!}
 			                    </div>
 		                    </div>
 		                </div>
@@ -258,8 +277,8 @@
     <script>
 	$(function(){
 		// --- 通常セットリスト --- //
-		@if(!empty(old('songs')))
-		var index = {{count(old('songs'))}};
+		@if(!empty(old('songs', $params['songs'])))
+		var index = {{count(old('songs', $params['songs']))}};
 		@else
 		var index = 1;
 		@endif
@@ -296,6 +315,11 @@
 				.attr("name", "songs[" + (index - 1) + "][arrange_type]")
 				.val(0)
 				.end()
+				// コラボアーティストのID変更
+				.find("#collabo_artists")
+				.attr("name", "songs[" + (index - 1) + "][collabo_artists]")
+				.val("")
+				.end()
 				// 追加処理
 				.appendTo("div#songListArea");
 			
@@ -314,8 +338,8 @@
 		});
 		
 		// --- アンコールセットリスト --- //
-		@if(!empty(old('encore_songs')))
-		var encoreIndex = {{count(old('encore_songs'))}};
+		@if(!empty(old('encore_songs', $params['encore_songs'])))
+		var encoreIndex = {{count(old('encore_songs', $params['encore_songs']))}};
 		@else
 		var encoreIndex = 1;
 		@endif
@@ -351,6 +375,11 @@
 				.find("#encore_song_arrange_type")
 				.attr("name", "encore_songs[" + (encoreIndex - 1) + "][arrange_type]")
 				.val(0)
+				.end()
+				// コラボアーティストのID変更
+				.find("#collabo_artists")
+				.attr("name", "encore_songs[" + (encoreIndex - 1) + "][collabo_artists]")
+				.val("")
 				.end()
 				// 追加処理
 				.appendTo("div#encoreSongListArea");

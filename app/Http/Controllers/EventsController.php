@@ -34,7 +34,9 @@ class EventsController extends Controller
 		$songDataList = array();
 		
 		// 曲マスタリストを全件取得
-		$song_master = Song::get();
+		$songMasters = Song::get();
+		// アーティストマスタを全件取得
+		$artistMasters = Artist::get();
 		
 		// セトリグループを取得
 		$setlistGroups = SetlistGroup::where('setlist_id', $setlist->setlist_id)->get();
@@ -45,14 +47,25 @@ class EventsController extends Controller
 			// セトリグループの種類ごとに曲名リストを作成する
 			foreach ($setlistSongs as $value)
 			{
-				$master = $song_master->where('song_id', $value->song_id)->first();
+				$master = $songMasters->where('song_id', $value->song_id)->first();
+				
+				// コラボアーティストIDから名前を取得
+				$collaboArtistIds = explode(',', $value['collabo_artist_ids']);
+				$collaboArtistNames = array();
+				foreach($collaboArtistIds as $artistId){
+ 					if(empty($artistId)) continue;
+					
+					$artist = $artistMasters->where('artist_id', $artistId)->first();
+					array_push($collaboArtistNames, $artist->name);
+				}
 				
 				$songData = array();
-				$songData['seq']			= $value->seq + 1;
-				$songData['song_id']		= $master['song_id'];
-				$songData['name']			= $master['name'];
-				$songData['is_short']		= $value['is_medley'];
-				$songData['arrange_type']	= $value['arrange_type'];
+				$songData['seq']				= $value->seq + 1;
+				$songData['song_id']			= $master['song_id'];
+				$songData['name']				= $master['name'];
+				$songData['is_short']			= $value['is_medley'];
+				$songData['arrange_type']		= $value['arrange_type'];
+				$songData['collabo_artists']	= implode(',', $collaboArtistNames);
 				
 				$songDataList[$group->setlist_group_seq][$value->seq] = $songData;
 			}
@@ -119,11 +132,13 @@ class EventsController extends Controller
 			'songs.*.name'					=>'required|string|max:100',	// 通常楽曲曲名
 			'songs.*.is_short'				=>'integer|max:50',				// 通常楽曲ショートかどうか
 			'songs.*.arrange_type'			=>'required|integer|max:5',		// 通常楽曲アレンジタイプ
+			'songs.*.collabo_artists'		=>'nullable|string|max:100',	// 通常楽曲コラボアーティスト
 			'encore_songs'					=>'array',						// アンコール楽曲配列
 			'encore_songs.*'				=>'array',						// アンコール楽曲の連想配列
 			'encore_songs.*.name'			=>'string|max:100',				// アンコール楽曲曲名
 			'encore_songs.*.is_short'		=>'integer|max:50',				// アンコール楽曲ショートかどうか
 			'encore_songs.*.arrange_type'	=>'integer|max:5',				// アンコール楽曲アレンジタイプ
+			'encore_songs.*.collabo_artists'=>'string|max:100',				// アンコール楽曲コラボアーティスト
 		];
 		
 		// リストの後ろに曲名が空の要素がある場合は予め弾いておく
@@ -152,29 +167,65 @@ class EventsController extends Controller
 			}
 		}
 		
-		// バリデーション
+		// バリデーションデータ作成
 		$validation = \Validator::make($data, $rules);
 		
-		// 曲名リストがちゃんと含まれているかを確認
-		$songs = Song::get()->toArray();
+		// 楽曲マスタを取得
+		$songMasters = Song::get()->toArray();
+		// アーティストマスタを取得
+		$artistMasters = Artist::get()->toArray();
+		
+		// 楽曲データの確認
 		foreach($data['songs'] as $key => $value)
 		{
-			if (array_search($value['name'], array_column($songs, 'name')) === false)
+			// 曲名リストがちゃんと定義されているかを確認
+			if (array_search($value['name'], array_column($songMasters, 'name')) === false)
 			{
 				// 含まれなかったらエラー追加
-				$validation->errors()->add('songs.'.$key, '指定された楽曲データが存在しません');
+				$validation->errors()->add('songs.'.$key.'.name', '※曲名が入力されていないか、正しくありません');
+			}
+			// コラボアーティストがちゃんと定義されているかを確認
+			$collaboArtistNames = explode(',', $value['collabo_artists']);
+			foreach($collaboArtistNames as $artistName){
+ 				if(empty($artistName)) continue;
+				
+				$targetIndex = array_search($artistName, array_column($artistMasters, 'name'));
+				\Log::debug(var_export($artistMasters[$targetIndex]['artist_id'], true));
+				\Log::debug(var_export($data['artist_id'], true));
+				if ($targetIndex === false){
+					// 含まれなかったらエラー追加
+					$validation->errors()->add('songs.'.$key.'.collabo_artists', '※指定された名前のコラボアーティストは定義されていません');
+ 				} else if ($artistMasters[$targetIndex]['artist_id'] === intval($data['artist_id'])) {
+ 					// アーティストIDが同一の場合はエラー
+					$validation->errors()->add('songs.'.$key.'.collabo_artists', '※指定されたコラボアーティストは自分自身です');
+				}
 			}
 		}
 		foreach($data['encore_songs'] as $key => $value)
 		{
-			if (array_search($value['name'], array_column($songs, 'name')) === false)
+			// 曲名リストがちゃんと含まれているかを確認
+			if (array_search($value['name'], array_column($songMasters, 'name')) === false)
 			{
 				// 含まれなかったらエラー追加
-				$validation->errors()->add('encore_songs.'.$key, '指定された楽曲データが存在しません');
+				$validation->errors()->add('encore_songs.'.$key.'.name', '※曲名が入力されていないか、正しくありません');
+			}
+			// コラボアーティストがちゃんと定義されているかを確認
+			$collaboArtistNames = explode(',', $value['collabo_artists']);
+			foreach($collaboArtistNames as $artistName){
+ 				if(empty($artistName)) continue;
+				
+				$targetIndex = array_search($artistName, array_column($artistMasters, 'name'));
+				if ($targetIndex === false){
+					// 含まれなかったらエラー追加
+					$validation->errors()->add('encore_songs.'.$key.'.collabo_artists', '※指定された名前のコラボアーティストは定義されていません');
+ 				} else if ($artistMasters[$targetIndex]['artist_id'] === intval($data['artist_id'])) {
+ 					// アーティストIDが同一の場合はエラー
+					$validation->errors()->add('encore_songs.'.$key.'.collabo_artists', '※指定されたコラボアーティストは自分自身です');
+				}
 			}
 		}
 		
-		// 確認
+		// バリデーション確認
 		if (!empty($validation->errors()->all()))
 		{
 			\Log::debug("validation error.");
@@ -243,13 +294,23 @@ class EventsController extends Controller
 			$setlistSongs = array();
 			foreach($data['songs'] as $key => $value)
 			{
-				$song_index = array_search($value['name'], array_column($songs, 'name'));
+				$song_index = array_search($value['name'], array_column($songMasters, 'name'));
 				if ($song_index === false) {
 					// TODO: 曲名からIDが取れなかった(上で確認してるからありえない)
 					echo '<pre>' . var_export($data['songs'], true) . '</pre>';
 					throw new Exception();
 				}
-				$song_id = $songs[$song_index]['song_id'];
+				$song_id = $songMasters[$song_index]['song_id'];
+				
+				// コラボアーティストのIDリストを取得
+				$collaboArtistNames = explode(',', $value['collabo_artists']);
+				$collaboArtistIds = array();
+				foreach($collaboArtistNames as $artistName){
+ 					if(empty($artistName)) continue;
+					
+					$artist_index = array_search($artistName, array_column($artistMasters, 'name'));
+					array_push($collaboArtistIds, $artistMasters[$artist_index]['artist_id']);
+				}
 				
 				$songData = array();
 				$songData['setlist_id'] = $setlistGroup->setlist_id;
@@ -257,7 +318,7 @@ class EventsController extends Controller
 				$songData['seq'] = $key;
 				$songData['song_id'] = $song_id;
 				$songData['is_medley'] = empty($value['is_short']) ? false : true;
-				$songData['collabo_artist_ids'] = "";
+				$songData['collabo_artist_ids'] = implode(",", $collaboArtistIds);
 				$songData['arrange_type'] = $value['arrange_type'];
 				$songData['created_at'] = new DateTime();
 				$songData['updated_at'] = new DateTime();
@@ -266,13 +327,23 @@ class EventsController extends Controller
 			}
 			foreach($data['encore_songs'] as $key => $value)
 			{
-				$song_index = array_search($value['name'], array_column($songs, 'name'));
+				$song_index = array_search($value['name'], array_column($songMasters, 'name'));
 				if ($song_index === false) {
 					// TODO: 曲名からIDが取れなかった(上で確認してるからありえない)
 					echo '<pre>' . var_export($data['encore_song_names'], true) . '</pre>';
 					throw new Exception();
 				}
-				$song_id = $songs[$song_index]['song_id'];
+				$song_id = $songMasters[$song_index]['song_id'];
+				
+				// コラボアーティストのIDリストを取得
+				$collaboArtistNames = explode(',', $value['collabo_artists']);
+				$collaboArtistIds = array();
+				foreach($collaboArtistNames as $artistName){
+ 					if(empty($artistName)) continue;
+					
+					$artist_index = array_search($artistName, array_column($artistMasters, 'name'));
+					array_push($collaboArtistIds, $artistMasters[$artist_index]['artist_id']);
+				}
 				
 				$songData = array();
 				$songData['setlist_id'] = $setlistGroup->setlist_id;
@@ -280,7 +351,7 @@ class EventsController extends Controller
 				$songData['seq'] = $key;
 				$songData['song_id'] = $song_id;
 				$songData['is_medley'] = empty($value['is_short']) ? false : true;
-				$songData['collabo_artist_ids'] = "";
+				$songData['collabo_artist_ids'] = implode(",", $collaboArtistIds);
 				$songData['arrange_type'] = $value['arrange_type'];
 				$songData['created_at'] = new DateTime();
 				$songData['updated_at'] = new DateTime();
@@ -315,7 +386,9 @@ class EventsController extends Controller
 		$setlist = Setlist::where('event_id', $event_id)->first();
 		
 		// 曲マスタリストを取得
-		$song_master = Song::where('artist_id', $setlist->artist_id)->get();
+		$songMasters = Song::orderby('name', 'asc')->get();
+		// アーティストマスタを取得
+		$artistMasters = Artist::orderby('artist_id', 'asc')->get();
 		
 		$songDataList = array();
 		
@@ -328,12 +401,23 @@ class EventsController extends Controller
 			// セトリグループの種類ごとに曲名リストを作成する
 			foreach ($setlistSongs as $value)
 			{
-				$master = $song_master->where('song_id', $value->song_id)->first();
+				$master = $songMasters->where('song_id', $value->song_id)->first();
+				
+				// コラボアーティストIDから名前を取得
+				$collaboArtistIds = explode(',', $value['collabo_artist_ids']);
+				$collaboArtistNames = array();
+				foreach($collaboArtistIds as $artistId){
+ 					if(empty($artistId)) continue;
+					
+					$artist = $artistMasters->where('artist_id', $artistId)->first();
+					array_push($collaboArtistNames, $artist->name);
+				}
 				
 				$songData = array();
-				$songData['name']			= $master['name'];
-				$songData['is_short']		= $value['is_medley'];
-				$songData['arrange_type']	= $value['arrange_type'];
+				$songData['name']				= $master['name'];
+				$songData['is_short']			= $value['is_medley'];
+				$songData['arrange_type']		= $value['arrange_type'];
+				$songData['collabo_artists']	= implode(',', $collaboArtistNames);
 				
 				$songDataList[$group->setlist_group_seq][$value->seq] = $songData;
 			}
@@ -361,8 +445,6 @@ class EventsController extends Controller
 		// アーティスト最初の1件だけ取得
 		$artist = Artist::orderBy('artist_id', 'asc')->first();
 		$params['artist'] = $artist;
-		// アーティストIDが等しいアーティストの楽曲をすべて取得
-		$songMasters = Song::where('artist_id', $artist['artist_id'])->orderby('name', 'asc')->get();
 		$params['songMasters'] = $songMasters;
 		
 		return view('events/create')->with('params', $params);
