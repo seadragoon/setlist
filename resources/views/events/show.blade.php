@@ -16,7 +16,29 @@
                 会場名: {{ $param['event_data']->venue_name }}
             </div>
             <div>
-                イベント概要: {{ $param['event_data']->event_summary }}
+                イベント概要: {{ $param['event_data']->summary }}
+            </div>
+            <div>
+                イベントタイプ: 
+					@switch($param['event_data']->event_type)
+						@case(0)
+							ワンマン
+							@break
+						@case(1)
+							フェス
+							@break
+						@case(2)
+							ミニライブ
+							@break
+						@case(3)
+							ゲスト
+							@break
+						@default
+							その他
+					@endswitch
+            </div>
+            <div>
+                タグ: {{ $param['event_data']->tag_text }}
             </div>
         </div>
         

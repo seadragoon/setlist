@@ -89,6 +89,18 @@
                         {!! Form::text('event_summary', old('event_summary', $params['event_summary']), ['id' => 'event_summary', 'class' => 'form-control']) !!}
                     </div>
                 </div>
+                <div class="form-group">
+                    {!! Form::label('event_type', 'イベントタイプ', ['class' => 'col-sm-3 control-label']) !!}
+                    <div class="col-sm-8 col-xs-12">
+                		{!! Form::select('event_type', ['ワンマン', 'フェス', 'ミニライブ', 'ゲスト', 'その他'], old('event_type', $params['event_type']), ['id' => 'event_type', 'class' => 'form-control']) !!}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {!! Form::label('event_tag', 'タグ(カンマ区切りで入力してください)', ['class' => 'col-sm-6 control-label']) !!}
+                    <div class="col-sm-8 col-xs-12">
+                        {!! Form::text('event_tag', old('event_tag', $params['event_tag']), ['id' => 'event_tag', 'class' => 'form-control']) !!}
+                    </div>
+                </div>
                 
                 <hr>
                 <h4>セットリスト</h4>

@@ -91,6 +91,8 @@ class EventsController extends Controller
 		$params['event_name'] = null;
 		$params['event_venue'] = null;
 		$params['event_summary'] = null;
+		$params['event_type'] = 0;
+		$params['event_tag'] = null;
 		$params['songs'] = null;
 		$params['encore_songs'] = null;
 		
@@ -109,6 +111,8 @@ class EventsController extends Controller
 			'event_name'					=>'required|string|max:100',	// イベント名
 			'event_venue'					=>'required|string|max:100',	// 会場名
 			'event_summary'					=>'nullable|string|max:100',	// イベント概要
+			'event_type'					=>'integer|max:10',				// イベントタイプ
+			'event_tag'						=>'nullable|string|max:100',	// イベントタグ
 			'artist_id'						=>'required|numeric',			// アーティストID
 			'songs'							=>'required|array|min:1',		// 通常楽曲配列
 			'songs.*'						=>'required|array|min:2',		// 通常楽曲の連想配列
@@ -204,6 +208,8 @@ class EventsController extends Controller
 			$event->name = $data['event_name'];
 			$event->venue_name = $data['event_venue'];
 			$event->summary = $data['event_summary'];
+			$event->tag_text = $data['event_tag'];
+			$event->event_type = $data['event_type'];
 			$event->save();
 			
 			// setlistデータ登録
@@ -345,6 +351,8 @@ class EventsController extends Controller
 		$params['event_name'] = $event_data->name;
 		$params['event_venue'] = $event_data->venue_name;
 		$params['event_summary'] = $event_data->summary;
+		$params['event_type'] = $event_data->event_type;
+		$params['event_tag'] = $event_data->tag_text;
 		$params['songs'] = $songs;
 		$params['encore_songs'] = $encore_songs;
 		
