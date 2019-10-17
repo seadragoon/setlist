@@ -30,6 +30,7 @@
                     <ul class="navbar-nav mr-auto">
                         {{-- 各ページへのリンク --}}
 	                    <li class="nav-item"><a class="nav-link" href="{{ url('/artists') }}">{{ __('アーティスト一覧') }}</a></li>
+	                    <li class="nav-item"><a class="nav-link" href="{{ url('/aggregate') }}">{{ __('集計機能') }}</a></li>
                     </ul>
 
                     {{-- Navbarの右側 --}}

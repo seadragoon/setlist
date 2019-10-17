@@ -12,13 +12,13 @@
 */
 
 Route::redirect('/', 'index');
-
 Route::get('/index', 'IndexController@index');
 
 Route::get('/generateMaster', 'GenerateMasterController@index');
 
 Route::get('/songs/add', 'SongsController@add');
 Route::get('/artists/add', 'ArtistsController@add');
+Route::get('/aggregate', 'AggregateController@index');
 
 Route::resource('artists', 'ArtistsController');
 Route::resource('songs', 'SongsController');
