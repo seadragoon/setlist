@@ -31,14 +31,14 @@
         	<hr>
             {!! Form::model($params, ['route' => 'events.store', 'method' => 'post', 'class' => 'form-horizontal']) !!}
             	<h4>イベント詳細</h4>
-				<div class="form-group col-sm-6 col-xs-12">
+				<div class="form-group col-sm-6 col-12">
                 	{!! Form::label('event_date_name', '日付', ['class' => 'col-sm-3 control-label']) !!}
                     {!! Form::text('event_date', old('event_date', $params['event_date']), ['id' => 'event_date', 'class' => 'datepicker']) !!}
                     @if(!empty($errors->first('event_date')))
                     	<span class="text-danger">※必須項目です</span>
                     @endif
 				</div>
-				<div class="form-group col-sm-6 col-xs-12">
+				<div class="form-group col-sm-6 col-12">
                 	{!! Form::label('event_time_name', '開始時間', ['class' => 'col-sm-3 control-label']) !!}
                     {!! Form::text('event_time', old('event_time', $params['event_time']), ['id' => 'event_time', 'class' => 'datepicker']) !!}
                     @if(!empty($errors->first('event_time')))
@@ -47,7 +47,7 @@
 				</div>
                 <div class="form-group">
                     {!! Form::label('event_name', 'イベント名', ['class' => 'col-sm-3 control-label']) !!}
-                    <div class="col-sm-8 col-xs-12">
+                    <div class="col-sm-8 col-12">
                         {!! Form::text('event_name', old('event_name', $params['event_name']), ['id' => 'event_name', 'class' => 'form-control']) !!}
 	                    @if(!empty($errors->first('event_name')))
 	                    	<span class="text-danger">※必須項目です</span>
@@ -56,7 +56,7 @@
                 </div>
                 <div class="form-group">
                     {!! Form::label('event_venue', '会場名', ['class' => 'col-sm-3 control-label']) !!}
-                    <div class="col-sm-8 col-xs-12">
+                    <div class="col-sm-8 col-12">
                         {!! Form::text('event_venue', old('event_venue', $params['event_venue']), ['id' => 'event_venue', 'class' => 'form-control']) !!}
                         @if(!empty($errors->first('event_venue')))
 	                    	<span class="text-danger">※必須項目です</span>
@@ -65,19 +65,19 @@
                 </div>
                 <div class="form-group">
                     {!! Form::label('event_summary', 'イベント概要', ['class' => 'col-sm-3 control-label']) !!}
-                    <div class="col-sm-8 col-xs-12">
+                    <div class="col-sm-8 col-12">
                         {!! Form::text('event_summary', old('event_summary', $params['event_summary']), ['id' => 'event_summary', 'class' => 'form-control']) !!}
                     </div>
                 </div>
                 <div class="form-group">
                     {!! Form::label('event_type', 'イベントタイプ', ['class' => 'col-sm-3 control-label']) !!}
-                    <div class="col-sm-8 col-xs-12">
+                    <div class="col-sm-8 col-12">
                 		{!! Form::select('event_type', ['ワンマン', 'フェス', 'ミニライブ', 'ゲスト', 'その他'], old('event_type', $params['event_type']), ['id' => 'event_type', 'class' => 'form-control']) !!}
                     </div>
                 </div>
                 <div class="form-group">
                     {!! Form::label('event_tag', 'タグ(カンマ区切りで入力してください)', ['class' => 'col-sm-6 control-label']) !!}
-                    <div class="col-sm-8 col-xs-12">
+                    <div class="col-sm-8 col-12">
                         {!! Form::text('event_tag', old('event_tag', $params['event_tag']), ['id' => 'event_tag', 'class' => 'form-control']) !!}
                     </div>
                 </div>
@@ -87,7 +87,7 @@
                 <h5>・通常</h5>
                 <button type="button" id="addButton">追加</button>
                 <button type="button" id="removeButton">削除</button>
-				<div class="row col-sm-12 col-xs-12">
+				<div class="row col-sm-12 col-12">
                 	<div class="col-sm-1">楽曲番号</div>
                 	<div class="col-sm-6">楽曲名</div>
                 	<div class="col-sm-1">ショートVerか</div>
@@ -98,7 +98,7 @@
                 	@if(!empty(old('songs', $params['songs'])))
 	                	@foreach (old('songs', $params['songs']) as $index => $oldSong)
 						<div class="form-group" id="song_{{$index + 1}}">
-		                	<div class="row col-sm-12 col-xs-12">
+		                	<div class="row col-sm-12 col-12">
 			                    <div class="col-sm-1">
 			                        {!! Form::label('song_seq', ($index + 1), ['id' => 'song_seq_label', 'class' => 'control-label']) !!}
 			                    </div>
@@ -132,7 +132,7 @@
 		                @endforeach
 		            @else
 		                <div class="form-group" id="song_1">
-		                	<div class="row col-sm-12 col-xs-12">
+		                	<div class="row col-sm-12 col-12">
 			                    <div class="col-sm-1">
 			                        {!! Form::label('song_seq', 1, ['id' => 'song_seq_label', 'class' => 'control-label']) !!}
 			                    </div>
@@ -163,7 +163,7 @@
                 <h5>・アンコール</h5>
                 <button type="button" id="addButtonEncore">追加</button>
                 <button type="button" id="removeButtonEncore">削除</button>
-				<div class="row col-sm-8 col-xs-12">
+				<div class="row col-sm-8 col-12">
                 	<div class="col-sm-2">楽曲番号</div>
                 	<div class="col-sm-6">楽曲名</div>
                 	<div class="col-sm-2">ショートVerか</div>
@@ -173,7 +173,7 @@
                 	@if(!empty(old('encore_songs', $params['encore_songs'])))
 	                	@foreach (old('encore_songs', $params['encore_songs']) as $index => $oldSong)
 						<div class="form-group" id="encore_song_{{$index + 1}}">
-		                	<div class="row col-sm-12 col-xs-12">
+		                	<div class="row col-sm-12 col-12">
 			                    <div class="col-sm-1">
 			                        {!! Form::label('encore_song_seq', ($index + 1), ['id' => 'encore_song_seq_label', 'class' => 'control-label']) !!}
 			                    </div>
@@ -207,7 +207,7 @@
 		                @endforeach
 		            @else
 		                <div class="form-group" id="encore_song_1">
-		                	<div class="row col-sm-12 col-xs-12">
+		                	<div class="row col-sm-12 col-12">
 			                    <div class="col-sm-1">
 			                        {!! Form::label('encore_song_seq', 1, ['id' => 'encore_song_seq_label', 'class' => 'control-label']) !!}
 			                    </div>
