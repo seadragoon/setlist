@@ -87,22 +87,25 @@
                 <h5>・通常</h5>
                 <button type="button" id="addButton">追加</button>
                 <button type="button" id="removeButton">削除</button>
-				<div class="row col-sm-12 col-12">
-                	<div class="col-sm-1">楽曲番号</div>
-                	<div class="col-sm-6">楽曲名</div>
-                	<div class="col-sm-1">ショートVerか</div>
-                	<div class="col-sm-2">アレンジタイプ</div>
-                	<div class="col-sm-2">コラボアーティスト</div>
+				<div class="d-none d-sm-flex">
+					<div class="row col-sm-12 px-0">
+	                	<div class="col-sm-1">楽曲番号</div>
+	                	<div class="col-sm-6">楽曲名</div>
+	                	<div class="col-sm-1">ショートVerか</div>
+	                	<div class="col-sm-2">アレンジタイプ</div>
+	                	<div class="col-sm-2">コラボアーティスト</div>
+					</div>
 				</div>
                 <div id="songListArea">
                 	@if(!empty(old('songs', $params['songs'])))
 	                	@foreach (old('songs', $params['songs']) as $index => $oldSong)
 						<div class="form-group" id="song_{{$index + 1}}">
 		                	<div class="row col-sm-12 col-12">
-			                    <div class="col-sm-1">
-			                        {!! Form::label('song_seq', ($index + 1), ['id' => 'song_seq_label', 'class' => 'control-label']) !!}
+			                    <div class="col-sm-1 px-0">
+			                        {!! Form::label('song_seq', ($index + 1), ['id' => 'song_seq_label', 'class' => 'control-label']) !!}.
 			                    </div>
-			                    <div class="col-sm-6">
+			                    <div class="d-sm-none col-2 px-0">楽曲名</div>
+			                    <div class="col-sm-6 col-10 px-0">
 			                    	<div class="dropdown">
 				                        {!! Form::text('songs['.$index.'][name]', $oldSong['name'], ['id' => 'song_name', 'class' => 'form-control dropdown-toggle', 'autocomplete' => 'off', 'list' => 'test']) !!}
 				                        <datalist id="test">
@@ -112,13 +115,16 @@
 										</datalist>
 								    </div>
 			                    </div>
-			                	<div class="col-sm-1">
+			                    <div class="d-sm-none col-6 px-0">ショートVerか</div>
+			                	<div class="col-sm-1 col-6 px-0">
 			                		{!! Form::checkbox('songs['.$index.'][is_short]', true, !empty($oldSong['is_short']), ['id' => 'song_is_short', 'class' => 'form-control']) !!}
 			                    </div>
-			                	<div class="col-sm-2">
+			                    <div class="d-sm-none col-6 px-0">アレンジタイプ</div>
+			                	<div class="col-sm-2 col-6 px-0">
 			                		{!! Form::select('songs['.$index.'][arrange_type]', ['通常', 'Acostic', 'その他'], $oldSong['arrange_type'], ['id' => 'song_arrange_type', 'class' => 'form-control']) !!}
 			                    </div>
-			                	<div class="col-sm-2">
+			                    <div class="d-sm-none col-6 px-0">コラボアーティスト</div>
+			                	<div class="col-sm-2 col-6 px-0">
 			                        {!! Form::text('songs['.$index.'][collabo_artists]', $oldSong['collabo_artists'], ['id' => 'collabo_artists', 'class' => 'form-control']) !!}
 			                    </div>
 		                    </div>
@@ -133,10 +139,11 @@
 		            @else
 		                <div class="form-group" id="song_1">
 		                	<div class="row col-sm-12 col-12">
-			                    <div class="col-sm-1">
-			                        {!! Form::label('song_seq', 1, ['id' => 'song_seq_label', 'class' => 'control-label']) !!}
+			                    <div class="col-sm-1 px-0">
+			                        {!! Form::label('song_seq', 1, ['id' => 'song_seq_label', 'class' => 'control-label']) !!}.
 			                    </div>
-			                    <div class="col-sm-6">
+			                    <div class="d-sm-none col-2 px-0">楽曲名</div>
+			                    <div class="col-sm-6 col-10 px-0">
 			                    	<div class="dropdown">
 				                        {!! Form::text('songs[0][name]', '', ['id' => 'song_name', 'class' => 'form-control dropdown-toggle', 'autocomplete' => 'off', 'list' => 'test']) !!}
 				                        <datalist id="test">
@@ -146,13 +153,16 @@
 										</datalist>
 								    </div>
 			                    </div>
-			                	<div class="col-sm-1">
+			                    <div class="d-sm-none col-6 px-0">ショートVerか</div>
+			                	<div class="col-sm-1 col-6 px-0">
 			                		{!! Form::checkbox('songs[0][is_short]', true, null, ['id' => 'song_is_short', 'class' => 'form-control']) !!}
 			                    </div>
-			                	<div class="col-sm-2">
+			                    <div class="d-sm-none col-6 px-0">アレンジタイプ</div>
+			                	<div class="col-sm-2 col-6 px-0">
 			                		{!! Form::select('songs[0][arrange_type]', ['通常', 'Acostic', 'その他'], 0, ['id' => 'song_arrange_type', 'class' => 'form-control']) !!}
 			                    </div>
-			                	<div class="col-sm-2">
+			                    <div class="d-sm-none col-6 px-0">コラボアーティスト</div>
+			                	<div class="col-sm-2 col-6 px-0">
 			                        {!! Form::text('songs[0][collabo_artists]', null, ['id' => 'collabo_artists', 'class' => 'form-control']) !!}
 			                    </div>
 		                    </div>
@@ -163,21 +173,25 @@
                 <h5>・アンコール</h5>
                 <button type="button" id="addButtonEncore">追加</button>
                 <button type="button" id="removeButtonEncore">削除</button>
-				<div class="row col-sm-8 col-12">
-                	<div class="col-sm-2">楽曲番号</div>
-                	<div class="col-sm-6">楽曲名</div>
-                	<div class="col-sm-2">ショートVerか</div>
-                	<div class="col-sm-2">アレンジタイプ</div>
+				<div class="d-none d-sm-flex">
+					<div class="row col-sm-12 px-0">
+	                	<div class="col-sm-1">楽曲番号</div>
+	                	<div class="col-sm-6">楽曲名</div>
+	                	<div class="col-sm-1">ショートVerか</div>
+	                	<div class="col-sm-2">アレンジタイプ</div>
+	                	<div class="col-sm-2">コラボアーティスト</div>
+					</div>
 				</div>
                 <div id="encoreSongListArea">
                 	@if(!empty(old('encore_songs', $params['encore_songs'])))
 	                	@foreach (old('encore_songs', $params['encore_songs']) as $index => $oldSong)
 						<div class="form-group" id="encore_song_{{$index + 1}}">
 		                	<div class="row col-sm-12 col-12">
-			                    <div class="col-sm-1">
-			                        {!! Form::label('encore_song_seq', ($index + 1), ['id' => 'encore_song_seq_label', 'class' => 'control-label']) !!}
+			                    <div class="col-sm-1 px-0">
+			                        {!! Form::label('encore_song_seq', ($index + 1), ['id' => 'encore_song_seq_label', 'class' => 'control-label']) !!}.
 			                    </div>
-			                    <div class="col-sm-6">
+			                    <div class="d-sm-none col-2 px-0">楽曲名</div>
+			                    <div class="col-sm-6 col-10 px-0">
 			                    	<div class="dropdown">
 				                        {!! Form::text('encore_songs['.$index.'][name]', $oldSong['name'], ['id' => 'encore_song_name', 'class' => 'form-control dropdown-toggle', 'autocomplete' => 'off', 'list' => 'test']) !!}
 				                        <datalist id="test">
@@ -187,13 +201,16 @@
 										</datalist>
 								    </div>
 			                    </div>
-			                	<div class="col-sm-1">
+			                    <div class="d-sm-none col-6 px-0">ショートVerか</div>
+			                	<div class="col-sm-1 col-6 px-0">
 			                		{!! Form::checkbox('encore_songs['.$index.'][is_short]', true, !empty($oldSong['is_short']), ['id' => 'encore_song_is_short', 'class' => 'form-control']) !!}
 			                    </div>
-			                	<div class="col-sm-2">
+			                    <div class="d-sm-none col-6 px-0">アレンジタイプ</div>
+			                	<div class="col-sm-2 col-6 px-0">
 			                		{!! Form::select('encore_songs['.$index.'][arrange_type]', ['通常', 'Acostic', 'その他'], $oldSong['arrange_type'], ['id' => 'encore_song_arrange_type', 'class' => 'form-control']) !!}
 			                    </div>
-			                	<div class="col-sm-2">
+			                    <div class="d-sm-none col-6 px-0">コラボアーティスト</div>
+			                	<div class="col-sm-2 col-6 px-0">
 			                        {!! Form::text('encore_songs['.$index.'][collabo_artists]', $oldSong['collabo_artists'], ['id' => 'collabo_artists', 'class' => 'form-control']) !!}
 			                    </div>
 		                    </div>
@@ -208,10 +225,11 @@
 		            @else
 		                <div class="form-group" id="encore_song_1">
 		                	<div class="row col-sm-12 col-12">
-			                    <div class="col-sm-1">
-			                        {!! Form::label('encore_song_seq', 1, ['id' => 'encore_song_seq_label', 'class' => 'control-label']) !!}
+			                    <div class="col-sm-1 px-0">
+			                        {!! Form::label('encore_song_seq', 1, ['id' => 'encore_song_seq_label', 'class' => 'control-label']) !!}.
 			                    </div>
-			                    <div class="col-sm-6">
+			                    <div class="d-sm-none col-2 px-0">楽曲名</div>
+			                    <div class="col-sm-6 col-10 px-0">
 			                    	<div class="dropdown">
 				                        {!! Form::text('encore_songs[0][name]', '', ['id' => 'encore_song_name', 'class' => 'form-control dropdown-toggle', 'autocomplete' => 'off', 'list' => 'test']) !!}
 				                        <datalist id="test">
@@ -221,13 +239,16 @@
 										</datalist>
 								    </div>
 			                    </div>
-			                	<div class="col-sm-1">
+			                    <div class="d-sm-none col-6 px-0">ショートVerか</div>
+			                	<div class="col-sm-1 col-6 px-0">
 			                		{!! Form::checkbox('encore_songs[0][is_short]', true, null, ['id' => 'encore_song_is_short', 'class' => 'form-control']) !!}
 			                    </div>
-			                	<div class="col-sm-2">
+			                    <div class="d-sm-none col-6 px-0">アレンジタイプ</div>
+			                	<div class="col-sm-2 col-6 px-0">
 			                		{!! Form::select('encore_songs[0][arrange_type]', ['通常', 'Acostic', 'その他'], 0, ['id' => 'encore_song_arrange_type', 'class' => 'form-control']) !!}
 			                    </div>
-			                	<div class="col-sm-2">
+			                    <div class="d-sm-none col-6 px-0">コラボアーティスト</div>
+			                	<div class="col-sm-2 col-6 px-0">
 			                        {!! Form::text('encore_songs[0][collabo_artists]', null, ['id' => 'collabo_artists', 'class' => 'form-control']) !!}
 			                    </div>
 		                    </div>
@@ -240,10 +261,8 @@
                 {{Form::hidden('artist_id', $params['artist']['artist_id'], ['id' => 'artist_id'])}}
                 
                 <div class="form-group">
-                	<div class="row justify-content-end">
-	                    <div class="col-sm-6">
-	                        {!! Form::submit('送信', ['class' => 'btn btn-default']) !!}
-	                    </div>
+                    <div class="col-sm-12 col-12">
+                        {!! Form::submit('送信', ['class' => 'btn btn-default']) !!}
                     </div>
                 </div>
             {!! Form::close() !!}

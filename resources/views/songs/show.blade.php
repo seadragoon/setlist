@@ -22,29 +22,29 @@
         <br>
         <br>
         <h5>歌唱したイベントリスト</h5>
-        <div class="panel-body">
-            <table class="table table-striped task-table">
-                <thead>
-                    <th>日付</th>
-                    <th>イベント名</th>
-                    <th>会場名</th>
-                </thead>
-                <tbody>
-                    @foreach ($param['eventDataList'] as $event)
-                        <tr>
-                            <td class="table-text">
-                                {{ date('Y年m月d日',  strtotime($event->datetime)) }}
-                            </td>
-                            <td class="table-text">
-                                {{ link_to_route('events.show', $event->name, $event->event_id, ['class' => 'btn btn-sm btn-default']) }}
-                            </td>
-                            <td class="table-text">
-                                {{ $event->venue_name }}
-                            </td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
+        <div class="d-none d-sm-flex">
+            <div class="col-sm-5">イベント名</div>
+            <div class="col-sm-3">日付</div>
+            <div class="col-sm-4">会場名</div>
+        </div>
+        <div class="mx-2">
+            @foreach ($param['eventDataList'] as $event)
+                @if($loop->iteration == 1)
+                <div class="row border-top border-bottom py-2">
+                @else
+                <div class="row border-bottom py-2">
+                @endif
+                    <div class="col-sm-5 col-12">
+                        {{ link_to_route('events.show', $event->name, $event->event_id, ['class' => 'btn-default']) }}
+                    </div>
+                    <div class="col-sm-3 col-12">
+                        {{ date('Y年m月d日',  strtotime($event->datetime)) }}
+                    </div>
+                    <div class="col-sm-4 col-12">
+                        {{ $event->venue_name }}
+                    </div>
+                </div>
+            @endforeach
         </div>
         <br>
         <div class="panel-footer">
