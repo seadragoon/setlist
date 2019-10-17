@@ -31,39 +31,19 @@
         	<hr>
             {!! Form::model($params, ['route' => 'events.store', 'method' => 'post', 'class' => 'form-horizontal']) !!}
             	<h4>イベント詳細</h4>
-				<div class="form-group">
-					<div class="table-responsive">
-						<table class="table table-borderless table-condensed">
-							<thead>
-								<td>日付</td>
-								<td>開始時間</td>
-							</thead>
-							<tbody>
-								<tr>
-									<td>
-										{!! Form::text('event_date', old('event_date', $params['event_date']), ['id' => 'event_date', 'class' => 'datepicker']) !!}
-									</td>
-									<td>
-										{!! Form::text('event_time', old('event_time', $params['event_time']), ['id' => 'event_time', 'class' => 'datepicker']) !!}
-									</td>
-								</tr>
-								@if(!empty($errors->first('event_date')) || !empty($errors->first('event_time')))
-								<tr>
-									<td>
-										@if(!empty($errors->first('event_date')))
-											<span class="text-danger">※必須項目です</span>
-										@endif
-									</td>
-									<td>
-										@if(!empty($errors->first('event_time')))
-											<span class="text-danger">※必須項目です</span>
-										@endif
-									</td>
-								</tr>
-								@endif
-							</tbody>
-						</table>
-					</div>
+				<div class="form-group col-sm-6 col-xs-12">
+                	{!! Form::label('event_date_name', '日付', ['class' => 'col-sm-3 control-label']) !!}
+                    {!! Form::text('event_date', old('event_date', $params['event_date']), ['id' => 'event_date', 'class' => 'datepicker']) !!}
+                    @if(!empty($errors->first('event_date')))
+                    	<span class="text-danger">※必須項目です</span>
+                    @endif
+				</div>
+				<div class="form-group col-sm-6 col-xs-12">
+                	{!! Form::label('event_time_name', '開始時間', ['class' => 'col-sm-3 control-label']) !!}
+                    {!! Form::text('event_time', old('event_time', $params['event_time']), ['id' => 'event_time', 'class' => 'datepicker']) !!}
+                    @if(!empty($errors->first('event_time')))
+                    	<span class="text-danger">※必須項目です</span>
+                    @endif
 				</div>
                 <div class="form-group">
                     {!! Form::label('event_name', 'イベント名', ['class' => 'col-sm-3 control-label']) !!}
@@ -273,6 +253,9 @@
         </div>
     </div>
     
+@endsection
+
+@section('script')
     
     <script>
 	$(function(){
@@ -453,6 +436,10 @@
 //        });
 	});
     </script>
+    
+@endsection
+
+@section('style')
     
     <style type="text/css">
 	    .dropdown-menu {
