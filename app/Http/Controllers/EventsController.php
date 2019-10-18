@@ -450,14 +450,6 @@ class EventsController extends Controller
 		return view('events/create')->with('params', $params);
 	}
 	
-	public function update(Request $request, $id)
-	{
-		$task = Task::find($id);
-		$task->fill($request->all());
-		$task->save();
-		return redirect()->route('tasks.index');
-	}
-	
 	public function destroy($id)
 	{
 		$task = Task::find($id);
