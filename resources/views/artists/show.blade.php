@@ -16,6 +16,9 @@
         <br>
         {{ link_to_route('artists.edit', '編集', $param['artist']->artist_id, ['class' => 'btn btn-sm btn-default']) }}
         <br>
+        <h4>集計ページ</h4>
+        {{ link_to('aggregate/show/'.$param['artist']->artist_id, '集計ページ', ['class' => 'btn btn-sm btn-default']) }}
+        <br>
         <h4>楽曲追加</h4>
         {{ link_to_action('SongsController@add', '追加', ['artist_id' => $param['artist']->artist_id], ['class' => 'btn btn-sm btn-default']) }}
         <br>
