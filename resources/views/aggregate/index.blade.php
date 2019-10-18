@@ -8,6 +8,7 @@
         <div class="panel-heading">
         </div>
         <div class="panel-body">
+            <br>
             <h2>集計機能</h2>
             <h5>アーティストリスト</h5>
             <ul>
