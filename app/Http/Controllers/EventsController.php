@@ -456,4 +456,13 @@ class EventsController extends Controller
 		$task->delete();
 		return redirect()->route('tasks.index');
 	}
+	
+	public function search(Request $request)
+	{
+		$keyword = $request->input('keyword');
+		
+		$params = array();
+		$params['keyword'] = $keyword;
+		return view('events/search')->with('params', $params);
+	}
 }

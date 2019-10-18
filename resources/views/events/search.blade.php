@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $params['artist']->name.'集計データ')
+@section('title', 'タスク一覧')
 
 @section('content')
 
@@ -9,9 +9,10 @@
         </div>
         <div class="panel-body">
             <br>
-            <h2>集計機能</h2>
-            アーティスト名: {{ $params['artist']->name }}
+            <h2>検索結果</h2>
+            検索ワード: {{ $params['keyword'] }}
             <br>
+            {{--
             <h4>演奏回数ランキング</h4>
             <div class="d-none d-sm-flex">
                 <div class="col-sm-8">楽曲名</div>
@@ -33,21 +34,12 @@
                     </div>
                 @endforeach
             </div>
+            --}}
         </div>
         <br>
         <div class="panel-footer">
             {{ link_to(url()->previous(), '戻る') }}
         </div>
     </div>
-    
-	<script>
-	$(function(){
-		$(".form_delete").submit(function(){
-			if(!confirm('本当に削除しますか？')){
-				return false;
-			}
-		});
-	});
-	</script>
 
 @endsection

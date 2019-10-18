@@ -31,6 +31,18 @@
                         {{-- 各ページへのリンク --}}
 	                    <li class="nav-item"><a class="nav-link" href="{{ url('/artists') }}">{{ __('アーティスト一覧') }}</a></li>
 	                    <li class="nav-item"><a class="nav-link" href="{{ url('/aggregate') }}">{{ __('集計機能') }}</a></li>
+	                    
+                        {{-- 検索 --}}
+                        <li class="nav-item">
+                            {!! Form::open(['action' => 'EventsController@search', 'method' => 'get', 'class' => 'form-inline my-2 my-lg-0']) !!}
+                                <div class="form-group">
+                                    {{ Form::text('keyword', null, ['class' => 'form-control mr-sm-2', 'placeholder' => '検索...', 'aria-label' => '検索...']) }}
+                                </div>
+                                <div class="form-group">
+                                    {!! Form::submit('検索', ['class' => 'btn btn-outline-success my-2 my-sm-0']) !!}
+                                </div>
+                            {!! Form::close() !!}
+                        </li>
                     </ul>
 
                     {{-- Navbarの右側 --}}
