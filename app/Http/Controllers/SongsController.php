@@ -102,4 +102,33 @@ class SongsController extends Controller
 		$song->save();
 		return redirect()->route('artists.show', $song->artist_id);
 	}
+	
+	/**
+	 * 検索アクション
+	 */
+	public function search(Request $request)
+	{
+		$keyword = $request->input('keyword');
+		$songs = array();
+		
+		if (!empty($keyword)) {
+			// 楽曲名部分一致で検索
+			$songs = Song::where('name', 'LIKE', "%$keyword%")->orderby('name', 'asc')->get()->toArray();
+			
+			// 対応するアーティスト名を取得
+			$artists = Artist::whereIn('artist_id', array_unique(array_column($songs, 'artist_id')))->get();
+			
+			foreach ($songs as $key => $song) {
+				$target = $artists->where('artist_id', $song['artist_id'])->first();
+				
+				$songs[$key]['artist_id'] = $target->artist_id;
+				$songs[$key]['artist_name'] = $target->name;
+			}
+		}
+		
+		$params = array();
+		$params['keyword'] = $keyword;
+		$params['result'] = $songs;
+		return view('songs/search')->with('params', $params);
+	}
 }

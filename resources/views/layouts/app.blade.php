@@ -29,7 +29,8 @@
                     {{-- Navbarの左側 --}}
                     <ul class="navbar-nav mr-auto">
                         {{-- 各ページへのリンク --}}
-	                    <li class="nav-item"><a class="nav-link" href="{{ url('/artists') }}">{{ __('アーティスト一覧') }}</a></li>
+	                    <li class="nav-item"><a class="nav-link" href="{{ url('/artists') }}">{{ __('アーティスト情報') }}</a></li>
+	                    <li class="nav-item"><a class="nav-link" href="{{ url('/songs/search') }}">{{ __('楽曲情報') }}</a></li>
 	                    <li class="nav-item"><a class="nav-link" href="{{ url('/aggregate') }}">{{ __('集計機能') }}</a></li>
 	                    
                         {{-- 検索 --}}

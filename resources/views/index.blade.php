@@ -1,63 +1,22 @@
 @extends('layouts.app')
 
-@section('title', 'イベント一覧')
+@section('title', 'イベント情報')
 
 @section('content')
 
     <div class="panel panel-default">
         <div class="panel-heading">
-            イベント一覧
         </div>
         <div class="panel-body">
-        
-            <!--
-            <div class="d-flex d-sm-none">
-                <table class="table table-striped">
-                    <tbody>
-                        @foreach ($events as $event)
-                            <tr>
-                                <td>
-                                    <div>
-                                        {{ date('Y年m月d日',  strtotime($event->datetime)) }}
-                                    </div>
-                                    <div>
-                                        {{ link_to_route('events.show', $event->name, $event->event_id, ['class' => 'btn-default']) }}
-                                    </div>
-                                    <div>
-                                        {{ $event->venue_name }}
-                                    </div>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
-            <div class="d-none d-sm-flex">
-                <table class="table table-striped">
-                    <thead>
-                        <th>日付</th>
-                        <th>イベント名</th>
-                        <th>会場名</th>
-                    </thead>
-                    <tbody>
-                        @foreach ($events as $event)
-                            <tr>
-                                <td class="table-text">
-                                    {{ date('Y年m月d日',  strtotime($event->datetime)) }}
-                                </td>
-                                <td class="table-text">
-                                    {{ link_to_route('events.show', $event->name, $event->event_id, ['class' => 'btn btn-sm btn-default']) }}
-                                </td>
-                                <td class="table-text">
-                                    {{ $event->venue_name }}
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
-            -->
-            
+            <br>
+            <h4>イベント検索</h4>
+            {!! Form::open(['action' => 'EventsController@search', 'method' => 'get', 'class' => 'form-inline']) !!}
+                {{ Form::label('keyword_label', '検索ワード：', ['id' => 'keyword_label', 'class' => 'control-label']) }}
+                {{ Form::text('keyword', null, ['class' => 'form-control', 'placeholder' => '検索...', 'aria-label' => '検索...']) }}
+                {!! Form::submit('検索', ['class' => 'btn']) !!}
+            {!! Form::close() !!}
+            <br>
+            <h4>イベント一覧</h4>
             <div class="d-none d-sm-flex">
                 <div class="col-sm-5">イベント名</div>
                 <div class="col-sm-3">日付</div>

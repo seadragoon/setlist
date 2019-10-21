@@ -16,10 +16,12 @@ Route::get('/index', 'IndexController@index');
 
 Route::get('/generateMaster', 'GenerateMasterController@index');
 
-Route::get('/songs/add', 'SongsController@add');
 Route::get('/artists/add', 'ArtistsController@add');
+Route::get('/songs/add', 'SongsController@add');
 
 Route::get('/events/search', 'EventsController@search');
+Route::get('/artists/search', 'ArtistsController@search');
+Route::get('/songs/search', 'SongsController@search');
 
 Route::get('/aggregate', 'AggregateController@index');
 Route::get('/aggregate/show/{artist_id}', 'AggregateController@show');

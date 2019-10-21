@@ -76,4 +76,20 @@ class ArtistsController extends Controller
 		$artist->save();
 		return redirect()->route('artists.index');
 	}
+	
+	/**
+	 * 検索アクション
+	 */
+	public function search(Request $request)
+	{
+		$keyword = $request->input('keyword');
+		
+		// アーティスト名部分一致で検索
+		$artists = Artist::where('name', 'LIKE', "%$keyword%")->orderby('name', 'asc')->get();
+		
+		$params = array();
+		$params['keyword'] = $keyword;
+		$params['result'] = $artists;
+		return view('artists/search')->with('params', $params);
+	}
 }
