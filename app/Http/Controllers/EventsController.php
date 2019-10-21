@@ -457,12 +457,42 @@ class EventsController extends Controller
 		return redirect()->route('tasks.index');
 	}
 	
+	/**
+	 * 検索アクション
+	 */
 	public function search(Request $request)
 	{
 		$keyword = $request->input('keyword');
 		
+		// アーティスト名完全一致検索→artist_idが等しいセトリデータを検索して引っかかったイベントリストを表示
+		$artist = Artist::where('name', $keyword)->first();
+		
+		$events = array();
+		
+		// アーティストが見つかった場合はアーティストから検索
+		if (!empty($artist))
+		{
+			// 一致したアーティストのセトリリストを取得
+			$setlists = Setlist::where('artist_id', $artist->artist_id)->get();
+			
+			// 抽出したイベントIDを含むイベントを全て取得
+			$events = Event::whereIn('event_id', array_column($setlists->toArray(), 'event_id'))
+						->orderBy('datetime', 'desc')->get();
+		}
+		// 通常はイベントデータから検索
+		else
+		{
+			// イベント名、イベント概要、会場名、タグテキストを検索（完全一致）
+			$events = Event::where('name', 'LIKE', "%$keyword%")
+						->orWhere('summary', 'LIKE', "%$keyword%")
+						->orWhere('venue_name', 'LIKE', "%$keyword%")
+						->orWhere('tag_text', 'LIKE', "%$keyword%")
+						->orderBy('datetime', 'desc')->get();
+		}
+		
 		$params = array();
 		$params['keyword'] = $keyword;
+		$params['result'] = $events;
 		return view('events/search')->with('params', $params);
 	}
 }
