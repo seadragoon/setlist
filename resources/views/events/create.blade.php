@@ -25,9 +25,10 @@
 
     <div class="panel panel-default">
         <div class="panel-heading">
-            イベント追加
         </div>
         <div class="panel-body">
+        	<br>
+        	<h4>イベント追加</h4>
         	<hr>
             {!! Form::model($params, ['route' => 'events.store', 'method' => 'post', 'class' => 'form-horizontal']) !!}
             	<h4>イベント詳細</h4>

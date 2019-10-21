@@ -9,7 +9,7 @@
         </div>
         <div class="panel-body">
             <br>
-            <h2>集計機能</h2>
+            <h4>集計機能</h4>
             <h5>アーティストリスト</h5>
             <ul>
                 @foreach ($params['artists'] as $artist)
