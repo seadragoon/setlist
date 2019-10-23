@@ -184,11 +184,13 @@
 		}
 		.cell a {
 	    	display: block;
+			text-decoration: none;
 		}
 		.cell .day {
 			font-size: 12px;
 			text-align: left;
 			margin: 0px;
+			color: black;
 		}
 		.cell .count {
 			font-size: 24px;
