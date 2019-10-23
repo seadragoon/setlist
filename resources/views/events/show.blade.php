@@ -47,7 +47,18 @@
         <h5>・通常</h5>
         @foreach ($param['song_list'] as $key => $song)
         	<div>
-	        	{{ $song['seq'] }}.　{{ link_to_route('songs.show', $song['name'], $song['song_id']) }}{{ empty($song['collabo_artists']) ? "" : "（with ".$song['collabo_artists']."）"}}{{ empty($song['is_short']) ? "" : "（short.ver）"}}{{ $song['arrange_type'] === 1 ? "（Acostic）" : "" }}
+	        	{{ $song['seq'] }}.　{{ link_to_route('songs.show', $song['name'], $song['song_id']) }}{{ empty($song['collabo_artists']) ? "" : "（with ".$song['collabo_artists']."）"}}{{ empty($song['is_short']) ? "" : "（short.ver）"}}
+					@switch($song['arrange_type'])
+						@case(1)
+							(Acostic)
+							@break
+						@case(2)
+							(Original)
+							@break
+						@case(3)
+							(Christmas)
+							@break
+					@endswitch
         	</div>
         @endforeach
         <br>
@@ -55,7 +66,18 @@
 	        <h5>・アンコール</h5>
 	        @foreach ($param['encore_song_list'] as $key => $song)
 	        	<div>
-	        		{{ $song['seq'] }}.　{{ link_to_route('songs.show', $song['name'], $song['song_id']) }}{{ empty($song['collabo_artists']) ? "" : "（with ".$song['collabo_artists']."）"}}{{ empty($song['is_short']) ? "" : "(short.ver)"}}{{ $song['arrange_type'] === 1 ? "(Acostic)" : "" }}
+	        		{{ $song['seq'] }}.　{{ link_to_route('songs.show', $song['name'], $song['song_id']) }}{{ empty($song['collabo_artists']) ? "" : "（with ".$song['collabo_artists']."）"}}{{ empty($song['is_short']) ? "" : "(short.ver)"}}
+					@switch($song['arrange_type'])
+						@case(1)
+							(Acostic)
+							@break
+						@case(2)
+							(Original)
+							@break
+						@case(3)
+							(Christmas)
+							@break
+					@endswitch
 	        	</div>
 	        @endforeach
         	<br>

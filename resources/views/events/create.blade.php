@@ -122,7 +122,7 @@
 			                    </div>
 			                    <div class="d-sm-none col-6 px-0">アレンジタイプ</div>
 			                	<div class="col-sm-2 col-6 px-0">
-			                		{!! Form::select('songs['.$index.'][arrange_type]', ['通常', 'Acostic', 'その他'], $oldSong['arrange_type'], ['id' => 'song_arrange_type', 'class' => 'form-control']) !!}
+			                		{!! Form::select('songs['.$index.'][arrange_type]', ['通常', 'Acostic', 'Original', 'Christmas', 'その他'], $oldSong['arrange_type'], ['id' => 'song_arrange_type', 'class' => 'form-control']) !!}
 			                    </div>
 			                    <div class="d-sm-none col-6 px-0">コラボアーティスト</div>
 			                	<div class="col-sm-2 col-6 px-0">
@@ -160,7 +160,7 @@
 			                    </div>
 			                    <div class="d-sm-none col-6 px-0">アレンジタイプ</div>
 			                	<div class="col-sm-2 col-6 px-0">
-			                		{!! Form::select('songs[0][arrange_type]', ['通常', 'Acostic', 'その他'], 0, ['id' => 'song_arrange_type', 'class' => 'form-control']) !!}
+			                		{!! Form::select('songs[0][arrange_type]', ['通常', 'Acostic', 'Original', 'Christmas', 'その他'], 0, ['id' => 'song_arrange_type', 'class' => 'form-control']) !!}
 			                    </div>
 			                    <div class="d-sm-none col-6 px-0">コラボアーティスト</div>
 			                	<div class="col-sm-2 col-6 px-0">
@@ -208,7 +208,7 @@
 			                    </div>
 			                    <div class="d-sm-none col-6 px-0">アレンジタイプ</div>
 			                	<div class="col-sm-2 col-6 px-0">
-			                		{!! Form::select('encore_songs['.$index.'][arrange_type]', ['通常', 'Acostic', 'その他'], $oldSong['arrange_type'], ['id' => 'encore_song_arrange_type', 'class' => 'form-control']) !!}
+			                		{!! Form::select('encore_songs['.$index.'][arrange_type]', ['通常', 'Acostic', 'Original', 'Christmas', 'その他'], $oldSong['arrange_type'], ['id' => 'encore_song_arrange_type', 'class' => 'form-control']) !!}
 			                    </div>
 			                    <div class="d-sm-none col-6 px-0">コラボアーティスト</div>
 			                	<div class="col-sm-2 col-6 px-0">
@@ -246,7 +246,7 @@
 			                    </div>
 			                    <div class="d-sm-none col-6 px-0">アレンジタイプ</div>
 			                	<div class="col-sm-2 col-6 px-0">
-			                		{!! Form::select('encore_songs[0][arrange_type]', ['通常', 'Acostic', 'その他'], 0, ['id' => 'encore_song_arrange_type', 'class' => 'form-control']) !!}
+			                		{!! Form::select('encore_songs[0][arrange_type]', ['通常', 'Acostic', 'Original', 'Christmas', 'その他'], 0, ['id' => 'encore_song_arrange_type', 'class' => 'form-control']) !!}
 			                    </div>
 			                    <div class="d-sm-none col-6 px-0">コラボアーティスト</div>
 			                	<div class="col-sm-2 col-6 px-0">
