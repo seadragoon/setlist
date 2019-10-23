@@ -26,6 +26,6 @@ Route::get('/songs/search', 'SongsController@search');
 Route::get('/aggregate', 'AggregateController@index');
 Route::get('/aggregate/show/{artist_id}', 'AggregateController@show');
 
-Route::resource('artists', 'ArtistsController', ['only' => ['index', 'show', 'edit', 'update', 'destroy'], 'store']);
+Route::resource('artists', 'ArtistsController', ['only' => ['index', 'show', 'edit', 'update', 'destroy', 'store']]);
 Route::resource('songs', 'SongsController', ['only' => ['index', 'show', 'edit', 'update', 'destroy', 'store']]);
 Route::resource('events', 'EventsController', ['only' => ['index', 'show', 'edit', 'create', 'destroy', 'store']]);
