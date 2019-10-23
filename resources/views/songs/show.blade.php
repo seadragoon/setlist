@@ -10,7 +10,7 @@
         <h4>楽曲データ</h4>
         <div class="panel-body">
             <div>
-                アーティスト名: {{ $param['artist']->name }}
+                アーティスト名: {{ link_to_route('artists.show', $param['artist']->name, $param['artist']->artist_id) }}
             </div>
             <div>
                 曲名: {{ $param['song']->name }}

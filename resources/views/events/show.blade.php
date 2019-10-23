@@ -40,6 +40,9 @@
             <div>
                 タグ: {{ $param['event_data']->tag_text }}
             </div>
+            <div>
+                アーティスト名: {{ link_to_route('artists.show', $param['artist']->name, $param['artist']->artist_id) }}
+            </div>
         </div>
         
         <hr>

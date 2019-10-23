@@ -78,9 +78,11 @@ class EventsController extends Controller
 		$event_data = Event::where('event_id', $event_id)->first();
 		
 		$param = array();
+		$param['event_data'] = $event_data;
+		// TODO: 以下は複数アーティスト対応する場合には確認する必要あり
+		$param['artist'] = $artistMasters->where('artist_id', $setlist->artist_id)->first();
 		$param['song_list'] = $song_list;
 		$param['encore_song_list'] = $encore_song_list;
-		$param['event_data'] = $event_data;
 		
 		//echo '<pre>' . var_export($param, true) . '</pre>';
 		
