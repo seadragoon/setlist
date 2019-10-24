@@ -465,6 +465,14 @@ class EventsController extends Controller
 	public function search(Request $request)
 	{
 		$keyword = $request->input('keyword');
+		$date_from = empty($request->input('date_from')) ? '1970-1-1' : $request->input('date_from');
+		$date_to = empty($request->input('date_to')) ? '2099-1-1' : $request->input('date_to');
+		
+		$fromDate = new Datetime($date_from);
+		$toDate = new Datetime($date_to);
+		$toDate->setTime(23, 59, 59);	// その日の最後に設定
+		// \Log::debug($fromDate->format('Y-m-d H:i:s'));
+		// \Log::debug($toDate->format('Y-m-d H:i:s'));
 		
 		// アーティスト名完全一致検索→artist_idが等しいセトリデータを検索して引っかかったイベントリストを表示
 		$artist = Artist::where('name', $keyword)->first();
@@ -479,21 +487,34 @@ class EventsController extends Controller
 			
 			// 抽出したイベントIDを含むイベントを全て取得
 			$events = Event::whereIn('event_id', array_column($setlists->toArray(), 'event_id'))
+						->whereBetween('datetime', [$fromDate, $toDate])
 						->orderBy('datetime', 'desc')->get();
 		}
 		// 通常はイベントデータから検索
 		else
 		{
-			// イベント名、イベント概要、会場名、タグテキストを検索（完全一致）
-			$events = Event::where('name', 'LIKE', "%$keyword%")
-						->orWhere('summary', 'LIKE', "%$keyword%")
-						->orWhere('venue_name', 'LIKE', "%$keyword%")
-						->orWhere('tag_text', 'LIKE', "%$keyword%")
-						->orderBy('datetime', 'desc')->get();
+			// keywordが空なら日付のみの検索
+			if (empty($keyword))
+			{
+				$events = Event::whereBetween('datetime', [$fromDate, $toDate])
+							->orderBy('datetime', 'desc')->get();
+			}
+			else
+			{
+				// イベント名、イベント概要、会場名、タグテキストを検索（完全一致）
+				$events = Event::where('name', 'LIKE', "%$keyword%")
+							->orWhere('summary', 'LIKE', "%$keyword%")
+							->orWhere('venue_name', 'LIKE', "%$keyword%")
+							->orWhere('tag_text', 'LIKE', "%$keyword%")
+							->whereBetween('datetime', [$fromDate, $toDate])
+							->orderBy('datetime', 'desc')->get();
+			}
 		}
 		
 		$params = array();
 		$params['keyword'] = $keyword;
+		$params['date_from'] = $request->input('date_from');
+		$params['date_to'] = $request->input('date_to');
 		$params['result'] = $events;
 		return view('events/search')->with('params', $params);
 	}

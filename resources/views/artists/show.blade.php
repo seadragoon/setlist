@@ -69,6 +69,7 @@
 	// 定数定義
 	const weeks = ['日', '月', '火', '水', '木', '金', '土'];
 	const todayDate = new Date();
+	const artistName = "{{ $param['artist']->name }}";
 	// 変数定義・初期化
 	let year = todayDate.getFullYear();
 	let month = todayDate.getMonth() + 1;
@@ -148,7 +149,8 @@
             		// calendarHtml += '<td><div class="cell"><a href="/"><p class="day is-disabled">' + num + '</p><p class="count">' + 0 + '<span>件</span></p></a></div></td>';
 		        	// dayCount++;
 		        } else {
-		            calendarHtml += '<td><div class="cell"><a href="/"><p class="day">' + dayCount + '</p><p class="count">' + 0 + '<span>件</span></p></a></div></td>';
+		        	const date = year + '-' + month + '-' + dayCount;
+		            calendarHtml += '<td><div class="cell"><a href="/events/search?keyword=' + artistName + '&date_from=' + date + '&date_to=' + date +  '"><p class="day">' + dayCount + '</p><p class="count">' + 0 + '<span>件</span></p></a></div></td>';
 		            dayCount++;
 		        }
 		    }
