@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Datetime;
+
 use App\Artist;
 use App\Song;
 use App\Event;
@@ -25,12 +27,23 @@ class AggregateController extends Controller
 	}
 	
 	// show
-	public function show($artist_id)
+	public function show(Request $request, $artist_id)
 	{
+		$date_from = empty($request->input('date_from')) ? '1970-1-1' : $request->input('date_from');
+		$date_to = empty($request->input('date_to')) ? '2099-1-1' : $request->input('date_to');
+		
+		$fromDate = new Datetime($date_from);
+		$toDate = new Datetime($date_to);
+		$toDate->setTime(23, 59, 59);	// その日の最後に設定
+		
 		// セットリストから特定のアーティストが演奏した回数をカウントして降順リストにして返却
 		
-		// セットリスト配列
-		$setlists = Setlist::where('artist_id', $artist_id)->get();
+		// イベントリスト
+		$events = Event::whereBetween('datetime', [$fromDate, $toDate])->get();
+		
+		// セットリスト（抽出したイベントIDを含む、かつ、対象のアーティストIDのセットリスト）
+		$setlists = Setlist::whereIn('event_id', array_column($events->toArray(), 'event_id'))
+						->where('artist_id', $artist_id)->get();
 		
 		// セトリ曲データでセトリIDの等しいものを全部取得してsong_idで集計する
 		$result = array();
@@ -65,6 +78,8 @@ class AggregateController extends Controller
 		$artist = Artist::where('artist_id', $artist_id)->first();
 		
 		$params = array();
+		$params['date_from'] = $request->input('date_from');
+		$params['date_to'] = $request->input('date_to');
 		$params['artist'] = $artist;
 		$params['result'] = $result;
 		return view('aggregate/show')->with('params', $params);
