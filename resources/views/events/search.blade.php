@@ -81,7 +81,7 @@
             @else
                 イベントが見付かりませんでした。
             @endif
-            @if($params['date_from'] === $params['date_to'])
+            @if(!empty($params['date_from']) && $params['date_from'] === $params['date_to'])
                 <br>
                 <h4>追加</h4>
                 {{ link_to_route('events.create', $params['date_from'].'のイベントを追加', array('date' => $params['date_from'], 'artist_id' => $params['artist_id']), ['class' => 'btn btn-sm btn-default']) }}
