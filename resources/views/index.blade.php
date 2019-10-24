@@ -9,14 +9,11 @@
         </div>
         <div class="panel-body">
             <br>
-            <h4>イベント検索</h4>
-            {!! Form::open(['action' => 'EventsController@search', 'method' => 'get', 'class' => 'form-inline']) !!}
-                {{ Form::label('keyword_label', '検索ワード：', ['id' => 'keyword_label', 'class' => 'control-label']) }}
-                {{ Form::text('keyword', null, ['class' => 'form-control', 'placeholder' => '検索...', 'aria-label' => '検索...']) }}
-                {!! Form::submit('検索', ['class' => 'btn']) !!}
-            {!! Form::close() !!}
+            <h4>ホーム画面</h4>
+            <h6>・このサイトについて</h6>
+            アーティストのライブセットリストを登録・集計するためのサイトです。<br>
             <br>
-            <h4>イベント一覧</h4>
+            <h4>直近のイベント一覧</h4>
             <div class="d-none d-sm-flex">
                 <div class="col-sm-5">イベント名</div>
                 <div class="col-sm-3">日付</div>
