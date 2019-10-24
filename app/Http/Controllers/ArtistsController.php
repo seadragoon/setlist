@@ -4,8 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Datetime;
+
 use App\Artist;
 use App\Song;
+use App\Event;
+use App\Setlist;
 
 class ArtistsController extends Controller
 {
@@ -22,9 +26,25 @@ class ArtistsController extends Controller
 		$artist = Artist::where('artist_id', $artist_id)->first();
 		$songs = Song::where('artist_id', $artist->artist_id)->orderby('name', 'asc')->get();
 		
+		// 一致したアーティストのセトリリストを取得
+		$setlists = Setlist::where('artist_id', $artist->artist_id)->get();
+		
+		// 抽出したイベントIDを含むイベントを全て取得
+		$eventArray = Event::whereIn('event_id', array_column($setlists->toArray(), 'event_id'))
+					->orderBy('datetime', 'desc')->get()->toArray();
+		
+		// \Log::debug(print_r($eventArray, true));
+		
+		// Y-m-d形式に整形
+		$eventDates = array();
+		foreach ($eventArray as $event) {
+			$eventDates[] = (new Datetime($event['datetime']))->format('"Y-n-j"');
+		}
+		
 		$param = array();
 		$param['artist'] = $artist;
 		$param['songs'] = $songs;
+		$param['datesString'] = '['.implode(',', $eventDates).']'; // JavaScriptの配列として使用
 		return view('artists/show')->with('param', $param);
 	}
 	

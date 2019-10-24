@@ -70,6 +70,7 @@
 	const weeks = ['日', '月', '火', '水', '木', '金', '土'];
 	const todayDate = new Date();
 	const artistName = "{{ $param['artist']->name }}";
+	const eventDates = {!! $param['datesString'] !!};
 	// 変数定義・初期化
 	let year = todayDate.getFullYear();
 	let month = todayDate.getMonth() + 1;
@@ -150,7 +151,20 @@
 		        	// dayCount++;
 		        } else {
 		        	const date = year + '-' + month + '-' + dayCount;
-		            calendarHtml += '<td><div class="cell"><a href="/events/search?keyword=' + artistName + '&date_from=' + date + '&date_to=' + date +  '"><p class="day">' + dayCount + '</p><p class="count">' + 0 + '<span>件</span></p></a></div></td>';
+		        	let count = 0;
+		        	eventDates.forEach(function(eventDate){
+		        		if (eventDate === date) {
+		        			count += 1;
+		        		}
+		        	});
+		            calendarHtml += '<td><div class="cell"><a href="/events/search?keyword=' + artistName + '&date_from=' + date + '&date_to=' + date +  '">';
+		            calendarHtml += '<p class="day">' + dayCount + '</p>';
+		        	if (count === 0) {
+			        	calendarHtml += '<p class="count is-zero">' + count + '<span>件</span></p>';
+		        	} else {
+			        	calendarHtml += '<p class="count">' + count + '<span>件</span></p>';
+		        	}
+		            calendarHtml += '</a></div></td>';
 		            dayCount++;
 		        }
 		    }
@@ -194,6 +208,9 @@
 			margin: 0px;
 			color: black;
 		}
+		.cell .is-zero {
+			color: #666;
+		}
 		.cell .count {
 			font-size: 24px;
 			text-align: center;
@@ -201,7 +218,7 @@
 		}
 		.cell .count span {
 			font-size: 10px;
-			color: #999;
+			color: #666;
 		}
     </style>
 
