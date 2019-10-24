@@ -47,15 +47,12 @@
                 </div>
             {!! Form::close() !!}
             <br>
-                <h4>イベント検索結果</h4>
-                @if(!empty($params['keyword']))
-                    検索ワード「{{ $params['keyword'] }}」での検索結果<br>
-                @endif
-                @if(count($params['result']) > 0)
-                    {{ count($params['result']) }}件のイベントが見付かりました。
-                @else
-                    イベントが見付かりませんでした。
-                @endif
+            <h4>イベント検索結果</h4>
+            @if(!empty($params['keyword']))
+                検索ワード「{{ $params['keyword'] }}」での検索結果<br>
+            @endif
+            @if(count($params['result']) > 0)
+                {{ count($params['result']) }}件のイベントが見付かりました。
                 <br>
                 <div class="d-none d-sm-flex">
                     <div class="col-sm-5">イベント名</div>
@@ -81,6 +78,15 @@
                         </div>
                     @endforeach
                 </div>
+            @else
+                イベントが見付かりませんでした。
+            @endif
+            @if($params['date_from'] === $params['date_to'])
+                <br>
+                <h4>追加</h4>
+                {{ link_to_route('events.create', $params['date_from'].'のイベントを追加', array('date' => $params['date_from'], 'artist_id' => $params['artist_id']), ['class' => 'btn btn-sm btn-default']) }}
+                <br>
+            @endif
         </div>
         <br>
         <div class="panel-footer">

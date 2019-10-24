@@ -47,6 +47,24 @@
                     @endif
 				</div>
                 <div class="form-group">
+                    {!! Form::label('artist_name', 'アーティスト名', ['class' => 'col-sm-3 control-label']) !!}
+                    <div class="col-sm-8 col-12">
+                    	<div class="dropdown">
+	                        {!! Form::text('artist_name', old('artist_name', $params['artist_name']), ['id' => 'artist_name', 'class' => 'form-control dropdown-toggle', 'autocomplete' => 'off', 'list' => 'test']) !!}
+	                        <datalist id="test">
+		                        @foreach ($params['artistMasters'] as $artist)
+									<option value="{{ $artist->name }}">
+								@endforeach
+							</datalist>
+					    </div>
+	                    @if(!empty($errors->first('artist_name')))
+                            <span class="text-danger">※必須項目です</span>
+	                    @elseif(!empty($errors->first('artist_name_wrong')))
+                            <span class="text-danger">{{ $errors->first('artist_name_wrong') }}</span>
+	                    @endif
+                    </div>
+                </div>
+                <div class="form-group">
                     {!! Form::label('event_name', 'イベント名', ['class' => 'col-sm-3 control-label']) !!}
                     <div class="col-sm-8 col-12">
                         {!! Form::text('event_name', old('event_name', $params['event_name']), ['id' => 'event_name', 'class' => 'form-control']) !!}
@@ -259,7 +277,6 @@
                 <hr>
                 <!-- hidden parameter -->
                 {{Form::hidden('event_id', $params['event_id'], ['id' => 'event_id'])}}
-                {{Form::hidden('artist_id', $params['artist']['artist_id'], ['id' => 'artist_id'])}}
                 
                 <div class="form-group">
                     <div class="col-sm-12 col-12">

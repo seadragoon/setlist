@@ -71,8 +71,8 @@ class EventsController extends Controller
 			}
 		}
 		
-		$song_list			= empty($songDataList[0]) ? null : $songDataList[0];		// 通常セトリ
-		$encore_song_list	= empty($songDataList[1]) ? null : $songDataList[1];		// アンコールセトリ
+		$song_list			= empty($songDataList[0]) ? array() : $songDataList[0];		// 通常セトリ
+		$encore_song_list	= empty($songDataList[1]) ? array() : $songDataList[1];		// アンコールセトリ
 		
 		// イベントデータを取得
 		$event_data = Event::where('event_id', $event_id)->first();
@@ -89,19 +89,30 @@ class EventsController extends Controller
 		return view('events/show')->with('param', $param);
 	}
 	
-	public function create()
+	public function create(Request $request)
 	{
+		$date = empty($request->input('date')) ? new Datetime() : new Datetime($request->input('date'));
+		$artist_id = empty($request->input('artist_id')) ? 0 : $request->input('artist_id');
+		
+		
 		$params = array();
 		
-		// アーティスト最初の1件だけ取得
-		$artist = Artist::orderBy('artist_id', 'asc')->first();
-		$params['artist'] = $artist;
 		// 楽曲をすべて取得 TODO: 他アーティストの楽曲を沢山登録していった場合負荷が掛かり過ぎる恐れがある
 		$songMasters = Song::orderby('name', 'asc')->get();
 		$params['songMasters'] = $songMasters;
+		// アーティストをすべて取得
+		$artistMasters = Artist::orderBy('artist_id', 'asc')->get();
+		$params['artistMasters'] = $artistMasters;
+		
+		$artist_name = null;
+		if (!empty($artist_id)){
+			$artist = Artist::where('artist_id', $artist_id)->first();
+			$artist_name = $artist->name;
+		}
+		$params['artist_name'] = $artist_name;
 		
 		$params['event_id'] = null;
-		$params['event_date'] = (new Datetime())->format('Y-m-d');
+		$params['event_date'] = $date->format('Y-m-d');
 		$params['event_time'] = null;
 		$params['event_name'] = null;
 		$params['event_venue'] = null;
@@ -123,13 +134,13 @@ class EventsController extends Controller
 		$rules = [
 			'event_date'					=>'required|string|max:10',		// 年月日 xxxx-xx-xx
 			'event_time'					=>'required|string|max:5',		// 時分 xx:xx
+			'artist_name'					=>'required|string|max:100',	// アーティスト名
 			'event_name'					=>'required|string|max:100',	// イベント名
 			'event_venue'					=>'required|string|max:100',	// 会場名
 			'event_summary'					=>'nullable|string|max:100',	// イベント概要
 			'event_type'					=>'integer|max:10',				// イベントタイプ
 			'event_tag'						=>'nullable|string|max:100',	// イベントタグ
-			'artist_id'						=>'required|numeric',			// アーティストID
-			'songs'							=>'required|array|min:1',		// 通常楽曲配列
+			'songs'							=>'array',						// 通常楽曲配列
 			'songs.*'						=>'required|array|min:2',		// 通常楽曲の連想配列
 			'songs.*.name'					=>'required|string|max:100',	// 通常楽曲曲名
 			'songs.*.is_short'				=>'integer|max:50',				// 通常楽曲ショートかどうか
@@ -140,7 +151,7 @@ class EventsController extends Controller
 			'encore_songs.*.name'			=>'string|max:100',				// アンコール楽曲曲名
 			'encore_songs.*.is_short'		=>'integer|max:50',				// アンコール楽曲ショートかどうか
 			'encore_songs.*.arrange_type'	=>'integer|max:5',				// アンコール楽曲アレンジタイプ
-			'encore_songs.*.collabo_artists'=>'string|max:100',				// アンコール楽曲コラボアーティスト
+			'encore_songs.*.collabo_artists'=>'nullable|string|max:100',	// アンコール楽曲コラボアーティスト
 		];
 		
 		// リストの後ろに曲名が空の要素がある場合は予め弾いておく
@@ -177,6 +188,17 @@ class EventsController extends Controller
 		// アーティストマスタを取得
 		$artistMasters = Artist::get()->toArray();
 		
+		// アーティスト名の確認
+		$artist_id = 0;
+		$targetIndex = array_search($data['artist_name'], array_column($artistMasters, 'name'));
+		if ($targetIndex === false){
+			// 含まれなかったらエラー追加
+			$validation->errors()->add('artist_name_wrong', '※指定された名前のアーティストは定義されていません');
+		} else {
+			// 見つかった場合はアーティストIDを保持しておく
+			$artist_id = $artistMasters[ $targetIndex ]['artist_id'];
+		}
+		
 		// 楽曲データの確認
 		foreach($data['songs'] as $key => $value)
 		{
@@ -192,17 +214,16 @@ class EventsController extends Controller
  				if(empty($artistName)) continue;
 				
 				$targetIndex = array_search($artistName, array_column($artistMasters, 'name'));
-				\Log::debug(var_export($artistMasters[$targetIndex]['artist_id'], true));
-				\Log::debug(var_export($data['artist_id'], true));
 				if ($targetIndex === false){
 					// 含まれなかったらエラー追加
 					$validation->errors()->add('songs.'.$key.'.collabo_artists', '※指定された名前のコラボアーティストは定義されていません');
- 				} else if ($artistMasters[$targetIndex]['artist_id'] === intval($data['artist_id'])) {
+ 				} else if (!empty($artist_id) && $artistMasters[$targetIndex]['artist_id'] === $artist_id) {
  					// アーティストIDが同一の場合はエラー
 					$validation->errors()->add('songs.'.$key.'.collabo_artists', '※指定されたコラボアーティストは自分自身です');
 				}
 			}
 		}
+		// アンコール楽曲データの確認
 		foreach($data['encore_songs'] as $key => $value)
 		{
 			// 曲名リストがちゃんと含まれているかを確認
@@ -220,7 +241,7 @@ class EventsController extends Controller
 				if ($targetIndex === false){
 					// 含まれなかったらエラー追加
 					$validation->errors()->add('encore_songs.'.$key.'.collabo_artists', '※指定された名前のコラボアーティストは定義されていません');
- 				} else if ($artistMasters[$targetIndex]['artist_id'] === intval($data['artist_id'])) {
+ 				} else if (!empty($artist_id) && $artistMasters[$targetIndex]['artist_id'] === $artist_id) {
  					// アーティストIDが同一の場合はエラー
 					$validation->errors()->add('encore_songs.'.$key.'.collabo_artists', '※指定されたコラボアーティストは自分自身です');
 				}
@@ -273,7 +294,7 @@ class EventsController extends Controller
 				$setlist = Setlist::where('event_id', $event_id)->first();
 			}
 			$setlist->event_id = $event_id;
-			$setlist->artist_id = $data['artist_id'];
+			$setlist->artist_id = $artist_id;
 			$setlist->save();
 			
 			// setlist_group登録
@@ -448,6 +469,10 @@ class EventsController extends Controller
 		$artist = Artist::orderBy('artist_id', 'asc')->first();
 		$params['artist'] = $artist;
 		$params['songMasters'] = $songMasters;
+		$params['artistMasters'] = $artistMasters;
+		
+		$artist = $artistMasters->where('artist_id', $setlist->artist_id)->first();
+		$params['artist_name'] = $artist->name;
 		
 		return view('events/create')->with('params', $params);
 	}
@@ -474,6 +499,8 @@ class EventsController extends Controller
 		// \Log::debug($fromDate->format('Y-m-d H:i:s'));
 		// \Log::debug($toDate->format('Y-m-d H:i:s'));
 		
+		$artist_id = 0;
+		
 		// アーティスト名完全一致検索→artist_idが等しいセトリデータを検索して引っかかったイベントリストを表示
 		$artist = Artist::where('name', $keyword)->first();
 		
@@ -489,6 +516,8 @@ class EventsController extends Controller
 			$events = Event::whereIn('event_id', array_column($setlists->toArray(), 'event_id'))
 						->whereBetween('datetime', [$fromDate, $toDate])
 						->orderBy('datetime', 'desc')->get();
+			
+			$artist_id = $artist->artist_id;
 		}
 		// 通常はイベントデータから検索
 		else
@@ -516,6 +545,7 @@ class EventsController extends Controller
 		$params['date_from'] = $request->input('date_from');
 		$params['date_to'] = $request->input('date_to');
 		$params['result'] = $events;
+		$params['artist_id'] = $artist_id;
 		return view('events/search')->with('params', $params);
 	}
 }

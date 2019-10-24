@@ -47,23 +47,27 @@
         
         <hr>
         <h4>セットリスト</h4>
+		@if(!empty($param['song_list']))
         <h5>・通常</h5>
-        @foreach ($param['song_list'] as $key => $song)
-        	<div>
-	        	{{ $song['seq'] }}.　{{ link_to_route('songs.show', $song['name'], $song['song_id']) }}{{ empty($song['collabo_artists']) ? "" : "（with ".$song['collabo_artists']."）"}}{{ empty($song['is_short']) ? "" : "（short.ver）"}}
-					@switch($song['arrange_type'])
-						@case(1)
-							(Acostic)
-							@break
-						@case(2)
-							(Original)
-							@break
-						@case(3)
-							(Christmas)
-							@break
-					@endswitch
-        	</div>
-        @endforeach
+	        @foreach ($param['song_list'] as $key => $song)
+	        	<div>
+		        	{{ $song['seq'] }}.　{{ link_to_route('songs.show', $song['name'], $song['song_id']) }}{{ empty($song['collabo_artists']) ? "" : "（with ".$song['collabo_artists']."）"}}{{ empty($song['is_short']) ? "" : "（short.ver）"}}
+						@switch($song['arrange_type'])
+							@case(1)
+								(Acostic)
+								@break
+							@case(2)
+								(Original)
+								@break
+							@case(3)
+								(Christmas)
+								@break
+						@endswitch
+	        	</div>
+	        @endforeach
+	    @else
+	    ※セットリストが登録されていません。
+	    @endif
         <br>
 		@if(!empty($param['encore_song_list']))
 	        <h5>・アンコール</h5>
