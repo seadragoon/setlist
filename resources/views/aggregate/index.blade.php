@@ -14,7 +14,7 @@
             <ul>
                 @foreach ($params['artists'] as $artist)
                     <li>
-                        {{ link_to('aggregate/show/'.$artist->artist_id, $artist->name) }}
+                        {{ link_to_action('AggregateController@show', $artist->name, $artist->artist_id) }}
                     </li>
                 @endforeach
             </ul>
