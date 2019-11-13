@@ -29,3 +29,7 @@ Route::get('/aggregate/show/{artist_id}', 'AggregateController@show');
 Route::resource('artists', 'ArtistsController', ['only' => ['index', 'show', 'edit', 'update', 'destroy', 'store']]);
 Route::resource('songs', 'SongsController', ['only' => ['index', 'show', 'edit', 'update', 'destroy', 'store']]);
 Route::resource('events', 'EventsController', ['only' => ['index', 'show', 'edit', 'create', 'destroy', 'store']]);
+
+Route::get('auth/twitter', 'Auth\SocialAuthController@redirectToProvider');
+Route::get('auth/twitter/callback', 'Auth\SocialAuthController@handleProviderCallback');
+Route::get('auth/twitter/logout', 'Auth\SocialAuthController@logout');

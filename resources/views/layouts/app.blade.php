@@ -60,21 +60,25 @@
                         @guest
                             {{-- 「ログイン」へのリンク --}}
                             <li class="nav-item">
-                                <a class="nav-link" href="/">{{ __('ログイン') }}</a>
+                                <a class="nav-link" href="/auth/twitter">{{ __('ログイン') }}</a>
                             </li>
                         @else
                             {{-- 「プロフィール」と「ログアウト」のドロップダウンメニュー --}}
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="dropdown-user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    @if(Auth::user()->profile_image != null)
+                                    <img src="{{ Auth::user()->profile_image }}" width="24" height="24">
+                                    @endif
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-user">
+                                    <!--
+                                    {{-- ひとまずユーザーページへのリンクは閉じておく --}}
                                     <a class="dropdown-item" href="{{ url('users/'.auth()->user()->id) }}">
                                         {{ __('Profile') }}
                                     </a>
-                                    <a class="dropdown-item" href="/"
-                                        onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
+                                    -->
+                                    <a class="dropdown-item" href="/auth/twitter/logout">
                                         {{ __('Logout') }}
                                     </a>
                                     <form id="logout-form" action="/" method="POST" style="display: none;">
