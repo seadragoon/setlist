@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use Datetime;
 
+use Auth;
 use App\Artist;
 use App\Song;
 use App\Event;
@@ -60,6 +61,9 @@ class ArtistsController extends Controller
 	{
 		$artist = Artist::where('artist_id', $artist_id)->first();
 		$artist->fill($request->all());
+		if (!empty(Auth::user())) {
+			$artist->edit_user_id = Auth::user()->id;
+		}
 		$artist->save();
 		return redirect()->route('artists.index');
 	}
@@ -93,6 +97,9 @@ class ArtistsController extends Controller
 		
 		$artist = new Artist();
 		$artist->fill($request->all());
+		if (!empty(Auth::user())) {
+			$artist->edit_user_id = Auth::user()->id;
+		}
 		$artist->save();
 		return redirect()->route('artists.index');
 	}

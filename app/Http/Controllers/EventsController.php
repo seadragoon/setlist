@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use Datetime;
 use Exception;
+use Auth;
 
 use App\Artist;
 use App\Song;
@@ -260,6 +261,12 @@ class EventsController extends Controller
 		//echo '<pre>' . var_export($data, true) . '</pre>';
 		\Log::debug(var_export($data, true));
 		
+		// 編集者ユーザーIDを取得しておく
+		$edit_user_id = 0;
+		if (!empty(Auth::user())) {
+			$edit_user_id = Auth::user()->id;
+		}
+		
 		// 編集時と新規作成で処理を分ける(event_idを受け取っているかどうか)
 		$event_id = $data['event_id'];
 		
@@ -284,6 +291,7 @@ class EventsController extends Controller
 			$event->summary = $data['event_summary'];
 			$event->tag_text = $data['event_tag'];
 			$event->event_type = $data['event_type'];
+			$event->edit_user_id = $edit_user_id;
 			$event->save();
 			
 			// setlistデータ登録
@@ -343,6 +351,7 @@ class EventsController extends Controller
 				$songData['is_medley'] = empty($value['is_short']) ? false : true;
 				$songData['collabo_artist_ids'] = implode(",", $collaboArtistIds);
 				$songData['arrange_type'] = $value['arrange_type'];
+				$songData['edit_user_id'] = $edit_user_id;
 				$songData['created_at'] = new DateTime();
 				$songData['updated_at'] = new DateTime();
 				
@@ -376,6 +385,7 @@ class EventsController extends Controller
 				$songData['is_medley'] = empty($value['is_short']) ? false : true;
 				$songData['collabo_artist_ids'] = implode(",", $collaboArtistIds);
 				$songData['arrange_type'] = $value['arrange_type'];
+				$songData['edit_user_id'] = $edit_user_id;
 				$songData['created_at'] = new DateTime();
 				$songData['updated_at'] = new DateTime();
 				

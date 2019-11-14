@@ -80,6 +80,12 @@ class SocialAuthController extends Controller
         $authUser = User::where('twitter_id', $twitterUser->id)->first();
 
         if ($authUser){
+            // 毎回ログインする度に最新データに更新する
+            $authUser->screen_name = $twitterUser->name;
+            $authUser->name = $twitterUser->nickname;
+            $authUser->profile_image = $twitterUser->avatar;
+            $authUser->save();
+
             return $authUser;
         }
 

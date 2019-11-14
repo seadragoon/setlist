@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Auth;
 use App\Artist;
 use App\Song;
 use App\Event;
@@ -26,22 +27,22 @@ class SongsController extends Controller
 		$song = Song::where('song_id', $song_id)->first();
 		$artist = Artist::where('artist_id', $song->artist_id)->first();
 		
-		// ‘ÎÛ‚Ì‰Ì‚ðƒZƒgƒŠ‚ÉŠÜ‚ÞƒCƒxƒ“ƒg‚ðŒŸõ
+		// å¯¾è±¡ã®æ­Œã‚’ã‚»ãƒˆãƒªã«å«ã‚€ã‚¤ãƒ™ãƒ³ãƒˆã‚’æ¤œç´¢
 		$eventDataList = array();
 		$setlistSongs = SetlistSong::where('song_id', $song_id)->get();
 		foreach ($setlistSongs as $setlistSong)
 		{
-			// ƒZƒbƒgƒŠƒXƒgID‚Ì“™‚µ‚¢ƒZƒbƒgƒŠƒXƒg‚ðŽæ“¾
+			// ã‚»ãƒƒãƒˆãƒªã‚¹ãƒˆIDã®ç­‰ã—ã„ã‚»ãƒƒãƒˆãƒªã‚¹ãƒˆã‚’å–å¾—
 			$setlist = Setlist::where('setlist_id', $setlistSong->setlist_id)->first();
 			
-			// ƒCƒxƒ“ƒgID‚Ì“™‚µ‚¢ƒCƒxƒ“ƒg‚ðŽæ“¾
+			// ã‚¤ãƒ™ãƒ³ãƒˆIDã®ç­‰ã—ã„ã‚¤ãƒ™ãƒ³ãƒˆã‚’å–å¾—
 			$event = Event::where('event_id', $setlist->event_id)->first();
 			
-			// ƒCƒxƒ“ƒgƒf[ƒ^‚ð”z—ñ‚É‹l‚ß‚é
+			// ã‚¤ãƒ™ãƒ³ãƒˆãƒ‡ãƒ¼ã‚¿ã‚’é…åˆ—ã«è©°ã‚ã‚‹
 			array_push($eventDataList, $event);
 		}
 		
-		// “ú•t‚Åƒ\[ƒg
+		// æ—¥ä»˜ã§ã‚½ãƒ¼ãƒˆ
 		usort($eventDataList, function ($a, $b) {
 			return $a->datetime < $b->datetime ? 1 : -1;
 		});
@@ -66,6 +67,9 @@ class SongsController extends Controller
 	{
 		$song = Song::where('song_id', $song_id)->first();
 		$song->fill($request->all());
+		if (!empty(Auth::user())) {
+			$song->edit_user_id = Auth::user()->id;
+		}
 		$song->save();
 		return redirect()->route('songs.show', $song_id);
 	}
@@ -99,12 +103,15 @@ class SongsController extends Controller
 		
 		$song = new Song();
 		$song->fill($request->all());
+		if (!empty(Auth::user())) {
+			$song->edit_user_id = Auth::user()->id;
+		}
 		$song->save();
 		return redirect()->route('artists.show', $song->artist_id);
 	}
 	
 	/**
-	 * ŒŸõƒAƒNƒVƒ‡ƒ“
+	 * æ¤œç´¢ã‚¢ã‚¯ã‚·ãƒ§ãƒ³
 	 */
 	public function search(Request $request)
 	{
@@ -112,10 +119,10 @@ class SongsController extends Controller
 		$songs = array();
 		
 		if (!empty($keyword)) {
-			// Šy‹È–¼•”•ªˆê’v‚ÅŒŸõ
+			// æ¥½æ›²åéƒ¨åˆ†ä¸€è‡´ã§æ¤œç´¢
 			$songs = Song::where('name', 'LIKE', "%$keyword%")->orderby('name', 'asc')->get()->toArray();
 			
-			// ‘Î‰ž‚·‚éƒA[ƒeƒBƒXƒg–¼‚ðŽæ“¾
+			// å¯¾å¿œã™ã‚‹ã‚¢ãƒ¼ãƒ†ã‚£ã‚¹ãƒˆåã‚’å–å¾—
 			$artists = Artist::whereIn('artist_id', array_unique(array_column($songs, 'artist_id')))->get();
 			
 			foreach ($songs as $key => $song) {
