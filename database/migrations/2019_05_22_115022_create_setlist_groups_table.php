@@ -19,7 +19,7 @@ class CreateSetlistGroupsTable extends Migration
             $table->integer('setlist_group_type')->default(0);
             $table->timestamps();
             
-            // ƒvƒ‰ƒCƒ}ƒŠƒL[Ý’è
+            // primaryã‚­ãƒ¼ã®æŒ‡å®š
             $table->unique(['setlist_id', 'setlist_group_seq']);
         });
     }
@@ -31,6 +31,6 @@ class CreateSetlistGroupsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('setlist_group');
+        Schema::dropIfExists('setlist_groups');
     }
 }
