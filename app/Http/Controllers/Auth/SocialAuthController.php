@@ -23,6 +23,11 @@ class SocialAuthController extends Controller
     {
         $previous = url()->previous();
         
+        // デバッグ用
+        // TODO: ログインしたことにして元のページに戻す
+
+
+        
         // \Log::debug("previous : " . $previous);
         
         // セッションに遷移元URLを格納
