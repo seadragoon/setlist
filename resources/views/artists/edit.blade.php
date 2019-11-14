@@ -6,7 +6,11 @@
 
     <div class="panel panel-default">
         <div class="panel-heading">
-            {{ $artist->name }}の編集
+            <br>
+            <h4>アーティスト編集</h4>
+            ・{{ $artist->name }} の編集
+            <br>
+            <br>
         </div>
         <div class="panel-body">
             {!! Form::model($artist, ['route' => ['artists.update', $artist->artist_id], 'method' => 'patch', 'class' => 'form-horizontal']) !!}

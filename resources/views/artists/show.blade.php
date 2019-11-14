@@ -16,6 +16,7 @@
 
 			@auth
 			{{ link_to_route('artists.edit', '編集', $param['artist']->artist_id, ['class' => 'btn btn-sm btn-default btn-success']) }}
+			<br>
 			@endauth
 			<br>
 			

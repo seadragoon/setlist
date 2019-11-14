@@ -14,6 +14,9 @@
                 イベント名: {{ $param['event_data']->name }}
             </div>
             <div>
+                開催日: {{ $param['event_data']->datetime }}
+            </div>
+            <div>
                 会場名: {{ $param['event_data']->venue_name }}
             </div>
             <div>

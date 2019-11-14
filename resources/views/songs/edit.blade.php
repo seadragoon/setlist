@@ -6,7 +6,11 @@
 
     <div class="panel panel-default">
         <div class="panel-heading">
-            {{ $song->name }}の編集
+            <br>
+            <h4>楽曲編集</h4>
+            ・{{ $song->name }} の編集
+            <br>
+            <br>
         </div>
         <div class="panel-body">
             {!! Form::model($song, ['route' => ['songs.update', $song->song_id], 'method' => 'patch', 'class' => 'form-horizontal']) !!}

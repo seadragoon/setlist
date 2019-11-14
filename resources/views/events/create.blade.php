@@ -50,8 +50,8 @@
                     {!! Form::label('artist_name', 'アーティスト名', ['class' => 'col-sm-3 control-label']) !!}
                     <div class="col-sm-8 col-12">
                     	<div class="dropdown">
-	                        {!! Form::text('artist_name', old('artist_name', $params['artist_name']), ['id' => 'artist_name', 'class' => 'form-control dropdown-toggle', 'autocomplete' => 'off', 'list' => 'test']) !!}
-	                        <datalist id="test">
+	                        {!! Form::text('artist_name', old('artist_name', $params['artist_name']), ['id' => 'artist_name', 'class' => 'form-control dropdown-toggle', 'autocomplete' => 'off', 'list' => 'artist_list']) !!}
+	                        <datalist id="artist_list">
 		                        @foreach ($params['artistMasters'] as $artist)
 									<option value="{{ $artist->name }}">
 								@endforeach
@@ -126,8 +126,8 @@
 			                    <div class="d-sm-none col-2 px-0">楽曲名</div>
 			                    <div class="col-sm-6 col-10 px-0">
 			                    	<div class="dropdown">
-				                        {!! Form::text('songs['.$index.'][name]', $oldSong['name'], ['id' => 'song_name', 'class' => 'form-control dropdown-toggle', 'autocomplete' => 'off', 'list' => 'test']) !!}
-				                        <datalist id="test">
+				                        {!! Form::text('songs['.$index.'][name]', $oldSong['name'], ['id' => 'song_name', 'class' => 'form-control dropdown-toggle', 'autocomplete' => 'off', 'list' => 'song_list']) !!}
+				                        <datalist id="song_list">
 					                        @foreach ($params['songMasters'] as $song)
 												<option value="{{ $song->name }}">
 											@endforeach
@@ -164,8 +164,8 @@
 			                    <div class="d-sm-none col-2 px-0">楽曲名</div>
 			                    <div class="col-sm-6 col-10 px-0">
 			                    	<div class="dropdown">
-				                        {!! Form::text('songs[0][name]', '', ['id' => 'song_name', 'class' => 'form-control dropdown-toggle', 'autocomplete' => 'off', 'list' => 'test']) !!}
-				                        <datalist id="test">
+				                        {!! Form::text('songs[0][name]', '', ['id' => 'song_name', 'class' => 'form-control dropdown-toggle', 'autocomplete' => 'off', 'list' => 'song_list']) !!}
+				                        <datalist id="song_list">
 					                        @foreach ($params['songMasters'] as $song)
 												<option value="{{ $song->name }}">
 											@endforeach
@@ -212,8 +212,8 @@
 			                    <div class="d-sm-none col-2 px-0">楽曲名</div>
 			                    <div class="col-sm-6 col-10 px-0">
 			                    	<div class="dropdown">
-				                        {!! Form::text('encore_songs['.$index.'][name]', $oldSong['name'], ['id' => 'encore_song_name', 'class' => 'form-control dropdown-toggle', 'autocomplete' => 'off', 'list' => 'test']) !!}
-				                        <datalist id="test">
+				                        {!! Form::text('encore_songs['.$index.'][name]', $oldSong['name'], ['id' => 'encore_song_name', 'class' => 'form-control dropdown-toggle', 'autocomplete' => 'off', 'list' => 'song_list']) !!}
+				                        <datalist id="song_list">
 					                        @foreach ($params['songMasters'] as $song)
 												<option value="{{ $song->name }}">
 											@endforeach
@@ -250,8 +250,8 @@
 			                    <div class="d-sm-none col-2 px-0">楽曲名</div>
 			                    <div class="col-sm-6 col-10 px-0">
 			                    	<div class="dropdown">
-				                        {!! Form::text('encore_songs[0][name]', '', ['id' => 'encore_song_name', 'class' => 'form-control dropdown-toggle', 'autocomplete' => 'off', 'list' => 'test']) !!}
-				                        <datalist id="test">
+				                        {!! Form::text('encore_songs[0][name]', '', ['id' => 'encore_song_name', 'class' => 'form-control dropdown-toggle', 'autocomplete' => 'off', 'list' => 'song_list']) !!}
+				                        <datalist id="song_list">
 					                        @foreach ($params['songMasters'] as $song)
 												<option value="{{ $song->name }}">
 											@endforeach
