@@ -8,6 +8,8 @@ use Socialite;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
+use InvalidArgumentException;
+
 class SocialAuthController extends Controller
 {
     use AuthenticatesUsers;
@@ -19,6 +21,13 @@ class SocialAuthController extends Controller
      */
     public function redirectToProvider()
     {
+        $previous = url()->previous();
+        
+        // \Log::debug("previous : " . $previous);
+        
+        // セッションに遷移元URLを格納
+        session(['url.previous' => $previous]);
+
         return Socialite::driver('twitter')->redirect();
     }
 
@@ -29,17 +38,30 @@ class SocialAuthController extends Controller
      */
     public function handleProviderCallback()
     {
+        // セッションから遷移元URLを取得
+        $redirectUrl = session('url.previous');
+        // セッションから消しておく
+        session()->forget('url.previous');
+
+        // \Log::debug("redirectUrl : " . $redirectUrl);
+
         try {
             $user = Socialite::driver('twitter')->user();
+        } catch (InvalidArgumentException $e) {
+            // \Log::debug($e);
+
+            return redirect($redirectUrl);
         } catch (Exception $e) {
             return redirect('auth/twitter');
         }
 
+        // twitterユーザーが取得できたのでユーザーデータ経由で取得
         $authUser = $this->findOrCreateUser($user);
 
+        // ログイン
         Auth::login($authUser, true);
 
-        return redirect('/');
+        return redirect($redirectUrl);
     }
     private function findOrCreateUser($twitterUser)
     {
@@ -61,8 +83,10 @@ class SocialAuthController extends Controller
     }
     public function logout()
     {
+        // ログアウト
         Auth::logout();
-        return redirect('/');
+
+        return redirect(url()->current());
     }
     public function __construct()
     {
