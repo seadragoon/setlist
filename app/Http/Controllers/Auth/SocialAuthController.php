@@ -24,9 +24,14 @@ class SocialAuthController extends Controller
         $previous = url()->previous();
         
         // デバッグ用
-        // TODO: ログインしたことにして元のページに戻す
+        // ダミーユーザーでログインしたことにして元のページに戻す
+        $isDebug = true;
 
-
+        if ($isDebug) {
+            $dummyUser = User::first();
+            Auth::login($dummyUser, true);
+            return redirect($previous);
+        }
         
         // \Log::debug("previous : " . $previous);
         
@@ -91,7 +96,7 @@ class SocialAuthController extends Controller
         // ログアウト
         Auth::logout();
 
-        return redirect(url()->current());
+        return redirect(url()->previous());
     }
     public function __construct()
     {
