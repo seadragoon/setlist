@@ -16,7 +16,7 @@
                 {!! Form::submit('検索', ['class' => 'btn']) !!}
             {!! Form::close() !!}
             <br>
-                {{ link_to_action('ArtistsController@add', 'アーティスト追加', ['class' => 'btn btn-sm btn-default']) }}
+                {{ link_to_action('ArtistsController@add', 'アーティスト追加', null, ['class' => 'btn btn-sm btn-default']) }}
             <br>
             <h4>アーティスト一覧</h4>
             ※アーティスト名をタップすると曲一覧が表示されます
