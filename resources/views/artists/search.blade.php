@@ -9,12 +9,13 @@
         </div>
         <div class="panel-body">
             <br>
-            <h2>アーティスト情報検索</h2>
+            <h4>アーティスト情報検索</h4>
             {!! Form::open(['action' => 'ArtistsController@search', 'method' => 'get', 'class' => 'form-inline']) !!}
                 {{ Form::label('keyword_label', '検索ワード：', ['id' => 'keyword_label', 'class' => 'control-label']) }}
                 {{ Form::text('keyword', $params['keyword'], ['class' => 'form-control', 'placeholder' => '検索...', 'aria-label' => '検索...']) }}
                 {!! Form::submit('検索', ['class' => 'btn']) !!}
             {!! Form::close() !!}
+            <br>
             <br>
             @if(!empty($params['keyword']))
                 <h4>イベント検索結果</h4>
@@ -28,10 +29,12 @@
                 <table class="table table-striped task-table">
                     <thead>
                         <th>名</th>
+                        @auth
                         <th>編集</th>
                         <!--
                         <th>削除</th>
                         -->
+                        @endauth
                     </thead>
                     <tbody>
                         @foreach ($params['result'] as $artist)
@@ -39,6 +42,7 @@
                                 <td class="table-text">
                                     {{ link_to_route('artists.show', $artist->name, $artist->artist_id) }}
                                 </td>
+                                @auth
                                 <td class="table-text">
                                     {{ link_to_route('artists.edit', '編集', $artist->artist_id, ['class' => 'btn btn-sm btn-default']) }}
                                 </td>
@@ -52,6 +56,7 @@
                                     {{ Form::close() }}
                                 </td>
                                 -->
+                                @endauth
                             </tr>
                         @endforeach
                     </tbody>

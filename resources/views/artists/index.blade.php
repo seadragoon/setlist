@@ -16,17 +16,25 @@
                 {!! Form::submit('検索', ['class' => 'btn']) !!}
             {!! Form::close() !!}
             <br>
-                {{ link_to_action('ArtistsController@add', 'アーティスト追加', null, ['class' => 'btn btn-sm btn-default']) }}
+
+            @auth
+            <h4>アーティスト追加</h4>
+                {{ link_to_action('ArtistsController@add', '追加', null, ['class' => 'btn btn-sm btn-default btn-primary']) }}
+                <br>
             <br>
+            @endauth
+            
             <h4>アーティスト一覧</h4>
             ※アーティスト名をタップすると曲一覧が表示されます
             <table class="table table-striped task-table">
                 <thead>
                     <th>名</th>
+                    @auth
                     <th>編集</th>
                     <!--
                     <th>削除</th>
                     -->
+                    @endauth
                 </thead>
                 <tbody>
                     @foreach ($artists as $artist)
@@ -34,6 +42,7 @@
                             <td class="table-text">
                                 {{ link_to_route('artists.show', $artist->name, $artist->artist_id) }}
                             </td>
+                            @auth
                             <td class="table-text">
                                 {{ link_to_route('artists.edit', '編集', $artist->artist_id, ['class' => 'btn btn-sm btn-default']) }}
                             </td>
@@ -47,6 +56,7 @@
                                 {{ Form::close() }}
                             </td>
                             -->
+                            @endauth
                         </tr>
                     @endforeach
                 </tbody>
