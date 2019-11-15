@@ -35,23 +35,31 @@
 			<h4>イベント追加</h4>
 			<p>新規イベントの追加を行えます。</p>
 			@endif
-			
+
         	<hr>
             {!! Form::model($params, ['route' => 'events.store', 'method' => 'post', 'class' => 'form-horizontal']) !!}
             	<h4>イベント詳細</h4>
-				<div class="form-group col-sm-6 col-12">
-                	{!! Form::label('event_date_name', '日付', ['class' => 'col-sm-3 control-label']) !!}
-                    {!! Form::text('event_date', old('event_date', $params['event_date']), ['id' => 'event_date', 'class' => 'datepicker']) !!}
-                    @if(!empty($errors->first('event_date')))
-                    	<span class="text-danger">※必須項目です</span>
-                    @endif
+				<div class="form-group">
+					{!! Form::label('event_date_name', '日付', ['class' => 'col-sm-3 control-label']) !!}
+					<div class="col-sm-8 col-12">
+						{!! Form::text('event_date', old('event_date', $params['event_date']), ['id' => 'event_date', 'class' => 'col-sm-6 col-8 datepicker']) !!}
+						<button id="prev" type="button" class="btn btn-default">◀</button>
+						<button id="next" type="button" class="btn btn-default">▶</button>
+						@if(!empty($errors->first('event_date')))
+							<br>
+							<span class="text-danger">※必須項目です</span>
+						@endif
+					</div>
 				</div>
-				<div class="form-group col-sm-6 col-12">
+				<div class="form-group">
                 	{!! Form::label('event_time_name', '開始時間', ['class' => 'col-sm-3 control-label']) !!}
-                    {!! Form::text('event_time', old('event_time', $params['event_time']), ['id' => 'event_time', 'class' => 'datepicker']) !!}
-                    @if(!empty($errors->first('event_time')))
-                    	<span class="text-danger">※必須項目です</span>
-                    @endif
+					<div class="col-sm-8 col-12">
+						{!! Form::text('event_time', old('event_time', $params['event_time']), ['id' => 'event_time', 'class' => 'col-sm-6 col-8 datepicker']) !!}
+						@if(!empty($errors->first('event_time')))
+							<br>
+							<span class="text-danger">※必須項目です</span>
+						@endif
+					</div>
 				</div>
                 <div class="form-group">
                     {!! Form::label('artist_name', 'アーティスト名', ['class' => 'col-sm-3 control-label']) !!}
@@ -425,60 +433,55 @@
 			}
 		});
 		
-		// オートコンプリート
-//		$(document).on('ontouched click', '.autocomplete', function(){
-//			var text = $(this).data('autocomplete');
-//			var target = $(this).data('target');
-//			$('input[name="' + target + '"]').val(text);
-//		});
-		
+		// pick a date 日付
 		$('#event_date').pickadate({
-			format: 'yyyy-mm-dd'
+			format: 'yyyy-mm-dd',
 		});
-		
+		// pick a date 時間
 		$('#event_time').pickatime({
 			format: 'HH:i', // 24時間表記
 			interval: 30,   // 表示間隔
 		});
-		
-//		// 日付選択
-//		$('#datetimepicker1').datetimepicker({
-//            dayViewHeaderFormat: 'YYYY年 M月',
-//            format: 'YYYY年MM月DD日',
-//            locale: moment.locale('ja', {
-//                week: { dow: 0 }
-//            }),
-//            viewMode: 'days',
-//            buttons: {
-//                showClose: true
-//            },
-//        });
-//		
-//        $('#datetimepicker2').datetimepicker({
-//            tooltips: {
-//                close: '閉じる',
-//                pickHour: '時間を取得',
-//                incrementHour: '時間を増加',
-//                decrementHour: '時間を減少',
-//                pickMinute: '分を取得',
-//                incrementMinute: '分を増加',
-//                decrementMinute: '分を減少',
-//                pickSecond: '秒を取得',
-//                incrementSecond: '秒を増加',
-//                decrementSecond: '秒を減少',
-//                togglePeriod: '午前/午後切替',
-//                selectTime: '時間を選択'
-//            },
-//            format: 'HH:mm',
-//            locale: 'ja',
-//            buttons: {
-//                showClose: true
-//            },
-//            // disabledHours: [0, 1, 2, 3, 4, 5, 6, 7, 8, 19, 20, 21, 22, 23],
-//            enabledHours: [ 9,10, 11, 12, 13, 14, 15, 16, 17,18]
-//
-//        });
+		// 前の年ボタン
+		$('button#prev').on('click', function(){
+			const date = getAddedYearDate($('#event_date').val(), -1);
+			$('#event_date').val(getFormatDate(date));
+			reflectToPicker(date);
+		});
+		// 次の年ボタン
+		$('button#next').on('click', function(){
+			const date = getAddedYearDate($('#event_date').val(), 1);
+			$('#event_date').val(getFormatDate(date));
+			reflectToPicker(date);
+		});
 	});
+
+	// pickerに反映させる
+	function reflectToPicker (date)
+	{
+		const picker = $('#event_date').pickadate('picker');
+		picker.set('select', date);
+	}
+	// 年を加算した日付を取得
+	function getAddedYearDate (date_string, add_year)
+	{
+		const date = getDate(date_string);
+		date.setYear(date.getFullYear() + add_year);
+		return date;
+	}
+	// 指定日付のDateを取得
+	function getDate (date_string)
+	{
+		return new Date(date_string + " 00:00:00");
+	}
+	// フォーマットされた日付を取得
+	function getFormatDate (date)
+	{
+		const y = date.getFullYear();
+		const m = date.getMonth() + 1;
+		const d = date.getDate();
+		return `${y}-${m}-${d}`;
+	}
     </script>
     
 @endsection
