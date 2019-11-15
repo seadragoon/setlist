@@ -18,8 +18,8 @@ use App\SetlistSong;
 use App\Util\TimeManager;
 use App\Util\ConstantManager;
 
-use App\Http\requests;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\HtmlString;
 
 class EventsController extends Controller
 {
@@ -82,6 +82,12 @@ class EventsController extends Controller
 		// イベントデータを取得
 		$event_data = Event::where('event_id', $event_id)->first()->toArray();
 		$event_data['event_type_text'] = ConstantManager::getEventTypeString($event_data['event_type']);
+		// 概要にはリンクを入れることが可能
+		if (!empty($event_data['summary'])) {
+			$pattern = '/((?:https?|ftp):\/\/[-_.!~*\'()a-zA-Z0-9;\/?:@&=+$,%#]+)/';
+			$replace = '<a href="$1">$1</a>';
+			$event_data['summary'] = new HtmlString(nl2br(preg_replace($pattern, $replace, $event_data['summary'])));
+		}
 		// イベント最終編集者を取得
 		$eventLastEditUser = User::where('id', $event_data['edit_user_id'])->first();
 
@@ -156,7 +162,7 @@ class EventsController extends Controller
 			'artist_name'					=>'required|string|max:100',	// アーティスト名
 			'event_name'					=>'required|string|max:100',	// イベント名
 			'event_venue'					=>'required|string|max:100',	// 会場名
-			'event_summary'					=>'nullable|string|max:100',	// イベント概要
+			'event_summary'					=>'nullable|string|max:9999',	// イベント概要
 			'event_type'					=>'integer|max:10',				// イベントタイプ
 			'event_tag'						=>'nullable|string|max:100',	// イベントタグ
 			'songs'							=>'array',						// 通常楽曲配列

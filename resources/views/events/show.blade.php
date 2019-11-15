@@ -20,10 +20,15 @@
                 会場名: {{ $param['event_data']['venue_name'] }}
             </div>
             <div>
-                イベント概要: {{ $param['event_data']['summary'] }}
+                イベント概要:
+				<div class="event-summary">
+					<p>
+						{!! $param['event_data']['summary'] !!}
+					</p>
+				</div>
             </div>
             <div>
-                イベントタイプ: {{ $param['event_data']['event_type_text'] }}
+                イベントタイプ: {!! $param['event_data']['event_type_text'] !!}
             </div>
             <div>
                 タグ: {{ $param['event_data']['tag_text'] }}
@@ -97,4 +102,14 @@
 	});
     </script>
     
+@endsection
+
+@section('style')
+    
+    <style type="text/css">
+	    .event-summary {
+			background-color: #ddd;
+	    }
+    </style>
+
 @endsection

@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
+@if($params['isEdit'])
+@section('title', 'イベント編集')
+@else
 @section('title', 'イベント追加')
+@endif
 
 @section('header')
 
@@ -47,7 +51,7 @@
 						<button id="next" type="button" class="btn btn-default">▶</button>
 						@if(!empty($errors->first('event_date')))
 							<br>
-							<span class="text-danger">※必須項目です</span>
+							<span class="text-danger">{{ $errors->first('event_date') }}</span>
 						@endif
 					</div>
 				</div>
@@ -57,7 +61,7 @@
 						{!! Form::text('event_time', old('event_time', $params['event_time']), ['id' => 'event_time', 'class' => 'col-sm-6 col-8 datepicker']) !!}
 						@if(!empty($errors->first('event_time')))
 							<br>
-							<span class="text-danger">※必須項目です</span>
+							<span class="text-danger">{{ $errors->first('event_time') }}</span>
 						@endif
 					</div>
 				</div>
@@ -73,7 +77,7 @@
 							</datalist>
 					    </div>
 	                    @if(!empty($errors->first('artist_name')))
-                            <span class="text-danger">※必須項目です</span>
+                            <span class="text-danger">{{ $errors->first('artist_name') }}</span>
 	                    @elseif(!empty($errors->first('artist_name_wrong')))
                             <span class="text-danger">{{ $errors->first('artist_name_wrong') }}</span>
 	                    @endif
@@ -84,7 +88,7 @@
                     <div class="col-sm-8 col-12">
                         {!! Form::text('event_name', old('event_name', $params['event_name']), ['id' => 'event_name', 'class' => 'form-control']) !!}
 	                    @if(!empty($errors->first('event_name')))
-	                    	<span class="text-danger">※必須項目です</span>
+	                    	<span class="text-danger">{{ $errors->first('event_name') }}</span>
 	                    @endif
                     </div>
                 </div>
@@ -93,14 +97,17 @@
                     <div class="col-sm-8 col-12">
                         {!! Form::text('event_venue', old('event_venue', $params['event_venue']), ['id' => 'event_venue', 'class' => 'form-control']) !!}
                         @if(!empty($errors->first('event_venue')))
-	                    	<span class="text-danger">※必須項目です</span>
+	                    	<span class="text-danger">{{ $errors->first('event_venue') }}</span>
 	                    @endif
                     </div>
                 </div>
                 <div class="form-group">
                     {!! Form::label('event_summary', 'イベント概要', ['class' => 'col-sm-3 control-label']) !!}
                     <div class="col-sm-8 col-12">
-                        {!! Form::text('event_summary', old('event_summary', $params['event_summary']), ['id' => 'event_summary', 'class' => 'form-control']) !!}
+						{!! Form::textarea('event_summary', old('event_summary', $params['event_summary']), ['id' => 'event_summary', 'size' => '30x5', 'class' => 'form-control']) !!}
+	                    @if(!empty($errors->first('event_summary')))
+	                    	<span class="text-danger">{{ $errors->first('event_summary') }}</span>
+	                    @endif
                     </div>
                 </div>
                 <div class="form-group">
