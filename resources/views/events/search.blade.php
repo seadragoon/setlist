@@ -100,6 +100,10 @@
     
     <script>
 	$(function(){
+        // これがないと画面に戻った時に勝手にカレンダーが表示される
+		$(window).on("focus", function () {
+			$(document.activeElement).blur();
+		});
 		$('#date_from').pickadate({
 			format: 'yyyy-mm-dd',
             selectYears: true,

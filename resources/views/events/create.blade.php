@@ -432,7 +432,11 @@
 				encoreIndex--;
 			}
 		});
-		
+
+		// これがないと画面に戻った時に勝手にカレンダーが表示される
+		$(window).on("focus", function () {
+			$(document.activeElement).blur();
+		});
 		// pick a date 日付
 		$('#event_date').pickadate({
 			format: 'yyyy-mm-dd',
