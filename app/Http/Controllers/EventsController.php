@@ -504,11 +504,48 @@ class EventsController extends Controller
 		return view('events/create')->with('params', $params);
 	}
 	
-	public function destroy($id)
+	/**
+	 * 削除アクション
+	 */
+	public function destroy($event_id)
 	{
-		$task = Task::find($id);
-		$task->delete();
-		return redirect()->route('tasks.index');
+		try
+		{
+			// トランザクション開始
+			DB::beginTransaction();
+
+			// イベントを取得
+			$event = Event::where('event_id', $event_id)->first();
+			// セットリストを取得
+			$setlist = Setlist::where('event_id', $event_id)->first();
+			// セトリグループを取得
+			$setlistGroups = SetlistGroup::where('setlist_id', $setlist->setlist_id)->get();
+			
+			// セトリ曲一覧を削除
+			foreach ($setlistGroups as $group) {
+				SetlistSong::where('setlist_id', $setlist->setlist_id)->where('setlist_group_seq', $group->setlist_group_seq)->delete();
+			}
+
+			// セトリグループ削除
+			SetlistGroup::where('setlist_id', $setlist->setlist_id)->delete();
+			// セットリスト削除
+			$setlist->delete();
+			// イベント削除
+			$event->delete();
+			
+			// トランザクション終了（コミット）
+			DB::commit();
+		}
+		catch (Exception $ex)
+		{
+			echo "例外が発生: " . $ex;
+			// ロールバック
+			DB::rollback();
+			
+			return;
+		}
+		
+		return redirect('/');
 	}
 	
 	/**

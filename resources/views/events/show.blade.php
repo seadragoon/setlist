@@ -68,6 +68,11 @@
 			{{ link_to_route('events.edit', '編集', $param['event_data']['event_id'], ['class' => 'btn btn-sm btn-default btn-success']) }}
 			<br>
 			<br>
+			{{ Form::open(['route' => ['events.destroy', $param['event_data']['event_id']], 'method' => 'delete', 'class' => 'form_delete']) }}
+				{{ Form::submit('削除', ['class' => 'btn btn-sm btn-default btn-danger']) }}
+			{{ Form::close() }}
+			<br>
+			<br>
 			@endauth
             <div>
 				<p class="text-muted">※最終編集者: {{ $param['songLastEditUserName'] }} ({{ $param['songLastEditTime'] }})</p>
@@ -78,4 +83,18 @@
         </div>
     </div>
 
+@endsection
+
+@section('script')
+    
+    <script>
+	$(function(){
+		$(".form_delete").submit(function(){
+			if(!confirm('本当に削除しますか？')){
+				return false;
+			}
+		});
+	});
+    </script>
+    
 @endsection
