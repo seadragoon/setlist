@@ -27,8 +27,15 @@
         <div class="panel-heading">
         </div>
         <div class="panel-body">
-        	<br>
-        	<h4>イベント追加</h4>
+			<br>
+			@if($params['isEdit'])
+			<h4>イベント編集</h4>
+			<p>既存イベントの編集を行えます。</p>
+			@else
+			<h4>イベント追加</h4>
+			<p>新規イベントの追加を行えます。</p>
+			@endif
+			
         	<hr>
             {!! Form::model($params, ['route' => 'events.store', 'method' => 'post', 'class' => 'form-horizontal']) !!}
             	<h4>イベント詳細</h4>
@@ -91,7 +98,7 @@
                 <div class="form-group">
                     {!! Form::label('event_type', 'イベントタイプ', ['class' => 'col-sm-3 control-label']) !!}
                     <div class="col-sm-8 col-12">
-                		{!! Form::select('event_type', ['ワンマン', 'フェス', 'ミニライブ', 'ゲスト', 'その他'], old('event_type', $params['event_type']), ['id' => 'event_type', 'class' => 'form-control']) !!}
+                		{!! Form::select('event_type', $params['eventTypeStrings'], old('event_type', $params['event_type']), ['id' => 'event_type', 'class' => 'form-control']) !!}
                     </div>
                 </div>
                 <div class="form-group">
@@ -140,7 +147,7 @@
 			                    </div>
 			                    <div class="d-sm-none col-6 px-0">アレンジタイプ</div>
 			                	<div class="col-sm-2 col-6 px-0">
-			                		{!! Form::select('songs['.$index.'][arrange_type]', ['通常', 'Acostic', 'Original', 'Christmas', 'その他'], $oldSong['arrange_type'], ['id' => 'song_arrange_type', 'class' => 'form-control']) !!}
+			                		{!! Form::select('songs['.$index.'][arrange_type]', $params['arrangeTypeStrings'], $oldSong['arrange_type'], ['id' => 'song_arrange_type', 'class' => 'form-control']) !!}
 			                    </div>
 			                    <div class="d-sm-none col-6 px-0">コラボアーティスト</div>
 			                	<div class="col-sm-2 col-6 px-0">
@@ -178,7 +185,7 @@
 			                    </div>
 			                    <div class="d-sm-none col-6 px-0">アレンジタイプ</div>
 			                	<div class="col-sm-2 col-6 px-0">
-			                		{!! Form::select('songs[0][arrange_type]', ['通常', 'Acostic', 'Original', 'Christmas', 'その他'], 0, ['id' => 'song_arrange_type', 'class' => 'form-control']) !!}
+			                		{!! Form::select('songs[0][arrange_type]', $params['arrangeTypeStrings'], 0, ['id' => 'song_arrange_type', 'class' => 'form-control']) !!}
 			                    </div>
 			                    <div class="d-sm-none col-6 px-0">コラボアーティスト</div>
 			                	<div class="col-sm-2 col-6 px-0">
@@ -226,7 +233,7 @@
 			                    </div>
 			                    <div class="d-sm-none col-6 px-0">アレンジタイプ</div>
 			                	<div class="col-sm-2 col-6 px-0">
-			                		{!! Form::select('encore_songs['.$index.'][arrange_type]', ['通常', 'Acostic', 'Original', 'Christmas', 'その他'], $oldSong['arrange_type'], ['id' => 'encore_song_arrange_type', 'class' => 'form-control']) !!}
+			                		{!! Form::select('encore_songs['.$index.'][arrange_type]', $params['arrangeTypeStrings'], $oldSong['arrange_type'], ['id' => 'encore_song_arrange_type', 'class' => 'form-control']) !!}
 			                    </div>
 			                    <div class="d-sm-none col-6 px-0">コラボアーティスト</div>
 			                	<div class="col-sm-2 col-6 px-0">
@@ -264,7 +271,7 @@
 			                    </div>
 			                    <div class="d-sm-none col-6 px-0">アレンジタイプ</div>
 			                	<div class="col-sm-2 col-6 px-0">
-			                		{!! Form::select('encore_songs[0][arrange_type]', ['通常', 'Acostic', 'Original', 'Christmas', 'その他'], 0, ['id' => 'encore_song_arrange_type', 'class' => 'form-control']) !!}
+			                		{!! Form::select('encore_songs[0][arrange_type]', $params['arrangeTypeStrings'], 0, ['id' => 'encore_song_arrange_type', 'class' => 'form-control']) !!}
 			                    </div>
 			                    <div class="d-sm-none col-6 px-0">コラボアーティスト</div>
 			                	<div class="col-sm-2 col-6 px-0">

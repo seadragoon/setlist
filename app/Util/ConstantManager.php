@@ -2,6 +2,8 @@
 
 namespace App\Util;
 
+use ReflectionClass;
+
 class SimpleEnum {
     public static function values()
     {
@@ -37,10 +39,11 @@ class EventType extends SimpleEnum {
  * アレンジタイプ
  */
 class ArrangeType extends SimpleEnum {
-    const NONE      = 0;
+    const NORMAL    = 0;
     const ACOSTIC   = 1;
     const ORIGINAL  = 2;
     const CHRISTMAS = 3;
+    const OTHER     = 4;
 }
 
 /**
@@ -74,17 +77,54 @@ class ConstantManager
     /**
      * ArrangeTypeからの文字列を取得
      */
-    public static function getArrangeTypeString($type)
+    public static function getArrangeTypeString($type, $ignoreNormal = false)
     {
         switch ($type) {
+            case ArrangeType::NORMAL:
+                if ($ignoreNormal){
+                    return '';
+                }
+                return '通常';
             case ArrangeType::ACOSTIC:
                 return 'Acostic';
             case ArrangeType::ORIGINAL:
                 return 'Original';
             case ArrangeType::CHRISTMAS:
                 return 'Christmas';
+            case ArrangeType::OTHER:
+                return 'その他';
             default:
                 return '';
         }
+    }
+    
+    /**
+     * EventType文字列のリストを配列で取得
+     */
+    public static function getEventTypeStringList()
+    {
+        $result = [];
+        foreach(EventType::values() as $type) {
+            $str = ConstantManager::getEventTypeString($type);
+            if (!empty($str)) {
+                $result[] = $str;
+            }
+        }
+        return $result;
+    }
+    
+    /**
+     * ArrangeType文字列のリストを配列で取得
+     */
+    public static function getArrangeTypeStringList()
+    {
+        $result = [];
+        foreach(ArrangeType::values() as $type) {
+            $str = ConstantManager::getArrangeTypeString($type);
+            if (!empty($str)) {
+                $result[] = $str;
+            }
+        }
+        return $result;
     }
 }

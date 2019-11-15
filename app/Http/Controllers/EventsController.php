@@ -66,7 +66,7 @@ class EventsController extends Controller
 				$songData['song_id']			= $master['song_id'];
 				$songData['name']				= $master['name'];
 				$songData['is_short']			= $value->is_medley;
-				$songData['arrange_type_text']	= ConstantManager::getArrangeTypeString($value->arrange_type);
+				$songData['arrange_type_text']	= ConstantManager::getArrangeTypeString($value->arrange_type, true/* ignoreNormal */);
 				$songData['collabo_artists']	= implode(',', $collaboArtistNames);
 				$songData['edit_user_id']		= $value->edit_user_id;
 				$songData['updated_at']			= $value->updated_at;
@@ -111,23 +111,25 @@ class EventsController extends Controller
 		$date = empty($request->input('date')) ? new Datetime() : new Datetime($request->input('date'));
 		$artist_id = empty($request->input('artist_id')) ? 0 : $request->input('artist_id');
 		
-		
-		$params = array();
-		
 		// 楽曲をすべて取得 TODO: 他アーティストの楽曲を沢山登録していった場合負荷が掛かり過ぎる恐れがある
 		$songMasters = Song::orderby('name', 'asc')->get();
-		$params['songMasters'] = $songMasters;
 		// アーティストをすべて取得
 		$artistMasters = Artist::orderBy('artist_id', 'asc')->get();
-		$params['artistMasters'] = $artistMasters;
 		
 		$artist_name = null;
 		if (!empty($artist_id)){
 			$artist = Artist::where('artist_id', $artist_id)->first();
 			$artist_name = $artist->name;
 		}
-		$params['artist_name'] = $artist_name;
 		
+		$params = array();
+		$params['isEdit'] = false;
+		$params['songMasters'] = $songMasters;
+		$params['artistMasters'] = $artistMasters;
+		$params['eventTypeStrings'] = ConstantManager::getEventTypeStringList();
+		$params['arrangeTypeStrings'] = ConstantManager::getArrangeTypeStringList();
+		$params['artist_name'] = $artist_name;
+
 		$params['event_id'] = null;
 		$params['event_date'] = $date->format('Y-m-d');
 		$params['event_time'] = null;
@@ -427,17 +429,20 @@ class EventsController extends Controller
 	
 	public function edit($event_id)
 	{
+		// 曲マスタリストを取得
+		$songMasters = Song::orderby('name', 'asc')->get();
+		// アーティストマスタを取得
+		$artistMasters = Artist::orderby('artist_id', 'asc')->get();
+
 		// イベントデータを取得
 		$event_data = Event::where('event_id', $event_id)->first();
 		$event_datetime = new Datetime($event_data->datetime);
 		
 		//TODO : 複数アーティストのデータを登録すると複数取れるが、ひとまず一旦最初に見つかったもので実装
 		$setlist = Setlist::where('event_id', $event_id)->first();
+		// アーティストIDの等しいアーティストを取得
+		$targetArtist = $artistMasters->where('artist_id', $setlist->artist_id)->first();
 		
-		// 曲マスタリストを取得
-		$songMasters = Song::orderby('name', 'asc')->get();
-		// アーティストマスタを取得
-		$artistMasters = Artist::orderby('artist_id', 'asc')->get();
 		
 		$songDataList = array();
 		
@@ -475,8 +480,13 @@ class EventsController extends Controller
 		$songs			= empty($songDataList[0]) ? null : $songDataList[0];		// 通常セトリ
 		$encore_songs	= empty($songDataList[1]) ? null : $songDataList[1];		// アンコールセトリ
 		
-		
 		$params = array();
+		$params['isEdit'] = true;
+		$params['songMasters'] = $songMasters;
+		$params['artistMasters'] = $artistMasters;
+		$params['eventTypeStrings'] = ConstantManager::getEventTypeStringList();
+		$params['arrangeTypeStrings'] = ConstantManager::getArrangeTypeStringList();
+		$params['artist_name'] = $targetArtist->name;
 		
 		$params['event_id'] = $event_id; // event_idは編集の場合のみ持たせる
 		$params['event_date'] = $event_datetime->format('Y-m-d');
@@ -490,15 +500,6 @@ class EventsController extends Controller
 		$params['encore_songs'] = $encore_songs;
 		
 		//echo '<pre>' . var_export($params, true) . '</pre>';
-		
-		// アーティスト最初の1件だけ取得
-		$artist = Artist::orderBy('artist_id', 'asc')->first();
-		$params['artist'] = $artist;
-		$params['songMasters'] = $songMasters;
-		$params['artistMasters'] = $artistMasters;
-		
-		$artist = $artistMasters->where('artist_id', $setlist->artist_id)->first();
-		$params['artist_name'] = $artist->name;
 		
 		return view('events/create')->with('params', $params);
 	}
