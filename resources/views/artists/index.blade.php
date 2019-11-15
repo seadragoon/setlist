@@ -67,8 +67,12 @@
             {{ link_to(url()->previous(), '戻る') }}
         </div>
     </div>
+
+@endsection
+
+@section('script')
     
-	<script>
+    <script>
 	$(function(){
 		$(".form_delete").submit(function(){
 			if(!confirm('本当に削除しますか？')){
@@ -76,6 +80,6 @@
 			}
 		});
 	});
-	</script>
-
+    </script>
+    
 @endsection

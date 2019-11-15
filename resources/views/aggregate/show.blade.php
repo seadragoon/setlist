@@ -79,12 +79,6 @@
     
     <script>
 	$(function(){
-		$(".form_delete").submit(function(){
-			if(!confirm('本当に削除しますか？')){
-				return false;
-			}
-        });
-        
 		// これがないと画面に戻った時に勝手にカレンダーが表示される
 		$(window).on("focus", function () {
 			$(document.activeElement).blur();
