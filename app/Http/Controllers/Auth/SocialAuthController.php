@@ -102,7 +102,7 @@ class SocialAuthController extends Controller
         // ログアウト
         Auth::logout();
 
-        return redirect(url()->previous());
+        return redirect('/');
     }
     public function __construct()
     {

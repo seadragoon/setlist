@@ -50,11 +50,13 @@
                     {{-- Navbarの右側 --}}
                     <ul class="navbar-nav ml-auto">
                         {{-- 追加ボタン --}}
+                        @auth
                         <li class="nav-item">
                             <a href="{{ url('events/create') }}" id="new-post" class="btn btn-success">
                                 {{ __('新規イベント追加') }}
                             </a>
                         </li>
+                        @endauth
 
                         {{-- 認証関連のリンク --}}
                         @guest
