@@ -18,6 +18,10 @@
                     </li>
                 @endforeach
             </ul>
+            <br>
+        </div>
+        <div class="panel-footer">
+            {{ link_to(url()->previous(), '戻る') }}
         </div>
     </div>
 

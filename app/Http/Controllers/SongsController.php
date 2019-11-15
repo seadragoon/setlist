@@ -5,11 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Auth;
+use App\User;
 use App\Artist;
 use App\Song;
 use App\Event;
 use App\Setlist;
 use App\SetlistSong;
+use App\Util\TimeManager;
 
 class SongsController extends Controller
 {
@@ -26,6 +28,9 @@ class SongsController extends Controller
 	{
 		$song = Song::where('song_id', $song_id)->first();
 		$artist = Artist::where('artist_id', $song->artist_id)->first();
+		
+		// 最終編集者を取得
+		$lastEditUser = User::where('id', $song->edit_user_id)->first();
 		
 		// 対象の歌をセトリに含むイベントを検索
 		$eventDataList = array();
@@ -50,6 +55,8 @@ class SongsController extends Controller
 		$param = array();
 		$param['artist'] = $artist;
 		$param['song'] = $song;
+		$param['lastEditUserName'] = empty($lastEditUser) ? '管理者' : $lastEditUser->screen_name;
+		$param['lastEditTime'] = TimeManager::convert_to_fuzzy_time($artist->updated_at);
 		$param['eventDataList'] = $eventDataList;
 		return view('songs/show')->with('param', $param);
 	}

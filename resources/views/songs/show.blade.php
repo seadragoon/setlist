@@ -16,6 +16,9 @@
             <div>
                 曲名: {{ $param['song']->name }}
             </div>
+            <div>
+				<p class="text-muted">※最終編集者: {{ $param['lastEditUserName'] }} ({{ $param['lastEditTime'] }})</p>
+            </div>
             @auth
             {{ link_to_route('songs.edit', '編集', $param['song']->song_id, ['class' => 'btn btn-sm btn-default btn-success']) }}
             <br>

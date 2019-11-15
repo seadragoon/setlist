@@ -13,6 +13,9 @@
             <div>
                 アーティスト名: {{ $param['artist']->name }}
             </div>
+            <div>
+				<p class="text-muted">※最終編集者: {{ $param['lastEditUserName'] }} ({{ $param['lastEditTime'] }})</p>
+            </div>
 
 			@auth
 			{{ link_to_route('artists.edit', '編集', $param['artist']->artist_id, ['class' => 'btn btn-sm btn-default btn-success']) }}

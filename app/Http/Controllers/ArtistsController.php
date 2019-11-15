@@ -7,10 +7,12 @@ use Illuminate\Http\Request;
 use Datetime;
 
 use Auth;
+use App\User;
 use App\Artist;
 use App\Song;
 use App\Event;
 use App\Setlist;
+use App\Util\TimeManager;
 
 class ArtistsController extends Controller
 {
@@ -26,6 +28,9 @@ class ArtistsController extends Controller
 	{
 		$artist = Artist::where('artist_id', $artist_id)->first();
 		$songs = Song::where('artist_id', $artist->artist_id)->orderby('name', 'asc')->get();
+
+		// 最終編集者を取得
+		$lastEditUser = User::where('id', $artist->edit_user_id)->first();
 		
 		// 一致したアーティストのセトリリストを取得
 		$setlists = Setlist::where('artist_id', $artist->artist_id)->get();
@@ -44,6 +49,8 @@ class ArtistsController extends Controller
 		
 		$param = array();
 		$param['artist'] = $artist;
+		$param['lastEditUserName'] = empty($lastEditUser) ? '管理者' : $lastEditUser->screen_name;
+		$param['lastEditTime'] = TimeManager::convert_to_fuzzy_time($artist->updated_at);
 		$param['songs'] = $songs;
 		$param['datesString'] = '['.implode(',', $eventDates).']'; // JavaScriptの配列として使用
 		return view('artists/show')->with('param', $param);

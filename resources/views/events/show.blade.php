@@ -47,6 +47,9 @@
             <div>
                 アーティスト名: {{ link_to_route('artists.show', $param['artist']->name, $param['artist']->artist_id) }}
             </div>
+            <div>
+				<p class="text-muted">※最終編集者: {{ $param['eventLastEditUserName'] }} ({{ $param['eventLastEditTime'] }})</p>
+            </div>
 			
 			<hr>
 			<h4>セットリスト</h4>
@@ -98,6 +101,9 @@
 			<br>
 			<br>
 			@endauth
+            <div>
+				<p class="text-muted">※最終編集者: {{ $param['songLastEditUserName'] }} ({{ $param['songLastEditTime'] }})</p>
+            </div>
 		</div>
         <div class="panel-footer">
             {{ link_to(url()->previous(), '戻る') }}

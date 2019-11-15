@@ -8,12 +8,14 @@ use Datetime;
 use Exception;
 use Auth;
 
+use App\User;
 use App\Artist;
 use App\Song;
 use App\Event;
 use App\Setlist;
 use App\SetlistGroup;
 use App\SetlistSong;
+use App\Util\TimeManager;
 
 use App\Http\requests;
 use Illuminate\Support\Facades\DB;
@@ -51,7 +53,7 @@ class EventsController extends Controller
 				$master = $songMasters->where('song_id', $value->song_id)->first();
 				
 				// コラボアーティストIDから名前を取得
-				$collaboArtistIds = explode(',', $value['collabo_artist_ids']);
+				$collaboArtistIds = explode(',', $value->collabo_artist_ids);
 				$collaboArtistNames = array();
 				foreach($collaboArtistIds as $artistId){
  					if(empty($artistId)) continue;
@@ -64,19 +66,28 @@ class EventsController extends Controller
 				$songData['seq']				= $value->seq + 1;
 				$songData['song_id']			= $master['song_id'];
 				$songData['name']				= $master['name'];
-				$songData['is_short']			= $value['is_medley'];
-				$songData['arrange_type']		= $value['arrange_type'];
+				$songData['is_short']			= $value->is_medley;
+				$songData['arrange_type']		= $value->arrange_type;
 				$songData['collabo_artists']	= implode(',', $collaboArtistNames);
+				$songData['edit_user_id']		= $value->edit_user_id;
+				$songData['updated_at']			= $value->updated_at;
 				
 				$songDataList[$group->setlist_group_seq][$value->seq] = $songData;
 			}
 		}
 		
-		$song_list			= empty($songDataList[0]) ? array() : $songDataList[0];		// 通常セトリ
-		$encore_song_list	= empty($songDataList[1]) ? array() : $songDataList[1];		// アンコールセトリ
+		// 通常セトリ・アンコールセトリ
+		$song_list			= empty($songDataList[0]) ? array() : $songDataList[0];
+		$encore_song_list	= empty($songDataList[1]) ? array() : $songDataList[1];
 		
 		// イベントデータを取得
 		$event_data = Event::where('event_id', $event_id)->first();
+		// イベント最終編集者を取得
+		$eventLastEditUser = User::where('id', $event_data->edit_user_id)->first();
+
+		// セトリ曲データの一つを取り出して、最終編集データを取得
+		$songSample = $song_list[0];
+		$songLastEditUser = User::where('id', $songSample['edit_user_id'])->first();
 		
 		$param = array();
 		$param['event_data'] = $event_data;
@@ -84,6 +95,11 @@ class EventsController extends Controller
 		$param['artist'] = $artistMasters->where('artist_id', $setlist->artist_id)->first();
 		$param['song_list'] = $song_list;
 		$param['encore_song_list'] = $encore_song_list;
+		// 最終編集者情報
+		$param['eventLastEditUserName'] = empty($eventLastEditUser) ? '管理者' : $eventLastEditUser->screen_name;
+		$param['eventLastEditTime'] = TimeManager::convert_to_fuzzy_time($event_data->updated_at);
+		$param['songLastEditUserName'] = empty($songLastEditUser) ? '管理者' : $songLastEditUser->screen_name;
+		$param['songLastEditTime'] = TimeManager::convert_to_fuzzy_time($songSample['updated_at']);
 		
 		//echo '<pre>' . var_export($param, true) . '</pre>';
 		
