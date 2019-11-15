@@ -23,6 +23,7 @@ class CreateEventsTable extends Migration
             $table->integer('event_type')->default(0);
             $table->integer('edit_user_id')->default(0);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -23,6 +23,7 @@ class CreateSetlistSongsTable extends Migration
             $table->integer('arrange_type');
             $table->integer('edit_user_id')->default(0);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

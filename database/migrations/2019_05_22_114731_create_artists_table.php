@@ -19,6 +19,7 @@ class CreateArtistsTable extends Migration
             $table->string('link')->nullable();
             $table->integer('edit_user_id')->default(0);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

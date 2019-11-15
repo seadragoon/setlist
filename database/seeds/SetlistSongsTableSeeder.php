@@ -27,8 +27,8 @@ class SetlistSongsTableSeeder extends Seeder
                 'collabo_artist_ids' => '',
                 'arrange_type' => 0,
                 'edit_user_id' => 0,
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'created_at' => '2019-06-07 17:22:51',
+                'updated_at' => '2019-06-07 17:22:51',
             ),
             1 => 
             array (
@@ -40,8 +40,8 @@ class SetlistSongsTableSeeder extends Seeder
                 'collabo_artist_ids' => '',
                 'arrange_type' => 0,
                 'edit_user_id' => 0,
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'created_at' => '2019-06-07 17:22:51',
+                'updated_at' => '2019-06-07 17:22:51',
             ),
             2 => 
             array (
@@ -53,8 +53,8 @@ class SetlistSongsTableSeeder extends Seeder
                 'collabo_artist_ids' => '',
                 'arrange_type' => 0,
                 'edit_user_id' => 0,
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'created_at' => '2019-06-07 17:22:51',
+                'updated_at' => '2019-06-07 17:22:51',
             ),
             3 => 
             array (
@@ -66,8 +66,8 @@ class SetlistSongsTableSeeder extends Seeder
                 'collabo_artist_ids' => '',
                 'arrange_type' => 0,
                 'edit_user_id' => 0,
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'created_at' => '2019-06-07 17:22:51',
+                'updated_at' => '2019-06-07 17:22:51',
             ),
             4 => 
             array (
@@ -79,8 +79,8 @@ class SetlistSongsTableSeeder extends Seeder
                 'collabo_artist_ids' => '',
                 'arrange_type' => 0,
                 'edit_user_id' => 0,
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'created_at' => '2019-06-07 17:22:51',
+                'updated_at' => '2019-06-07 17:22:51',
             ),
             5 => 
             array (
@@ -92,8 +92,8 @@ class SetlistSongsTableSeeder extends Seeder
                 'collabo_artist_ids' => '',
                 'arrange_type' => 0,
                 'edit_user_id' => 0,
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'created_at' => '2019-06-07 17:22:51',
+                'updated_at' => '2019-06-07 17:22:51',
             ),
             6 => 
             array (
@@ -105,8 +105,8 @@ class SetlistSongsTableSeeder extends Seeder
                 'collabo_artist_ids' => '',
                 'arrange_type' => 0,
                 'edit_user_id' => 0,
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'created_at' => '2019-06-07 17:22:51',
+                'updated_at' => '2019-06-07 17:22:51',
             ),
             7 => 
             array (
@@ -118,8 +118,8 @@ class SetlistSongsTableSeeder extends Seeder
                 'collabo_artist_ids' => '',
                 'arrange_type' => 0,
                 'edit_user_id' => 0,
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'created_at' => '2019-06-07 17:22:51',
+                'updated_at' => '2019-06-07 17:22:51',
             ),
             8 => 
             array (
@@ -131,8 +131,8 @@ class SetlistSongsTableSeeder extends Seeder
                 'collabo_artist_ids' => '',
                 'arrange_type' => 0,
                 'edit_user_id' => 0,
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'created_at' => '2019-06-07 17:22:51',
+                'updated_at' => '2019-06-07 17:22:51',
             ),
             9 => 
             array (
@@ -144,8 +144,8 @@ class SetlistSongsTableSeeder extends Seeder
                 'collabo_artist_ids' => '',
                 'arrange_type' => 0,
                 'edit_user_id' => 0,
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'created_at' => '2019-06-07 17:22:51',
+                'updated_at' => '2019-06-07 17:22:51',
             ),
             10 => 
             array (
@@ -157,8 +157,8 @@ class SetlistSongsTableSeeder extends Seeder
                 'collabo_artist_ids' => '',
                 'arrange_type' => 0,
                 'edit_user_id' => 0,
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'created_at' => '2019-06-07 17:22:51',
+                'updated_at' => '2019-06-07 17:22:51',
             ),
             11 => 
             array (
@@ -170,8 +170,8 @@ class SetlistSongsTableSeeder extends Seeder
                 'collabo_artist_ids' => '',
                 'arrange_type' => 0,
                 'edit_user_id' => 0,
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'created_at' => '2019-06-07 17:22:51',
+                'updated_at' => '2019-06-07 17:22:51',
             ),
             12 => 
             array (
@@ -183,8 +183,8 @@ class SetlistSongsTableSeeder extends Seeder
                 'collabo_artist_ids' => '',
                 'arrange_type' => 0,
                 'edit_user_id' => 0,
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'created_at' => '2019-06-07 17:22:51',
+                'updated_at' => '2019-06-07 17:22:51',
             ),
             13 => 
             array (
@@ -196,8 +196,8 @@ class SetlistSongsTableSeeder extends Seeder
                 'collabo_artist_ids' => '',
                 'arrange_type' => 0,
                 'edit_user_id' => 0,
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'created_at' => '2019-06-07 17:22:51',
+                'updated_at' => '2019-06-07 17:22:51',
             ),
             14 => 
             array (
@@ -209,8 +209,8 @@ class SetlistSongsTableSeeder extends Seeder
                 'collabo_artist_ids' => '',
                 'arrange_type' => 0,
                 'edit_user_id' => 0,
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'created_at' => '2019-06-07 17:22:51',
+                'updated_at' => '2019-06-07 17:22:51',
             ),
             15 => 
             array (

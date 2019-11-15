@@ -18,6 +18,7 @@ class CreateSetlistGroupsTable extends Migration
             $table->bigInteger('setlist_group_seq');
             $table->integer('setlist_group_type')->default(0);
             $table->timestamps();
+            $table->softDeletes();
             
             // primaryキーの指定
             $table->unique(['setlist_id', 'setlist_group_seq']);

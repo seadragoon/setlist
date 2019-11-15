@@ -18,6 +18,7 @@ class CreateSetlistsTable extends Migration
             $table->bigInteger('event_id');
             $table->bigInteger('artist_id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
