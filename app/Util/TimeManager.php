@@ -2,6 +2,9 @@
 
 namespace App\Util;
 
+/**
+ * 時間マネージャー
+ */
 class TimeManager
 {
     /**
