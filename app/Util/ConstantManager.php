@@ -28,9 +28,9 @@ class EventType extends SimpleEnum {
     const ONE_MAN_LIVE  = 0;
     const FC_EVENT      = 1;
     const FES_EVENT     = 2;
-    const MINI_LIVE     = 2;
-    const GUEST         = 3;
-    const OTHER         = 4;
+    const MINI_LIVE     = 3;
+    const GUEST         = 4;
+    const OTHER         = 5;
 }
 
 /**
