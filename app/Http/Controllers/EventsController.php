@@ -16,6 +16,7 @@ use App\Setlist;
 use App\SetlistGroup;
 use App\SetlistSong;
 use App\Util\TimeManager;
+use App\Util\ConstantManager;
 
 use App\Http\requests;
 use Illuminate\Support\Facades\DB;
@@ -25,8 +26,6 @@ class EventsController extends Controller
 	public function index()
 	{
 		return redirect('/');
-		//$tasks = Task::orderBy('updated_at', 'desc')->get();
-		//return view('tasks/index')->with('tasks', $tasks);
 	}
 	
 	public function show($event_id)
@@ -67,7 +66,7 @@ class EventsController extends Controller
 				$songData['song_id']			= $master['song_id'];
 				$songData['name']				= $master['name'];
 				$songData['is_short']			= $value->is_medley;
-				$songData['arrange_type']		= $value->arrange_type;
+				$songData['arrange_type_text']	= ConstantManager::getArrangeTypeString($value->arrange_type);
 				$songData['collabo_artists']	= implode(',', $collaboArtistNames);
 				$songData['edit_user_id']		= $value->edit_user_id;
 				$songData['updated_at']			= $value->updated_at;
@@ -81,9 +80,10 @@ class EventsController extends Controller
 		$encore_song_list	= empty($songDataList[1]) ? array() : $songDataList[1];
 		
 		// イベントデータを取得
-		$event_data = Event::where('event_id', $event_id)->first();
+		$event_data = Event::where('event_id', $event_id)->first()->toArray();
+		$event_data['event_type_text'] = ConstantManager::getEventTypeString($event_data['event_type']);
 		// イベント最終編集者を取得
-		$eventLastEditUser = User::where('id', $event_data->edit_user_id)->first();
+		$eventLastEditUser = User::where('id', $event_data['edit_user_id'])->first();
 
 		// セトリ曲データの一つを取り出して、最終編集データを取得
 		$songSample = $song_list[0];
@@ -97,7 +97,7 @@ class EventsController extends Controller
 		$param['encore_song_list'] = $encore_song_list;
 		// 最終編集者情報
 		$param['eventLastEditUserName'] = empty($eventLastEditUser) ? '管理者' : $eventLastEditUser->screen_name;
-		$param['eventLastEditTime'] = TimeManager::convert_to_fuzzy_time($event_data->updated_at);
+		$param['eventLastEditTime'] = TimeManager::convert_to_fuzzy_time($event_data['updated_at']);
 		$param['songLastEditUserName'] = empty($songLastEditUser) ? '管理者' : $songLastEditUser->screen_name;
 		$param['songLastEditTime'] = TimeManager::convert_to_fuzzy_time($songSample['updated_at']);
 		
