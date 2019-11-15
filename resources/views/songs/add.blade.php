@@ -6,9 +6,12 @@
 
     <div class="panel panel-default">
         <div class="panel-heading">
-            {{ $param['artist']->name }}の楽曲追加
         </div>
         <div class="panel-body">
+			<br>
+        	<h4>楽曲追加</h4>
+            <p>{{ $param['artist']->name }}の楽曲追加</p>
+
             {!! Form::model($param['song'], ['route' => 'songs.store', 'method' => 'post', 'class' => 'form-horizontal']) !!}
                 <div class="form-group">
                     {!! Form::label('name', '楽曲名', ['class' => 'col-sm-3 control-label']) !!}

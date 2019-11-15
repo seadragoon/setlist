@@ -28,18 +28,19 @@
 			<br>
 			<br>
 
+			<h4>イベントカレンダー</h4>
+			<button id="prev" type="button" class="btn btn-default">前の月</button>
+			<button id="next" type="button" class="btn btn-default">次の月</button>
+			<div id="event-calendar"></div>
+			<br>
+
 			@auth
 			<h4>楽曲追加</h4>
 			{{ link_to_action('SongsController@add', '追加', ['artist_id' => $param['artist']->artist_id], ['class' => 'btn btn-sm btn-default btn-success']) }}
 			<br>
 			<br>
 			@endauth
-
-			<h4>イベントカレンダー</h4>
-			<button id="prev" type="button" class="btn btn-default">前の月</button>
-			<button id="next" type="button" class="btn btn-default">次の月</button>
-			<div id="event-calendar"></div>
-			<br>
+			
 			<h4>楽曲リスト（全{{ count($param['songs']) }}曲）</h4>
 			<div class="panel-body">
 				<table class="table table-striped">
@@ -58,12 +59,12 @@
 								</td>
 								@auth
 								<td class="table-text">
-									{{ link_to_route('songs.edit', '編集', $song->song_id, ['class' => 'btn btn-sm btn-default']) }}
+									{{ link_to_route('songs.edit', '編集', $song->song_id, ['class' => 'btn btn-sm btn-default btn-success']) }}
 								</td>
 								<td class="table-text">
 									{{ Form::open(['route' => ['songs.destroy', $song->song_id], 'method' => 'delete', 'class' => 'form_delete']) }}
 										{{ Form::hidden('song_id', $song->song_id) }}
-										{{ Form::submit('削除', ['class' => 'btn btn-sm btn-default']) }}
+										{{ Form::submit('削除', ['class' => 'btn btn-sm btn-default btn-danger']) }}
 									{{ Form::close() }}
 								</td>
 								@endauth

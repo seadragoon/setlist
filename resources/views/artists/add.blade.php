@@ -6,9 +6,11 @@
 
     <div class="panel panel-default">
         <div class="panel-heading">
-            アーティスト追加
         </div>
         <div class="panel-body">
+			<br>
+        	<h4>楽曲追加</h4>
+            
             {!! Form::model($param['artist'], ['route' => 'artists.store', 'method' => 'post', 'class' => 'form-horizontal']) !!}
                 <div class="form-group">
                     {!! Form::label('name', 'アーティスト名', ['class' => 'col-sm-3 control-label']) !!}
