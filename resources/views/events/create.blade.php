@@ -436,6 +436,7 @@
 		// pick a date 日付
 		$('#event_date').pickadate({
 			format: 'yyyy-mm-dd',
+            selectYears: true,
 		});
 		// pick a date 時間
 		$('#event_time').pickatime({
