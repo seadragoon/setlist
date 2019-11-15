@@ -55,6 +55,7 @@ class SongsController extends Controller
 		$param = array();
 		$param['artist'] = $artist;
 		$param['song'] = $song;
+		$param['count'] = count($setlistSongs);
 		$param['lastEditUserName'] = empty($lastEditUser) ? '管理者' : $lastEditUser->screen_name;
 		$param['lastEditTime'] = TimeManager::convert_to_fuzzy_time($artist->updated_at);
 		$param['eventDataList'] = $eventDataList;

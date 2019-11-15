@@ -17,6 +17,9 @@
                 曲名: {{ $param['song']->name }}
             </div>
             <div>
+                歌唱回数: {{ $param['count'] }}回
+            </div>
+            <div>
 				<p class="text-muted">※最終編集者: {{ $param['lastEditUserName'] }} ({{ $param['lastEditTime'] }})</p>
             </div>
             @auth
