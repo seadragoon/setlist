@@ -52,7 +52,7 @@
 			<h4>セットリスト</h4>
 			@if(!empty($params['setlistArray']))
 				@foreach ($params['setlistArray'] as $setlist)
-					<h5>■{{ $setlist['artist']->name }}</h5>
+					<h5>■{{ link_to_route('artists.show', $setlist['artist']->name, $setlist['artist']->artist_id) }}</h5>
 					<h6>・通常</h6>
 					@foreach ($setlist['song_list'] as $key => $song)
 						<div>
