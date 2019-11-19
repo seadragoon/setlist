@@ -36,7 +36,7 @@
 
 			@auth
 			<h4>楽曲追加</h4>
-			{{ link_to_action('SongsController@add', '追加', ['artist_id' => $param['artist']->artist_id], ['class' => 'btn btn-sm btn-default btn-success']) }}
+			{{ link_to_action('SongsController@add', '追加', ['artist_id' => $param['artist']->artist_id], ['class' => 'btn btn-sm btn-default btn-primary']) }}
 			<br>
 			<br>
 			@endauth
