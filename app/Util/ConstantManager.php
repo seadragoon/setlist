@@ -31,8 +31,7 @@ class EventType extends SimpleEnum {
     const FC_EVENT      = 1;
     const FES_EVENT     = 2;
     const MINI_LIVE     = 3;
-    const GUEST         = 4;
-    const OTHER         = 5;
+    const OTHER         = 4;
 }
 
 /**
@@ -65,8 +64,6 @@ class ConstantManager
                 return 'フェス';
             case EventType::MINI_LIVE:
                 return 'ミニライブ';
-            case EventType::GUEST:
-                return 'ゲスト';
             case EventType::OTHER:
                 return 'その他';
             default:
