@@ -43,6 +43,13 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('artists', 'ArtistsController', ['only' => ['edit', 'update', 'destroy', 'store']]);
     Route::resource('songs', 'SongsController', ['only' => ['edit', 'update', 'destroy', 'store']]);
     Route::resource('events', 'EventsController', ['only' => ['edit', 'create', 'destroy', 'store']]);
+
+    Route::get('/events/{event_id}/setlist/{artist_id}', 'EventsController@editSetlist')->name('events.edit_setlist')
+        ->where(['event_id' => '[0-9]+', 'artist_id' => '[0-9]+']);
+    Route::post('/events/{event_id}/setlist/{artist_id}', 'EventsController@storeSetlist')->name('events.store_setlist')
+        ->where(['event_id' => '[0-9]+', 'artist_id' => '[0-9]+']);
+    Route::delete('/events/{event_id}/setlist/{artist_id}', 'EventsController@destroySetlist')->name('events.destroy_setlist')
+        ->where(['event_id' => '[0-9]+', 'artist_id' => '[0-9]+']);
     
     // TODO: 本番に上げる際にはコメントアウトする
     Route::get('/generateMaster', 'GenerateMasterController@index');
