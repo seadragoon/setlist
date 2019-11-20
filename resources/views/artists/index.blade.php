@@ -44,7 +44,7 @@
                             </td>
                             @auth
                             <td class="table-text">
-                                {{ link_to_route('artists.edit', '編集', $artist->artist_id, ['class' => 'btn btn-sm btn-default']) }}
+                                {{ link_to_route('artists.edit', '編集', $artist->artist_id, ['class' => 'btn btn-sm btn-default btn-success']) }}
                             </td>
                             
                             <!--
