@@ -34,18 +34,29 @@ class SongsController extends Controller
 		
 		// 対象の歌をセトリに含むイベントを検索
 		$eventDataList = array();
+		$count = 0;
+
 		$setlistSongs = SetlistSong::where('song_id', $song_id)->get();
 		foreach ($setlistSongs as $setlistSong)
 		{
-			// セットリストIDの等しいセットリストを取得
-			$setlist = Setlist::where('setlist_id', $setlistSong->setlist_id)->first();
+			// セットリストIDとアーティストIDの等しいセットリストを取得
+			// ※別アーティストによるカバーはここではリストに含めない
+			$setlist = Setlist::where('setlist_id', $setlistSong->setlist_id)->where('artist_id', $song->artist_id)->first();
 			
-			// イベントIDの等しいイベントを取得
-			$event = Event::where('event_id', $setlist->event_id)->first();
-			
-			// イベントデータを配列に詰める
-			array_push($eventDataList, $event);
+			if (!empty($setlist)) {
+				// イベントIDの等しいイベントを取得
+				$event = Event::where('event_id', $setlist->event_id)->first();
+
+				// カウント加算
+				$count++;
+
+				// イベントデータを配列に詰める
+				array_push($eventDataList, $event);
+			}
 		}
+
+		// 重複削除
+		$eventDataList = array_unique($eventDataList);
 		
 		// 日付でソート
 		usort($eventDataList, function ($a, $b) {
@@ -55,7 +66,7 @@ class SongsController extends Controller
 		$param = array();
 		$param['artist'] = $artist;
 		$param['song'] = $song;
-		$param['count'] = count($setlistSongs);
+		$param['count'] = $count;
 		$param['lastEditUserName'] = empty($lastEditUser) ? '管理者' : $lastEditUser->screen_name;
 		$param['lastEditTime'] = TimeManager::convert_to_fuzzy_time($artist->updated_at);
 		$param['eventDataList'] = $eventDataList;

@@ -64,9 +64,15 @@ class AggregateController extends Controller
 		// 曲名を紐づけ
 		foreach ($result as $songId => $value) {
 			$song = Song::where('song_id', $songId)->first();
+
+			$songName = $song->name;
+			if ($song->artist_id != $artist_id) {
+				$songArtist = Artist::where('artist_id', $song->artist_id)->first();
+				$songName .= '(' . $songArtist->name . ')';
+			}
 			
 			$result[$songId]['song_id'] = $songId;
-			$result[$songId]['name'] = $song->name;
+			$result[$songId]['name'] = $songName;
 		}
 		
 		// 回数でソート
@@ -74,7 +80,7 @@ class AggregateController extends Controller
 			return $a['count'] < $b['count'] ? 1 : -1;
 		});
 		
-		// アーティスト情報を取得
+		// 対象アーティスト情報を取得
 		$artist = Artist::where('artist_id', $artist_id)->first();
 		
 		$params = array();
