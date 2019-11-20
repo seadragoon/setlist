@@ -38,13 +38,16 @@
 			</div>
 			
 			@auth
-			{{ link_to_route('events.edit', '編集', $params['event_data']['event_id'], ['class' => 'btn btn-sm btn-default btn-success']) }}
-			<br>
-			<br>
-			{{ Form::open(['route' => ['events.destroy', $params['event_data']['event_id']], 'method' => 'delete', 'class' => 'form_delete']) }}
-				{{ Form::submit('削除', ['class' => 'btn btn-sm btn-default btn-danger']) }}
-			{{ Form::close() }}
-			<br>
+			<div class="btn-toolbar">
+				<div class="btn-group mr-2">
+					{{ link_to_route('events.edit', '編集', $params['event_data']['event_id'], ['class' => 'btn btn-sm btn-default btn-success']) }}
+				</div>
+				<div class="btn-group">
+					{{ Form::open(['route' => ['events.destroy', $params['event_data']['event_id']], 'method' => 'delete', 'class' => 'form_delete']) }}
+						{{ Form::submit('削除', ['class' => 'btn btn-sm btn-default btn-danger']) }}
+					{{ Form::close() }}
+				</div>
+			</div>
 			@endauth
 			
 			<hr>
@@ -82,15 +85,18 @@
 					</div>
 
 					@auth
-					{{ link_to_route('events.edit_setlist', '編集'
-						, ['event_id' => $params['event_data']['event_id'], 'artist_id' => $setlist['artist']->artist_id]
-						, ['class' => 'btn btn-sm btn-default btn-success']) }}
-					<br>
-					<br>
-					{{ Form::open(['route' => ['events.destroy_setlist', $params['event_data']['event_id'], 'artist_id' => $setlist['artist']->artist_id], 'method' => 'delete', 'class' => 'form_setlist_delete']) }}
-						{{ Form::submit('削除', ['class' => 'btn btn-sm btn-default btn-danger']) }}
-					{{ Form::close() }}
-					<br>
+					<div class="btn-toolbar">
+						<div class="btn-group mr-2">
+							{{ link_to_route('events.edit_setlist', '編集'
+								, ['event_id' => $params['event_data']['event_id'], 'artist_id' => $setlist['artist']->artist_id]
+								, ['class' => 'btn btn-sm btn-default btn-success']) }}
+						</div>
+						<div class="btn-group">
+							{{ Form::open(['route' => ['events.destroy_setlist', $params['event_data']['event_id'], 'artist_id' => $setlist['artist']->artist_id], 'method' => 'delete', 'class' => 'form_setlist_delete']) }}
+								{{ Form::submit('削除', ['class' => 'btn btn-sm btn-default btn-danger']) }}
+							{{ Form::close() }}
+						</div>
+					</div>
 					@endauth
 				@endforeach
 
