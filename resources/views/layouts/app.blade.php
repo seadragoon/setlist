@@ -52,7 +52,7 @@
                         {{-- 追加ボタン --}}
                         @auth
                         <li class="nav-item">
-                            <a href="{{ url('events/create') }}" id="new-post" class="btn btn-primary">
+                            <a href="{{ url('events/create') }}" id="new-post" class="btn btn-success">
                                 {{ __('新規イベント追加') }}
                             </a>
                         </li>
