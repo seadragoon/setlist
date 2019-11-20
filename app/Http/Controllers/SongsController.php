@@ -27,6 +27,9 @@ class SongsController extends Controller
 	public function show($song_id)
 	{
 		$song = Song::where('song_id', $song_id)->first();
+		if (empty($song)){
+            return abort('404');
+		}
 		$artist = Artist::where('artist_id', $song->artist_id)->first();
 		
 		// 最終編集者を取得

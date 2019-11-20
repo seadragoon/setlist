@@ -26,6 +26,13 @@ class GenerateMasterController extends Controller
 
 	public function index($artist_id)
 	{
+		// アーティストの存在確認
+		$artist = Artist::where('artist_id', $artist_id)->first();
+		if (empty($artist)){
+            return abort('404');
+		}
+
+		// セッションを作成
 		$session = GenerateMasterController::createSpotifySession();
 		
 		// \Log::debug('generateMaster/index artist_id = '. $artist_id);

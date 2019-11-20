@@ -29,6 +29,13 @@ class AggregateController extends Controller
 	// show
 	public function show(Request $request, $artist_id)
 	{
+		// 対象アーティスト情報を取得
+		$artist = Artist::where('artist_id', $artist_id)->first();
+		if (empty($artist)){
+            return abort('404');
+		}
+
+		// 日付データを準備
 		$date_from = empty($request->input('date_from')) ? '1970-1-1' : $request->input('date_from');
 		$date_to = empty($request->input('date_to')) ? '2099-1-1' : $request->input('date_to');
 		
@@ -79,9 +86,6 @@ class AggregateController extends Controller
 		usort($result, function ($a, $b) {
 			return $a['count'] < $b['count'] ? 1 : -1;
 		});
-		
-		// 対象アーティスト情報を取得
-		$artist = Artist::where('artist_id', $artist_id)->first();
 		
 		$params = array();
 		$params['date_from'] = $request->input('date_from');

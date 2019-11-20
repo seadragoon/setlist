@@ -35,6 +35,9 @@ class EventsController extends Controller
 		// ------------------------------------------- //
 		// イベントデータを取得
 		$event_data = Event::where('event_id', $event_id)->first()->toArray();
+		if (empty($event_data)){
+            return abort('404');
+		}
 		$event_data['event_type_text'] = ConstantManager::getEventTypeString($event_data['event_type']);
 		// 概要にはリンクを入れることが可能
 		if (!empty($event_data['summary'])) {
