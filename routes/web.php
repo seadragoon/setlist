@@ -52,5 +52,6 @@ Route::group(['middleware' => 'auth'], function() {
         ->where(['event_id' => '[0-9]+', 'artist_id' => '[0-9]+']);
     
     // TODO: 本番に上げる際にはコメントアウトする
-    Route::get('/generateMaster', 'GenerateMasterController@index');
+    Route::get('/generateMaster/{artist_id}', 'GenerateMasterController@index')->where('artist_id', '[0-9]+');
+    Route::get('/generateMaster/callback', 'GenerateMasterController@callback');
 });

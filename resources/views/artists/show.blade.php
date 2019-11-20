@@ -36,7 +36,18 @@
 
 			@auth
 			<h4>楽曲追加</h4>
-			{{ link_to_action('SongsController@add', '追加', ['artist_id' => $param['artist']->artist_id], ['class' => 'btn btn-sm btn-default btn-primary']) }}
+			<div class="btn-toolbar">
+				<div class="btn-group mr-2">
+					{{ link_to_action('SongsController@add', '追加'
+						, ['artist_id' => $param['artist']->artist_id]
+						, ['class' => 'btn btn-sm btn-default btn-primary']) }}
+				</div>
+				<div class="btn-group">
+					{{ link_to_action('GenerateMasterController@index', 'Spotify APIで追加'
+						, ['artist_id' => $param['artist']->artist_id]
+						, ['class' => 'btn btn-sm btn-default btn-success']) }}
+				</div>
+			</div>
 			<br>
 			<br>
 			@endauth
