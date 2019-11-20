@@ -94,11 +94,18 @@ class EventsController extends Controller
 							$artist = $artistMasters->where('artist_id', $artistId)->first();
 							array_push($collaboArtistNames, $artist->name);
 						}
+
+						// カバー曲の曲名変更
+						$songName = $master->name;
+						if ($master->artist_id != $setlist->artist_id) {
+							$songArtist = $artistMasters->where('artist_id', $master->artist_id)->first();
+							$songName .= '(' . $songArtist->name . ')';
+						}
 						
 						$songData = array();
 						$songData['seq']				= $value->seq + 1;
-						$songData['song_id']			= $master['song_id'];
-						$songData['name']				= $master['name'];
+						$songData['song_id']			= $master->song_id;
+						$songData['name']				= $songName;
 						$songData['is_short']			= $value->is_medley;
 						$songData['arrange_type_text']	= ConstantManager::getArrangeTypeString($value->arrange_type, true/* ignoreNormal */);
 						$songData['collabo_artists']	= implode(',', $collaboArtistNames);
