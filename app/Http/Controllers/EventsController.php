@@ -86,8 +86,6 @@ class EventsController extends Controller
 					// セトリグループの種類ごとに曲名リストを作成する
 					foreach ($setlistSongs as $value)
 					{
-						$master = $songMasters->where('song_id', $value->song_id)->first();
-						
 						// コラボアーティストIDから名前を取得
 						$collaboArtistIds = explode(',', $value->collabo_artist_ids);
 						$collaboArtistNames = array();
@@ -98,16 +96,23 @@ class EventsController extends Controller
 							array_push($collaboArtistNames, $artist->name);
 						}
 
+						// 曲マスタを取得
+						$songMaster = $songMasters->where('song_id', $value->song_id)->first();
+						if (empty($songMaster)) {
+							\Log::debug("曲マスタが取得できませんでした。 song_id = " . $value->song_id);
+							continue;
+						}
+
 						// カバー曲の曲名変更
-						$songName = $master->name;
-						if ($master->artist_id != $setlist->artist_id) {
-							$songArtist = $artistMasters->where('artist_id', $master->artist_id)->first();
+						$songName = $songMaster->name;
+						if ($songMaster->artist_id != $setlist->artist_id) {
+							$songArtist = $artistMasters->where('artist_id', $songMaster->artist_id)->first();
 							$songName .= '(' . $songArtist->name . ')';
 						}
 						
 						$songData = array();
 						$songData['seq']				= $value->seq + 1;
-						$songData['song_id']			= $master->song_id;
+						$songData['song_id']			= $songMaster->song_id;
 						$songData['name']				= $songName;
 						$songData['is_short']			= $value->is_medley;
 						$songData['arrange_type_text']	= ConstantManager::getArrangeTypeString($value->arrange_type, true/* ignoreNormal */);
@@ -426,8 +431,8 @@ class EventsController extends Controller
 					foreach($collaboArtistIds as $artistId){
 						if(empty($artistId)) continue;
 						
-						$artist = $artistMasters->where('artist_id', $artistId)->first();
-						array_push($collaboArtistNames, $artist->name);
+						$collaboArtist = $artistMasters->where('artist_id', $artistId)->first();
+						array_push($collaboArtistNames, $collaboArtist->name);
 					}
 					
 					// 曲データを作成
