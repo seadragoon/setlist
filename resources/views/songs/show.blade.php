@@ -62,8 +62,11 @@
             <br>
         </div>
         <div class="panel-footer">
-            {{ link_to(url()->previous(), '戻る') }}
-            <!--{{ link_to_route('artists.show', '戻る', $param['artist']->artist_id) }}-->
+            @if (url()->previous() === url()->current())
+                {{ link_to_route('artists.show', '戻る', $param['artist']->artist_id) }}
+            @else
+                {{ link_to(url()->previous(), '戻る') }}
+            @endif
         </div>
     </div>
 

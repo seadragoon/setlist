@@ -28,7 +28,11 @@
             {!! Form::close() !!}
         </div>
         <div class="panel-footer">
-            {{ link_to(url()->previous(), '戻る') }}
+            @if (url()->previous() === url()->current())
+                {{ link_to('/artists', '戻る') }}
+            @else
+                {{ link_to(url()->previous(), '戻る') }}
+            @endif
         </div>
     </div>
 

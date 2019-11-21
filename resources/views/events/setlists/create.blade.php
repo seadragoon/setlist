@@ -213,7 +213,11 @@
             {!! Form::close() !!}
         </div>
         <div class="panel-footer">
-            {{ link_to(url()->previous(), '戻る') }}
+			@if (url()->previous() === url()->current())
+				{{ link_to_route('events.show', '戻る', $params['event']->event_id) }}
+            @else
+                {{ link_to(url()->previous(), '戻る') }}
+            @endif
         </div>
     </div>
     
