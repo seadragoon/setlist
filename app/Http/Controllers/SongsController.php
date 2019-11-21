@@ -12,6 +12,7 @@ use App\Event;
 use App\Setlist;
 use App\SetlistSong;
 use App\Util\TimeManager;
+use App\Util\ConstantManager;
 
 class SongsController extends Controller
 {
@@ -142,16 +143,17 @@ class SongsController extends Controller
 		
 		if (!empty($keyword)) {
 			// 楽曲名部分一致で検索
-			$songs = Song::where('name', 'LIKE', "%$keyword%")->orderby('name', 'asc')->get()->toArray();
+			$songs = Song::where('name', 'LIKE', "%$keyword%")->orderby('name', 'asc')->paginate(ConstantManager::PerPage);
+
+			// \Log::debug(var_export($songs->getCollection()->toArray(), true));
 			
 			// 対応するアーティスト名を取得
-			$artists = Artist::whereIn('artist_id', array_unique(array_column($songs, 'artist_id')))->get();
+			$artists = Artist::whereIn('artist_id', array_unique(array_column($songs->getCollection()->toArray(), 'artist_id')))->get();
 			
-			foreach ($songs as $key => $song) {
-				$target = $artists->where('artist_id', $song['artist_id'])->first();
+			foreach ($songs as $song) {
+				$target = $artists->where('artist_id', $song->artist_id)->first();
 				
-				$songs[$key]['artist_id'] = $target->artist_id;
-				$songs[$key]['artist_name'] = $target->name;
+				$song->artist_name = $target->name;
 			}
 		}
 		

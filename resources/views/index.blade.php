@@ -13,7 +13,7 @@
             <h6>・このサイトについて</h6>
             アーティストのライブセットリストを登録・集計するためのサイトです。<br>
             <br>
-            <h4>直近のイベント一覧</h4>
+            <h4>直近のイベント一覧({{ $events->currentPage() }}/{{ $events->lastPage() }})</h4>
             <div class="d-none d-sm-flex">
                 <div class="col-sm-5">イベント名</div>
                 <div class="col-sm-3">日付</div>
@@ -38,6 +38,9 @@
                     </div>
                 @endforeach
             </div>
+            <!-- page control -->
+            <br>
+            {!! $events->render() !!}
         </div>
     </div>
 

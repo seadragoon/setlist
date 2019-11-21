@@ -357,7 +357,7 @@ class EventsController extends Controller
 			// 抽出したイベントIDを含むイベントを全て取得
 			$events = Event::whereIn('event_id', array_column($setlists->toArray(), 'event_id'))
 						->whereBetween('datetime', [$fromDate, $toDate])
-						->orderBy('datetime', 'desc')->get();
+						->orderBy('datetime', 'desc')->paginate(ConstantManager::PerPage);
 			
 			$artist_id = $artist->artist_id;
 		}
@@ -368,7 +368,7 @@ class EventsController extends Controller
 			if (empty($keyword))
 			{
 				$events = Event::whereBetween('datetime', [$fromDate, $toDate])
-							->orderBy('datetime', 'desc')->get();
+							->orderBy('datetime', 'desc')->paginate(ConstantManager::PerPage);
 			}
 			else
 			{
@@ -378,7 +378,7 @@ class EventsController extends Controller
 							->orWhere('venue_name', 'LIKE', "%$keyword%")
 							->orWhere('tag_text', 'LIKE', "%$keyword%")
 							->whereBetween('datetime', [$fromDate, $toDate])
-							->orderBy('datetime', 'desc')->get();
+							->orderBy('datetime', 'desc')->paginate(ConstantManager::PerPage);
 			}
 		}
 		

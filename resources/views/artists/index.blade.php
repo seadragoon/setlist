@@ -24,7 +24,7 @@
             <br>
             @endauth
             
-            <h4>アーティスト一覧</h4>
+            <h4>アーティスト一覧({{ $artists->currentPage() }}/{{ $artists->lastPage() }})</h4>
             ※アーティスト名をタップすると曲一覧が表示されます
             <table class="table table-striped task-table">
                 <thead>
@@ -61,7 +61,9 @@
                     @endforeach
                 </tbody>
             </table>
+            <!-- page control -->
             <br>
+            {!! $artists->render() !!}
         </div>
         <div class="panel-footer">
             {{ link_to(url()->previous(), '戻る') }}

@@ -124,4 +124,9 @@ class ConstantManager
         }
         return $result;
     }
+
+    /**
+     * ページネーションの固定件数
+     */
+    const PerPage = 15;
 }

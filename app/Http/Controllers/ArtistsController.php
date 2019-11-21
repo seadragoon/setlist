@@ -13,13 +13,14 @@ use App\Song;
 use App\Event;
 use App\Setlist;
 use App\Util\TimeManager;
+use App\Util\ConstantManager;
 
 class ArtistsController extends Controller
 {
     // index
 	public function index()
 	{
-		$artists = Artist::orderBy('artist_id', 'asc')->get();
+		$artists = Artist::orderBy('artist_id', 'asc')->paginate(ConstantManager::PerPage);
 		return view('artists/index')->with('artists', $artists);
 	}
 	
@@ -122,7 +123,7 @@ class ArtistsController extends Controller
 		$keyword = $request->input('keyword');
 		
 		// アーティスト名部分一致で検索
-		$artists = Artist::where('name', 'LIKE', "%$keyword%")->orderby('name', 'asc')->get();
+		$artists = Artist::where('name', 'LIKE', "%$keyword%")->orderby('name', 'asc')->paginate(ConstantManager::PerPage);
 		
 		$params = array();
 		$params['keyword'] = $keyword;

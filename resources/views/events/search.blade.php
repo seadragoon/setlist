@@ -51,8 +51,8 @@
             @if(!empty($params['keyword']))
                 検索ワード「{{ $params['keyword'] }}」での検索結果<br>
             @endif
-            @if(count($params['result']) > 0)
-                {{ count($params['result']) }}件のイベントが見付かりました。
+            @if($params['result']->total() > 0)
+                {{ $params['result']->total() }}件のイベントが見付かりました。({{ $params['result']->currentPage() }}/{{ $params['result']->lastPage() }})
                 <br>
                 <div class="d-none d-sm-flex">
                     <div class="col-sm-5">イベント名</div>
@@ -78,6 +78,9 @@
                         </div>
                     @endforeach
                 </div>
+                <!-- page control -->
+                <br>
+                {!! $params['result']->render() !!}
             @else
                 イベントが見付かりませんでした。
             @endif
