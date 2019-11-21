@@ -91,25 +91,42 @@ class GenerateMasterController extends Controller
 
 			// \Log::debug(var_export($api->me(), true));
 			// \Log::debug($session->getAccessToken());
+
+			$SEARCH_COUNT = 50;
 			
 			$offset = 0;
 			$trackNameList = array();
 			do {
 				// アーティスト名で検索実行
-				$result = $api->search($artist->name, "track", array(
-					'limit' => 20,
+				$result = $api->search("artist:".$artist->name, "track", array(
+					'limit' => $SEARCH_COUNT,
 					'offset' => $offset
 				));
+
+				// 曲名のみの配列
+				$songNameList = array();
+
+				// アーティスト名と完全一致するものが無くなったら終了する
+				foreach ($result->tracks->items as $item) {
+					if (strpos($item->artists[0]->name, $artist->name) !== false) {
+						$songNameList[] = $item->name;
+					} else {
+						\Log::debug('artist name: '.$item->artists[0]->name);
+					}
+				}
+				if (empty($songNameList)) {
+					break;
+				}
 				
 				// 検索結果から曲名のみを抽出した配列を取得
-				$nameList = array_column($result->tracks->items, 'name');
+				// $nameList = array_column($result->tracks->items, 'name');
 				// 検索結果をマージ
-				$trackNameList = array_merge($trackNameList, $nameList);
+				$trackNameList = array_merge($trackNameList, $songNameList);
 				$trackNameList = array_unique($trackNameList);
 				$trackNameList = array_values($trackNameList);
 				
 				// offset値を加算
-				$offset += 20;
+				$offset += $SEARCH_COUNT;
 				
 				//0.2秒スリープ(一応APIにかかる負荷を減らすつもり)
 				usleep(200000);
@@ -140,11 +157,19 @@ class GenerateMasterController extends Controller
 					// 特定の文字列が含まれたいたら無視
 					if (strpos($name, 'instrumental') !== false
 						|| strpos($name, 'Instrumental') !== false
-						|| strpos($name, 'Album Ver') !== false
 						|| strpos($name, 'album mix') !== false
 						|| strpos($name, 'TV MIX') !== false
-						|| strpos($name, 'TV Size ver') !== false
-						|| strpos($name, 'LIVE ver') !== false
+						|| strpos($name, 'TVsize') !== false
+						|| strpos($name, 'TVSize') !== false
+						|| strpos($name, 'one man live') !== false
+						|| strpos($name, 'One-man Live') !== false
+						|| strpos($name, 'off vocal') !== false
+						|| strpos($name, 'Game Size') !== false
+						|| strpos($name, '8BIT Mix') !== false
+						|| strpos($name, ' Ver') !== false
+						|| strpos($name, ' ver') !== false
+						|| strpos($name, ' Version') !== false
+						|| strpos($name, ' version') !== false
 						) {
 						\Log::debug('invalid strings: '.$name);
 						continue;
