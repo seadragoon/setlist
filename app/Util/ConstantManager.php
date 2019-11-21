@@ -36,6 +36,7 @@ class EventType extends SimpleEnum {
 
 /**
  * アレンジタイプ
+ * NOTICE: 運用開始後はデータ不整合の恐れがあるのでその他の下に追加していくこと
  */
 class ArrangeType extends SimpleEnum {
     const NORMAL    = 0;
@@ -84,15 +85,15 @@ class ConstantManager
                 }
                 return '通常';
             case ArrangeType::ACOSTIC:
-                return 'Acostic';
+                return 'Acostic Ver';
             case ArrangeType::ORIGINAL:
-                return 'Original';
+                return 'Original Ver';
             case ArrangeType::CHRISTMAS:
-                return 'Christmas';
+                return 'Christmas Ver';
             case ArrangeType::R_AND_B:
-                return 'R&B';
+                return 'R&B Ver';
             case ArrangeType::OTHER:
-                return 'その他';
+                return 'アレンジVer';
             default:
                 return '';
         }
