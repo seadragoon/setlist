@@ -18,9 +18,9 @@ class GenerateMasterController extends Controller
 	static private function createSpotifySession ()
 	{
 		return new SpotifyWebAPI\Session(
-			'0c3de006d178498497fab849ce950da5',
-			'4d80f88f6ca44c89831cb42a4e65b1e5',
-			'http://homestead.setlist/generateMaster/callback'
+			config('services.spotify')['client_id'],
+			config('services.spotify')['client_secret'],
+			config('services.spotify')['redirect']
 		);
 	}
 
