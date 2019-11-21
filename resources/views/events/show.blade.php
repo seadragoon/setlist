@@ -97,6 +97,7 @@
 							{{ Form::close() }}
 						</div>
 					</div>
+					<br>
 					@endauth
 				@endforeach
 
