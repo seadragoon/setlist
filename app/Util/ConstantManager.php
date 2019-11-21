@@ -42,7 +42,8 @@ class ArrangeType extends SimpleEnum {
     const ACOSTIC   = 1;
     const ORIGINAL  = 2;
     const CHRISTMAS = 3;
-    const OTHER     = 4;
+    const R_AND_B   = 4;
+    const OTHER     = 5;
 }
 
 /**
@@ -88,6 +89,8 @@ class ConstantManager
                 return 'Original';
             case ArrangeType::CHRISTMAS:
                 return 'Christmas';
+            case ArrangeType::R_AND_B:
+                return 'R&B';
             case ArrangeType::OTHER:
                 return 'その他';
             default:
