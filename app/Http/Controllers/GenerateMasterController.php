@@ -92,13 +92,39 @@ class GenerateMasterController extends Controller
 			// \Log::debug(var_export($api->me(), true));
 			// \Log::debug($session->getAccessToken());
 
+			// ------------------------------------------- //
+			// アーティスト名を決定
+			// ※専用のアーティスト名をSpotify APIでは使用している可能性がある
+			// ------------------------------------------- //
+			// アーティストを1件取得
+			$result = $api->search($artist->name, "artist", array(
+				'limit' => 10,
+				'offset' => 0
+			));
+			// 同一のアーティスト名が見付かったらそれを使用する
+			$artist_name = null;
+			foreach ($result->artists->items as $item) {
+				if ($item->name === $artist->name) {
+					$artist_name = $artist->name;
+					break;
+				}
+			}
+			// 同一のアーティスト名が見付かった場合は配列0番目のアーティスト名を使用してみる
+			if (empty($artist_name)) {
+				$artist_name = $result->artists->items[0]->name;
+			}
+			
+			// ------------------------------------------- //
+			// 楽曲検索（件数毎に通信）
+			// ------------------------------------------- //
+			// 一度に検索する件数
 			$SEARCH_COUNT = 50;
 			
 			$offset = 0;
 			$trackNameList = array();
 			do {
 				// アーティスト名で検索実行
-				$result = $api->search("artist:".$artist->name, "track", array(
+				$result = $api->search($artist_name, "track", array(
 					'limit' => $SEARCH_COUNT,
 					'offset' => $offset
 				));
@@ -108,7 +134,7 @@ class GenerateMasterController extends Controller
 
 				// アーティスト名と完全一致するものが無くなったら終了する
 				foreach ($result->tracks->items as $item) {
-					if (strpos($item->artists[0]->name, $artist->name) !== false) {
+					if ($item->artists[0]->name === $artist_name) {
 						$songNameList[] = $item->name;
 					} else {
 						\Log::debug('artist name: '.$item->artists[0]->name);
@@ -142,7 +168,9 @@ class GenerateMasterController extends Controller
 			// 登録前にそのアーティストIDのデータは削除しておく
 			//Song::where('artist_id', $artist->artist_id)->delete();
 			
-			// データベースに登録
+			// ------------------------------------------- //
+			// 登録データ抽出
+			// ------------------------------------------- //
 			$savedata = array();
 			foreach($trackNameList as $key => $name)
 			{
@@ -175,6 +203,7 @@ class GenerateMasterController extends Controller
 						continue;
 					}
 					// 現在追加しようとしているリストに入っていないか確認
+					// TODO : 空白を削除したもの同士を比較するのもありかも
 					if (array_search(strtolower($name), array_map('strtolower', array_column($savedata, 'name'))) !== false){
 						\Log::debug('already exist: '.$name);
 						continue;
@@ -196,6 +225,9 @@ class GenerateMasterController extends Controller
 				}
 			}
 			
+			// ------------------------------------------- //
+			// データ保存
+			// ------------------------------------------- //
 			if(empty($savedata)) {
 				\Log::debug('新規データはありませんでした。');
 			} else {
