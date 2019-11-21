@@ -25,7 +25,7 @@ class SocialAuthController extends Controller
         
         // デバッグ用
         // ダミーユーザーでログインしたことにして元のページに戻す
-        $isDebug = true;
+        $isDebug = false;
 
         if ($isDebug) {
             $dummyUser = User::first();
