@@ -45,6 +45,8 @@ class ArrangeType extends SimpleEnum {
     const CHRISTMAS = 3;
     const R_AND_B   = 4;
     const OTHER     = 5;
+    const ENGLISH   = 6;
+    const CHINESE   = 7;
 }
 
 /**
@@ -94,6 +96,10 @@ class ConstantManager
                 return 'R&B Ver';
             case ArrangeType::OTHER:
                 return 'アレンジVer';
+            case ArrangeType::ENGLISH:
+                return '英語 Ver';
+            case ArrangeType::CHINESE:
+                return '中国語 Ver';
             default:
                 return '';
         }
