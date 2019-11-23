@@ -114,10 +114,12 @@
 		});
 		$('#date_from').pickadate({
 			format: 'yyyy-mm-dd',
+			firstDay: 0,
             selectYears: true,
 		});
 		$('#date_to').pickadate({
 			format: 'yyyy-mm-dd',
+			firstDay: 0,
             selectYears: true,
 		});
 	});
