@@ -493,13 +493,13 @@ class EventsController extends Controller
 			'songs.*'						=>'required|array|min:2',		// 通常楽曲の連想配列
 			'songs.*.name'					=>'required|string|max:100',	// 通常楽曲曲名
 			'songs.*.is_short'				=>'integer|max:50',				// 通常楽曲ショートかどうか
-			'songs.*.arrange_type'			=>'required|integer|max:5',		// 通常楽曲アレンジタイプ
+			'songs.*.arrange_type'			=>'required|integer|max:20',	// 通常楽曲アレンジタイプ
 			'songs.*.collabo_artists'		=>'nullable|string|max:100',	// 通常楽曲コラボアーティスト
 			'encore_songs'					=>'array',						// アンコール楽曲配列
 			'encore_songs.*'				=>'array',						// アンコール楽曲の連想配列
 			'encore_songs.*.name'			=>'string|max:100',				// アンコール楽曲曲名
 			'encore_songs.*.is_short'		=>'integer|max:50',				// アンコール楽曲ショートかどうか
-			'encore_songs.*.arrange_type'	=>'integer|max:5',				// アンコール楽曲アレンジタイプ
+			'encore_songs.*.arrange_type'	=>'integer|max:20',				// アンコール楽曲アレンジタイプ
 			'encore_songs.*.collabo_artists'=>'nullable|string|max:100',	// アンコール楽曲コラボアーティスト
 		];
 		
