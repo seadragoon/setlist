@@ -402,6 +402,13 @@ class EventsController extends Controller
 		$artistMasters = Artist::orderby('artist_id', 'asc')->get();
 		// 楽曲をすべて取得 TODO: 他アーティストの楽曲を沢山登録していった場合負荷が掛かり過ぎる恐れがある
 		$songMasters = Song::orderby('name', 'asc')->get();
+		// 自分の曲以外を区別するために末尾に文字列を入れておく
+		foreach ($songMasters as $song) {
+			if ($song->artist_id != $artist_id) {
+				$songArtist = $artistMasters->where('artist_id', $song->artist_id)->first();
+				$song->name = $song->name . '(' . $songArtist->name . ')';
+			}
+		}
 
 		// イベントデータ取得
 		$event = Event::where('event_id', $event_id)->first();
@@ -526,9 +533,19 @@ class EventsController extends Controller
 		$validation = \Validator::make($data, $rules);
 		
 		// 楽曲マスタを取得
-		$songMasters = Song::get()->toArray();
+		$songMasters = Song::get();
 		// アーティストマスタを取得
-		$artistMasters = Artist::get()->toArray();
+		$artistMasters = Artist::get();
+		// 自分の曲以外を区別するために末尾に文字列を入れておく
+		foreach ($songMasters as $song) {
+			if ($song->artist_id != $artist_id) {
+				$songArtist = $artistMasters->where('artist_id', $song->artist_id)->first();
+				$song->name = $song->name . '(' . $songArtist->name . ')';
+			}
+		}
+		// 後の処理の都合上配列化
+		$songMasters = $songMasters->toArray();
+		$artistMasters = $artistMasters->toArray();
 		
 		// 楽曲データの確認
 		foreach($data['songs'] as $key => $value)
