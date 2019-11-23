@@ -15,7 +15,7 @@ class AdminUsersSeeder extends Seeder
         \DB::table('users')->insert(array (
             0 => 
             array (
-                'twitter_id' => 1000,
+                'twitter_id' => 3959840594,
                 'screen_name' => 'admin',
                 'name' => 'admin_user',
                 'profile_image' => null,
