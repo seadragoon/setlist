@@ -156,6 +156,10 @@
 			$('#event_date').val(getFormatDate(date));
 			reflectToPicker(date);
 		});
+
+		// 時間の初期値を入れておく
+		const picker = $('#event_time').pickatime('picker');
+		picker.set('select', new Date("2000-01-01 18:00:00"));
 	});
 
 	// pickerに反映させる
