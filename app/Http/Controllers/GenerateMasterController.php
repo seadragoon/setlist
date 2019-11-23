@@ -185,8 +185,13 @@ class GenerateMasterController extends Controller
 					// 特定の文字列が含まれたいたら無視
 					if (strpos($name, 'instrumental') !== false
 						|| strpos($name, 'Instrumental') !== false
+						|| strpos($name, 'instrumetal') !== false // 誤字
+						|| strpos($name, 'Instrumetal') !== false // 誤字
 						|| strpos($name, 'album mix') !== false
+						|| strpos($name, 'TV Mix') !== false
 						|| strpos($name, 'TV MIX') !== false
+						|| strpos($name, 'TV edit') !== false
+						|| strpos($name, 'TV Edit') !== false
 						|| strpos($name, 'TVsize') !== false
 						|| strpos($name, 'TVSize') !== false
 						|| strpos($name, 'one man live') !== false
@@ -194,10 +199,14 @@ class GenerateMasterController extends Controller
 						|| strpos($name, 'off vocal') !== false
 						|| strpos($name, 'Game Size') !== false
 						|| strpos($name, '8BIT Mix') !== false
+						|| strpos($name, 'ver.') !== false
+						|| strpos($name, 'Ver.') !== false
 						|| strpos($name, ' Ver') !== false
 						|| strpos($name, ' ver') !== false
 						|| strpos($name, ' Version') !== false
 						|| strpos($name, ' version') !== false
+						|| strpos($name, 'remix') !== false
+						|| strpos($name, 'Remix') !== false
 						) {
 						\Log::debug('invalid strings: '.$name);
 						continue;
