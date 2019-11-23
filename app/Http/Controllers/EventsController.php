@@ -151,7 +151,7 @@ class EventsController extends Controller
 		$params['event_data']			= $event_data;
 		$params['eventLastEditUserName']= $eventLastEditUserName;
 		$params['eventLastEditTime']	= $eventLastEditTime;
-		$params['addableArtists']		= Artist::whereNotIn('artist_id', $artistIdList)->get();
+		$params['addableArtists']		= Artist::whereNotIn('artist_id', $artistIdList)->orderby('name', 'asc')->get();
 		$params['setlistArray']			= $setlistArray;
 		
 		//echo '<pre>' . var_export($param, true) . '</pre>';
