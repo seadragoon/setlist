@@ -60,7 +60,7 @@
                     </table>
                     <!-- page control -->
                     <br>
-                    {!! $params['result']->render() !!}
+                    {!! $params['result']->appends(['keyword' => $params['keyword'])->render() !!}
                 @else
                     アーティストが見付かりませんでした。
                 @endif

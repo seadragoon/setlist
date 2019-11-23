@@ -45,45 +45,46 @@
                 <div class="form-group col-sm-6">
                     {!! Form::submit('検索', ['class' => 'btn']) !!}
                 </div>
+                <br>
+                <h4>イベント検索結果</h4>
+                @if(!empty($params['keyword']))
+                    検索ワード「{{ $params['keyword'] }}」での検索結果<br>
+                @endif
+                @if($params['result']->total() > 0)
+                    {{ $params['result']->total() }}件のイベントが見付かりました。({{ $params['result']->currentPage() }}/{{ $params['result']->lastPage() }})
+                    <br>
+                    <div class="d-none d-sm-flex">
+                        <div class="col-sm-5">イベント名</div>
+                        <div class="col-sm-3">日付</div>
+                        <div class="col-sm-4">会場名</div>
+                    </div>
+                    <div class="mx-2">
+                        @foreach ($params['result'] as $event)
+                            @if($loop->iteration == 1)
+                            <div class="row border-top border-bottom py-2">
+                            @else
+                            <div class="row border-bottom py-2">
+                            @endif
+                                <div class="col-sm-5 col-12">
+                                    {{ link_to_route('events.show', $event->name, $event->event_id, ['class' => 'btn-default']) }}
+                                </div>
+                                <div class="col-sm-3 col-12">
+                                    {{ date('Y年m月d日',  strtotime($event->datetime)) }}
+                                </div>
+                                <div class="col-sm-4 col-12">
+                                    {{ $event->venue_name }}
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                    <!-- page control -->
+                    <br>
+                    {!! $params['result']->appends(['keyword' => $params['keyword']
+                        , 'date_from' => $params['date_from'], 'date_to' => $params['date_to']])->render() !!}
+                @else
+                    イベントが見付かりませんでした。
+                @endif
             {!! Form::close() !!}
-            <br>
-            <h4>イベント検索結果</h4>
-            @if(!empty($params['keyword']))
-                検索ワード「{{ $params['keyword'] }}」での検索結果<br>
-            @endif
-            @if($params['result']->total() > 0)
-                {{ $params['result']->total() }}件のイベントが見付かりました。({{ $params['result']->currentPage() }}/{{ $params['result']->lastPage() }})
-                <br>
-                <div class="d-none d-sm-flex">
-                    <div class="col-sm-5">イベント名</div>
-                    <div class="col-sm-3">日付</div>
-                    <div class="col-sm-4">会場名</div>
-                </div>
-                <div class="mx-2">
-                    @foreach ($params['result'] as $event)
-                        @if($loop->iteration == 1)
-                        <div class="row border-top border-bottom py-2">
-                        @else
-                        <div class="row border-bottom py-2">
-                        @endif
-                            <div class="col-sm-5 col-12">
-                                {{ link_to_route('events.show', $event->name, $event->event_id, ['class' => 'btn-default']) }}
-                            </div>
-                            <div class="col-sm-3 col-12">
-                                {{ date('Y年m月d日',  strtotime($event->datetime)) }}
-                            </div>
-                            <div class="col-sm-4 col-12">
-                                {{ $event->venue_name }}
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-                <!-- page control -->
-                <br>
-                {!! $params['result']->render() !!}
-            @else
-                イベントが見付かりませんでした。
-            @endif
             @if(!empty($params['date_from']) && $params['date_from'] === $params['date_to'])
                 <br>
                 <h4>追加</h4>

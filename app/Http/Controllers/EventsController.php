@@ -372,13 +372,15 @@ class EventsController extends Controller
 			}
 			else
 			{
-				// イベント名、イベント概要、会場名、タグテキストを検索（完全一致）
-				$events = Event::where('name', 'LIKE', "%$keyword%")
+				// イベント名、イベント概要、会場名、タグテキストを検索
+				$events = Event::where(function($query) use ($keyword){
+					$query->where('name', 'LIKE', "%$keyword%")
 							->orWhere('summary', 'LIKE', "%$keyword%")
 							->orWhere('venue_name', 'LIKE', "%$keyword%")
-							->orWhere('tag_text', 'LIKE', "%$keyword%")
-							->whereBetween('datetime', [$fromDate, $toDate])
-							->orderBy('datetime', 'desc')->paginate(ConstantManager::PerPage);
+							->orWhere('tag_text', 'LIKE', "%$keyword%");
+					})
+					->whereBetween('datetime', [$fromDate, $toDate])
+					->orderBy('datetime', 'desc')->paginate(ConstantManager::PerPage);;
 			}
 		}
 		
