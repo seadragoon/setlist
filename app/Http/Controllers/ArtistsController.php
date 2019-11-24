@@ -20,7 +20,7 @@ class ArtistsController extends Controller
     // index
 	public function index()
 	{
-		$artists = Artist::orderBy('artist_id', 'asc')->paginate(ConstantManager::PerPage);
+		$artists = Artist::orderBy('name', 'asc')->paginate(ConstantManager::PerPage);
 		return view('artists/index')->with('artists', $artists);
 	}
 	
