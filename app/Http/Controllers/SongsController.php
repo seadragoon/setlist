@@ -81,15 +81,56 @@ class SongsController extends Controller
 	public function edit($song_id)
 	{
 		$song = Song::where('song_id', $song_id)->first();
-		return view('songs/edit')->with('song', $song);
+
+		$artistMasters = Artist::get();
+		
+		$artist = $artistMasters->where('artist_id', $song->artist_id)->first();
+
+		$params = array();
+		$params['song'] = $song;
+		$params['artist'] = $artist;
+		$params['artistMasters'] = $artistMasters;
+		return view('songs/edit')->with('params', $params);
 	}
 	
 	
 	// update
 	public function update(Request $request, $song_id)
 	{
+		$data = $request->all();
+
+		// 値の検証
+		$rules = [
+			'song_name'						=>'string|max:100',				// 楽曲名
+			'artist_name'					=>'string|max:100',				// アーティスト名
+		];
+
+		// バリデーションデータ作成
+		$validation = \Validator::make($data, $rules);
+
+		// アーティストマスタ(配列)
+		$artistMasters = Artist::get()->toArray();
+
+		$targetIndex = array_search($data['artist_name'], array_column($artistMasters, 'name'));
+		if ($targetIndex === false){
+			// 含まれなかったらエラー追加
+			$validation->errors()->add('artist_not_found', '指定された名前のアーティストは存在しません');
+		}
+
+		// バリデーション確認
+		if (!empty($validation->errors()->all()))
+		{
+			return redirect()->back()->withErrors($validation->errors())->withInput();
+		}
+		
+		// 楽曲データ取得
 		$song = Song::where('song_id', $song_id)->first();
-		$song->fill($request->all());
+		// アーティスト情報
+		$artsit = $artistMasters[$targetIndex];
+
+		// データ保存
+		$song->artist_id = $artsit['artist_id'];
+		$song->name = $data['song_name'];
 		if (!empty(Auth::user())) {
 			$song->edit_user_id = Auth::user()->id;
 		}
