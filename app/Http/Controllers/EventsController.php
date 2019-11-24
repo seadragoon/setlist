@@ -87,13 +87,18 @@ class EventsController extends Controller
 					foreach ($setlistSongs as $value)
 					{
 						// コラボアーティストIDから名前を取得
-						$collaboArtistIds = explode(',', $value->collabo_artist_ids);
 						$collaboArtistNames = array();
-						foreach($collaboArtistIds as $artistId){
-							 if(empty($artistId)) continue;
-							
-							$artist = $artistMasters->where('artist_id', $artistId)->first();
-							array_push($collaboArtistNames, $artist->name);
+						if ($value->collabo_artist_ids !== "") {
+							$collaboArtistIds = explode(',', $value->collabo_artist_ids);
+							foreach($collaboArtistIds as $artistId){
+								if ($artistId == 0) {
+									array_push($collaboArtistNames, 'ALL');
+									break;
+								}
+								
+								$artist = $artistMasters->where('artist_id', $artistId)->first();
+								array_push($collaboArtistNames, $artist->name);
+							}
 						}
 
 						// 曲マスタを取得
@@ -435,13 +440,18 @@ class EventsController extends Controller
 					$master = $songMasters->where('song_id', $value->song_id)->first();
 					
 					// コラボアーティストIDから名前を取得
-					$collaboArtistIds = explode(',', $value['collabo_artist_ids']);
 					$collaboArtistNames = array();
-					foreach($collaboArtistIds as $artistId){
-						if(empty($artistId)) continue;
-						
-						$collaboArtist = $artistMasters->where('artist_id', $artistId)->first();
-						array_push($collaboArtistNames, $collaboArtist->name);
+					if ($value['collabo_artist_ids'] !== '') {
+						$collaboArtistIds = explode(',', $value['collabo_artist_ids']);
+						foreach($collaboArtistIds as $artistId){
+							if ($artistId == 0) {
+								array_push($collaboArtistNames, 'ALL');
+								break;
+							}
+							
+							$collaboArtist = $artistMasters->where('artist_id', $artistId)->first();
+							array_push($collaboArtistNames, $collaboArtist->name);
+						}
 					}
 					
 					// 曲データを作成
@@ -559,8 +569,9 @@ class EventsController extends Controller
 			// コラボアーティストがちゃんと定義されているかを確認
 			$collaboArtistNames = explode(',', $value['collabo_artists']);
 			foreach($collaboArtistNames as $artistName){
- 				if(empty($artistName)) continue;
-				
+ 				if (empty($artistName)) continue;
+				if ($artistName === 'ALL') continue; // ALLだったらオーケー
+
 				$targetIndex = array_search($artistName, array_column($artistMasters, 'name'));
 				if ($targetIndex === false){
 					// 含まれなかったらエラー追加
@@ -583,7 +594,8 @@ class EventsController extends Controller
 			// コラボアーティストがちゃんと定義されているかを確認
 			$collaboArtistNames = explode(',', $value['collabo_artists']);
 			foreach($collaboArtistNames as $artistName){
- 				if(empty($artistName)) continue;
+ 				if (empty($artistName)) continue;
+				if ($artistName === 'ALL') continue; // ALLだったらオーケー
 				
 				$targetIndex = array_search($artistName, array_column($artistMasters, 'name'));
 				if ($targetIndex === false){
@@ -663,7 +675,11 @@ class EventsController extends Controller
 				$collaboArtistNames = explode(',', $value['collabo_artists']);
 				$collaboArtistIds = array();
 				foreach($collaboArtistNames as $artistName){
- 					if(empty($artistName)) continue;
+ 					if (empty($artistName)) continue;
+					if ($artistName === 'ALL') {
+						array_push($collaboArtistIds, 0);
+						break; // ALLだったらオーケー
+					}
 					
 					$artist_index = array_search($artistName, array_column($artistMasters, 'name'));
 					array_push($collaboArtistIds, $artistMasters[$artist_index]['artist_id']);
@@ -698,6 +714,10 @@ class EventsController extends Controller
 				$collaboArtistIds = array();
 				foreach($collaboArtistNames as $artistName){
  					if(empty($artistName)) continue;
+					if ($artistName === 'ALL') {
+						array_push($collaboArtistIds, 0);
+						break; // ALLだったらオーケー
+					}
 					
 					$artist_index = array_search($artistName, array_column($artistMasters, 'name'));
 					array_push($collaboArtistIds, $artistMasters[$artist_index]['artist_id']);
