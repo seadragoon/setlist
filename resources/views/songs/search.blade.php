@@ -44,7 +44,7 @@
                     </div>
                     <!-- page control -->
                     <br>
-                    {!! $params['result']->appends(['keyword' => $params['keyword'])->render() !!}
+                    {!! $params['result']->appends(['keyword' => $params['keyword']])->render() !!}
                 @else
                     楽曲が見付かりませんでした。
                 @endif
