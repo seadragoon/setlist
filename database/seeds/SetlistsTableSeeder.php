@@ -638,6 +638,303 @@ class SetlistsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 15:29:04',
                 'deleted_at' => NULL,
             ),
+            69 => 
+            array (
+                'setlist_id' => 70,
+                'event_id' => 70,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 02:37:23',
+                'updated_at' => '2019-11-24 02:37:23',
+                'deleted_at' => NULL,
+            ),
+            70 => 
+            array (
+                'setlist_id' => 71,
+                'event_id' => 71,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 02:41:57',
+                'updated_at' => '2019-11-24 02:41:57',
+                'deleted_at' => NULL,
+            ),
+            71 => 
+            array (
+                'setlist_id' => 72,
+                'event_id' => 72,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 02:52:42',
+                'updated_at' => '2019-11-24 02:52:42',
+                'deleted_at' => NULL,
+            ),
+            72 => 
+            array (
+                'setlist_id' => 73,
+                'event_id' => 73,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 02:56:49',
+                'updated_at' => '2019-11-24 02:56:49',
+                'deleted_at' => NULL,
+            ),
+            73 => 
+            array (
+                'setlist_id' => 74,
+                'event_id' => 74,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 02:59:20',
+                'updated_at' => '2019-11-24 02:59:20',
+                'deleted_at' => NULL,
+            ),
+            74 => 
+            array (
+                'setlist_id' => 75,
+                'event_id' => 75,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 03:03:13',
+                'updated_at' => '2019-11-24 03:03:13',
+                'deleted_at' => NULL,
+            ),
+            75 => 
+            array (
+                'setlist_id' => 76,
+                'event_id' => 76,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 03:05:38',
+                'updated_at' => '2019-11-24 03:05:38',
+                'deleted_at' => NULL,
+            ),
+            76 => 
+            array (
+                'setlist_id' => 77,
+                'event_id' => 77,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 03:11:14',
+                'updated_at' => '2019-11-24 03:11:14',
+                'deleted_at' => NULL,
+            ),
+            77 => 
+            array (
+                'setlist_id' => 78,
+                'event_id' => 78,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 03:13:47',
+                'updated_at' => '2019-11-24 03:13:47',
+                'deleted_at' => NULL,
+            ),
+            78 => 
+            array (
+                'setlist_id' => 79,
+                'event_id' => 79,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 03:16:08',
+                'updated_at' => '2019-11-24 03:16:08',
+                'deleted_at' => NULL,
+            ),
+            79 => 
+            array (
+                'setlist_id' => 80,
+                'event_id' => 80,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 03:19:19',
+                'updated_at' => '2019-11-24 03:19:19',
+                'deleted_at' => NULL,
+            ),
+            80 => 
+            array (
+                'setlist_id' => 81,
+                'event_id' => 81,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 03:23:50',
+                'updated_at' => '2019-11-24 03:23:50',
+                'deleted_at' => NULL,
+            ),
+            81 => 
+            array (
+                'setlist_id' => 82,
+                'event_id' => 82,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 03:30:14',
+                'updated_at' => '2019-11-24 03:30:14',
+                'deleted_at' => NULL,
+            ),
+            82 => 
+            array (
+                'setlist_id' => 83,
+                'event_id' => 83,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 03:32:09',
+                'updated_at' => '2019-11-24 03:32:09',
+                'deleted_at' => NULL,
+            ),
+            83 => 
+            array (
+                'setlist_id' => 84,
+                'event_id' => 84,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 03:34:18',
+                'updated_at' => '2019-11-24 03:34:18',
+                'deleted_at' => NULL,
+            ),
+            84 => 
+            array (
+                'setlist_id' => 85,
+                'event_id' => 85,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 03:41:32',
+                'updated_at' => '2019-11-24 03:41:32',
+                'deleted_at' => NULL,
+            ),
+            85 => 
+            array (
+                'setlist_id' => 86,
+                'event_id' => 86,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 12:21:19',
+                'updated_at' => '2019-11-24 12:21:19',
+                'deleted_at' => NULL,
+            ),
+            86 => 
+            array (
+                'setlist_id' => 87,
+                'event_id' => 87,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 12:25:29',
+                'updated_at' => '2019-11-24 12:25:29',
+                'deleted_at' => NULL,
+            ),
+            87 => 
+            array (
+                'setlist_id' => 88,
+                'event_id' => 88,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 12:31:08',
+                'updated_at' => '2019-11-24 12:31:08',
+                'deleted_at' => NULL,
+            ),
+            88 => 
+            array (
+                'setlist_id' => 89,
+                'event_id' => 89,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 12:35:20',
+                'updated_at' => '2019-11-24 12:35:20',
+                'deleted_at' => NULL,
+            ),
+            89 => 
+            array (
+                'setlist_id' => 90,
+                'event_id' => 90,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 13:28:17',
+                'updated_at' => '2019-11-24 13:28:17',
+                'deleted_at' => NULL,
+            ),
+            90 => 
+            array (
+                'setlist_id' => 91,
+                'event_id' => 91,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 21:32:19',
+                'updated_at' => '2019-11-24 21:32:19',
+                'deleted_at' => NULL,
+            ),
+            91 => 
+            array (
+                'setlist_id' => 92,
+                'event_id' => 92,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 21:35:30',
+                'updated_at' => '2019-11-24 21:35:30',
+                'deleted_at' => NULL,
+            ),
+            92 => 
+            array (
+                'setlist_id' => 93,
+                'event_id' => 93,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 21:38:52',
+                'updated_at' => '2019-11-24 21:38:52',
+                'deleted_at' => NULL,
+            ),
+            93 => 
+            array (
+                'setlist_id' => 94,
+                'event_id' => 94,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 21:42:27',
+                'updated_at' => '2019-11-24 21:42:27',
+                'deleted_at' => NULL,
+            ),
+            94 => 
+            array (
+                'setlist_id' => 95,
+                'event_id' => 95,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 21:58:36',
+                'updated_at' => '2019-11-24 21:58:36',
+                'deleted_at' => NULL,
+            ),
+            95 => 
+            array (
+                'setlist_id' => 96,
+                'event_id' => 96,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 22:01:19',
+                'updated_at' => '2019-11-24 22:01:19',
+                'deleted_at' => NULL,
+            ),
+            96 => 
+            array (
+                'setlist_id' => 97,
+                'event_id' => 97,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 22:06:32',
+                'updated_at' => '2019-11-24 22:06:32',
+                'deleted_at' => NULL,
+            ),
+            97 => 
+            array (
+                'setlist_id' => 98,
+                'event_id' => 98,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 22:15:33',
+                'updated_at' => '2019-11-24 22:15:33',
+                'deleted_at' => NULL,
+            ),
+            98 => 
+            array (
+                'setlist_id' => 99,
+                'event_id' => 99,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 22:17:44',
+                'updated_at' => '2019-11-24 22:17:44',
+                'deleted_at' => NULL,
+            ),
+            99 => 
+            array (
+                'setlist_id' => 100,
+                'event_id' => 100,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 22:19:40',
+                'updated_at' => '2019-11-24 22:19:40',
+                'deleted_at' => NULL,
+            ),
+            100 => 
+            array (
+                'setlist_id' => 101,
+                'event_id' => 101,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 22:22:28',
+                'updated_at' => '2019-11-24 22:22:28',
+                'deleted_at' => NULL,
+            ),
+            101 => 
+            array (
+                'setlist_id' => 102,
+                'event_id' => 102,
+                'artist_id' => 1,
+                'created_at' => '2019-11-24 22:24:14',
+                'updated_at' => '2019-11-24 22:24:14',
+                'deleted_at' => NULL,
+            ),
         ));
         
         

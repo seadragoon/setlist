@@ -549,11 +549,11 @@ class SongsTableSeeder extends Seeder
             array (
                 'song_id' => 50,
                 'artist_id' => 1,
-                'name' => 'Hana',
+                'name' => '花',
                 'link' => NULL,
                 'edit_user_id' => 1,
                 'created_at' => '2019-11-22 05:21:26',
-                'updated_at' => '2019-11-22 05:21:26',
+                'updated_at' => '2019-11-24 16:39:00',
                 'deleted_at' => NULL,
             ),
             49 => 
@@ -878,12 +878,12 @@ class SongsTableSeeder extends Seeder
             78 => 
             array (
                 'song_id' => 81,
-                'artist_id' => 1,
+                'artist_id' => 12,
                 'name' => 'daze',
                 'link' => NULL,
                 'edit_user_id' => 1,
                 'created_at' => '2019-11-22 06:02:02',
-                'updated_at' => '2019-11-22 06:02:02',
+                'updated_at' => '2019-11-24 16:30:38',
                 'deleted_at' => NULL,
             ),
             79 => 
@@ -900,12 +900,12 @@ class SongsTableSeeder extends Seeder
             80 => 
             array (
                 'song_id' => 83,
-                'artist_id' => 1,
+                'artist_id' => 23,
                 'name' => 'ブリキノダンス',
                 'link' => NULL,
                 'edit_user_id' => 1,
                 'created_at' => '2019-11-22 06:19:00',
-                'updated_at' => '2019-11-22 06:19:00',
+                'updated_at' => '2019-11-24 16:10:41',
                 'deleted_at' => NULL,
             ),
             81 => 
@@ -1823,17 +1823,6 @@ class SongsTableSeeder extends Seeder
             ),
             164 => 
             array (
-                'song_id' => 168,
-                'artist_id' => 5,
-                'name' => 'irony-TV Mix-',
-                'link' => NULL,
-                'edit_user_id' => 1,
-                'created_at' => '2019-11-22 23:12:58',
-                'updated_at' => '2019-11-22 23:12:58',
-                'deleted_at' => NULL,
-            ),
-            165 => 
-            array (
                 'song_id' => 169,
                 'artist_id' => 5,
                 'name' => 'zutto',
@@ -1843,7 +1832,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            166 => 
+            165 => 
             array (
                 'song_id' => 170,
                 'artist_id' => 5,
@@ -1854,7 +1843,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            167 => 
+            166 => 
             array (
                 'song_id' => 171,
                 'artist_id' => 5,
@@ -1865,7 +1854,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            168 => 
+            167 => 
             array (
                 'song_id' => 172,
                 'artist_id' => 5,
@@ -1876,7 +1865,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            169 => 
+            168 => 
             array (
                 'song_id' => 173,
                 'artist_id' => 5,
@@ -1887,7 +1876,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            170 => 
+            169 => 
             array (
                 'song_id' => 174,
                 'artist_id' => 5,
@@ -1898,7 +1887,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            171 => 
+            170 => 
             array (
                 'song_id' => 175,
                 'artist_id' => 5,
@@ -1909,7 +1898,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            172 => 
+            171 => 
             array (
                 'song_id' => 176,
                 'artist_id' => 5,
@@ -1920,7 +1909,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            173 => 
+            172 => 
             array (
                 'song_id' => 177,
                 'artist_id' => 5,
@@ -1931,18 +1920,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            174 => 
-            array (
-                'song_id' => 178,
-                'artist_id' => 5,
-                'name' => 'border -remix-',
-                'link' => NULL,
-                'edit_user_id' => 1,
-                'created_at' => '2019-11-22 23:12:58',
-                'updated_at' => '2019-11-22 23:12:58',
-                'deleted_at' => NULL,
-            ),
-            175 => 
+            173 => 
             array (
                 'song_id' => 179,
                 'artist_id' => 5,
@@ -1953,7 +1931,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            176 => 
+            174 => 
             array (
                 'song_id' => 180,
                 'artist_id' => 5,
@@ -1964,7 +1942,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            177 => 
+            175 => 
             array (
                 'song_id' => 181,
                 'artist_id' => 5,
@@ -1975,7 +1953,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            178 => 
+            176 => 
             array (
                 'song_id' => 182,
                 'artist_id' => 5,
@@ -1986,7 +1964,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            179 => 
+            177 => 
             array (
                 'song_id' => 183,
                 'artist_id' => 5,
@@ -1997,7 +1975,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            180 => 
+            178 => 
             array (
                 'song_id' => 184,
                 'artist_id' => 5,
@@ -2008,7 +1986,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            181 => 
+            179 => 
             array (
                 'song_id' => 185,
                 'artist_id' => 5,
@@ -2019,7 +1997,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            182 => 
+            180 => 
             array (
                 'song_id' => 186,
                 'artist_id' => 5,
@@ -2030,7 +2008,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            183 => 
+            181 => 
             array (
                 'song_id' => 187,
                 'artist_id' => 5,
@@ -2041,7 +2019,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            184 => 
+            182 => 
             array (
                 'song_id' => 188,
                 'artist_id' => 5,
@@ -2052,7 +2030,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            185 => 
+            183 => 
             array (
                 'song_id' => 189,
                 'artist_id' => 5,
@@ -2063,7 +2041,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            186 => 
+            184 => 
             array (
                 'song_id' => 190,
                 'artist_id' => 5,
@@ -2074,7 +2052,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            187 => 
+            185 => 
             array (
                 'song_id' => 191,
                 'artist_id' => 5,
@@ -2085,7 +2063,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            188 => 
+            186 => 
             array (
                 'song_id' => 192,
                 'artist_id' => 5,
@@ -2096,7 +2074,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            189 => 
+            187 => 
             array (
                 'song_id' => 193,
                 'artist_id' => 5,
@@ -2107,7 +2085,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            190 => 
+            188 => 
             array (
                 'song_id' => 194,
                 'artist_id' => 5,
@@ -2118,7 +2096,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            191 => 
+            189 => 
             array (
                 'song_id' => 195,
                 'artist_id' => 5,
@@ -2129,7 +2107,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            192 => 
+            190 => 
             array (
                 'song_id' => 196,
                 'artist_id' => 5,
@@ -2140,7 +2118,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            193 => 
+            191 => 
             array (
                 'song_id' => 197,
                 'artist_id' => 5,
@@ -2151,7 +2129,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            194 => 
+            192 => 
             array (
                 'song_id' => 198,
                 'artist_id' => 5,
@@ -2162,7 +2140,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:12:58',
                 'deleted_at' => NULL,
             ),
-            195 => 
+            193 => 
             array (
                 'song_id' => 199,
                 'artist_id' => 6,
@@ -2173,7 +2151,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            196 => 
+            194 => 
             array (
                 'song_id' => 200,
                 'artist_id' => 6,
@@ -2184,7 +2162,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            197 => 
+            195 => 
             array (
                 'song_id' => 201,
                 'artist_id' => 6,
@@ -2195,7 +2173,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            198 => 
+            196 => 
             array (
                 'song_id' => 202,
                 'artist_id' => 6,
@@ -2206,7 +2184,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            199 => 
+            197 => 
             array (
                 'song_id' => 203,
                 'artist_id' => 6,
@@ -2217,7 +2195,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            200 => 
+            198 => 
             array (
                 'song_id' => 204,
                 'artist_id' => 6,
@@ -2228,7 +2206,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            201 => 
+            199 => 
             array (
                 'song_id' => 205,
                 'artist_id' => 6,
@@ -2239,7 +2217,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            202 => 
+            200 => 
             array (
                 'song_id' => 206,
                 'artist_id' => 6,
@@ -2250,7 +2228,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            203 => 
+            201 => 
             array (
                 'song_id' => 207,
                 'artist_id' => 6,
@@ -2261,7 +2239,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            204 => 
+            202 => 
             array (
                 'song_id' => 208,
                 'artist_id' => 6,
@@ -2272,7 +2250,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            205 => 
+            203 => 
             array (
                 'song_id' => 209,
                 'artist_id' => 6,
@@ -2283,7 +2261,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            206 => 
+            204 => 
             array (
                 'song_id' => 210,
                 'artist_id' => 6,
@@ -2294,7 +2272,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            207 => 
+            205 => 
             array (
                 'song_id' => 211,
                 'artist_id' => 6,
@@ -2305,7 +2283,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            208 => 
+            206 => 
             array (
                 'song_id' => 212,
                 'artist_id' => 6,
@@ -2316,7 +2294,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            209 => 
+            207 => 
             array (
                 'song_id' => 213,
                 'artist_id' => 6,
@@ -2327,7 +2305,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            210 => 
+            208 => 
             array (
                 'song_id' => 214,
                 'artist_id' => 6,
@@ -2338,7 +2316,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            211 => 
+            209 => 
             array (
                 'song_id' => 215,
                 'artist_id' => 6,
@@ -2349,7 +2327,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            212 => 
+            210 => 
             array (
                 'song_id' => 216,
                 'artist_id' => 6,
@@ -2360,7 +2338,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            213 => 
+            211 => 
             array (
                 'song_id' => 217,
                 'artist_id' => 6,
@@ -2371,7 +2349,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            214 => 
+            212 => 
             array (
                 'song_id' => 218,
                 'artist_id' => 6,
@@ -2382,7 +2360,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            215 => 
+            213 => 
             array (
                 'song_id' => 219,
                 'artist_id' => 6,
@@ -2393,7 +2371,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            216 => 
+            214 => 
             array (
                 'song_id' => 220,
                 'artist_id' => 6,
@@ -2404,7 +2382,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            217 => 
+            215 => 
             array (
                 'song_id' => 221,
                 'artist_id' => 6,
@@ -2415,7 +2393,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            218 => 
+            216 => 
             array (
                 'song_id' => 222,
                 'artist_id' => 6,
@@ -2426,7 +2404,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            219 => 
+            217 => 
             array (
                 'song_id' => 223,
                 'artist_id' => 6,
@@ -2437,7 +2415,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            220 => 
+            218 => 
             array (
                 'song_id' => 224,
                 'artist_id' => 6,
@@ -2448,7 +2426,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            221 => 
+            219 => 
             array (
                 'song_id' => 225,
                 'artist_id' => 6,
@@ -2459,7 +2437,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            222 => 
+            220 => 
             array (
                 'song_id' => 226,
                 'artist_id' => 6,
@@ -2470,7 +2448,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            223 => 
+            221 => 
             array (
                 'song_id' => 227,
                 'artist_id' => 6,
@@ -2481,7 +2459,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            224 => 
+            222 => 
             array (
                 'song_id' => 228,
                 'artist_id' => 6,
@@ -2492,7 +2470,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            225 => 
+            223 => 
             array (
                 'song_id' => 229,
                 'artist_id' => 6,
@@ -2503,7 +2481,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            226 => 
+            224 => 
             array (
                 'song_id' => 230,
                 'artist_id' => 6,
@@ -2514,7 +2492,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            227 => 
+            225 => 
             array (
                 'song_id' => 231,
                 'artist_id' => 6,
@@ -2525,7 +2503,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            228 => 
+            226 => 
             array (
                 'song_id' => 232,
                 'artist_id' => 6,
@@ -2536,7 +2514,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            229 => 
+            227 => 
             array (
                 'song_id' => 233,
                 'artist_id' => 6,
@@ -2547,7 +2525,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            230 => 
+            228 => 
             array (
                 'song_id' => 234,
                 'artist_id' => 6,
@@ -2558,7 +2536,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            231 => 
+            229 => 
             array (
                 'song_id' => 235,
                 'artist_id' => 6,
@@ -2569,7 +2547,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            232 => 
+            230 => 
             array (
                 'song_id' => 236,
                 'artist_id' => 6,
@@ -2580,7 +2558,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            233 => 
+            231 => 
             array (
                 'song_id' => 237,
                 'artist_id' => 6,
@@ -2591,7 +2569,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            234 => 
+            232 => 
             array (
                 'song_id' => 238,
                 'artist_id' => 6,
@@ -2602,7 +2580,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:33:47',
                 'deleted_at' => NULL,
             ),
-            235 => 
+            233 => 
             array (
                 'song_id' => 239,
                 'artist_id' => 10,
@@ -2613,7 +2591,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            236 => 
+            234 => 
             array (
                 'song_id' => 240,
                 'artist_id' => 10,
@@ -2624,7 +2602,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            237 => 
+            235 => 
             array (
                 'song_id' => 241,
                 'artist_id' => 10,
@@ -2635,7 +2613,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            238 => 
+            236 => 
             array (
                 'song_id' => 242,
                 'artist_id' => 10,
@@ -2646,7 +2624,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            239 => 
+            237 => 
             array (
                 'song_id' => 243,
                 'artist_id' => 10,
@@ -2657,7 +2635,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            240 => 
+            238 => 
             array (
                 'song_id' => 244,
                 'artist_id' => 10,
@@ -2668,7 +2646,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            241 => 
+            239 => 
             array (
                 'song_id' => 245,
                 'artist_id' => 10,
@@ -2679,7 +2657,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            242 => 
+            240 => 
             array (
                 'song_id' => 246,
                 'artist_id' => 10,
@@ -2690,7 +2668,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            243 => 
+            241 => 
             array (
                 'song_id' => 247,
                 'artist_id' => 10,
@@ -2701,7 +2679,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            244 => 
+            242 => 
             array (
                 'song_id' => 248,
                 'artist_id' => 10,
@@ -2712,7 +2690,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            245 => 
+            243 => 
             array (
                 'song_id' => 249,
                 'artist_id' => 10,
@@ -2723,7 +2701,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            246 => 
+            244 => 
             array (
                 'song_id' => 250,
                 'artist_id' => 10,
@@ -2734,7 +2712,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            247 => 
+            245 => 
             array (
                 'song_id' => 251,
                 'artist_id' => 10,
@@ -2745,7 +2723,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            248 => 
+            246 => 
             array (
                 'song_id' => 252,
                 'artist_id' => 10,
@@ -2756,7 +2734,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            249 => 
+            247 => 
             array (
                 'song_id' => 253,
                 'artist_id' => 10,
@@ -2767,7 +2745,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            250 => 
+            248 => 
             array (
                 'song_id' => 254,
                 'artist_id' => 10,
@@ -2778,7 +2756,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            251 => 
+            249 => 
             array (
                 'song_id' => 255,
                 'artist_id' => 10,
@@ -2789,7 +2767,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            252 => 
+            250 => 
             array (
                 'song_id' => 256,
                 'artist_id' => 10,
@@ -2800,7 +2778,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            253 => 
+            251 => 
             array (
                 'song_id' => 257,
                 'artist_id' => 10,
@@ -2811,18 +2789,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            254 => 
-            array (
-                'song_id' => 258,
-                'artist_id' => 10,
-                'name' => '君の知らない物語 -TV Edit-',
-                'link' => NULL,
-                'edit_user_id' => 1,
-                'created_at' => '2019-11-22 23:42:55',
-                'updated_at' => '2019-11-22 23:42:55',
-                'deleted_at' => NULL,
-            ),
-            255 => 
+            252 => 
             array (
                 'song_id' => 259,
                 'artist_id' => 10,
@@ -2833,7 +2800,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            256 => 
+            253 => 
             array (
                 'song_id' => 260,
                 'artist_id' => 10,
@@ -2844,7 +2811,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            257 => 
+            254 => 
             array (
                 'song_id' => 261,
                 'artist_id' => 10,
@@ -2855,7 +2822,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            258 => 
+            255 => 
             array (
                 'song_id' => 262,
                 'artist_id' => 10,
@@ -2866,7 +2833,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            259 => 
+            256 => 
             array (
                 'song_id' => 263,
                 'artist_id' => 10,
@@ -2877,7 +2844,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            260 => 
+            257 => 
             array (
                 'song_id' => 264,
                 'artist_id' => 10,
@@ -2888,7 +2855,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            261 => 
+            258 => 
             array (
                 'song_id' => 265,
                 'artist_id' => 10,
@@ -2899,18 +2866,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            262 => 
-            array (
-                'song_id' => 266,
-                'artist_id' => 10,
-                'name' => '星が瞬くこんな夜に ~ゲームVer.~',
-                'link' => NULL,
-                'edit_user_id' => 1,
-                'created_at' => '2019-11-22 23:42:55',
-                'updated_at' => '2019-11-22 23:42:55',
-                'deleted_at' => NULL,
-            ),
-            263 => 
+            259 => 
             array (
                 'song_id' => 267,
                 'artist_id' => 10,
@@ -2921,7 +2877,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            264 => 
+            260 => 
             array (
                 'song_id' => 268,
                 'artist_id' => 10,
@@ -2932,7 +2888,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            265 => 
+            261 => 
             array (
                 'song_id' => 269,
                 'artist_id' => 10,
@@ -2943,7 +2899,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            266 => 
+            262 => 
             array (
                 'song_id' => 270,
                 'artist_id' => 10,
@@ -2954,7 +2910,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            267 => 
+            263 => 
             array (
                 'song_id' => 271,
                 'artist_id' => 10,
@@ -2965,7 +2921,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            268 => 
+            264 => 
             array (
                 'song_id' => 272,
                 'artist_id' => 10,
@@ -2976,7 +2932,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            269 => 
+            265 => 
             array (
                 'song_id' => 273,
                 'artist_id' => 10,
@@ -2987,7 +2943,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            270 => 
+            266 => 
             array (
                 'song_id' => 274,
                 'artist_id' => 10,
@@ -2998,7 +2954,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            271 => 
+            267 => 
             array (
                 'song_id' => 275,
                 'artist_id' => 10,
@@ -3009,7 +2965,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            272 => 
+            268 => 
             array (
                 'song_id' => 276,
                 'artist_id' => 10,
@@ -3020,7 +2976,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            273 => 
+            269 => 
             array (
                 'song_id' => 277,
                 'artist_id' => 10,
@@ -3031,7 +2987,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            274 => 
+            270 => 
             array (
                 'song_id' => 278,
                 'artist_id' => 10,
@@ -3042,7 +2998,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            275 => 
+            271 => 
             array (
                 'song_id' => 279,
                 'artist_id' => 10,
@@ -3053,7 +3009,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            276 => 
+            272 => 
             array (
                 'song_id' => 280,
                 'artist_id' => 10,
@@ -3064,7 +3020,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            277 => 
+            273 => 
             array (
                 'song_id' => 281,
                 'artist_id' => 10,
@@ -3075,7 +3031,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            278 => 
+            274 => 
             array (
                 'song_id' => 282,
                 'artist_id' => 10,
@@ -3086,7 +3042,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            279 => 
+            275 => 
             array (
                 'song_id' => 283,
                 'artist_id' => 10,
@@ -3097,7 +3053,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            280 => 
+            276 => 
             array (
                 'song_id' => 284,
                 'artist_id' => 10,
@@ -3108,18 +3064,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:42:55',
                 'deleted_at' => NULL,
             ),
-            281 => 
-            array (
-                'song_id' => 285,
-                'artist_id' => 10,
-                'name' => '星が瞬くこんな夜に ~オルゴールVer.~',
-                'link' => NULL,
-                'edit_user_id' => 1,
-                'created_at' => '2019-11-22 23:42:55',
-                'updated_at' => '2019-11-22 23:42:55',
-                'deleted_at' => NULL,
-            ),
-            282 => 
+            277 => 
             array (
                 'song_id' => 286,
                 'artist_id' => 11,
@@ -3130,7 +3075,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            283 => 
+            278 => 
             array (
                 'song_id' => 287,
                 'artist_id' => 11,
@@ -3141,7 +3086,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            284 => 
+            279 => 
             array (
                 'song_id' => 288,
                 'artist_id' => 11,
@@ -3152,7 +3097,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            285 => 
+            280 => 
             array (
                 'song_id' => 289,
                 'artist_id' => 11,
@@ -3163,7 +3108,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            286 => 
+            281 => 
             array (
                 'song_id' => 290,
                 'artist_id' => 11,
@@ -3174,7 +3119,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            287 => 
+            282 => 
             array (
                 'song_id' => 291,
                 'artist_id' => 11,
@@ -3185,7 +3130,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            288 => 
+            283 => 
             array (
                 'song_id' => 292,
                 'artist_id' => 11,
@@ -3196,7 +3141,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            289 => 
+            284 => 
             array (
                 'song_id' => 293,
                 'artist_id' => 11,
@@ -3207,7 +3152,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            290 => 
+            285 => 
             array (
                 'song_id' => 294,
                 'artist_id' => 11,
@@ -3218,7 +3163,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            291 => 
+            286 => 
             array (
                 'song_id' => 295,
                 'artist_id' => 11,
@@ -3229,7 +3174,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            292 => 
+            287 => 
             array (
                 'song_id' => 296,
                 'artist_id' => 11,
@@ -3240,7 +3185,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            293 => 
+            288 => 
             array (
                 'song_id' => 297,
                 'artist_id' => 11,
@@ -3251,7 +3196,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            294 => 
+            289 => 
             array (
                 'song_id' => 298,
                 'artist_id' => 11,
@@ -3262,7 +3207,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            295 => 
+            290 => 
             array (
                 'song_id' => 299,
                 'artist_id' => 11,
@@ -3273,7 +3218,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            296 => 
+            291 => 
             array (
                 'song_id' => 300,
                 'artist_id' => 11,
@@ -3284,7 +3229,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            297 => 
+            292 => 
             array (
                 'song_id' => 301,
                 'artist_id' => 11,
@@ -3295,7 +3240,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            298 => 
+            293 => 
             array (
                 'song_id' => 302,
                 'artist_id' => 11,
@@ -3306,7 +3251,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            299 => 
+            294 => 
             array (
                 'song_id' => 303,
                 'artist_id' => 11,
@@ -3317,7 +3262,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            300 => 
+            295 => 
             array (
                 'song_id' => 304,
                 'artist_id' => 11,
@@ -3328,7 +3273,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            301 => 
+            296 => 
             array (
                 'song_id' => 305,
                 'artist_id' => 11,
@@ -3339,7 +3284,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            302 => 
+            297 => 
             array (
                 'song_id' => 306,
                 'artist_id' => 11,
@@ -3350,7 +3295,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            303 => 
+            298 => 
             array (
                 'song_id' => 307,
                 'artist_id' => 11,
@@ -3361,7 +3306,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            304 => 
+            299 => 
             array (
                 'song_id' => 308,
                 'artist_id' => 11,
@@ -3372,7 +3317,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            305 => 
+            300 => 
             array (
                 'song_id' => 309,
                 'artist_id' => 11,
@@ -3383,7 +3328,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            306 => 
+            301 => 
             array (
                 'song_id' => 310,
                 'artist_id' => 11,
@@ -3394,7 +3339,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            307 => 
+            302 => 
             array (
                 'song_id' => 311,
                 'artist_id' => 11,
@@ -3405,7 +3350,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            308 => 
+            303 => 
             array (
                 'song_id' => 312,
                 'artist_id' => 11,
@@ -3416,7 +3361,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            309 => 
+            304 => 
             array (
                 'song_id' => 313,
                 'artist_id' => 11,
@@ -3427,7 +3372,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            310 => 
+            305 => 
             array (
                 'song_id' => 314,
                 'artist_id' => 11,
@@ -3438,7 +3383,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            311 => 
+            306 => 
             array (
                 'song_id' => 315,
                 'artist_id' => 11,
@@ -3449,7 +3394,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            312 => 
+            307 => 
             array (
                 'song_id' => 316,
                 'artist_id' => 11,
@@ -3460,7 +3405,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            313 => 
+            308 => 
             array (
                 'song_id' => 317,
                 'artist_id' => 11,
@@ -3471,7 +3416,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            314 => 
+            309 => 
             array (
                 'song_id' => 318,
                 'artist_id' => 11,
@@ -3482,7 +3427,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            315 => 
+            310 => 
             array (
                 'song_id' => 319,
                 'artist_id' => 11,
@@ -3493,7 +3438,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            316 => 
+            311 => 
             array (
                 'song_id' => 320,
                 'artist_id' => 11,
@@ -3504,7 +3449,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            317 => 
+            312 => 
             array (
                 'song_id' => 321,
                 'artist_id' => 11,
@@ -3515,7 +3460,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            318 => 
+            313 => 
             array (
                 'song_id' => 322,
                 'artist_id' => 11,
@@ -3526,7 +3471,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            319 => 
+            314 => 
             array (
                 'song_id' => 323,
                 'artist_id' => 11,
@@ -3537,7 +3482,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            320 => 
+            315 => 
             array (
                 'song_id' => 324,
                 'artist_id' => 11,
@@ -3548,7 +3493,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            321 => 
+            316 => 
             array (
                 'song_id' => 325,
                 'artist_id' => 11,
@@ -3559,7 +3504,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            322 => 
+            317 => 
             array (
                 'song_id' => 326,
                 'artist_id' => 11,
@@ -3570,7 +3515,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            323 => 
+            318 => 
             array (
                 'song_id' => 327,
                 'artist_id' => 11,
@@ -3581,7 +3526,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            324 => 
+            319 => 
             array (
                 'song_id' => 328,
                 'artist_id' => 11,
@@ -3592,7 +3537,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            325 => 
+            320 => 
             array (
                 'song_id' => 329,
                 'artist_id' => 11,
@@ -3603,7 +3548,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            326 => 
+            321 => 
             array (
                 'song_id' => 330,
                 'artist_id' => 11,
@@ -3614,7 +3559,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            327 => 
+            322 => 
             array (
                 'song_id' => 331,
                 'artist_id' => 11,
@@ -3625,7 +3570,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            328 => 
+            323 => 
             array (
                 'song_id' => 332,
                 'artist_id' => 11,
@@ -3636,7 +3581,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            329 => 
+            324 => 
             array (
                 'song_id' => 333,
                 'artist_id' => 11,
@@ -3647,7 +3592,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            330 => 
+            325 => 
             array (
                 'song_id' => 334,
                 'artist_id' => 11,
@@ -3658,7 +3603,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            331 => 
+            326 => 
             array (
                 'song_id' => 335,
                 'artist_id' => 11,
@@ -3669,7 +3614,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            332 => 
+            327 => 
             array (
                 'song_id' => 336,
                 'artist_id' => 11,
@@ -3680,7 +3625,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            333 => 
+            328 => 
             array (
                 'song_id' => 337,
                 'artist_id' => 11,
@@ -3691,7 +3636,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            334 => 
+            329 => 
             array (
                 'song_id' => 338,
                 'artist_id' => 11,
@@ -3702,7 +3647,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            335 => 
+            330 => 
             array (
                 'song_id' => 339,
                 'artist_id' => 11,
@@ -3713,7 +3658,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            336 => 
+            331 => 
             array (
                 'song_id' => 340,
                 'artist_id' => 11,
@@ -3724,7 +3669,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            337 => 
+            332 => 
             array (
                 'song_id' => 341,
                 'artist_id' => 11,
@@ -3735,7 +3680,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            338 => 
+            333 => 
             array (
                 'song_id' => 342,
                 'artist_id' => 11,
@@ -3746,7 +3691,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            339 => 
+            334 => 
             array (
                 'song_id' => 343,
                 'artist_id' => 11,
@@ -3757,7 +3702,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            340 => 
+            335 => 
             array (
                 'song_id' => 344,
                 'artist_id' => 11,
@@ -3768,7 +3713,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            341 => 
+            336 => 
             array (
                 'song_id' => 345,
                 'artist_id' => 11,
@@ -3779,7 +3724,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            342 => 
+            337 => 
             array (
                 'song_id' => 346,
                 'artist_id' => 11,
@@ -3790,7 +3735,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            343 => 
+            338 => 
             array (
                 'song_id' => 347,
                 'artist_id' => 11,
@@ -3801,7 +3746,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            344 => 
+            339 => 
             array (
                 'song_id' => 348,
                 'artist_id' => 11,
@@ -3812,7 +3757,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            345 => 
+            340 => 
             array (
                 'song_id' => 349,
                 'artist_id' => 11,
@@ -3823,7 +3768,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            346 => 
+            341 => 
             array (
                 'song_id' => 350,
                 'artist_id' => 11,
@@ -3834,7 +3779,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            347 => 
+            342 => 
             array (
                 'song_id' => 351,
                 'artist_id' => 11,
@@ -3845,7 +3790,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            348 => 
+            343 => 
             array (
                 'song_id' => 352,
                 'artist_id' => 11,
@@ -3856,7 +3801,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            349 => 
+            344 => 
             array (
                 'song_id' => 353,
                 'artist_id' => 11,
@@ -3867,7 +3812,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            350 => 
+            345 => 
             array (
                 'song_id' => 354,
                 'artist_id' => 11,
@@ -3878,7 +3823,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            351 => 
+            346 => 
             array (
                 'song_id' => 355,
                 'artist_id' => 11,
@@ -3889,7 +3834,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            352 => 
+            347 => 
             array (
                 'song_id' => 356,
                 'artist_id' => 11,
@@ -3900,7 +3845,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            353 => 
+            348 => 
             array (
                 'song_id' => 357,
                 'artist_id' => 11,
@@ -3911,7 +3856,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            354 => 
+            349 => 
             array (
                 'song_id' => 358,
                 'artist_id' => 11,
@@ -3922,7 +3867,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            355 => 
+            350 => 
             array (
                 'song_id' => 359,
                 'artist_id' => 11,
@@ -3933,7 +3878,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            356 => 
+            351 => 
             array (
                 'song_id' => 360,
                 'artist_id' => 11,
@@ -3944,7 +3889,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            357 => 
+            352 => 
             array (
                 'song_id' => 361,
                 'artist_id' => 11,
@@ -3955,7 +3900,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            358 => 
+            353 => 
             array (
                 'song_id' => 362,
                 'artist_id' => 11,
@@ -3966,7 +3911,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            359 => 
+            354 => 
             array (
                 'song_id' => 363,
                 'artist_id' => 11,
@@ -3977,7 +3922,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            360 => 
+            355 => 
             array (
                 'song_id' => 364,
                 'artist_id' => 11,
@@ -3988,7 +3933,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            361 => 
+            356 => 
             array (
                 'song_id' => 365,
                 'artist_id' => 11,
@@ -3999,7 +3944,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            362 => 
+            357 => 
             array (
                 'song_id' => 366,
                 'artist_id' => 11,
@@ -4010,7 +3955,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            363 => 
+            358 => 
             array (
                 'song_id' => 367,
                 'artist_id' => 11,
@@ -4021,7 +3966,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            364 => 
+            359 => 
             array (
                 'song_id' => 368,
                 'artist_id' => 11,
@@ -4032,7 +3977,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            365 => 
+            360 => 
             array (
                 'song_id' => 369,
                 'artist_id' => 11,
@@ -4043,7 +3988,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            366 => 
+            361 => 
             array (
                 'song_id' => 370,
                 'artist_id' => 11,
@@ -4054,7 +3999,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            367 => 
+            362 => 
             array (
                 'song_id' => 371,
                 'artist_id' => 11,
@@ -4065,7 +4010,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            368 => 
+            363 => 
             array (
                 'song_id' => 372,
                 'artist_id' => 11,
@@ -4076,7 +4021,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            369 => 
+            364 => 
             array (
                 'song_id' => 373,
                 'artist_id' => 11,
@@ -4087,7 +4032,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            370 => 
+            365 => 
             array (
                 'song_id' => 374,
                 'artist_id' => 11,
@@ -4098,7 +4043,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            371 => 
+            366 => 
             array (
                 'song_id' => 375,
                 'artist_id' => 11,
@@ -4109,7 +4054,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            372 => 
+            367 => 
             array (
                 'song_id' => 376,
                 'artist_id' => 11,
@@ -4120,7 +4065,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            373 => 
+            368 => 
             array (
                 'song_id' => 377,
                 'artist_id' => 11,
@@ -4131,7 +4076,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            374 => 
+            369 => 
             array (
                 'song_id' => 378,
                 'artist_id' => 11,
@@ -4142,7 +4087,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            375 => 
+            370 => 
             array (
                 'song_id' => 379,
                 'artist_id' => 11,
@@ -4153,7 +4098,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            376 => 
+            371 => 
             array (
                 'song_id' => 380,
                 'artist_id' => 11,
@@ -4164,7 +4109,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            377 => 
+            372 => 
             array (
                 'song_id' => 381,
                 'artist_id' => 11,
@@ -4175,7 +4120,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            378 => 
+            373 => 
             array (
                 'song_id' => 382,
                 'artist_id' => 11,
@@ -4186,7 +4131,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:44:57',
                 'deleted_at' => NULL,
             ),
-            379 => 
+            374 => 
             array (
                 'song_id' => 383,
                 'artist_id' => 7,
@@ -4197,7 +4142,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            380 => 
+            375 => 
             array (
                 'song_id' => 384,
                 'artist_id' => 7,
@@ -4208,7 +4153,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            381 => 
+            376 => 
             array (
                 'song_id' => 385,
                 'artist_id' => 7,
@@ -4219,7 +4164,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            382 => 
+            377 => 
             array (
                 'song_id' => 386,
                 'artist_id' => 7,
@@ -4230,7 +4175,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            383 => 
+            378 => 
             array (
                 'song_id' => 387,
                 'artist_id' => 7,
@@ -4241,7 +4186,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            384 => 
+            379 => 
             array (
                 'song_id' => 388,
                 'artist_id' => 7,
@@ -4252,7 +4197,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            385 => 
+            380 => 
             array (
                 'song_id' => 389,
                 'artist_id' => 7,
@@ -4263,7 +4208,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            386 => 
+            381 => 
             array (
                 'song_id' => 390,
                 'artist_id' => 7,
@@ -4274,7 +4219,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            387 => 
+            382 => 
             array (
                 'song_id' => 391,
                 'artist_id' => 7,
@@ -4285,7 +4230,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            388 => 
+            383 => 
             array (
                 'song_id' => 392,
                 'artist_id' => 7,
@@ -4296,7 +4241,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            389 => 
+            384 => 
             array (
                 'song_id' => 393,
                 'artist_id' => 7,
@@ -4307,7 +4252,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            390 => 
+            385 => 
             array (
                 'song_id' => 394,
                 'artist_id' => 7,
@@ -4318,7 +4263,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            391 => 
+            386 => 
             array (
                 'song_id' => 395,
                 'artist_id' => 7,
@@ -4329,7 +4274,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            392 => 
+            387 => 
             array (
                 'song_id' => 396,
                 'artist_id' => 7,
@@ -4340,7 +4285,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            393 => 
+            388 => 
             array (
                 'song_id' => 397,
                 'artist_id' => 7,
@@ -4351,7 +4296,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            394 => 
+            389 => 
             array (
                 'song_id' => 398,
                 'artist_id' => 7,
@@ -4362,7 +4307,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            395 => 
+            390 => 
             array (
                 'song_id' => 399,
                 'artist_id' => 7,
@@ -4373,7 +4318,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            396 => 
+            391 => 
             array (
                 'song_id' => 400,
                 'artist_id' => 7,
@@ -4384,7 +4329,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            397 => 
+            392 => 
             array (
                 'song_id' => 401,
                 'artist_id' => 7,
@@ -4395,7 +4340,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            398 => 
+            393 => 
             array (
                 'song_id' => 402,
                 'artist_id' => 7,
@@ -4406,7 +4351,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            399 => 
+            394 => 
             array (
                 'song_id' => 403,
                 'artist_id' => 7,
@@ -4417,7 +4362,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            400 => 
+            395 => 
             array (
                 'song_id' => 404,
                 'artist_id' => 7,
@@ -4428,7 +4373,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            401 => 
+            396 => 
             array (
                 'song_id' => 405,
                 'artist_id' => 7,
@@ -4439,7 +4384,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            402 => 
+            397 => 
             array (
                 'song_id' => 406,
                 'artist_id' => 7,
@@ -4450,7 +4395,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            403 => 
+            398 => 
             array (
                 'song_id' => 407,
                 'artist_id' => 7,
@@ -4461,7 +4406,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            404 => 
+            399 => 
             array (
                 'song_id' => 408,
                 'artist_id' => 7,
@@ -4472,7 +4417,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            405 => 
+            400 => 
             array (
                 'song_id' => 409,
                 'artist_id' => 7,
@@ -4483,7 +4428,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            406 => 
+            401 => 
             array (
                 'song_id' => 410,
                 'artist_id' => 7,
@@ -4494,7 +4439,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            407 => 
+            402 => 
             array (
                 'song_id' => 411,
                 'artist_id' => 7,
@@ -4505,7 +4450,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            408 => 
+            403 => 
             array (
                 'song_id' => 412,
                 'artist_id' => 7,
@@ -4516,7 +4461,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            409 => 
+            404 => 
             array (
                 'song_id' => 413,
                 'artist_id' => 7,
@@ -4527,7 +4472,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            410 => 
+            405 => 
             array (
                 'song_id' => 414,
                 'artist_id' => 7,
@@ -4538,7 +4483,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            411 => 
+            406 => 
             array (
                 'song_id' => 415,
                 'artist_id' => 7,
@@ -4549,7 +4494,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            412 => 
+            407 => 
             array (
                 'song_id' => 416,
                 'artist_id' => 7,
@@ -4560,7 +4505,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            413 => 
+            408 => 
             array (
                 'song_id' => 417,
                 'artist_id' => 7,
@@ -4571,7 +4516,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            414 => 
+            409 => 
             array (
                 'song_id' => 418,
                 'artist_id' => 7,
@@ -4582,7 +4527,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            415 => 
+            410 => 
             array (
                 'song_id' => 419,
                 'artist_id' => 7,
@@ -4593,7 +4538,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            416 => 
+            411 => 
             array (
                 'song_id' => 420,
                 'artist_id' => 7,
@@ -4604,7 +4549,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            417 => 
+            412 => 
             array (
                 'song_id' => 421,
                 'artist_id' => 7,
@@ -4615,7 +4560,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            418 => 
+            413 => 
             array (
                 'song_id' => 422,
                 'artist_id' => 7,
@@ -4626,7 +4571,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            419 => 
+            414 => 
             array (
                 'song_id' => 423,
                 'artist_id' => 7,
@@ -4637,7 +4582,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            420 => 
+            415 => 
             array (
                 'song_id' => 424,
                 'artist_id' => 7,
@@ -4648,7 +4593,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            421 => 
+            416 => 
             array (
                 'song_id' => 425,
                 'artist_id' => 7,
@@ -4659,7 +4604,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            422 => 
+            417 => 
             array (
                 'song_id' => 426,
                 'artist_id' => 7,
@@ -4670,7 +4615,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            423 => 
+            418 => 
             array (
                 'song_id' => 427,
                 'artist_id' => 7,
@@ -4681,7 +4626,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            424 => 
+            419 => 
             array (
                 'song_id' => 428,
                 'artist_id' => 7,
@@ -4692,7 +4637,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            425 => 
+            420 => 
             array (
                 'song_id' => 429,
                 'artist_id' => 7,
@@ -4703,7 +4648,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            426 => 
+            421 => 
             array (
                 'song_id' => 430,
                 'artist_id' => 7,
@@ -4714,7 +4659,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            427 => 
+            422 => 
             array (
                 'song_id' => 431,
                 'artist_id' => 7,
@@ -4725,7 +4670,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            428 => 
+            423 => 
             array (
                 'song_id' => 432,
                 'artist_id' => 7,
@@ -4736,7 +4681,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            429 => 
+            424 => 
             array (
                 'song_id' => 433,
                 'artist_id' => 7,
@@ -4747,7 +4692,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            430 => 
+            425 => 
             array (
                 'song_id' => 434,
                 'artist_id' => 7,
@@ -4758,7 +4703,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            431 => 
+            426 => 
             array (
                 'song_id' => 435,
                 'artist_id' => 7,
@@ -4769,7 +4714,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            432 => 
+            427 => 
             array (
                 'song_id' => 436,
                 'artist_id' => 7,
@@ -4780,7 +4725,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            433 => 
+            428 => 
             array (
                 'song_id' => 437,
                 'artist_id' => 7,
@@ -4791,7 +4736,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            434 => 
+            429 => 
             array (
                 'song_id' => 438,
                 'artist_id' => 7,
@@ -4802,7 +4747,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            435 => 
+            430 => 
             array (
                 'song_id' => 439,
                 'artist_id' => 7,
@@ -4813,7 +4758,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            436 => 
+            431 => 
             array (
                 'song_id' => 440,
                 'artist_id' => 7,
@@ -4824,7 +4769,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            437 => 
+            432 => 
             array (
                 'song_id' => 441,
                 'artist_id' => 7,
@@ -4835,7 +4780,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            438 => 
+            433 => 
             array (
                 'song_id' => 442,
                 'artist_id' => 7,
@@ -4846,7 +4791,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            439 => 
+            434 => 
             array (
                 'song_id' => 443,
                 'artist_id' => 7,
@@ -4857,7 +4802,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            440 => 
+            435 => 
             array (
                 'song_id' => 444,
                 'artist_id' => 7,
@@ -4868,7 +4813,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            441 => 
+            436 => 
             array (
                 'song_id' => 445,
                 'artist_id' => 7,
@@ -4879,7 +4824,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            442 => 
+            437 => 
             array (
                 'song_id' => 446,
                 'artist_id' => 7,
@@ -4890,7 +4835,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            443 => 
+            438 => 
             array (
                 'song_id' => 447,
                 'artist_id' => 7,
@@ -4901,7 +4846,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            444 => 
+            439 => 
             array (
                 'song_id' => 448,
                 'artist_id' => 7,
@@ -4912,7 +4857,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            445 => 
+            440 => 
             array (
                 'song_id' => 449,
                 'artist_id' => 7,
@@ -4923,7 +4868,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            446 => 
+            441 => 
             array (
                 'song_id' => 450,
                 'artist_id' => 7,
@@ -4934,7 +4879,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            447 => 
+            442 => 
             array (
                 'song_id' => 451,
                 'artist_id' => 7,
@@ -4945,7 +4890,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            448 => 
+            443 => 
             array (
                 'song_id' => 452,
                 'artist_id' => 7,
@@ -4956,7 +4901,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            449 => 
+            444 => 
             array (
                 'song_id' => 453,
                 'artist_id' => 7,
@@ -4967,7 +4912,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            450 => 
+            445 => 
             array (
                 'song_id' => 454,
                 'artist_id' => 7,
@@ -4978,7 +4923,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            451 => 
+            446 => 
             array (
                 'song_id' => 455,
                 'artist_id' => 7,
@@ -4989,7 +4934,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            452 => 
+            447 => 
             array (
                 'song_id' => 456,
                 'artist_id' => 7,
@@ -5000,7 +4945,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            453 => 
+            448 => 
             array (
                 'song_id' => 457,
                 'artist_id' => 7,
@@ -5011,7 +4956,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-22 23:54:25',
                 'deleted_at' => NULL,
             ),
-            454 => 
+            449 => 
             array (
                 'song_id' => 465,
                 'artist_id' => 12,
@@ -5022,7 +4967,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            455 => 
+            450 => 
             array (
                 'song_id' => 466,
                 'artist_id' => 12,
@@ -5033,7 +4978,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            456 => 
+            451 => 
             array (
                 'song_id' => 467,
                 'artist_id' => 12,
@@ -5044,7 +4989,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            457 => 
+            452 => 
             array (
                 'song_id' => 468,
                 'artist_id' => 12,
@@ -5055,18 +5000,18 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            458 => 
+            453 => 
             array (
                 'song_id' => 469,
                 'artist_id' => 12,
-                'name' => 'Yobanashi Deseive',
+                'name' => '夜咄ディセイブ',
                 'link' => NULL,
                 'edit_user_id' => 1,
                 'created_at' => '2019-11-23 14:36:02',
-                'updated_at' => '2019-11-23 14:36:02',
+                'updated_at' => '2019-11-24 16:29:33',
                 'deleted_at' => NULL,
             ),
-            459 => 
+            454 => 
             array (
                 'song_id' => 470,
                 'artist_id' => 12,
@@ -5077,7 +5022,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            460 => 
+            455 => 
             array (
                 'song_id' => 471,
                 'artist_id' => 12,
@@ -5088,7 +5033,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            461 => 
+            456 => 
             array (
                 'song_id' => 472,
                 'artist_id' => 12,
@@ -5099,7 +5044,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            462 => 
+            457 => 
             array (
                 'song_id' => 473,
                 'artist_id' => 12,
@@ -5110,7 +5055,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            463 => 
+            458 => 
             array (
                 'song_id' => 474,
                 'artist_id' => 12,
@@ -5121,7 +5066,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            464 => 
+            459 => 
             array (
                 'song_id' => 475,
                 'artist_id' => 12,
@@ -5132,7 +5077,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            465 => 
+            460 => 
             array (
                 'song_id' => 476,
                 'artist_id' => 12,
@@ -5143,7 +5088,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            466 => 
+            461 => 
             array (
                 'song_id' => 477,
                 'artist_id' => 12,
@@ -5154,7 +5099,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            467 => 
+            462 => 
             array (
                 'song_id' => 478,
                 'artist_id' => 12,
@@ -5165,7 +5110,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            468 => 
+            463 => 
             array (
                 'song_id' => 479,
                 'artist_id' => 12,
@@ -5176,7 +5121,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            469 => 
+            464 => 
             array (
                 'song_id' => 480,
                 'artist_id' => 12,
@@ -5187,7 +5132,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            470 => 
+            465 => 
             array (
                 'song_id' => 481,
                 'artist_id' => 12,
@@ -5198,7 +5143,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            471 => 
+            466 => 
             array (
                 'song_id' => 482,
                 'artist_id' => 12,
@@ -5209,7 +5154,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            472 => 
+            467 => 
             array (
                 'song_id' => 483,
                 'artist_id' => 12,
@@ -5220,7 +5165,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            473 => 
+            468 => 
             array (
                 'song_id' => 484,
                 'artist_id' => 12,
@@ -5231,7 +5176,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            474 => 
+            469 => 
             array (
                 'song_id' => 485,
                 'artist_id' => 12,
@@ -5242,7 +5187,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            475 => 
+            470 => 
             array (
                 'song_id' => 486,
                 'artist_id' => 12,
@@ -5253,7 +5198,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            476 => 
+            471 => 
             array (
                 'song_id' => 487,
                 'artist_id' => 12,
@@ -5264,7 +5209,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            477 => 
+            472 => 
             array (
                 'song_id' => 488,
                 'artist_id' => 12,
@@ -5275,7 +5220,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            478 => 
+            473 => 
             array (
                 'song_id' => 489,
                 'artist_id' => 12,
@@ -5286,7 +5231,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            479 => 
+            474 => 
             array (
                 'song_id' => 490,
                 'artist_id' => 12,
@@ -5297,7 +5242,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            480 => 
+            475 => 
             array (
                 'song_id' => 491,
                 'artist_id' => 12,
@@ -5308,7 +5253,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            481 => 
+            476 => 
             array (
                 'song_id' => 492,
                 'artist_id' => 12,
@@ -5319,7 +5264,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            482 => 
+            477 => 
             array (
                 'song_id' => 493,
                 'artist_id' => 12,
@@ -5330,7 +5275,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            483 => 
+            478 => 
             array (
                 'song_id' => 494,
                 'artist_id' => 12,
@@ -5341,7 +5286,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            484 => 
+            479 => 
             array (
                 'song_id' => 495,
                 'artist_id' => 12,
@@ -5352,7 +5297,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            485 => 
+            480 => 
             array (
                 'song_id' => 496,
                 'artist_id' => 12,
@@ -5363,7 +5308,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            486 => 
+            481 => 
             array (
                 'song_id' => 497,
                 'artist_id' => 12,
@@ -5374,7 +5319,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            487 => 
+            482 => 
             array (
                 'song_id' => 498,
                 'artist_id' => 12,
@@ -5385,7 +5330,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            488 => 
+            483 => 
             array (
                 'song_id' => 499,
                 'artist_id' => 12,
@@ -5396,7 +5341,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            489 => 
+            484 => 
             array (
                 'song_id' => 500,
                 'artist_id' => 12,
@@ -5407,7 +5352,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            490 => 
+            485 => 
             array (
                 'song_id' => 501,
                 'artist_id' => 12,
@@ -5418,7 +5363,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            491 => 
+            486 => 
             array (
                 'song_id' => 502,
                 'artist_id' => 12,
@@ -5429,7 +5374,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            492 => 
+            487 => 
             array (
                 'song_id' => 503,
                 'artist_id' => 12,
@@ -5440,7 +5385,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            493 => 
+            488 => 
             array (
                 'song_id' => 504,
                 'artist_id' => 12,
@@ -5451,7 +5396,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            494 => 
+            489 => 
             array (
                 'song_id' => 505,
                 'artist_id' => 12,
@@ -5462,7 +5407,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            495 => 
+            490 => 
             array (
                 'song_id' => 506,
                 'artist_id' => 12,
@@ -5473,7 +5418,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            496 => 
+            491 => 
             array (
                 'song_id' => 507,
                 'artist_id' => 12,
@@ -5484,7 +5429,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            497 => 
+            492 => 
             array (
                 'song_id' => 508,
                 'artist_id' => 12,
@@ -5495,7 +5440,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            498 => 
+            493 => 
             array (
                 'song_id' => 509,
                 'artist_id' => 12,
@@ -5506,7 +5451,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            499 => 
+            494 => 
             array (
                 'song_id' => 510,
                 'artist_id' => 12,
@@ -5517,9 +5462,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-        ));
-        \DB::table('songs')->insert(array (
-            0 => 
+            495 => 
             array (
                 'song_id' => 511,
                 'artist_id' => 12,
@@ -5530,7 +5473,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            1 => 
+            496 => 
             array (
                 'song_id' => 512,
                 'artist_id' => 12,
@@ -5541,7 +5484,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            2 => 
+            497 => 
             array (
                 'song_id' => 513,
                 'artist_id' => 12,
@@ -5552,7 +5495,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            3 => 
+            498 => 
             array (
                 'song_id' => 514,
                 'artist_id' => 12,
@@ -5563,7 +5506,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            4 => 
+            499 => 
             array (
                 'song_id' => 515,
                 'artist_id' => 12,
@@ -5574,7 +5517,9 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            5 => 
+        ));
+        \DB::table('songs')->insert(array (
+            0 => 
             array (
                 'song_id' => 516,
                 'artist_id' => 12,
@@ -5585,7 +5530,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            6 => 
+            1 => 
             array (
                 'song_id' => 517,
                 'artist_id' => 12,
@@ -5596,7 +5541,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            7 => 
+            2 => 
             array (
                 'song_id' => 518,
                 'artist_id' => 12,
@@ -5607,7 +5552,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            8 => 
+            3 => 
             array (
                 'song_id' => 519,
                 'artist_id' => 12,
@@ -5618,7 +5563,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            9 => 
+            4 => 
             array (
                 'song_id' => 520,
                 'artist_id' => 12,
@@ -5629,7 +5574,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            10 => 
+            5 => 
             array (
                 'song_id' => 521,
                 'artist_id' => 12,
@@ -5640,7 +5585,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            11 => 
+            6 => 
             array (
                 'song_id' => 522,
                 'artist_id' => 12,
@@ -5651,7 +5596,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            12 => 
+            7 => 
             array (
                 'song_id' => 523,
                 'artist_id' => 12,
@@ -5662,7 +5607,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            13 => 
+            8 => 
             array (
                 'song_id' => 524,
                 'artist_id' => 12,
@@ -5673,7 +5618,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            14 => 
+            9 => 
             array (
                 'song_id' => 525,
                 'artist_id' => 12,
@@ -5684,7 +5629,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            15 => 
+            10 => 
             array (
                 'song_id' => 526,
                 'artist_id' => 12,
@@ -5695,7 +5640,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            16 => 
+            11 => 
             array (
                 'song_id' => 527,
                 'artist_id' => 12,
@@ -5706,7 +5651,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            17 => 
+            12 => 
             array (
                 'song_id' => 528,
                 'artist_id' => 12,
@@ -5717,7 +5662,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            18 => 
+            13 => 
             array (
                 'song_id' => 529,
                 'artist_id' => 12,
@@ -5728,7 +5673,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            19 => 
+            14 => 
             array (
                 'song_id' => 530,
                 'artist_id' => 12,
@@ -5739,7 +5684,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            20 => 
+            15 => 
             array (
                 'song_id' => 531,
                 'artist_id' => 12,
@@ -5750,7 +5695,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            21 => 
+            16 => 
             array (
                 'song_id' => 532,
                 'artist_id' => 12,
@@ -5761,7 +5706,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            22 => 
+            17 => 
             array (
                 'song_id' => 533,
                 'artist_id' => 12,
@@ -5772,7 +5717,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2019-11-23 14:36:02',
                 'deleted_at' => NULL,
             ),
-            23 => 
+            18 => 
             array (
                 'song_id' => 534,
                 'artist_id' => 12,
@@ -5781,6 +5726,2998 @@ class SongsTableSeeder extends Seeder
                 'edit_user_id' => 1,
                 'created_at' => '2019-11-23 14:36:02',
                 'updated_at' => '2019-11-23 14:36:02',
+                'deleted_at' => NULL,
+            ),
+            19 => 
+            array (
+                'song_id' => 535,
+                'artist_id' => 14,
+                'name' => 'ideal white',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            20 => 
+            array (
+                'song_id' => 536,
+                'artist_id' => 14,
+                'name' => 'Lotus Pain',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            21 => 
+            array (
+                'song_id' => 537,
+                'artist_id' => 14,
+                'name' => '衝動',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            22 => 
+            array (
+                'song_id' => 538,
+                'artist_id' => 14,
+                'name' => 'vanilla sky',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            23 => 
+            array (
+                'song_id' => 539,
+                'artist_id' => 14,
+                'name' => 'starry',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            24 => 
+            array (
+                'song_id' => 540,
+                'artist_id' => 14,
+                'name' => 'GLAMOROUS SKY',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            25 => 
+            array (
+                'song_id' => 541,
+                'artist_id' => 14,
+                'name' => 'NEWLOOK',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            26 => 
+            array (
+                'song_id' => 542,
+                'artist_id' => 14,
+                'name' => 'GET OVER',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            27 => 
+            array (
+                'song_id' => 543,
+                'artist_id' => 14,
+                'name' => 'tiny wings',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            28 => 
+            array (
+                'song_id' => 544,
+                'artist_id' => 14,
+                'name' => 'MATROSKA',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            29 => 
+            array (
+                'song_id' => 545,
+                'artist_id' => 14,
+                'name' => 'アークエンジェル',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            30 => 
+            array (
+                'song_id' => 546,
+                'artist_id' => 14,
+                'name' => 'pixy breath',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            31 => 
+            array (
+                'song_id' => 547,
+                'artist_id' => 14,
+                'name' => '幻燈',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            32 => 
+            array (
+                'song_id' => 548,
+                'artist_id' => 14,
+                'name' => 'confession',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            33 => 
+            array (
+                'song_id' => 549,
+                'artist_id' => 14,
+                'name' => '燐光',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            34 => 
+            array (
+                'song_id' => 550,
+                'artist_id' => 14,
+                'name' => 'focus light',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            35 => 
+            array (
+                'song_id' => 551,
+                'artist_id' => 14,
+                'name' => 'ECHOES',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            36 => 
+            array (
+                'song_id' => 552,
+                'artist_id' => 14,
+                'name' => 'pledge of stars',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            37 => 
+            array (
+                'song_id' => 553,
+                'artist_id' => 14,
+                'name' => 'LAST FUTURE',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            38 => 
+            array (
+                'song_id' => 554,
+                'artist_id' => 14,
+                'name' => 'スパイラルガーデン',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            39 => 
+            array (
+                'song_id' => 555,
+                'artist_id' => 14,
+                'name' => 'TRUE KISS',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            40 => 
+            array (
+                'song_id' => 556,
+                'artist_id' => 14,
+                'name' => 'caelum',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            41 => 
+            array (
+                'song_id' => 557,
+                'artist_id' => 14,
+                'name' => 'Unleash',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            42 => 
+            array (
+                'song_id' => 558,
+                'artist_id' => 14,
+                'name' => 'marionnette',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            43 => 
+            array (
+                'song_id' => 559,
+                'artist_id' => 14,
+                'name' => 'Delusion',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            44 => 
+            array (
+                'song_id' => 560,
+                'artist_id' => 14,
+                'name' => 'TURN TO YOU',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            45 => 
+            array (
+                'song_id' => 561,
+                'artist_id' => 14,
+                'name' => 're:rain',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            46 => 
+            array (
+                'song_id' => 562,
+                'artist_id' => 14,
+                'name' => 'ANGEL HORIZON',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            47 => 
+            array (
+                'song_id' => 563,
+                'artist_id' => 14,
+                'name' => 'Believe',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            48 => 
+            array (
+                'song_id' => 564,
+                'artist_id' => 14,
+                'name' => 'infinity beyond',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            49 => 
+            array (
+                'song_id' => 565,
+                'artist_id' => 14,
+                'name' => 'misty way',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            50 => 
+            array (
+                'song_id' => 566,
+                'artist_id' => 14,
+                'name' => '刹那クロニクル',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            51 => 
+            array (
+                'song_id' => 567,
+                'artist_id' => 14,
+                'name' => '春想の街',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            52 => 
+            array (
+                'song_id' => 568,
+                'artist_id' => 14,
+                'name' => 'shinkiro',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            53 => 
+            array (
+                'song_id' => 569,
+                'artist_id' => 14,
+                'name' => 'Wingless Diver',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            54 => 
+            array (
+                'song_id' => 570,
+                'artist_id' => 14,
+                'name' => 'ハーフムーンフラワー',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            55 => 
+            array (
+                'song_id' => 571,
+                'artist_id' => 14,
+                'name' => 'RAY OF LIGHT',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            56 => 
+            array (
+                'song_id' => 572,
+                'artist_id' => 14,
+                'name' => '憧憬',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            57 => 
+            array (
+                'song_id' => 573,
+                'artist_id' => 14,
+                'name' => 'Dolly Girl',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            58 => 
+            array (
+                'song_id' => 574,
+                'artist_id' => 14,
+                'name' => 'white arise ~overture~',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            59 => 
+            array (
+                'song_id' => 575,
+                'artist_id' => 14,
+                'name' => 'labradorite',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            60 => 
+            array (
+                'song_id' => 576,
+                'artist_id' => 14,
+                'name' => '邂逅',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            61 => 
+            array (
+                'song_id' => 577,
+                'artist_id' => 14,
+                'name' => 'white feel ~overture~',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 03:32:32',
+                'updated_at' => '2019-11-24 03:32:32',
+                'deleted_at' => NULL,
+            ),
+            62 => 
+            array (
+                'song_id' => 578,
+                'artist_id' => 1,
+                'name' => 'SECRET HALLOWEEN PARTY',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 13:19:31',
+                'updated_at' => '2019-11-24 13:19:31',
+                'deleted_at' => NULL,
+            ),
+            63 => 
+            array (
+                'song_id' => 579,
+                'artist_id' => 23,
+                'name' => 'クレイジー・ビート',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 13:32:47',
+                'updated_at' => '2019-11-24 16:09:50',
+                'deleted_at' => NULL,
+            ),
+            64 => 
+            array (
+                'song_id' => 580,
+                'artist_id' => 23,
+                'name' => '虎視眈々',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 13:32:55',
+                'updated_at' => '2019-11-24 16:10:03',
+                'deleted_at' => NULL,
+            ),
+            65 => 
+            array (
+                'song_id' => 581,
+                'artist_id' => 16,
+                'name' => 'エビバデwakeUp!!',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 13:34:44',
+                'updated_at' => '2019-11-24 13:34:44',
+                'deleted_at' => NULL,
+            ),
+            66 => 
+            array (
+                'song_id' => 582,
+                'artist_id' => 16,
+                'name' => 'NO KIDDING',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 13:34:44',
+                'updated_at' => '2019-11-24 13:34:44',
+                'deleted_at' => NULL,
+            ),
+            67 => 
+            array (
+                'song_id' => 583,
+                'artist_id' => 16,
+                'name' => 'Soldier',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 13:34:44',
+                'updated_at' => '2019-11-24 13:34:44',
+                'deleted_at' => NULL,
+            ),
+            68 => 
+            array (
+                'song_id' => 584,
+                'artist_id' => 16,
+                'name' => 'BLACK SWAN',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 13:34:44',
+                'updated_at' => '2019-11-24 13:34:44',
+                'deleted_at' => NULL,
+            ),
+            69 => 
+            array (
+                'song_id' => 585,
+                'artist_id' => 16,
+                'name' => '暁月夜',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 13:34:44',
+                'updated_at' => '2019-11-24 13:34:44',
+                'deleted_at' => NULL,
+            ),
+            70 => 
+            array (
+                'song_id' => 586,
+                'artist_id' => 16,
+                'name' => 'again',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 13:34:44',
+                'updated_at' => '2019-11-24 13:34:44',
+                'deleted_at' => NULL,
+            ),
+            71 => 
+            array (
+                'song_id' => 587,
+                'artist_id' => 16,
+                'name' => 'try Again',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 13:34:44',
+                'updated_at' => '2019-11-24 13:34:44',
+                'deleted_at' => NULL,
+            ),
+            72 => 
+            array (
+                'song_id' => 588,
+                'artist_id' => 16,
+                'name' => 'only',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 13:34:44',
+                'updated_at' => '2019-11-24 13:34:44',
+                'deleted_at' => NULL,
+            ),
+            73 => 
+            array (
+                'song_id' => 589,
+                'artist_id' => 16,
+                'name' => 'Repeated',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 13:34:44',
+                'updated_at' => '2019-11-24 13:34:44',
+                'deleted_at' => NULL,
+            ),
+            74 => 
+            array (
+                'song_id' => 590,
+                'artist_id' => 16,
+                'name' => 'Answer',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 13:34:44',
+                'updated_at' => '2019-11-24 13:34:44',
+                'deleted_at' => NULL,
+            ),
+            75 => 
+            array (
+                'song_id' => 591,
+                'artist_id' => 16,
+                'name' => 'SUPER HERO',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 13:34:44',
+                'updated_at' => '2019-11-24 13:34:44',
+                'deleted_at' => NULL,
+            ),
+            76 => 
+            array (
+                'song_id' => 592,
+                'artist_id' => 16,
+                'name' => 'Delight',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 13:34:44',
+                'updated_at' => '2019-11-24 13:34:44',
+                'deleted_at' => NULL,
+            ),
+            77 => 
+            array (
+                'song_id' => 593,
+                'artist_id' => 16,
+                'name' => 'FLYDAY',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 13:34:44',
+                'updated_at' => '2019-11-24 13:34:44',
+                'deleted_at' => NULL,
+            ),
+            78 => 
+            array (
+                'song_id' => 594,
+                'artist_id' => 16,
+                'name' => 'Future D',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 13:34:44',
+                'updated_at' => '2019-11-24 13:34:44',
+                'deleted_at' => NULL,
+            ),
+            79 => 
+            array (
+                'song_id' => 595,
+                'artist_id' => 16,
+                'name' => 'Nocturne',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 13:34:44',
+                'updated_at' => '2019-11-24 13:34:44',
+                'deleted_at' => NULL,
+            ),
+            80 => 
+            array (
+                'song_id' => 596,
+                'artist_id' => 16,
+                'name' => 'from C',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 13:34:44',
+                'updated_at' => '2019-11-24 13:34:44',
+                'deleted_at' => NULL,
+            ),
+            81 => 
+            array (
+                'song_id' => 597,
+                'artist_id' => 16,
+                'name' => 'Choice',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 13:35:22',
+                'updated_at' => '2019-11-24 13:35:22',
+                'deleted_at' => NULL,
+            ),
+            82 => 
+            array (
+                'song_id' => 598,
+                'artist_id' => 17,
+                'name' => 'さよならホームラン',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 13:36:06',
+                'updated_at' => '2019-11-24 13:36:06',
+                'deleted_at' => NULL,
+            ),
+            83 => 
+            array (
+                'song_id' => 599,
+                'artist_id' => 23,
+                'name' => 'わんわ・んわん',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 13:40:14',
+                'updated_at' => '2019-11-24 16:13:38',
+                'deleted_at' => NULL,
+            ),
+            84 => 
+            array (
+                'song_id' => 600,
+                'artist_id' => 23,
+                'name' => 'ロキ',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:15:43',
+                'updated_at' => '2019-11-24 16:15:43',
+                'deleted_at' => NULL,
+            ),
+            85 => 
+            array (
+                'song_id' => 601,
+                'artist_id' => 23,
+                'name' => 'メルト 10th ANNIVERSARY MIX',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:16:37',
+                'updated_at' => '2019-11-24 16:16:37',
+                'deleted_at' => NULL,
+            ),
+            86 => 
+            array (
+                'song_id' => 602,
+                'artist_id' => 21,
+                'name' => 'Vampire Kiss',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:17:07',
+                'updated_at' => '2019-11-24 16:17:07',
+                'deleted_at' => NULL,
+            ),
+            87 => 
+            array (
+                'song_id' => 603,
+                'artist_id' => 24,
+                'name' => 'Belief',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            88 => 
+            array (
+                'song_id' => 604,
+                'artist_id' => 24,
+                'name' => 'Scarlet Ballet',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            89 => 
+            array (
+                'song_id' => 605,
+                'artist_id' => 24,
+                'name' => 'Stay Alive',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            90 => 
+            array (
+                'song_id' => 606,
+                'artist_id' => 24,
+                'name' => 'Chase the world',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            91 => 
+            array (
+                'song_id' => 607,
+                'artist_id' => 24,
+                'name' => '牙と翼',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            92 => 
+            array (
+                'song_id' => 608,
+                'artist_id' => 24,
+                'name' => 'ViViD',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            93 => 
+            array (
+                'song_id' => 609,
+                'artist_id' => 24,
+                'name' => 'Brain Diver',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            94 => 
+            array (
+                'song_id' => 610,
+                'artist_id' => 24,
+                'name' => 'サマー・スライダー',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            95 => 
+            array (
+                'song_id' => 611,
+                'artist_id' => 24,
+                'name' => 'Belief - TV size',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            96 => 
+            array (
+                'song_id' => 612,
+                'artist_id' => 24,
+                'name' => '天使よ故郷を聞け',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            97 => 
+            array (
+                'song_id' => 613,
+                'artist_id' => 24,
+                'name' => 'Lifetime with...',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            98 => 
+            array (
+                'song_id' => 614,
+                'artist_id' => 24,
+                'name' => 'マイヒロイン',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            99 => 
+            array (
+                'song_id' => 615,
+                'artist_id' => 24,
+                'name' => 'キミシニタモウコトナカレ',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            100 => 
+            array (
+                'song_id' => 616,
+                'artist_id' => 24,
+                'name' => 'Happiness',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            101 => 
+            array (
+                'song_id' => 617,
+                'artist_id' => 24,
+                'name' => 'Ready Go!',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            102 => 
+            array (
+                'song_id' => 618,
+                'artist_id' => 24,
+                'name' => '全部大丈夫',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            103 => 
+            array (
+                'song_id' => 619,
+                'artist_id' => 24,
+                'name' => 'stair',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            104 => 
+            array (
+                'song_id' => 620,
+                'artist_id' => 24,
+                'name' => 'シンジテミル',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            105 => 
+            array (
+                'song_id' => 621,
+                'artist_id' => 24,
+                'name' => 'Run Real Run',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            106 => 
+            array (
+                'song_id' => 622,
+                'artist_id' => 24,
+                'name' => 'HOME',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            107 => 
+            array (
+                'song_id' => 623,
+                'artist_id' => 24,
+                'name' => 'May\'n☆Space',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            108 => 
+            array (
+                'song_id' => 624,
+                'artist_id' => 24,
+                'name' => 'このままじゃ、だめなんだ。このままじゃ、いやなんだ。',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            109 => 
+            array (
+                'song_id' => 625,
+                'artist_id' => 24,
+                'name' => 'Starring',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            110 => 
+            array (
+                'song_id' => 626,
+                'artist_id' => 24,
+                'name' => 'もしも君が願うのなら',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            111 => 
+            array (
+                'song_id' => 627,
+                'artist_id' => 24,
+                'name' => 'Smile:D',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            112 => 
+            array (
+                'song_id' => 628,
+                'artist_id' => 24,
+                'name' => 'ナンバーワン!',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            113 => 
+            array (
+                'song_id' => 629,
+                'artist_id' => 24,
+                'name' => 'HEAT of the moment',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            114 => 
+            array (
+                'song_id' => 630,
+                'artist_id' => 24,
+                'name' => '光',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            115 => 
+            array (
+                'song_id' => 631,
+                'artist_id' => 24,
+                'name' => 'DOLCE',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            116 => 
+            array (
+                'song_id' => 632,
+                'artist_id' => 24,
+                'name' => 'Glorious Heart',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            117 => 
+            array (
+                'song_id' => 633,
+                'artist_id' => 24,
+                'name' => '嫌、嫌',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            118 => 
+            array (
+                'song_id' => 634,
+                'artist_id' => 24,
+                'name' => 'ワイルドローズ',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            119 => 
+            array (
+                'song_id' => 635,
+                'artist_id' => 24,
+                'name' => '「愛してる」なんて',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            120 => 
+            array (
+                'song_id' => 636,
+                'artist_id' => 24,
+                'name' => '鏡',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            121 => 
+            array (
+                'song_id' => 637,
+                'artist_id' => 24,
+                'name' => 'Disco☆Galaxxxy',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            122 => 
+            array (
+                'song_id' => 638,
+                'artist_id' => 24,
+                'name' => 'WE ARE',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            123 => 
+            array (
+                'song_id' => 639,
+                'artist_id' => 24,
+                'name' => 'O-Zero-',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            124 => 
+            array (
+                'song_id' => 640,
+                'artist_id' => 24,
+                'name' => 'Get Ready',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            125 => 
+            array (
+                'song_id' => 641,
+                'artist_id' => 24,
+                'name' => 'モザイカ',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            126 => 
+            array (
+                'song_id' => 642,
+                'artist_id' => 24,
+                'name' => 'ユズレナイ想ヒ',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            127 => 
+            array (
+                'song_id' => 643,
+                'artist_id' => 24,
+                'name' => 'Deep Breathing',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            128 => 
+            array (
+                'song_id' => 644,
+                'artist_id' => 24,
+                'name' => 'Phonic Nation',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            129 => 
+            array (
+                'song_id' => 645,
+                'artist_id' => 24,
+                'name' => 'BLUE',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            130 => 
+            array (
+                'song_id' => 646,
+                'artist_id' => 24,
+                'name' => 'M-Revolution',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            131 => 
+            array (
+                'song_id' => 647,
+                'artist_id' => 24,
+                'name' => 'Heart & Soul',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            132 => 
+            array (
+                'song_id' => 648,
+                'artist_id' => 24,
+                'name' => 'このままで…',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            133 => 
+            array (
+                'song_id' => 649,
+                'artist_id' => 24,
+                'name' => 'GET TOUGH',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            134 => 
+            array (
+                'song_id' => 650,
+                'artist_id' => 24,
+                'name' => 'キスを頂戴',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            135 => 
+            array (
+                'song_id' => 651,
+                'artist_id' => 24,
+                'name' => 'パラノイア',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            136 => 
+            array (
+                'song_id' => 652,
+                'artist_id' => 24,
+                'name' => 'SPIRIT',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            137 => 
+            array (
+                'song_id' => 653,
+                'artist_id' => 24,
+                'name' => 'HERO',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            138 => 
+            array (
+                'song_id' => 654,
+                'artist_id' => 24,
+                'name' => 'アウトサイダー',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            139 => 
+            array (
+                'song_id' => 655,
+                'artist_id' => 24,
+                'name' => 'WHY?',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            140 => 
+            array (
+                'song_id' => 656,
+                'artist_id' => 24,
+                'name' => 'Swan',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            141 => 
+            array (
+                'song_id' => 657,
+                'artist_id' => 24,
+                'name' => 'My Lovely Thing',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            142 => 
+            array (
+                'song_id' => 658,
+                'artist_id' => 24,
+                'name' => '恋',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            143 => 
+            array (
+                'song_id' => 659,
+                'artist_id' => 24,
+                'name' => '愛は降る星のごとく',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            144 => 
+            array (
+                'song_id' => 660,
+                'artist_id' => 24,
+                'name' => 'YOUR ROCK',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            145 => 
+            array (
+                'song_id' => 661,
+                'artist_id' => 24,
+                'name' => 'standing bird',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            146 => 
+            array (
+                'song_id' => 662,
+                'artist_id' => 24,
+                'name' => 'Let Me Be Myself',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            147 => 
+            array (
+                'song_id' => 663,
+                'artist_id' => 24,
+                'name' => 'XYZ',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            148 => 
+            array (
+                'song_id' => 664,
+                'artist_id' => 24,
+                'name' => 'Jewels',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            149 => 
+            array (
+                'song_id' => 665,
+                'artist_id' => 24,
+                'name' => 'h@e me? h@e you!',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            150 => 
+            array (
+                'song_id' => 666,
+                'artist_id' => 24,
+                'name' => 'アネモネ',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:19:54',
+                'updated_at' => '2019-11-24 16:19:54',
+                'deleted_at' => NULL,
+            ),
+            151 => 
+            array (
+                'song_id' => 667,
+                'artist_id' => 25,
+                'name' => 'ライオン',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:21:29',
+                'updated_at' => '2019-11-24 16:21:29',
+                'deleted_at' => NULL,
+            ),
+            152 => 
+            array (
+                'song_id' => 668,
+                'artist_id' => 26,
+                'name' => 'unravel',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            153 => 
+            array (
+                'song_id' => 669,
+                'artist_id' => 26,
+                'name' => 'katharsis',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            154 => 
+            array (
+                'song_id' => 670,
+                'artist_id' => 26,
+                'name' => 'P.S. RED I',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            155 => 
+            array (
+                'song_id' => 671,
+                'artist_id' => 26,
+                'name' => 'Signal',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            156 => 
+            array (
+                'song_id' => 672,
+                'artist_id' => 26,
+                'name' => 'Fantastic Magic',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            157 => 
+            array (
+                'song_id' => 673,
+                'artist_id' => 26,
+                'name' => 'Fu re te Fu re ru',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            158 => 
+            array (
+                'song_id' => 674,
+                'artist_id' => 26,
+                'name' => 'kalei de scope',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            159 => 
+            array (
+                'song_id' => 675,
+                'artist_id' => 26,
+                'name' => 'moving on',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            160 => 
+            array (
+                'song_id' => 676,
+                'artist_id' => 26,
+                'name' => 'Crazy Tampern',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            161 => 
+            array (
+                'song_id' => 677,
+                'artist_id' => 26,
+                'name' => 'memento',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            162 => 
+            array (
+                'song_id' => 678,
+                'artist_id' => 26,
+                'name' => 'contrast',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            163 => 
+            array (
+                'song_id' => 679,
+                'artist_id' => 26,
+                'name' => 'an artist',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            164 => 
+            array (
+                'song_id' => 680,
+                'artist_id' => 26,
+                'name' => 'Acoustic Installation',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            165 => 
+            array (
+                'song_id' => 681,
+                'artist_id' => 26,
+                'name' => 'Secret Sensation',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            166 => 
+            array (
+                'song_id' => 682,
+                'artist_id' => 26,
+                'name' => 'fragile',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            167 => 
+            array (
+                'song_id' => 683,
+                'artist_id' => 26,
+                'name' => 'Spiral Parade',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            168 => 
+            array (
+                'song_id' => 684,
+                'artist_id' => 26,
+                'name' => 'haze',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            169 => 
+            array (
+                'song_id' => 685,
+                'artist_id' => 26,
+                'name' => 'flower',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            170 => 
+            array (
+                'song_id' => 686,
+                'artist_id' => 26,
+                'name' => 'Shinkiro',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            171 => 
+            array (
+                'song_id' => 687,
+                'artist_id' => 26,
+                'name' => 'Showcase Reflection',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            172 => 
+            array (
+                'song_id' => 688,
+                'artist_id' => 26,
+                'name' => 'tokio',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            173 => 
+            array (
+                'song_id' => 689,
+                'artist_id' => 26,
+                'name' => 'Wonder Palette',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            174 => 
+            array (
+                'song_id' => 690,
+                'artist_id' => 26,
+                'name' => 'white out',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            175 => 
+            array (
+                'song_id' => 691,
+                'artist_id' => 26,
+                'name' => 'ear+f',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            176 => 
+            array (
+                'song_id' => 692,
+                'artist_id' => 26,
+                'name' => 'dead end complex',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            177 => 
+            array (
+                'song_id' => 693,
+                'artist_id' => 26,
+                'name' => 'phase to phrase',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            178 => 
+            array (
+                'song_id' => 694,
+                'artist_id' => 26,
+                'name' => 'Addictive Dancer',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            179 => 
+            array (
+                'song_id' => 695,
+                'artist_id' => 26,
+                'name' => '12th laser',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            180 => 
+            array (
+                'song_id' => 696,
+                'artist_id' => 26,
+                'name' => 'Abnormal trick',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            181 => 
+            array (
+                'song_id' => 697,
+                'artist_id' => 26,
+                'name' => 'Shandy',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            182 => 
+            array (
+                'song_id' => 698,
+                'artist_id' => 26,
+                'name' => 'invalid phrase',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            183 => 
+            array (
+                'song_id' => 699,
+                'artist_id' => 26,
+                'name' => '罪の宝石',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            184 => 
+            array (
+                'song_id' => 700,
+                'artist_id' => 26,
+                'name' => 'subliminal',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            185 => 
+            array (
+                'song_id' => 701,
+                'artist_id' => 26,
+                'name' => 'fourth',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            186 => 
+            array (
+                'song_id' => 702,
+                'artist_id' => 26,
+                'name' => 'daylily',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            187 => 
+            array (
+                'song_id' => 703,
+                'artist_id' => 26,
+                'name' => 'Dramatic Slow Motion',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            188 => 
+            array (
+                'song_id' => 704,
+                'artist_id' => 26,
+                'name' => 'like there is tomorrow',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            189 => 
+            array (
+                'song_id' => 705,
+                'artist_id' => 26,
+                'name' => '涙の旅路',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:22:19',
+                'updated_at' => '2019-11-24 16:22:19',
+                'deleted_at' => NULL,
+            ),
+            190 => 
+            array (
+                'song_id' => 706,
+                'artist_id' => 29,
+                'name' => 'ムーンライト伝説',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:26:21',
+                'updated_at' => '2019-11-24 16:26:21',
+                'deleted_at' => NULL,
+            ),
+            191 => 
+            array (
+                'song_id' => 707,
+                'artist_id' => 30,
+                'name' => '残酷な天使のテーゼ',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 16:26:59',
+                'updated_at' => '2019-11-24 16:26:59',
+                'deleted_at' => NULL,
+            ),
+            192 => 
+            array (
+                'song_id' => 708,
+                'artist_id' => 33,
+                'name' => 'UNION',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 21:26:21',
+                'updated_at' => '2019-11-24 21:26:21',
+                'deleted_at' => NULL,
+            ),
+            193 => 
+            array (
+                'song_id' => 709,
+                'artist_id' => 33,
+                'name' => 'ゴールデンアフタースクール',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 21:26:21',
+                'updated_at' => '2019-11-24 21:26:21',
+                'deleted_at' => NULL,
+            ),
+            194 => 
+            array (
+                'song_id' => 710,
+                'artist_id' => 33,
+                'name' => 'BLOOM OF YOUTH',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 21:26:21',
+                'updated_at' => '2019-11-24 21:26:21',
+                'deleted_at' => NULL,
+            ),
+            195 => 
+            array (
+                'song_id' => 711,
+                'artist_id' => 33,
+                'name' => 'KIMERO!!',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 21:26:21',
+                'updated_at' => '2019-11-24 21:26:21',
+                'deleted_at' => NULL,
+            ),
+            196 => 
+            array (
+                'song_id' => 713,
+                'artist_id' => 33,
+                'name' => 'Be The Best! Be The Blue!',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 21:26:21',
+                'updated_at' => '2019-11-24 21:26:21',
+                'deleted_at' => NULL,
+            ),
+            197 => 
+            array (
+                'song_id' => 714,
+                'artist_id' => 33,
+                'name' => 'Tears of a Genius',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 21:26:21',
+                'updated_at' => '2019-11-24 21:26:21',
+                'deleted_at' => NULL,
+            ),
+            198 => 
+            array (
+                'song_id' => 718,
+                'artist_id' => 33,
+                'name' => 'Clattanoia',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 21:28:49',
+                'updated_at' => '2019-11-24 21:28:49',
+                'deleted_at' => NULL,
+            ),
+            199 => 
+            array (
+                'song_id' => 719,
+                'artist_id' => 34,
+                'name' => 'DREAMS',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 21:31:02',
+                'updated_at' => '2019-11-24 21:31:02',
+                'deleted_at' => NULL,
+            ),
+            200 => 
+            array (
+                'song_id' => 720,
+                'artist_id' => 36,
+                'name' => 'Believe',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 21:43:10',
+                'updated_at' => '2019-11-24 21:43:10',
+                'deleted_at' => NULL,
+            ),
+            201 => 
+            array (
+                'song_id' => 721,
+                'artist_id' => 5,
+                'name' => 'clever',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 21:59:16',
+                'updated_at' => '2019-11-24 21:59:16',
+                'deleted_at' => NULL,
+            ),
+            202 => 
+            array (
+                'song_id' => 722,
+                'artist_id' => 38,
+                'name' => 'Resolution',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            203 => 
+            array (
+                'song_id' => 723,
+                'artist_id' => 38,
+                'name' => 'courage',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            204 => 
+            array (
+                'song_id' => 724,
+                'artist_id' => 38,
+                'name' => 'Q&A リサイタル!',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            205 => 
+            array (
+                'song_id' => 725,
+                'artist_id' => 38,
+                'name' => 'ユメセカイ',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            206 => 
+            array (
+                'song_id' => 726,
+                'artist_id' => 38,
+                'name' => 'motto☆派手にね!',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            207 => 
+            array (
+                'song_id' => 727,
+                'artist_id' => 38,
+                'name' => 'ラスタート',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            208 => 
+            array (
+                'song_id' => 728,
+                'artist_id' => 38,
+                'name' => 'セパレイト・ウェイズ',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            209 => 
+            array (
+                'song_id' => 729,
+                'artist_id' => 38,
+                'name' => 'DELUXE DELUXE HAPPY',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            210 => 
+            array (
+                'song_id' => 730,
+                'artist_id' => 38,
+                'name' => '有頂天トラベラー',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            211 => 
+            array (
+                'song_id' => 731,
+                'artist_id' => 38,
+                'name' => 'Baby Baby Love',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            212 => 
+            array (
+                'song_id' => 732,
+                'artist_id' => 38,
+                'name' => 'オレンジレボリューション',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            213 => 
+            array (
+                'song_id' => 733,
+                'artist_id' => 38,
+                'name' => 'Girls, Be Ambitious.',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            214 => 
+            array (
+                'song_id' => 734,
+                'artist_id' => 38,
+                'name' => '恋ヲウチヌケ',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            215 => 
+            array (
+                'song_id' => 735,
+                'artist_id' => 38,
+                'name' => 'Two of us',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            216 => 
+            array (
+                'song_id' => 736,
+                'artist_id' => 38,
+                'name' => 'TRY & JOY',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            217 => 
+            array (
+                'song_id' => 737,
+                'artist_id' => 38,
+                'name' => 'モノクロ',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            218 => 
+            array (
+                'song_id' => 738,
+                'artist_id' => 38,
+                'name' => 'BIG WAVE',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            219 => 
+            array (
+                'song_id' => 739,
+                'artist_id' => 38,
+                'name' => 'Oh My God',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            220 => 
+            array (
+                'song_id' => 740,
+                'artist_id' => 38,
+                'name' => '産巣日の時',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            221 => 
+            array (
+                'song_id' => 741,
+                'artist_id' => 38,
+                'name' => '星のステージ',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            222 => 
+            array (
+                'song_id' => 742,
+                'artist_id' => 38,
+                'name' => 'あなたの幸せに私がなれるなら',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            223 => 
+            array (
+                'song_id' => 743,
+                'artist_id' => 38,
+                'name' => 'ドーナツ',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            224 => 
+            array (
+                'song_id' => 744,
+                'artist_id' => 38,
+                'name' => 'やさしき日々',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            225 => 
+            array (
+                'song_id' => 745,
+                'artist_id' => 38,
+                'name' => 'こいのうた',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            226 => 
+            array (
+                'song_id' => 746,
+                'artist_id' => 38,
+                'name' => 'STAGE',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            227 => 
+            array (
+                'song_id' => 747,
+                'artist_id' => 38,
+                'name' => '未来時計',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            228 => 
+            array (
+                'song_id' => 748,
+                'artist_id' => 38,
+                'name' => 'Rainbow',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            229 => 
+            array (
+                'song_id' => 749,
+                'artist_id' => 38,
+                'name' => 'Star☆Tripper',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            230 => 
+            array (
+                'song_id' => 750,
+                'artist_id' => 38,
+                'name' => 'シンデレラ☆シンフォニー',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            231 => 
+            array (
+                'song_id' => 751,
+                'artist_id' => 38,
+                'name' => 'ミライガール',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            232 => 
+            array (
+                'song_id' => 752,
+                'artist_id' => 38,
+                'name' => 'Get you ! !',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            233 => 
+            array (
+                'song_id' => 753,
+                'artist_id' => 38,
+                'name' => 'Fantastic Soda!!',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            234 => 
+            array (
+                'song_id' => 754,
+                'artist_id' => 38,
+                'name' => 'グラデーション',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            235 => 
+            array (
+                'song_id' => 755,
+                'artist_id' => 38,
+                'name' => 'No.1 GIRL',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            236 => 
+            array (
+                'song_id' => 756,
+                'artist_id' => 38,
+                'name' => 'PACHI PACHI PARTY',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            237 => 
+            array (
+                'song_id' => 757,
+                'artist_id' => 38,
+                'name' => 'REWIND',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            238 => 
+            array (
+                'song_id' => 758,
+                'artist_id' => 38,
+                'name' => 'アテンション☆プリ~ズ',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            239 => 
+            array (
+                'song_id' => 759,
+                'artist_id' => 38,
+                'name' => '記憶の景色',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            240 => 
+            array (
+                'song_id' => 760,
+                'artist_id' => 38,
+                'name' => 'STEP A GO! GO!',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            241 => 
+            array (
+                'song_id' => 761,
+                'artist_id' => 38,
+                'name' => '約束_ダーリン',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            242 => 
+            array (
+                'song_id' => 762,
+                'artist_id' => 38,
+                'name' => 'ラブ ローラーコースター',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            243 => 
+            array (
+                'song_id' => 763,
+                'artist_id' => 38,
+                'name' => 'Issai Gassai',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            244 => 
+            array (
+                'song_id' => 764,
+                'artist_id' => 38,
+                'name' => 'RUN',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            245 => 
+            array (
+                'song_id' => 765,
+                'artist_id' => 38,
+                'name' => 'Counter Attack',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            246 => 
+            array (
+                'song_id' => 766,
+                'artist_id' => 38,
+                'name' => '明日色ひまわり',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            247 => 
+            array (
+                'song_id' => 767,
+                'artist_id' => 38,
+                'name' => '渚のSHOOTING STAR',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            248 => 
+            array (
+                'song_id' => 768,
+                'artist_id' => 38,
+                'name' => 'Boom Boom Typhoon !',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            249 => 
+            array (
+                'song_id' => 769,
+                'artist_id' => 38,
+                'name' => '♪Make Up Sweet Girl☆',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            250 => 
+            array (
+                'song_id' => 770,
+                'artist_id' => 38,
+                'name' => 'Fan Fun Parade',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            251 => 
+            array (
+                'song_id' => 771,
+                'artist_id' => 38,
+                'name' => '愛しい光',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            252 => 
+            array (
+                'song_id' => 772,
+                'artist_id' => 38,
+                'name' => 'bookmark',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            253 => 
+            array (
+                'song_id' => 773,
+                'artist_id' => 38,
+                'name' => 'In Our Hands',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            254 => 
+            array (
+                'song_id' => 774,
+                'artist_id' => 38,
+                'name' => 'Marble',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            255 => 
+            array (
+                'song_id' => 775,
+                'artist_id' => 38,
+                'name' => 'Tomorrow',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            256 => 
+            array (
+                'song_id' => 776,
+                'artist_id' => 38,
+                'name' => 'ヒカリギフト',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            257 => 
+            array (
+                'song_id' => 777,
+                'artist_id' => 38,
+                'name' => '色彩日記',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            258 => 
+            array (
+                'song_id' => 778,
+                'artist_id' => 38,
+                'name' => '七色みちしるべ',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            259 => 
+            array (
+                'song_id' => 779,
+                'artist_id' => 38,
+                'name' => 'Circle',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            260 => 
+            array (
+                'song_id' => 780,
+                'artist_id' => 38,
+                'name' => 'naissance',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            261 => 
+            array (
+                'song_id' => 781,
+                'artist_id' => 38,
+                'name' => 'シアワセサガシ',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            262 => 
+            array (
+                'song_id' => 782,
+                'artist_id' => 38,
+                'name' => 'マリラレルラ',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            263 => 
+            array (
+                'song_id' => 783,
+                'artist_id' => 38,
+                'name' => '自己中男',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            264 => 
+            array (
+                'song_id' => 784,
+                'artist_id' => 38,
+                'name' => 'Orange☆Smoothie',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            265 => 
+            array (
+                'song_id' => 785,
+                'artist_id' => 38,
+                'name' => '痛快!ロマンチッカー',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            266 => 
+            array (
+                'song_id' => 786,
+                'artist_id' => 38,
+                'name' => 'パズル',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            267 => 
+            array (
+                'song_id' => 787,
+                'artist_id' => 38,
+                'name' => 'Re:Motion',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:07:48',
+                'updated_at' => '2019-11-24 22:07:48',
+                'deleted_at' => NULL,
+            ),
+            268 => 
+            array (
+                'song_id' => 788,
+                'artist_id' => 39,
+                'name' => 'シュガーソングとビターステップ',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:10:08',
+                'updated_at' => '2019-11-24 22:10:08',
+                'deleted_at' => NULL,
+            ),
+            269 => 
+            array (
+                'song_id' => 789,
+                'artist_id' => 39,
+                'name' => 'Phantom Joke',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:10:08',
+                'updated_at' => '2019-11-24 22:10:08',
+                'deleted_at' => NULL,
+            ),
+            270 => 
+            array (
+                'song_id' => 790,
+                'artist_id' => 39,
+                'name' => 'オリオンをなぞる',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:10:08',
+                'updated_at' => '2019-11-24 22:10:08',
+                'deleted_at' => NULL,
+            ),
+            271 => 
+            array (
+                'song_id' => 791,
+                'artist_id' => 39,
+                'name' => 'fake town baby',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:10:08',
+                'updated_at' => '2019-11-24 22:10:08',
+                'deleted_at' => NULL,
+            ),
+            272 => 
+            array (
+                'song_id' => 792,
+                'artist_id' => 39,
+                'name' => '君の瞳に恋してない',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:10:08',
+                'updated_at' => '2019-11-24 22:10:08',
+                'deleted_at' => NULL,
+            ),
+            273 => 
+            array (
+                'song_id' => 793,
+                'artist_id' => 39,
+                'name' => 'Invisible Sensation',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:10:08',
+                'updated_at' => '2019-11-24 22:10:08',
+                'deleted_at' => NULL,
+            ),
+            274 => 
+            array (
+                'song_id' => 794,
+                'artist_id' => 39,
+                'name' => '10% roll, 10% romance',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:10:08',
+                'updated_at' => '2019-11-24 22:10:08',
+                'deleted_at' => NULL,
+            ),
+            275 => 
+            array (
+                'song_id' => 795,
+                'artist_id' => 39,
+                'name' => '天国と地獄',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:10:08',
+                'updated_at' => '2019-11-24 22:10:08',
+                'deleted_at' => NULL,
+            ),
+            276 => 
+            array (
+                'song_id' => 796,
+                'artist_id' => 39,
+                'name' => 'Catch up, latency',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:10:08',
+                'updated_at' => '2019-11-24 22:10:08',
+                'deleted_at' => NULL,
+            ),
+            277 => 
+            array (
+                'song_id' => 797,
+                'artist_id' => 39,
+                'name' => '春が来てぼくら',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:10:08',
+                'updated_at' => '2019-11-24 22:10:08',
+                'deleted_at' => NULL,
+            ),
+            278 => 
+            array (
+                'song_id' => 798,
+                'artist_id' => 39,
+                'name' => '徹頭徹尾夜な夜なドライブ',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:10:08',
+                'updated_at' => '2019-11-24 22:10:08',
+                'deleted_at' => NULL,
+            ),
+            279 => 
+            array (
+                'song_id' => 799,
+                'artist_id' => 39,
+                'name' => 'mix juiceのいうとおり',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:10:08',
+                'updated_at' => '2019-11-24 22:10:08',
+                'deleted_at' => NULL,
+            ),
+            280 => 
+            array (
+                'song_id' => 800,
+                'artist_id' => 39,
+                'name' => 'リニアブルーを聴きながら',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:10:08',
+                'updated_at' => '2019-11-24 22:10:08',
+                'deleted_at' => NULL,
+            ),
+            281 => 
+            array (
+                'song_id' => 801,
+                'artist_id' => 39,
+                'name' => 'センチメンタルピリオド',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:10:08',
+                'updated_at' => '2019-11-24 22:10:08',
+                'deleted_at' => NULL,
+            ),
+            282 => 
+            array (
+                'song_id' => 802,
+                'artist_id' => 39,
+                'name' => 'harmonized finale',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:10:08',
+                'updated_at' => '2019-11-24 22:10:08',
+                'deleted_at' => NULL,
+            ),
+            283 => 
+            array (
+                'song_id' => 803,
+                'artist_id' => 39,
+                'name' => 'マスターボリューム',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:10:08',
+                'updated_at' => '2019-11-24 22:10:08',
+                'deleted_at' => NULL,
+            ),
+            284 => 
+            array (
+                'song_id' => 804,
+                'artist_id' => 39,
+                'name' => 'パンデミックサドンデス',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:10:08',
+                'updated_at' => '2019-11-24 22:10:08',
+                'deleted_at' => NULL,
+            ),
+            285 => 
+            array (
+                'song_id' => 805,
+                'artist_id' => 39,
+                'name' => 'MR.アンディ -party style-',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:10:08',
+                'updated_at' => '2019-11-24 22:10:08',
+                'deleted_at' => NULL,
+            ),
+            286 => 
+            array (
+                'song_id' => 806,
+                'artist_id' => 39,
+                'name' => '流星のスコール',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:10:08',
+                'updated_at' => '2019-11-24 22:10:08',
+                'deleted_at' => NULL,
+            ),
+            287 => 
+            array (
+                'song_id' => 807,
+                'artist_id' => 39,
+                'name' => 'Silent Libre Mirage',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:10:08',
+                'updated_at' => '2019-11-24 22:10:08',
+                'deleted_at' => NULL,
+            ),
+            288 => 
+            array (
+                'song_id' => 808,
+                'artist_id' => 39,
+                'name' => 'スカースデイル',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:10:08',
+                'updated_at' => '2019-11-24 22:10:08',
+                'deleted_at' => NULL,
+            ),
+            289 => 
+            array (
+                'song_id' => 809,
+                'artist_id' => 39,
+                'name' => 'cody beats',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:10:08',
+                'updated_at' => '2019-11-24 22:10:08',
+                'deleted_at' => NULL,
+            ),
+            290 => 
+            array (
+                'song_id' => 810,
+                'artist_id' => 39,
+                'name' => '愛があるかい?',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2019-11-24 22:10:08',
+                'updated_at' => '2019-11-24 22:10:08',
                 'deleted_at' => NULL,
             ),
         ));
