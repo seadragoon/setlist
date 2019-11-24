@@ -112,7 +112,7 @@ class ArtistsController extends Controller
 			$artist->edit_user_id = Auth::user()->id;
 		}
 		$artist->save();
-		return redirect()->route('artists.index');
+		return redirect()->route('artists.show', $artist->artist_id);
 	}
 	
 	/**
