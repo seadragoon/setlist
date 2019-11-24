@@ -57,10 +57,10 @@
                     @else
                     <div class="row border-bottom py-2">
                     @endif
-                        <div class="col-sm-8 col-10">
+                        <div class="col-sm-8 col-9">
                             {{ link_to_route('songs.show', $value['name'], $value['song_id']) }}
                         </div>
-                        <div class="col-sm-4 col-2">
+                        <div class="col-sm-4 col-3">
                             {{ $value['count'] }}回
                         </div>
                     </div>
