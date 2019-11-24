@@ -101,6 +101,10 @@ class GenerateMasterController extends Controller
 				'limit' => 10,
 				'offset' => 0
 			));
+			// アーティストが見付からなかったら終了
+			if (empty($result->artists->items)){
+				return redirect()->route('artists.show', $artist->artist_id);
+			}
 			// 同一のアーティスト名が見付かったらそれを使用する
 			$artist_name = null;
 			foreach ($result->artists->items as $item) {
