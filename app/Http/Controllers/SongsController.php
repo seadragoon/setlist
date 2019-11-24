@@ -45,7 +45,8 @@ class SongsController extends Controller
 		{
 			// セットリストIDとアーティストIDの等しいセットリストを取得
 			// ※別アーティストによるカバーはここではリストに含めない
-			$setlist = Setlist::where('setlist_id', $setlistSong->setlist_id)->where('artist_id', $song->artist_id)->first();
+			// $setlist = Setlist::where('setlist_id', $setlistSong->setlist_id)->where('artist_id', $song->artist_id)->first();
+			$setlist = Setlist::where('setlist_id', $setlistSong->setlist_id)->first();
 			
 			if (!empty($setlist)) {
 				// イベントIDの等しいイベントを取得
