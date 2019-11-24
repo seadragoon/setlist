@@ -191,6 +191,8 @@ class GenerateMasterController extends Controller
 						|| strpos($name, 'Instrumental') !== false
 						|| strpos($name, 'instrumetal') !== false // 誤字
 						|| strpos($name, 'Instrumetal') !== false // 誤字
+						|| strpos($name, 'KARAOKE') !== false
+						|| strpos($name, 'Short Edit') !== false
 						|| strpos($name, 'album mix') !== false
 						|| strpos($name, 'TV Mix') !== false
 						|| strpos($name, 'TV MIX') !== false
