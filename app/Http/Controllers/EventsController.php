@@ -151,12 +151,16 @@ class EventsController extends Controller
 				$setlistArray[] = $setlistData;
 			}
 		}
+
+		$addableArtists = Artist::whereNotIn('artist_id', $artistIdList)->orderby('name', 'asc')->get();
 		
+		$addableArtistsPluck = $addableArtists->pluck('name', 'artist_id');
+
 		$params = array();
 		$params['event_data']			= $event_data;
 		$params['eventLastEditUserName']= $eventLastEditUserName;
 		$params['eventLastEditTime']	= $eventLastEditTime;
-		$params['addableArtists']		= Artist::whereNotIn('artist_id', $artistIdList)->orderby('name', 'asc')->get();
+		$params['addableArtists']		= $addableArtistsPluck;
 		$params['setlistArray']			= $setlistArray;
 		
 		//echo '<pre>' . var_export($param, true) . '</pre>';

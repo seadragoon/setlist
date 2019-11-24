@@ -112,14 +112,19 @@
 				<h4>セットリスト追加</h4>
 				<div class="form-group">
 					<label for="artist_title" class="col-sm-3 control-label">アーティスト</label>
-					<div class="col-sm-8 col-12">
-						{!! Form::select('artist_id', $params['addableArtists']->pluck('name', 'artist_id'), old('artist_id'), ['id' => 'artist_id', 'class' => 'form-control']) !!}
-					</div>
+                    <div class="dropdown col-sm-6">
+                        {!! Form::text('artist_name', null, ['id' => 'artist_name', 'class' => 'form-control dropdown-toggle', 'autocomplete' => 'off', 'list' => 'artist_list']) !!}
+                        <datalist id="artist_list">
+                            @foreach ($params['addableArtists'] as $artist_id => $name)
+                                <option value="{{ $name }}">
+                            @endforeach
+                        </datalist>
+                    </div>
 				</div>
 				<div class="form-group">
 					<div class="col-sm-12 col-12">
 						{{ link_to_route('events.edit_setlist', '追加'
-							, ['event_id' => $params['event_data']['event_id'], 'artist_id' => $params['addableArtists'][0]->artist_id]
+							, ['event_id' => $params['event_data']['event_id'], 'artist_id' => 1]
 							, ['id' => 'add_setlist', 'class' => 'btn btn-default btn-primary']) }}
 					</div>
 				</div>
@@ -138,9 +143,10 @@
 
 @endsection
 
-@section('script')
+@section('script')]
     
     <script>
+	const addableArtists = {!! $params['addableArtists'] !!};
 	$(function(){
 		$(".form_delete").submit(function(){
 			if(!confirm('このイベントを本当に削除しますか？（不随するセットリスト情報も全て削除されます）')){
@@ -152,9 +158,17 @@
 				return false;
 			}
 		});
-		$("#artist_id").change(function(){
-			const artist_id = $(this).val();
-			$("#add_setlist").attr('href', '{{ url()->current() }}/setlist/' + artist_id);
+		$("#add_setlist").on("click", function(){
+			const artistName = $('#artist_name').val();
+			const index = Object.values(addableArtists).findIndex(x => x === artistName);
+			const id = Object.keys(addableArtists)[index];
+			
+			if (id === null || id === undefined) {
+				alert("入力したアーティスト名のアーティストは存在しません：" + artistName);
+				return false;
+			}
+			
+			$("#add_setlist").attr('href', '{{ url()->current() }}/setlist/' + id);
 		});
 	});
     </script>
@@ -166,6 +180,11 @@
     <style type="text/css">
 	    .event-summary {
 			background-color: #ddd;
+	    }
+	    .dropdown-menu {
+	        overflow:auto;
+	        max-height: 250px;
+	        min-width: 100%;
 	    }
     </style>
 
