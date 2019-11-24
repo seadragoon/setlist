@@ -19,7 +19,7 @@ class AggregateController extends Controller
 	{
 		// indexはアーティストリストを表示して個別ページへの導線だけのページにしても良い
 		
-		$artists = Artist::orderBy('artist_id', 'asc')->get();
+		$artists = Artist::orderBy('name', 'asc')->get();
 		
 		$params = array();
 		$params['artists'] = $artists;
