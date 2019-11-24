@@ -9,7 +9,7 @@
         </div>
         <div class="panel-body">
 			<br>
-        	<h4>楽曲追加</h4>
+        	<h4>アーティスト追加</h4>
             
             {!! Form::model($param['artist'], ['route' => 'artists.store', 'method' => 'post', 'class' => 'form-horizontal']) !!}
                 <div class="form-group">
