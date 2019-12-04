@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Datetime;
 
 use App\Event;
 use App\Util\ConstantManager;
@@ -11,10 +11,9 @@ class IndexController extends Controller
 {
 	public function index()
 	{
-		// 1ページの項目数
-		$perPage = 15;
+		$currentDate = new Datetime();
 
-		$events = Event::orderBy('datetime', 'desc')->paginate(ConstantManager::PerPage);
+		$events = Event::where('datetime', '<', $currentDate)->orderBy('datetime', 'desc')->paginate(ConstantManager::PerPage);
 		
 		//$params = array();
 		//$params['events'] = $events;
