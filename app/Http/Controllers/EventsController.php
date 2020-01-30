@@ -182,8 +182,9 @@ class EventsController extends Controller
 		$params['event_name'] = null;
 		$params['event_venue'] = null;
 		$params['event_summary'] = null;
-		$params['event_type'] = 0;
 		$params['event_tag'] = null;
+		$params['event_type'] = 0;
+		$params['is_viewer_warning'] = false;
 		
 		return view('events/create')->with('params', $params);
 	}
@@ -204,8 +205,9 @@ class EventsController extends Controller
 		$params['event_name'] = $event_data->name;
 		$params['event_venue'] = $event_data->venue_name;
 		$params['event_summary'] = $event_data->summary;
-		$params['event_type'] = $event_data->event_type;
 		$params['event_tag'] = $event_data->tag_text;
+		$params['event_type'] = $event_data->event_type;
+		$params['is_viewer_warning'] = $event_data->is_viewer_warning;
 
 		//echo '<pre>' . var_export($params, true) . '</pre>';
 		
@@ -224,8 +226,9 @@ class EventsController extends Controller
 			'event_name'					=>'required|string|max:100',	// イベント名
 			'event_venue'					=>'required|string|max:100',	// 会場名
 			'event_summary'					=>'nullable|string|max:9999',	// イベント概要
-			'event_type'					=>'integer|max:10',				// イベントタイプ
 			'event_tag'						=>'nullable|string|max:100',	// イベントタグ
+			'event_type'					=>'integer|max:10',				// イベントタイプ
+			'is_viewer_warning'				=>'integer|max:50',				// イベント閲覧注意を出すかどうか
 		];
 
 		// バリデーションデータ作成
@@ -273,6 +276,7 @@ class EventsController extends Controller
 			$event->summary = $data['event_summary'];
 			$event->tag_text = $data['event_tag'];
 			$event->event_type = $data['event_type'];
+			$event->is_viewer_warning = !empty($data['is_viewer_warning']);
 			$event->edit_user_id = $edit_user_id;
 			$event->save();
 			

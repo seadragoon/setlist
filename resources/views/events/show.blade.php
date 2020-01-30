@@ -54,6 +54,19 @@
 
 			<h4>セットリスト</h4>
 			@if(!empty($params['setlistArray']))
+
+				@if(!empty($params['event_data']['is_viewer_warning']))
+				<p>
+					<span class="text-danger">
+						※閲覧注意に設定されています。
+					</span>
+					表示するには
+					<a data-toggle="collapse" href="#setlist_area">ここ</a>
+					を押してください。
+				</p>
+				<div id="setlist_area" class="collapse">
+				@endif
+
 				@foreach ($params['setlistArray'] as $setlist)
 					<h5>■{{ link_to_route('artists.show', $setlist['artist']->name, $setlist['artist']->artist_id) }}</h5>
 					<h6>・通常</h6>
@@ -100,6 +113,11 @@
 					<br>
 					@endauth
 				@endforeach
+
+				@if(!empty($params['event_data']['is_viewer_warning']))
+				{{-- 折り畳み用の閉じタグ --}}
+				</div>
+				@endif
 
 			@else
 				※セットリストが登録されていません。

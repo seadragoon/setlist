@@ -104,6 +104,12 @@
                         {!! Form::text('event_tag', old('event_tag', $params['event_tag']), ['id' => 'event_tag', 'class' => 'form-control']) !!}
                     </div>
                 </div>
+                <div class="form-group">
+                    {!! Form::label('is_viewer_warning', '閲覧注意フラグ', ['class' => 'col-sm-3 control-label']) !!}
+                    <div class="col-sm-8 col-12">
+						{!! Form::checkbox('is_viewer_warning', true, !empty(old('is_viewer_warning', $params['is_viewer_warning'])), ['id' => 'is_viewer_warning', 'class' => 'form-control']) !!}
+					</div>
+                </div>
                 <hr>
                 <!-- hidden parameter -->
                 {{Form::hidden('event_id', $params['event_id'], ['id' => 'event_id'])}}
