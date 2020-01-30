@@ -58,9 +58,10 @@
 				@if(!empty($params['event_data']['is_viewer_warning']))
 				<p>
 					<span class="text-danger">
-						※閲覧注意に設定されています。
+						！！閲覧注意に設定されています！！
 					</span>
-					表示するには
+					<br>
+					※表示するには
 					<a data-toggle="collapse" href="#setlist_area">ここ</a>
 					を押してください。
 				</p>
