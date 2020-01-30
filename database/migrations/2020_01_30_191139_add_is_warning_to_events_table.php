@@ -14,7 +14,7 @@ class AddIsWarningToEventsTable extends Migration
     public function up()
     {
         Schema::table('events', function (Blueprint $table) {
-            $table->boolean('is_viewer_warning')->after('edit_user_id');
+            $table->boolean('is_viewer_warning')->after('event_type');
         });
     }
 
