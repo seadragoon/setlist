@@ -82,6 +82,17 @@ class AggregateController extends Controller
 			$result[$songId]['name'] = $songName;
 		}
 		
+		// 0回のリストも作成するためにアーティストの楽曲もすべて取得する
+		$artistSongs = Song::where('artist_id', $artist->artist_id)->orderby('name', 'asc')->get();
+		foreach ($artistSongs as $song) {
+			if (empty($result[$song->song_id])) {
+				$result[$song->song_id] = array();
+				$result[$song->song_id]['count'] = 0;
+				$result[$song->song_id]['song_id'] = $song->song_id;
+				$result[$song->song_id]['name'] = $song->name;
+			}
+		}
+		
 		// 回数でソート
 		usort($result, function ($a, $b) {
 			return $a['count'] < $b['count'] ? 1 : -1;
