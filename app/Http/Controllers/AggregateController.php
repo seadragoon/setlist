@@ -76,6 +76,10 @@ class AggregateController extends Controller
 			if ($song->artist_id != $artist_id) {
 				$songArtist = Artist::where('artist_id', $song->artist_id)->first();
 				$songName .= '(' . $songArtist->name . ')';
+
+				$result[$songId]['is_own'] = false;
+			} else {
+				$result[$songId]['is_own'] = true;
 			}
 			
 			$result[$songId]['song_id'] = $songId;
@@ -85,11 +89,13 @@ class AggregateController extends Controller
 		// 0回のリストも作成するためにアーティストの楽曲もすべて取得する
 		$artistSongs = Song::where('artist_id', $artist->artist_id)->orderby('name', 'asc')->get();
 		foreach ($artistSongs as $song) {
-			if (empty($result[$song->song_id])) {
-				$result[$song->song_id] = array();
-				$result[$song->song_id]['count'] = 0;
-				$result[$song->song_id]['song_id'] = $song->song_id;
-				$result[$song->song_id]['name'] = $song->name;
+			$songId = $song->song_id;
+			if (empty($result[$songId])) {
+				$result[$songId] = array();
+				$result[$songId]['count'] = 0;
+				$result[$songId]['song_id'] = $songId;
+				$result[$songId]['name'] = $song->name;
+				$result[$songId]['is_own'] = true;
 			}
 		}
 		

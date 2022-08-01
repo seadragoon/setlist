@@ -46,25 +46,16 @@
             {!! Form::close() !!}
             <br>
             <h4>演奏回数ランキング</h4>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="is-own" name="is-own" value="">
+                <label class="form-check-label">自身の楽曲のみ表示</label>
+            </div>
+            <br>
             <div class="d-none d-sm-flex">
                 <div class="col-sm-8">楽曲名</div>
                 <div class="col-sm-4">回数</div>
             </div>
-            <div class="mx-2">
-                @foreach ($params['result'] as $value)
-                    @if($loop->iteration == 1)
-                    <div class="row border-top border-bottom py-2">
-                    @else
-                    <div class="row border-bottom py-2">
-                    @endif
-                        <div class="col-sm-8 col-9">
-                            {{ link_to_route('songs.show', $value['name'], $value['song_id']) }}
-                        </div>
-                        <div class="col-sm-4 col-3">
-                            {{ $value['count'] }}回
-                        </div>
-                    </div>
-                @endforeach
+            <div class="mx-2" id="result-area">
             </div>
         </div>
         <br>
@@ -82,6 +73,9 @@
 @section('script')
     
     <script>
+    // 変数定義
+    const results = @json($params['result']);
+    
 	$(function(){
 		// これがないと画面に戻った時に勝手にカレンダーが表示される
 		$(window).on("focus", function () {
@@ -97,7 +91,54 @@
 			firstDay: 0,
             selectYears: true,
 		});
+
+        // チェックボックス制御
+		$('input#is-own').change(function(){
+            if($(this).prop('checked')){
+                // チェックがある場合の処理
+                ShowResult(true);
+            } else {
+                // チェックがない場合の処理
+                ShowResult(false);
+            }
+		});
+
+        // 初回表示
+        ShowResult(false);
 	});
+
+    function ShowResult(isOwn)
+    {
+		let resultHtml = ''; // HTMLを組み立てる変数
+
+        for (let i = 0; i < results.length; i++) {
+            const songData = results[i];
+            if (isOwn && songData.is_own === false)
+            {
+                // 自分の楽曲のみ表示の場合は他アーティスト楽曲は非表示
+                continue;
+            }
+            if(i == 0) {
+                resultHtml += '<div class="row border-top border-bottom py-2">';
+            } else {
+                resultHtml += '<div class="row border-bottom py-2">';
+            }
+
+            {
+                resultHtml += '<div class="col-sm-8 col-9">';
+                resultHtml += '<a href="/songs/' + songData.song_id + '">' + songData.name + '</a>';
+                resultHtml += '</div>';
+
+                resultHtml += '<div class="col-sm-4 col-3">';
+                resultHtml += songData.count + '回';
+                resultHtml += '</div>';
+            }
+
+            resultHtml += '</div>';
+        }
+
+		document.querySelector('#result-area').innerHTML = resultHtml;
+    }
     </script>
     
 @endsection
