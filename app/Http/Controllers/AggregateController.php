@@ -49,26 +49,68 @@ class AggregateController extends Controller
 		$events = Event::whereBetween('datetime', [$fromDate, $toDate])->get();
 		
 		// セットリスト（抽出したイベントIDを含む、かつ、対象のアーティストIDのセットリスト）
-		$setlists = Setlist::whereIn('event_id', array_column($events->toArray(), 'event_id'))
-						->where('artist_id', $artist_id)->get();
+		$setlistsArray = Setlist::whereIn('event_id', array_column($events->toArray(), 'event_id'))
+						->where('artist_id', $artist_id)->get()->toArray();
+		
+		// 演奏日付を紐づけ
+		foreach ($setlistsArray as $index => $setlist)
+		{
+			$targetEvent = $events->where('event_id', $setlist['event_id'])->first();
+
+			$setlistsArray[$index]['datetime'] = $targetEvent->datetime;
+		}
+		
+		// セトリ配列を日付でソート
+		usort($setlistsArray, function ($a, $b) {
+			return new Datetime($b['datetime']) < new Datetime($a['datetime']) ? 1 : -1;
+		});
 		
 		// セトリ曲データでセトリIDの等しいものを全部取得してsong_idで集計する
 		$result = array();
-		foreach ($setlists as $setlist)
+		foreach ($setlistsArray as $index => $setlist)
 		{
+			// 現在のループのセットリストの日付
+			$thisLoopDate = new Datetime($setlist['datetime']);
+
 			// セトリIDが等しいセトリ曲データを全て取得
-			$setlistSongs = SetlistSong::where('setlist_id', $setlist->setlist_id)->get();
+			$setlistSongs = SetlistSong::where('setlist_id', $setlist['setlist_id'])->get();
 			foreach ($setlistSongs as $setlistSong)
 			{
+				// 回数集計
 				$songId = $setlistSong->song_id;
 				if (empty($result[$songId]['count'])) {
 					$result[$songId]['count'] = 0;
 				}
 				$result[$songId]['count'] += 1;
+
+				// 初演奏日付
+				if (empty($result[$songId]['first_date'])) {
+					$result[$songId]['first_date'] = $setlist['datetime'];
+					$result[$songId]['first_date_index'] = $index;
+				} else {
+					$preliminaryDate = new Datetime($result[$songId]['first_date']);
+					if ($thisLoopDate < $preliminaryDate) {
+						$result[$songId]['first_date'] = $setlist['datetime'];
+						$result[$songId]['first_date_index'] = $index;
+					}
+				}
+
+				// 最終演奏日付
+				if (empty($result[$songId]['last_date'])) {
+					$result[$songId]['last_date'] = $setlist['datetime'];
+				} else {
+					$preliminaryDate = new Datetime($result[$songId]['last_date']);
+					if ($preliminaryDate < $thisLoopDate) {
+						$result[$songId]['last_date'] = $setlist['datetime'];
+					}
+				}
 			}
 		}
+
+		// セトリ配列の個数
+		$setlistCount = count($setlistsArray);
 		
-		// 曲名を紐づけ
+		// 曲名を紐づけ、自分自身の楽曲かどうか判定
 		foreach ($result as $songId => $value) {
 			$song = Song::where('song_id', $songId)->first();
 
@@ -84,6 +126,11 @@ class AggregateController extends Controller
 			
 			$result[$songId]['song_id'] = $songId;
 			$result[$songId]['name'] = $songName;
+			
+			$result[$songId]['first_date_short'] = (new Datetime($result[$songId]['first_date']))->format('Y-n-j'); // Y-m-d形式に整形
+			$result[$songId]['last_date_short'] = (new Datetime($result[$songId]['last_date']))->format('Y-n-j'); // Y-m-d形式に整形
+
+			$result[$songId]['rate'] = round($result[$songId]['count'] / ($setlistCount - $result[$songId]['first_date_index']) * 100, 1);
 		}
 		
 		// 0回のリストも作成するためにアーティストの楽曲もすべて取得する
@@ -96,6 +143,11 @@ class AggregateController extends Controller
 				$result[$songId]['song_id'] = $songId;
 				$result[$songId]['name'] = $song->name;
 				$result[$songId]['is_own'] = true;
+				$result[$songId]['first_date'] = null;
+				$result[$songId]['last_date'] = null;
+				$result[$songId]['first_date_short'] = null;
+				$result[$songId]['last_date_short'] = null;
+				$result[$songId]['rate'] = 0;
 			}
 		}
 		
@@ -108,6 +160,7 @@ class AggregateController extends Controller
 		$params['date_from'] = $request->input('date_from');
 		$params['date_to'] = $request->input('date_to');
 		$params['artist'] = $artist;
+		$params['live_count'] = $setlistCount;
 		$params['result'] = $result;
 		return view('aggregate/show')->with('params', $params);
 	}

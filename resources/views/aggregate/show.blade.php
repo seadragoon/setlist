@@ -45,15 +45,44 @@
                 </div>
             {!! Form::close() !!}
             <br>
+            期間内でのライブ出演回数: {{ $params['live_count'] }}回<br>
+            <br>
             <h4>演奏回数ランキング</h4>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="is-own" name="is-own" value="">
                 <label class="form-check-label">自身の楽曲のみ表示</label>
             </div>
             <br>
+            <h6>ソート切り替え(降順)</h6>
+            <div class="form-check form-check-inline">
+                <div class="radio-inline">
+                    <input class="form-check-input" type="radio" id="sort" name="sort_group" value="1" checked="checked">
+                    <label class="form-check-label">回数　</label>
+                </div>
+                <div class="radio-inline">
+                    <input class="form-check-input" type="radio" id="sort" name="sort_group" value="2">
+                    <label class="form-check-label">採用率　</label>
+                </div>
+                <div class="radio-inline">
+                    <input class="form-check-input" type="radio" id="sort" name="sort_group" value="3">
+                    <label class="form-check-label">初回日付　</label>
+                </div>
+                <div class="radio-inline">
+                    <input class="form-check-input" type="radio" id="sort" name="sort_group" value="4">
+                    <label class="form-check-label">最終日付　</label>
+                </div>
+            </div>
+            <br>
+            <br>
+            <p class="text-secondary">　※採用率：初回演奏時からの演奏確率（最近の曲は高くなる傾向にあり、統計として十分なデータが揃っていない可能性があります）</p>
+            <br>
+            <br>
             <div class="d-none d-sm-flex">
-                <div class="col-sm-8">楽曲名</div>
-                <div class="col-sm-4">回数</div>
+                <div class="col-sm-6">楽曲名</div>
+                <div class="col-sm-1">回数</div>
+                <div class="col-sm-1">採用率</div>
+                <div class="col-sm-2">初回日付</div>
+                <div class="col-sm-2">最終日付</div>
             </div>
             <div class="mx-2" id="result-area">
             </div>
@@ -74,7 +103,7 @@
     
     <script>
     // 変数定義
-    const results = @json($params['result']);
+    let results = @json($params['result']);
     
 	$(function(){
 		// これがないと画面に戻った時に勝手にカレンダーが表示される
@@ -103,6 +132,28 @@
             }
 		});
 
+        // ラジオボタン制御（ソート切り替え）
+		$('input#sort').change(function(){
+            let radioVal = parseInt($(this).val());
+            switch(radioVal){
+                case 1:
+                    results.sort((a, b) => b.count - a.count);
+                    break;
+                case 2:
+                    results.sort((a, b) => b.rate - a.rate);
+                    break;
+                case 3:
+                    results.sort((a, b) => Date.parse(b.first_date) - Date.parse(a.first_date));
+                    break;
+                case 4:
+                    results.sort((a, b) => Date.parse(b.last_date) - Date.parse(a.last_date));
+                    break;
+            }
+
+            let isOwn = $('input#is-own').prop('checked');
+            ShowResult(isOwn);
+		});
+
         // 初回表示
         ShowResult(false);
 	});
@@ -125,12 +176,24 @@
             }
 
             {
-                resultHtml += '<div class="col-sm-8 col-9">';
+                resultHtml += '<div class="col-sm-6 col-6">';
                 resultHtml += '<a href="/songs/' + songData.song_id + '">' + songData.name + '</a>';
                 resultHtml += '</div>';
 
-                resultHtml += '<div class="col-sm-4 col-3">';
+                resultHtml += '<div class="col-sm-1 col-1">';
                 resultHtml += songData.count + '回';
+                resultHtml += '</div>';
+
+                resultHtml += '<div class="col-sm-1 col-1">';
+                resultHtml += songData.rate + '%';
+                resultHtml += '</div>';
+
+                resultHtml += '<div class="col-sm-2 col-2">';
+                resultHtml += (songData.first_date_short == null) ? '-' : songData.first_date_short;
+                resultHtml += '</div>';
+
+                resultHtml += '<div class="col-sm-2 col-2">';
+                resultHtml += (songData.last_date_short == null) ? '-' : songData.last_date_short;
                 resultHtml += '</div>';
             }
 
