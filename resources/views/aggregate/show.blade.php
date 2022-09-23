@@ -77,15 +77,19 @@
             <p class="text-secondary">　※採用率：初回演奏時からの演奏確率（最近の曲は高くなる傾向にあり、統計として十分なデータが揃っていない可能性があります）</p>
             <br>
             <br>
-            <div class="d-none d-sm-flex">
-                <div class="col-sm-6">楽曲名</div>
-                <div class="col-sm-1">回数</div>
-                <div class="col-sm-1">採用率</div>
-                <div class="col-sm-2">初回日付</div>
-                <div class="col-sm-2">最終日付</div>
-            </div>
-            <div class="mx-2" id="result-area">
-            </div>
+			<div class="panel-body">
+				<table class="table table-striped">
+					<thead>
+						<th>楽曲名</th>
+						<th>回数</th>
+						<th>採用率</th>
+						<th>初回日付</th>
+						<th>最終日付</th>
+					</thead>
+					<tbody id="result-area">
+					</tbody>
+				</table>
+			</div>
         </div>
         <br>
         <div class="panel-footer">
@@ -169,35 +173,30 @@
                 // 自分の楽曲のみ表示の場合は他アーティスト楽曲は非表示
                 continue;
             }
-            if(i == 0) {
-                resultHtml += '<div class="row border-top border-bottom py-2">';
-            } else {
-                resultHtml += '<div class="row border-bottom py-2">';
-            }
 
+            resultHtml += '<tr>\n';
             {
-                resultHtml += '<div class="col-sm-6 col-6">';
+                resultHtml += '<td class="table-text">';
                 resultHtml += '<a href="/songs/' + songData.song_id + '">' + songData.name + '</a>';
-                resultHtml += '</div>';
+                resultHtml += '</td>';
 
-                resultHtml += '<div class="col-sm-1 col-1">';
+                resultHtml += '<td class="table-text">';
                 resultHtml += songData.count + '回';
-                resultHtml += '</div>';
+                resultHtml += '</td>';
 
-                resultHtml += '<div class="col-sm-1 col-1">';
+                resultHtml += '<td class="table-text">';
                 resultHtml += songData.rate + '%';
-                resultHtml += '</div>';
+                resultHtml += '</td>';
 
-                resultHtml += '<div class="col-sm-2 col-2">';
+                resultHtml += '<td class="table-text">';
                 resultHtml += (songData.first_date_short == null) ? '-' : songData.first_date_short;
-                resultHtml += '</div>';
+                resultHtml += '</td>';
 
-                resultHtml += '<div class="col-sm-2 col-2">';
+                resultHtml += '<td class="table-text">';
                 resultHtml += (songData.last_date_short == null) ? '-' : songData.last_date_short;
-                resultHtml += '</div>';
+                resultHtml += '</td>';
             }
-
-            resultHtml += '</div>';
+            resultHtml += '</tr>\n';
         }
 
 		document.querySelector('#result-area').innerHTML = resultHtml;
