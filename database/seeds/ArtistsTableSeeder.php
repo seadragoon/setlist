@@ -837,6 +837,26 @@ class ArtistsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:40:07',
                 'deleted_at' => NULL,
             ),
+            82 => 
+            array (
+                'artist_id' => 83,
+                'name' => 'その他',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-08-02 06:37:41',
+                'updated_at' => '2022-08-02 06:37:41',
+                'deleted_at' => NULL,
+            ),
+            83 => 
+            array (
+                'artist_id' => 84,
+                'name' => 'AKINO from bless4',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-08-02 06:39:25',
+                'updated_at' => '2022-08-02 06:39:25',
+                'deleted_at' => NULL,
+            ),
         ));
         
         

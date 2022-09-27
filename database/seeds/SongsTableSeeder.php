@@ -702,12 +702,12 @@ class SongsTableSeeder extends Seeder
             62 => 
             array (
                 'song_id' => 64,
-                'artist_id' => 1,
+                'artist_id' => 84,
                 'name' => 'Go Tight!',
                 'link' => NULL,
                 'edit_user_id' => 1,
                 'created_at' => '2019-11-22 05:21:26',
-                'updated_at' => '2019-11-22 05:21:26',
+                'updated_at' => '2022-08-02 06:39:38',
                 'deleted_at' => NULL,
             ),
             63 => 
@@ -889,12 +889,12 @@ class SongsTableSeeder extends Seeder
             79 => 
             array (
                 'song_id' => 82,
-                'artist_id' => 1,
+                'artist_id' => 83,
                 'name' => 'ジングルベル',
                 'link' => NULL,
                 'edit_user_id' => 1,
                 'created_at' => '2019-11-22 06:04:26',
-                'updated_at' => '2019-11-22 06:04:26',
+                'updated_at' => '2022-08-02 06:38:02',
                 'deleted_at' => NULL,
             ),
             80 => 
@@ -10632,6 +10632,17 @@ class SongsTableSeeder extends Seeder
                 'edit_user_id' => 1,
                 'created_at' => '2022-07-08 13:43:16',
                 'updated_at' => '2022-07-08 13:43:16',
+                'deleted_at' => NULL,
+            ),
+            465 => 
+            array (
+                'song_id' => 1337,
+                'artist_id' => 1,
+                'name' => '幻愛遊戯',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-09-15 21:52:20',
+                'updated_at' => '2022-09-15 21:52:20',
                 'deleted_at' => NULL,
             ),
         ));

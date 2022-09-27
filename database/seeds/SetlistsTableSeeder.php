@@ -1754,6 +1754,51 @@ class SetlistsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:37:36',
                 'deleted_at' => NULL,
             ),
+            193 => 
+            array (
+                'setlist_id' => 197,
+                'event_id' => 220,
+                'artist_id' => 1,
+                'created_at' => '2022-08-29 18:40:04',
+                'updated_at' => '2022-08-29 18:40:04',
+                'deleted_at' => NULL,
+            ),
+            194 => 
+            array (
+                'setlist_id' => 198,
+                'event_id' => 221,
+                'artist_id' => 1,
+                'created_at' => '2022-08-29 18:41:13',
+                'updated_at' => '2022-08-29 18:41:13',
+                'deleted_at' => NULL,
+            ),
+            195 => 
+            array (
+                'setlist_id' => 199,
+                'event_id' => 222,
+                'artist_id' => 1,
+                'created_at' => '2022-09-15 21:51:32',
+                'updated_at' => '2022-09-15 21:51:32',
+                'deleted_at' => NULL,
+            ),
+            196 => 
+            array (
+                'setlist_id' => 200,
+                'event_id' => 223,
+                'artist_id' => 1,
+                'created_at' => '2022-09-15 21:57:01',
+                'updated_at' => '2022-09-15 21:57:01',
+                'deleted_at' => NULL,
+            ),
+            197 => 
+            array (
+                'setlist_id' => 201,
+                'event_id' => 224,
+                'artist_id' => 1,
+                'created_at' => '2022-09-19 02:19:28',
+                'updated_at' => '2022-09-19 02:19:28',
+                'deleted_at' => NULL,
+            ),
         ));
         
         
