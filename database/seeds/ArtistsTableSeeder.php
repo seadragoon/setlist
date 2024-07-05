@@ -590,11 +590,11 @@ class ArtistsTableSeeder extends Seeder
             57 => 
             array (
                 'artist_id' => 58,
-            'name' => 'メイリア(GARNiDELiA)',
+                'name' => '削除予定',
                 'link' => NULL,
                 'edit_user_id' => 1,
                 'created_at' => '2021-03-24 17:29:10',
-                'updated_at' => '2021-03-24 17:29:10',
+                'updated_at' => '2022-10-16 21:01:41',
                 'deleted_at' => NULL,
             ),
             58 => 
@@ -855,6 +855,326 @@ class ArtistsTableSeeder extends Seeder
                 'edit_user_id' => 1,
                 'created_at' => '2022-08-02 06:39:25',
                 'updated_at' => '2022-08-02 06:39:25',
+                'deleted_at' => NULL,
+            ),
+            84 => 
+            array (
+                'artist_id' => 85,
+                'name' => 'REBECCA',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-10-09 03:16:25',
+                'updated_at' => '2022-10-09 03:16:25',
+                'deleted_at' => NULL,
+            ),
+            85 => 
+            array (
+                'artist_id' => 86,
+                'name' => '坂本真綾',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-10-16 20:23:21',
+                'updated_at' => '2022-10-16 20:23:21',
+                'deleted_at' => NULL,
+            ),
+            86 => 
+            array (
+                'artist_id' => 87,
+                'name' => 'NORISTRY',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-10-16 23:28:22',
+                'updated_at' => '2022-10-16 23:28:22',
+                'deleted_at' => NULL,
+            ),
+            87 => 
+            array (
+                'artist_id' => 88,
+                'name' => 'KARASU',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-10-17 00:44:09',
+                'updated_at' => '2022-10-17 00:44:09',
+                'deleted_at' => NULL,
+            ),
+            88 => 
+            array (
+                'artist_id' => 89,
+                'name' => 'YUMA',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-10-17 00:44:51',
+                'updated_at' => '2022-10-17 00:44:51',
+                'deleted_at' => NULL,
+            ),
+            89 => 
+            array (
+                'artist_id' => 90,
+                'name' => 'SHIRAHAN',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-10-17 00:45:01',
+                'updated_at' => '2022-10-17 00:45:01',
+                'deleted_at' => NULL,
+            ),
+            90 => 
+            array (
+                'artist_id' => 91,
+                'name' => 'ATY',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-10-17 00:50:06',
+                'updated_at' => '2022-10-17 00:50:06',
+                'deleted_at' => NULL,
+            ),
+            91 => 
+            array (
+                'artist_id' => 92,
+                'name' => '小林幸子',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-10-17 00:54:43',
+                'updated_at' => '2022-10-17 00:54:43',
+                'deleted_at' => NULL,
+            ),
+            92 => 
+            array (
+                'artist_id' => 93,
+                'name' => 'しゃばだばSTEP',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-10-17 00:56:01',
+                'updated_at' => '2022-10-17 00:56:01',
+                'deleted_at' => NULL,
+            ),
+            93 => 
+            array (
+                'artist_id' => 94,
+                'name' => '愛川こずえ',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-10-17 00:57:20',
+                'updated_at' => '2022-10-17 00:57:20',
+                'deleted_at' => NULL,
+            ),
+            94 => 
+            array (
+                'artist_id' => 95,
+                'name' => '鎖音プロジェクト',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-10-17 00:57:50',
+                'updated_at' => '2022-10-17 00:57:50',
+                'deleted_at' => NULL,
+            ),
+            95 => 
+            array (
+                'artist_id' => 96,
+                'name' => 'のら',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-10-17 00:58:47',
+                'updated_at' => '2022-10-17 00:58:47',
+                'deleted_at' => NULL,
+            ),
+            96 => 
+            array (
+                'artist_id' => 97,
+                'name' => 'しゃけみー',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-10-18 16:01:14',
+                'updated_at' => '2022-10-18 16:01:14',
+                'deleted_at' => NULL,
+            ),
+            97 => 
+            array (
+                'artist_id' => 98,
+                'name' => 'ぷす',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-10-18 16:01:48',
+                'updated_at' => '2022-10-18 16:01:48',
+                'deleted_at' => NULL,
+            ),
+            98 => 
+            array (
+                'artist_id' => 99,
+                'name' => 'スタンガン',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-10-18 16:02:04',
+                'updated_at' => '2022-10-18 16:02:04',
+                'deleted_at' => NULL,
+            ),
+            99 => 
+            array (
+                'artist_id' => 100,
+                'name' => 'NoryStry',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-10-18 16:02:26',
+                'updated_at' => '2022-10-18 16:02:26',
+                'deleted_at' => NULL,
+            ),
+            100 => 
+            array (
+                'artist_id' => 101,
+                'name' => 'Love Desire',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-10-18 16:03:01',
+                'updated_at' => '2022-10-18 16:03:01',
+                'deleted_at' => NULL,
+            ),
+            101 => 
+            array (
+                'artist_id' => 102,
+                'name' => 'ROOT FIVE',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-10-18 16:03:52',
+                'updated_at' => '2022-10-18 16:03:52',
+                'deleted_at' => NULL,
+            ),
+            102 => 
+            array (
+                'artist_id' => 103,
+                'name' => '佐香智久',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-11-03 03:42:38',
+                'updated_at' => '2022-11-03 03:42:38',
+                'deleted_at' => NULL,
+            ),
+            103 => 
+            array (
+                'artist_id' => 104,
+                'name' => 'しゅーず',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-11-03 03:43:30',
+                'updated_at' => '2022-11-03 03:43:30',
+                'deleted_at' => NULL,
+            ),
+            104 => 
+            array (
+                'artist_id' => 105,
+                'name' => 'luz',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-11-03 03:44:19',
+                'updated_at' => '2022-11-03 03:44:19',
+                'deleted_at' => NULL,
+            ),
+            105 => 
+            array (
+                'artist_id' => 106,
+                'name' => 'Ado',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-11-03 03:50:04',
+                'updated_at' => '2022-11-03 03:50:04',
+                'deleted_at' => NULL,
+            ),
+            106 => 
+            array (
+                'artist_id' => 107,
+                'name' => '森川美穂',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-11-03 04:10:01',
+                'updated_at' => '2022-11-03 04:10:01',
+                'deleted_at' => NULL,
+            ),
+            107 => 
+            array (
+                'artist_id' => 108,
+                'name' => '井上喜久子',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-11-03 04:13:24',
+                'updated_at' => '2022-11-03 04:13:24',
+                'deleted_at' => NULL,
+            ),
+            108 => 
+            array (
+                'artist_id' => 109,
+                'name' => 'angela',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-11-03 04:14:07',
+                'updated_at' => '2022-11-03 04:14:07',
+                'deleted_at' => NULL,
+            ),
+            109 => 
+            array (
+                'artist_id' => 110,
+                'name' => 'fripSide',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-11-14 18:59:51',
+                'updated_at' => '2022-11-14 18:59:51',
+                'deleted_at' => NULL,
+            ),
+            110 => 
+            array (
+                'artist_id' => 111,
+                'name' => 'KOTOKO',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-11-21 03:34:09',
+                'updated_at' => '2022-11-21 03:34:09',
+                'deleted_at' => NULL,
+            ),
+            111 => 
+            array (
+                'artist_id' => 112,
+                'name' => 'あんこうチーム',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-11-21 03:36:43',
+                'updated_at' => '2022-11-21 03:36:43',
+                'deleted_at' => NULL,
+            ),
+            112 => 
+            array (
+                'artist_id' => 113,
+                'name' => '中森明菜',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2023-05-30 22:16:15',
+                'updated_at' => '2023-05-30 22:16:15',
+                'deleted_at' => NULL,
+            ),
+            113 => 
+            array (
+                'artist_id' => 114,
+            'name' => '周深(チャーリー・ジョウ)',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2023-07-15 16:27:25',
+                'updated_at' => '2023-07-15 16:27:25',
+                'deleted_at' => NULL,
+            ),
+            114 => 
+            array (
+                'artist_id' => 115,
+                'name' => 'ZONE',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2023-07-15 16:28:46',
+                'updated_at' => '2023-07-15 16:28:46',
+                'deleted_at' => NULL,
+            ),
+            115 => 
+            array (
+                'artist_id' => 116,
+                'name' => 'いきものがかり',
+                'link' => NULL,
+                'edit_user_id' => 6,
+                'created_at' => '2024-07-01 11:56:46',
+                'updated_at' => '2024-07-01 11:56:46',
                 'deleted_at' => NULL,
             ),
         ));

@@ -9085,28 +9085,6 @@ class SongsTableSeeder extends Seeder
             ),
             324 => 
             array (
-                'song_id' => 847,
-                'artist_id' => 58,
-                'name' => 'CONTRA',
-                'link' => NULL,
-                'edit_user_id' => 1,
-                'created_at' => '2021-03-24 17:29:21',
-                'updated_at' => '2021-03-24 17:29:21',
-                'deleted_at' => NULL,
-            ),
-            325 => 
-            array (
-                'song_id' => 848,
-                'artist_id' => 58,
-                'name' => '瞳のLAZhWARD',
-                'link' => NULL,
-                'edit_user_id' => 1,
-                'created_at' => '2021-03-24 17:30:04',
-                'updated_at' => '2021-03-24 17:30:04',
-                'deleted_at' => NULL,
-            ),
-            326 => 
-            array (
                 'song_id' => 849,
                 'artist_id' => 59,
                 'name' => '僕たちの行方',
@@ -9116,7 +9094,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-03-24 19:04:43',
                 'deleted_at' => NULL,
             ),
-            327 => 
+            325 => 
             array (
                 'song_id' => 850,
                 'artist_id' => 60,
@@ -9127,7 +9105,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-03-24 19:17:12',
                 'deleted_at' => NULL,
             ),
-            328 => 
+            326 => 
             array (
                 'song_id' => 851,
                 'artist_id' => 61,
@@ -9138,7 +9116,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-03-24 19:17:47',
                 'deleted_at' => NULL,
             ),
-            329 => 
+            327 => 
             array (
                 'song_id' => 1153,
                 'artist_id' => 62,
@@ -9149,7 +9127,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-06-21 02:33:48',
                 'deleted_at' => NULL,
             ),
-            330 => 
+            328 => 
             array (
                 'song_id' => 1154,
                 'artist_id' => 62,
@@ -9160,7 +9138,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-06-21 02:33:56',
                 'deleted_at' => NULL,
             ),
-            331 => 
+            329 => 
             array (
                 'song_id' => 1155,
                 'artist_id' => 62,
@@ -9171,7 +9149,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-06-21 02:34:04',
                 'deleted_at' => NULL,
             ),
-            332 => 
+            330 => 
             array (
                 'song_id' => 1156,
                 'artist_id' => 62,
@@ -9182,7 +9160,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-06-21 02:34:10',
                 'deleted_at' => NULL,
             ),
-            333 => 
+            331 => 
             array (
                 'song_id' => 1157,
                 'artist_id' => 62,
@@ -9193,7 +9171,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-06-21 02:34:16',
                 'deleted_at' => NULL,
             ),
-            334 => 
+            332 => 
             array (
                 'song_id' => 1158,
                 'artist_id' => 62,
@@ -9204,7 +9182,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-06-21 02:34:23',
                 'deleted_at' => NULL,
             ),
-            335 => 
+            333 => 
             array (
                 'song_id' => 1159,
                 'artist_id' => 62,
@@ -9215,7 +9193,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-06-21 02:34:34',
                 'deleted_at' => NULL,
             ),
-            336 => 
+            334 => 
             array (
                 'song_id' => 1160,
                 'artist_id' => 62,
@@ -9226,7 +9204,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-06-21 02:34:42',
                 'deleted_at' => NULL,
             ),
-            337 => 
+            335 => 
             array (
                 'song_id' => 1161,
                 'artist_id' => 62,
@@ -9237,7 +9215,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-06-21 02:34:48',
                 'deleted_at' => NULL,
             ),
-            338 => 
+            336 => 
             array (
                 'song_id' => 1162,
                 'artist_id' => 62,
@@ -9248,7 +9226,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-06-21 02:34:53',
                 'deleted_at' => NULL,
             ),
-            339 => 
+            337 => 
             array (
                 'song_id' => 1163,
                 'artist_id' => 62,
@@ -9259,7 +9237,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-06-21 02:37:22',
                 'deleted_at' => NULL,
             ),
-            340 => 
+            338 => 
             array (
                 'song_id' => 1164,
                 'artist_id' => 62,
@@ -9270,7 +9248,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-06-22 23:52:47',
                 'deleted_at' => NULL,
             ),
-            341 => 
+            339 => 
             array (
                 'song_id' => 1165,
                 'artist_id' => 63,
@@ -9281,7 +9259,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-06-21 02:38:11',
                 'deleted_at' => NULL,
             ),
-            342 => 
+            340 => 
             array (
                 'song_id' => 1166,
                 'artist_id' => 63,
@@ -9292,7 +9270,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-06-21 02:38:20',
                 'deleted_at' => NULL,
             ),
-            343 => 
+            341 => 
             array (
                 'song_id' => 1167,
                 'artist_id' => 64,
@@ -9303,7 +9281,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-06-21 02:38:41',
                 'deleted_at' => NULL,
             ),
-            344 => 
+            342 => 
             array (
                 'song_id' => 1168,
                 'artist_id' => 1,
@@ -9314,7 +9292,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-13 13:57:41',
                 'deleted_at' => NULL,
             ),
-            345 => 
+            343 => 
             array (
                 'song_id' => 1169,
                 'artist_id' => 1,
@@ -9325,7 +9303,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-09-12 19:13:56',
                 'deleted_at' => NULL,
             ),
-            346 => 
+            344 => 
             array (
                 'song_id' => 1170,
                 'artist_id' => 65,
@@ -9336,7 +9314,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:00:24',
                 'deleted_at' => NULL,
             ),
-            347 => 
+            345 => 
             array (
                 'song_id' => 1171,
                 'artist_id' => 65,
@@ -9347,7 +9325,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:00:24',
                 'deleted_at' => NULL,
             ),
-            348 => 
+            346 => 
             array (
                 'song_id' => 1172,
                 'artist_id' => 65,
@@ -9358,7 +9336,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:00:24',
                 'deleted_at' => NULL,
             ),
-            349 => 
+            347 => 
             array (
                 'song_id' => 1173,
                 'artist_id' => 65,
@@ -9369,7 +9347,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:00:24',
                 'deleted_at' => NULL,
             ),
-            350 => 
+            348 => 
             array (
                 'song_id' => 1174,
                 'artist_id' => 65,
@@ -9380,7 +9358,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:00:24',
                 'deleted_at' => NULL,
             ),
-            351 => 
+            349 => 
             array (
                 'song_id' => 1175,
                 'artist_id' => 53,
@@ -9391,7 +9369,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            352 => 
+            350 => 
             array (
                 'song_id' => 1176,
                 'artist_id' => 53,
@@ -9402,7 +9380,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            353 => 
+            351 => 
             array (
                 'song_id' => 1177,
                 'artist_id' => 53,
@@ -9413,7 +9391,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            354 => 
+            352 => 
             array (
                 'song_id' => 1178,
                 'artist_id' => 53,
@@ -9424,7 +9402,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            355 => 
+            353 => 
             array (
                 'song_id' => 1179,
                 'artist_id' => 53,
@@ -9435,7 +9413,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            356 => 
+            354 => 
             array (
                 'song_id' => 1180,
                 'artist_id' => 53,
@@ -9446,7 +9424,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            357 => 
+            355 => 
             array (
                 'song_id' => 1181,
                 'artist_id' => 53,
@@ -9457,7 +9435,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            358 => 
+            356 => 
             array (
                 'song_id' => 1182,
                 'artist_id' => 53,
@@ -9468,7 +9446,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            359 => 
+            357 => 
             array (
                 'song_id' => 1183,
                 'artist_id' => 53,
@@ -9479,7 +9457,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            360 => 
+            358 => 
             array (
                 'song_id' => 1184,
                 'artist_id' => 53,
@@ -9490,7 +9468,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            361 => 
+            359 => 
             array (
                 'song_id' => 1185,
                 'artist_id' => 53,
@@ -9501,7 +9479,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            362 => 
+            360 => 
             array (
                 'song_id' => 1186,
                 'artist_id' => 53,
@@ -9512,7 +9490,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            363 => 
+            361 => 
             array (
                 'song_id' => 1187,
                 'artist_id' => 53,
@@ -9523,7 +9501,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            364 => 
+            362 => 
             array (
                 'song_id' => 1188,
                 'artist_id' => 53,
@@ -9534,7 +9512,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            365 => 
+            363 => 
             array (
                 'song_id' => 1189,
                 'artist_id' => 53,
@@ -9545,7 +9523,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            366 => 
+            364 => 
             array (
                 'song_id' => 1190,
                 'artist_id' => 53,
@@ -9556,7 +9534,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            367 => 
+            365 => 
             array (
                 'song_id' => 1191,
                 'artist_id' => 53,
@@ -9567,7 +9545,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            368 => 
+            366 => 
             array (
                 'song_id' => 1192,
                 'artist_id' => 53,
@@ -9578,7 +9556,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            369 => 
+            367 => 
             array (
                 'song_id' => 1193,
                 'artist_id' => 53,
@@ -9589,7 +9567,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            370 => 
+            368 => 
             array (
                 'song_id' => 1194,
                 'artist_id' => 53,
@@ -9600,7 +9578,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            371 => 
+            369 => 
             array (
                 'song_id' => 1195,
                 'artist_id' => 53,
@@ -9611,7 +9589,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            372 => 
+            370 => 
             array (
                 'song_id' => 1196,
                 'artist_id' => 53,
@@ -9622,7 +9600,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            373 => 
+            371 => 
             array (
                 'song_id' => 1197,
                 'artist_id' => 53,
@@ -9633,7 +9611,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            374 => 
+            372 => 
             array (
                 'song_id' => 1198,
                 'artist_id' => 53,
@@ -9644,7 +9622,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            375 => 
+            373 => 
             array (
                 'song_id' => 1199,
                 'artist_id' => 53,
@@ -9655,7 +9633,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            376 => 
+            374 => 
             array (
                 'song_id' => 1200,
                 'artist_id' => 53,
@@ -9666,7 +9644,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            377 => 
+            375 => 
             array (
                 'song_id' => 1201,
                 'artist_id' => 53,
@@ -9677,7 +9655,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            378 => 
+            376 => 
             array (
                 'song_id' => 1202,
                 'artist_id' => 53,
@@ -9688,7 +9666,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            379 => 
+            377 => 
             array (
                 'song_id' => 1203,
                 'artist_id' => 53,
@@ -9699,7 +9677,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            380 => 
+            378 => 
             array (
                 'song_id' => 1204,
                 'artist_id' => 53,
@@ -9710,7 +9688,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            381 => 
+            379 => 
             array (
                 'song_id' => 1205,
                 'artist_id' => 53,
@@ -9721,7 +9699,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            382 => 
+            380 => 
             array (
                 'song_id' => 1206,
                 'artist_id' => 53,
@@ -9732,7 +9710,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            383 => 
+            381 => 
             array (
                 'song_id' => 1207,
                 'artist_id' => 53,
@@ -9743,7 +9721,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            384 => 
+            382 => 
             array (
                 'song_id' => 1208,
                 'artist_id' => 53,
@@ -9754,7 +9732,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            385 => 
+            383 => 
             array (
                 'song_id' => 1209,
                 'artist_id' => 53,
@@ -9765,7 +9743,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 01:01:06',
                 'deleted_at' => NULL,
             ),
-            386 => 
+            384 => 
             array (
                 'song_id' => 1210,
                 'artist_id' => 66,
@@ -9776,7 +9754,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 23:40:12',
                 'deleted_at' => NULL,
             ),
-            387 => 
+            385 => 
             array (
                 'song_id' => 1211,
                 'artist_id' => 67,
@@ -9787,7 +9765,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-10-23 23:43:01',
                 'deleted_at' => NULL,
             ),
-            388 => 
+            386 => 
             array (
                 'song_id' => 1212,
                 'artist_id' => 20,
@@ -9798,7 +9776,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-11-26 14:43:12',
                 'deleted_at' => NULL,
             ),
-            389 => 
+            387 => 
             array (
                 'song_id' => 1213,
                 'artist_id' => 68,
@@ -9809,7 +9787,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-11-26 14:45:52',
                 'deleted_at' => NULL,
             ),
-            390 => 
+            388 => 
             array (
                 'song_id' => 1214,
                 'artist_id' => 1,
@@ -9820,7 +9798,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-11-26 14:55:58',
                 'deleted_at' => NULL,
             ),
-            391 => 
+            389 => 
             array (
                 'song_id' => 1215,
                 'artist_id' => 1,
@@ -9831,7 +9809,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-11-26 14:56:06',
                 'deleted_at' => NULL,
             ),
-            392 => 
+            390 => 
             array (
                 'song_id' => 1216,
                 'artist_id' => 1,
@@ -9842,7 +9820,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-11-26 14:56:18',
                 'deleted_at' => NULL,
             ),
-            393 => 
+            391 => 
             array (
                 'song_id' => 1217,
                 'artist_id' => 1,
@@ -9853,7 +9831,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-11-26 14:56:25',
                 'deleted_at' => NULL,
             ),
-            394 => 
+            392 => 
             array (
                 'song_id' => 1218,
                 'artist_id' => 1,
@@ -9864,7 +9842,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-11-26 14:56:33',
                 'deleted_at' => NULL,
             ),
-            395 => 
+            393 => 
             array (
                 'song_id' => 1219,
                 'artist_id' => 1,
@@ -9875,7 +9853,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-11-26 14:56:40',
                 'deleted_at' => NULL,
             ),
-            396 => 
+            394 => 
             array (
                 'song_id' => 1220,
                 'artist_id' => 1,
@@ -9886,7 +9864,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-11-26 14:56:47',
                 'deleted_at' => NULL,
             ),
-            397 => 
+            395 => 
             array (
                 'song_id' => 1221,
                 'artist_id' => 1,
@@ -9897,7 +9875,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-11-26 14:56:57',
                 'deleted_at' => NULL,
             ),
-            398 => 
+            396 => 
             array (
                 'song_id' => 1222,
                 'artist_id' => 1,
@@ -9908,7 +9886,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-11-26 14:57:09',
                 'deleted_at' => NULL,
             ),
-            399 => 
+            397 => 
             array (
                 'song_id' => 1223,
                 'artist_id' => 1,
@@ -9919,7 +9897,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-11-26 14:57:14',
                 'deleted_at' => NULL,
             ),
-            400 => 
+            398 => 
             array (
                 'song_id' => 1224,
                 'artist_id' => 23,
@@ -9930,7 +9908,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-12-15 20:41:31',
                 'deleted_at' => NULL,
             ),
-            401 => 
+            399 => 
             array (
                 'song_id' => 1225,
                 'artist_id' => 23,
@@ -9941,7 +9919,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-12-15 20:49:17',
                 'deleted_at' => NULL,
             ),
-            402 => 
+            400 => 
             array (
                 'song_id' => 1226,
                 'artist_id' => 23,
@@ -9952,7 +9930,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-12-15 20:49:52',
                 'deleted_at' => NULL,
             ),
-            403 => 
+            401 => 
             array (
                 'song_id' => 1227,
                 'artist_id' => 23,
@@ -9963,7 +9941,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2021-12-15 20:50:29',
                 'deleted_at' => NULL,
             ),
-            404 => 
+            402 => 
             array (
                 'song_id' => 1228,
                 'artist_id' => 1,
@@ -9974,7 +9952,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-01-24 12:24:20',
                 'deleted_at' => NULL,
             ),
-            405 => 
+            403 => 
             array (
                 'song_id' => 1229,
                 'artist_id' => 79,
@@ -9985,7 +9963,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-05-22 00:31:00',
                 'deleted_at' => NULL,
             ),
-            406 => 
+            404 => 
             array (
                 'song_id' => 1230,
                 'artist_id' => 62,
@@ -9996,7 +9974,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-06-22 23:51:47',
                 'deleted_at' => NULL,
             ),
-            407 => 
+            405 => 
             array (
                 'song_id' => 1231,
                 'artist_id' => 62,
@@ -10007,7 +9985,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-06-22 23:51:54',
                 'deleted_at' => NULL,
             ),
-            408 => 
+            406 => 
             array (
                 'song_id' => 1232,
                 'artist_id' => 62,
@@ -10018,7 +9996,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-06-22 23:52:06',
                 'deleted_at' => NULL,
             ),
-            409 => 
+            407 => 
             array (
                 'song_id' => 1233,
                 'artist_id' => 62,
@@ -10029,7 +10007,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-06-22 23:52:16',
                 'deleted_at' => NULL,
             ),
-            410 => 
+            408 => 
             array (
                 'song_id' => 1234,
                 'artist_id' => 62,
@@ -10040,7 +10018,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-06-22 23:52:23',
                 'deleted_at' => NULL,
             ),
-            411 => 
+            409 => 
             array (
                 'song_id' => 1235,
                 'artist_id' => 62,
@@ -10051,7 +10029,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-06-22 23:52:34',
                 'deleted_at' => NULL,
             ),
-            412 => 
+            410 => 
             array (
                 'song_id' => 1236,
                 'artist_id' => 62,
@@ -10062,7 +10040,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-06-22 23:53:18',
                 'deleted_at' => NULL,
             ),
-            413 => 
+            411 => 
             array (
                 'song_id' => 1237,
                 'artist_id' => 62,
@@ -10073,7 +10051,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-06-22 23:53:23',
                 'deleted_at' => NULL,
             ),
-            414 => 
+            412 => 
             array (
                 'song_id' => 1238,
                 'artist_id' => 62,
@@ -10084,7 +10062,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-06-22 23:53:30',
                 'deleted_at' => NULL,
             ),
-            415 => 
+            413 => 
             array (
                 'song_id' => 1239,
                 'artist_id' => 81,
@@ -10095,7 +10073,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            416 => 
+            414 => 
             array (
                 'song_id' => 1240,
                 'artist_id' => 81,
@@ -10106,7 +10084,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            417 => 
+            415 => 
             array (
                 'song_id' => 1241,
                 'artist_id' => 81,
@@ -10117,7 +10095,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            418 => 
+            416 => 
             array (
                 'song_id' => 1242,
                 'artist_id' => 81,
@@ -10128,7 +10106,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            419 => 
+            417 => 
             array (
                 'song_id' => 1243,
                 'artist_id' => 81,
@@ -10139,7 +10117,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            420 => 
+            418 => 
             array (
                 'song_id' => 1244,
                 'artist_id' => 81,
@@ -10150,7 +10128,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            421 => 
+            419 => 
             array (
                 'song_id' => 1245,
                 'artist_id' => 81,
@@ -10161,7 +10139,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            422 => 
+            420 => 
             array (
                 'song_id' => 1246,
                 'artist_id' => 81,
@@ -10172,7 +10150,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            423 => 
+            421 => 
             array (
                 'song_id' => 1247,
                 'artist_id' => 81,
@@ -10183,7 +10161,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            424 => 
+            422 => 
             array (
                 'song_id' => 1248,
                 'artist_id' => 81,
@@ -10194,7 +10172,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            425 => 
+            423 => 
             array (
                 'song_id' => 1249,
                 'artist_id' => 81,
@@ -10205,7 +10183,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            426 => 
+            424 => 
             array (
                 'song_id' => 1250,
                 'artist_id' => 81,
@@ -10216,7 +10194,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            427 => 
+            425 => 
             array (
                 'song_id' => 1251,
                 'artist_id' => 81,
@@ -10227,7 +10205,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            428 => 
+            426 => 
             array (
                 'song_id' => 1252,
                 'artist_id' => 81,
@@ -10238,7 +10216,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            429 => 
+            427 => 
             array (
                 'song_id' => 1253,
                 'artist_id' => 81,
@@ -10249,7 +10227,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            430 => 
+            428 => 
             array (
                 'song_id' => 1254,
                 'artist_id' => 81,
@@ -10260,7 +10238,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            431 => 
+            429 => 
             array (
                 'song_id' => 1255,
                 'artist_id' => 81,
@@ -10271,7 +10249,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            432 => 
+            430 => 
             array (
                 'song_id' => 1256,
                 'artist_id' => 81,
@@ -10282,7 +10260,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            433 => 
+            431 => 
             array (
                 'song_id' => 1257,
                 'artist_id' => 81,
@@ -10293,7 +10271,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            434 => 
+            432 => 
             array (
                 'song_id' => 1258,
                 'artist_id' => 81,
@@ -10304,7 +10282,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            435 => 
+            433 => 
             array (
                 'song_id' => 1259,
                 'artist_id' => 81,
@@ -10315,7 +10293,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            436 => 
+            434 => 
             array (
                 'song_id' => 1260,
                 'artist_id' => 81,
@@ -10326,7 +10304,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            437 => 
+            435 => 
             array (
                 'song_id' => 1261,
                 'artist_id' => 81,
@@ -10337,7 +10315,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            438 => 
+            436 => 
             array (
                 'song_id' => 1262,
                 'artist_id' => 81,
@@ -10348,7 +10326,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            439 => 
+            437 => 
             array (
                 'song_id' => 1263,
                 'artist_id' => 81,
@@ -10359,7 +10337,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            440 => 
+            438 => 
             array (
                 'song_id' => 1264,
                 'artist_id' => 81,
@@ -10370,7 +10348,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            441 => 
+            439 => 
             array (
                 'song_id' => 1265,
                 'artist_id' => 81,
@@ -10381,7 +10359,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            442 => 
+            440 => 
             array (
                 'song_id' => 1266,
                 'artist_id' => 81,
@@ -10392,7 +10370,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            443 => 
+            441 => 
             array (
                 'song_id' => 1267,
                 'artist_id' => 81,
@@ -10403,7 +10381,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            444 => 
+            442 => 
             array (
                 'song_id' => 1268,
                 'artist_id' => 81,
@@ -10414,7 +10392,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            445 => 
+            443 => 
             array (
                 'song_id' => 1269,
                 'artist_id' => 81,
@@ -10425,7 +10403,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            446 => 
+            444 => 
             array (
                 'song_id' => 1270,
                 'artist_id' => 81,
@@ -10436,7 +10414,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            447 => 
+            445 => 
             array (
                 'song_id' => 1271,
                 'artist_id' => 81,
@@ -10447,7 +10425,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            448 => 
+            446 => 
             array (
                 'song_id' => 1272,
                 'artist_id' => 81,
@@ -10458,7 +10436,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            449 => 
+            447 => 
             array (
                 'song_id' => 1273,
                 'artist_id' => 81,
@@ -10469,7 +10447,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            450 => 
+            448 => 
             array (
                 'song_id' => 1274,
                 'artist_id' => 81,
@@ -10480,7 +10458,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            451 => 
+            449 => 
             array (
                 'song_id' => 1275,
                 'artist_id' => 81,
@@ -10491,7 +10469,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            452 => 
+            450 => 
             array (
                 'song_id' => 1276,
                 'artist_id' => 81,
@@ -10502,7 +10480,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            453 => 
+            451 => 
             array (
                 'song_id' => 1277,
                 'artist_id' => 81,
@@ -10513,7 +10491,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            454 => 
+            452 => 
             array (
                 'song_id' => 1278,
                 'artist_id' => 81,
@@ -10524,7 +10502,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            455 => 
+            453 => 
             array (
                 'song_id' => 1279,
                 'artist_id' => 81,
@@ -10535,7 +10513,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            456 => 
+            454 => 
             array (
                 'song_id' => 1280,
                 'artist_id' => 81,
@@ -10546,7 +10524,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            457 => 
+            455 => 
             array (
                 'song_id' => 1281,
                 'artist_id' => 81,
@@ -10557,7 +10535,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            458 => 
+            456 => 
             array (
                 'song_id' => 1282,
                 'artist_id' => 81,
@@ -10568,7 +10546,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            459 => 
+            457 => 
             array (
                 'song_id' => 1283,
                 'artist_id' => 81,
@@ -10579,7 +10557,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            460 => 
+            458 => 
             array (
                 'song_id' => 1284,
                 'artist_id' => 81,
@@ -10590,7 +10568,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            461 => 
+            459 => 
             array (
                 'song_id' => 1285,
                 'artist_id' => 81,
@@ -10601,7 +10579,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            462 => 
+            460 => 
             array (
                 'song_id' => 1286,
                 'artist_id' => 81,
@@ -10612,7 +10590,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:38:08',
                 'deleted_at' => NULL,
             ),
-            463 => 
+            461 => 
             array (
                 'song_id' => 1335,
                 'artist_id' => 82,
@@ -10623,7 +10601,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:42:43',
                 'deleted_at' => NULL,
             ),
-            464 => 
+            462 => 
             array (
                 'song_id' => 1336,
                 'artist_id' => 62,
@@ -10634,7 +10612,7 @@ class SongsTableSeeder extends Seeder
                 'updated_at' => '2022-07-08 13:43:16',
                 'deleted_at' => NULL,
             ),
-            465 => 
+            463 => 
             array (
                 'song_id' => 1337,
                 'artist_id' => 1,
@@ -10643,6 +10621,347 @@ class SongsTableSeeder extends Seeder
                 'edit_user_id' => 1,
                 'created_at' => '2022-09-15 21:52:20',
                 'updated_at' => '2022-09-15 21:52:20',
+                'deleted_at' => NULL,
+            ),
+            464 => 
+            array (
+                'song_id' => 1338,
+                'artist_id' => 85,
+                'name' => 'フレンズ',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-10-09 03:16:38',
+                'updated_at' => '2022-10-09 03:16:38',
+                'deleted_at' => NULL,
+            ),
+            465 => 
+            array (
+                'song_id' => 1339,
+                'artist_id' => 86,
+                'name' => 'トライアングラー',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-10-16 20:23:35',
+                'updated_at' => '2022-10-16 20:23:35',
+                'deleted_at' => NULL,
+            ),
+            466 => 
+            array (
+                'song_id' => 1340,
+                'artist_id' => 23,
+                'name' => 'アヤカシ',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-10-16 20:57:25',
+                'updated_at' => '2022-10-16 20:57:25',
+                'deleted_at' => NULL,
+            ),
+            467 => 
+            array (
+                'song_id' => 1341,
+                'artist_id' => 62,
+                'name' => 'CONTRA',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-10-16 20:58:53',
+                'updated_at' => '2022-10-16 20:58:53',
+                'deleted_at' => NULL,
+            ),
+            468 => 
+            array (
+                'song_id' => 1342,
+                'artist_id' => 62,
+                'name' => '瞳のLAZhWARD',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-10-16 20:59:11',
+                'updated_at' => '2022-10-16 20:59:11',
+                'deleted_at' => NULL,
+            ),
+            469 => 
+            array (
+                'song_id' => 1343,
+                'artist_id' => 23,
+                'name' => '吉原ラメント',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-10-17 00:54:18',
+                'updated_at' => '2022-10-17 00:54:18',
+                'deleted_at' => NULL,
+            ),
+            470 => 
+            array (
+                'song_id' => 1344,
+                'artist_id' => 23,
+                'name' => 'ジャガーノート',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-10-18 15:56:51',
+                'updated_at' => '2022-10-18 15:56:51',
+                'deleted_at' => NULL,
+            ),
+            471 => 
+            array (
+                'song_id' => 1345,
+                'artist_id' => 103,
+                'name' => 'ゲッタバンバン',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-11-03 03:42:46',
+                'updated_at' => '2022-11-03 03:42:46',
+                'deleted_at' => NULL,
+            ),
+            472 => 
+            array (
+                'song_id' => 1346,
+                'artist_id' => 1,
+                'name' => '謳歌爛漫',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-11-03 03:46:47',
+                'updated_at' => '2022-11-03 03:46:47',
+                'deleted_at' => NULL,
+            ),
+            473 => 
+            array (
+                'song_id' => 1347,
+                'artist_id' => 23,
+                'name' => 'Happy Halloween',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-11-03 03:48:10',
+                'updated_at' => '2022-11-03 03:48:10',
+                'deleted_at' => NULL,
+            ),
+            474 => 
+            array (
+                'song_id' => 1348,
+                'artist_id' => 106,
+                'name' => '阿修羅ちゃん',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-11-03 03:50:13',
+                'updated_at' => '2022-11-03 03:50:13',
+                'deleted_at' => NULL,
+            ),
+            475 => 
+            array (
+                'song_id' => 1349,
+                'artist_id' => 107,
+                'name' => 'ブルーウォーター',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-11-03 04:10:09',
+                'updated_at' => '2022-11-03 04:10:09',
+                'deleted_at' => NULL,
+            ),
+            476 => 
+            array (
+                'song_id' => 1350,
+                'artist_id' => 110,
+                'name' => 'only my railgun',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-11-14 19:00:19',
+                'updated_at' => '2022-11-14 19:00:19',
+                'deleted_at' => NULL,
+            ),
+            477 => 
+            array (
+                'song_id' => 1351,
+                'artist_id' => 111,
+                'name' => '→unfinished→',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-11-21 03:34:18',
+                'updated_at' => '2022-11-21 03:34:18',
+                'deleted_at' => NULL,
+            ),
+            478 => 
+            array (
+                'song_id' => 1352,
+                'artist_id' => 112,
+                'name' => 'Enter Enter MISSION!',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2022-11-21 03:36:59',
+                'updated_at' => '2022-11-21 03:36:59',
+                'deleted_at' => NULL,
+            ),
+            479 => 
+            array (
+                'song_id' => 1353,
+                'artist_id' => 23,
+                'name' => 'ブラック☆ロックシューター',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2023-01-29 03:53:38',
+                'updated_at' => '2023-01-29 03:53:38',
+                'deleted_at' => NULL,
+            ),
+            480 => 
+            array (
+                'song_id' => 1354,
+                'artist_id' => 1,
+                'name' => 'ONLY',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2023-05-30 22:14:52',
+                'updated_at' => '2023-05-30 22:14:52',
+                'deleted_at' => NULL,
+            ),
+            481 => 
+            array (
+                'song_id' => 1355,
+                'artist_id' => 113,
+                'name' => '飾りじゃないのよ涙は',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2023-05-30 22:16:29',
+                'updated_at' => '2023-05-30 22:16:29',
+                'deleted_at' => NULL,
+            ),
+            482 => 
+            array (
+                'song_id' => 1356,
+                'artist_id' => 4,
+                'name' => '紅蓮華',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2023-06-12 20:54:08',
+                'updated_at' => '2023-06-12 20:54:08',
+                'deleted_at' => NULL,
+            ),
+            483 => 
+            array (
+                'song_id' => 1357,
+                'artist_id' => 115,
+                'name' => 'secret base～君がくれたもの～',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2023-07-15 16:28:51',
+                'updated_at' => '2023-07-15 16:28:51',
+                'deleted_at' => NULL,
+            ),
+            484 => 
+            array (
+                'song_id' => 1358,
+                'artist_id' => 1,
+                'name' => 'Future Wing',
+                'link' => NULL,
+                'edit_user_id' => 6,
+                'created_at' => '2023-10-08 19:59:24',
+                'updated_at' => '2023-10-08 19:59:24',
+                'deleted_at' => NULL,
+            ),
+            485 => 
+            array (
+                'song_id' => 1359,
+                'artist_id' => 23,
+                'name' => 'ヴァンパイア',
+                'link' => NULL,
+                'edit_user_id' => 1,
+                'created_at' => '2023-10-29 14:27:21',
+                'updated_at' => '2023-10-29 14:27:21',
+                'deleted_at' => NULL,
+            ),
+            486 => 
+            array (
+                'song_id' => 1361,
+                'artist_id' => 1,
+                'name' => '暁桜',
+                'link' => NULL,
+                'edit_user_id' => 6,
+                'created_at' => '2023-12-26 09:46:14',
+                'updated_at' => '2023-12-26 09:46:14',
+                'deleted_at' => NULL,
+            ),
+            487 => 
+            array (
+                'song_id' => 1362,
+                'artist_id' => 1,
+                'name' => '―TEN―',
+                'link' => NULL,
+                'edit_user_id' => 6,
+                'created_at' => '2024-01-16 16:02:09',
+                'updated_at' => '2024-01-16 16:02:09',
+                'deleted_at' => NULL,
+            ),
+            488 => 
+            array (
+                'song_id' => 1363,
+                'artist_id' => 1,
+                'name' => '猫の城',
+                'link' => NULL,
+                'edit_user_id' => 6,
+                'created_at' => '2024-01-16 16:02:35',
+                'updated_at' => '2024-01-16 16:02:35',
+                'deleted_at' => NULL,
+            ),
+            489 => 
+            array (
+                'song_id' => 1364,
+                'artist_id' => 1,
+            'name' => 'QUEEN(S) GAME',
+                'link' => NULL,
+                'edit_user_id' => 6,
+                'created_at' => '2024-01-16 16:02:49',
+                'updated_at' => '2024-01-16 16:02:49',
+                'deleted_at' => NULL,
+            ),
+            490 => 
+            array (
+                'song_id' => 1365,
+                'artist_id' => 1,
+                'name' => 'フィクション',
+                'link' => NULL,
+                'edit_user_id' => 6,
+                'created_at' => '2024-01-16 16:02:54',
+                'updated_at' => '2024-01-16 16:02:54',
+                'deleted_at' => NULL,
+            ),
+            491 => 
+            array (
+                'song_id' => 1366,
+                'artist_id' => 1,
+                'name' => 'FRONTiER',
+                'link' => NULL,
+                'edit_user_id' => 6,
+                'created_at' => '2024-01-16 16:03:09',
+                'updated_at' => '2024-01-16 16:03:09',
+                'deleted_at' => NULL,
+            ),
+            492 => 
+            array (
+                'song_id' => 1367,
+                'artist_id' => 1,
+                'name' => 'スズラン',
+                'link' => NULL,
+                'edit_user_id' => 6,
+                'created_at' => '2024-01-16 16:03:17',
+                'updated_at' => '2024-01-16 16:03:17',
+                'deleted_at' => NULL,
+            ),
+            493 => 
+            array (
+                'song_id' => 1368,
+                'artist_id' => 1,
+                'name' => '一蓮托生',
+                'link' => NULL,
+                'edit_user_id' => 6,
+                'created_at' => '2024-01-16 16:03:22',
+                'updated_at' => '2024-01-16 16:03:22',
+                'deleted_at' => NULL,
+            ),
+            494 => 
+            array (
+                'song_id' => 1369,
+                'artist_id' => 116,
+                'name' => 'ブルーバード',
+                'link' => NULL,
+                'edit_user_id' => 6,
+                'created_at' => '2024-07-01 11:57:30',
+                'updated_at' => '2024-07-01 11:57:30',
                 'deleted_at' => NULL,
             ),
         ));

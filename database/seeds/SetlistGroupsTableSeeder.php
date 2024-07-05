@@ -3581,6 +3581,1070 @@ class SetlistGroupsTableSeeder extends Seeder
                 'updated_at' => '2022-09-19 02:19:28',
                 'deleted_at' => NULL,
             ),
+            396 => 
+            array (
+                'setlist_id' => 202,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2022-10-09 03:15:56',
+                'updated_at' => '2022-10-09 03:15:56',
+                'deleted_at' => NULL,
+            ),
+            397 => 
+            array (
+                'setlist_id' => 202,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2022-10-09 03:15:56',
+                'updated_at' => '2022-10-09 03:15:56',
+                'deleted_at' => NULL,
+            ),
+            398 => 
+            array (
+                'setlist_id' => 203,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2022-10-16 20:27:44',
+                'updated_at' => '2022-10-16 20:27:44',
+                'deleted_at' => NULL,
+            ),
+            399 => 
+            array (
+                'setlist_id' => 203,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2022-10-16 20:27:44',
+                'updated_at' => '2022-10-16 20:27:44',
+                'deleted_at' => NULL,
+            ),
+            400 => 
+            array (
+                'setlist_id' => 205,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2022-10-16 20:47:42',
+                'updated_at' => '2022-10-16 20:47:42',
+                'deleted_at' => NULL,
+            ),
+            401 => 
+            array (
+                'setlist_id' => 205,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2022-10-16 20:47:42',
+                'updated_at' => '2022-10-16 20:47:42',
+                'deleted_at' => NULL,
+            ),
+            402 => 
+            array (
+                'setlist_id' => 206,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2022-10-16 20:57:00',
+                'updated_at' => '2022-10-16 20:57:00',
+                'deleted_at' => NULL,
+            ),
+            403 => 
+            array (
+                'setlist_id' => 206,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2022-10-16 20:57:00',
+                'updated_at' => '2022-10-16 20:57:00',
+                'deleted_at' => NULL,
+            ),
+            404 => 
+            array (
+                'setlist_id' => 207,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2022-10-16 21:12:58',
+                'updated_at' => '2022-10-16 21:12:58',
+                'deleted_at' => NULL,
+            ),
+            405 => 
+            array (
+                'setlist_id' => 207,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2022-10-16 21:12:58',
+                'updated_at' => '2022-10-16 21:12:58',
+                'deleted_at' => NULL,
+            ),
+            406 => 
+            array (
+                'setlist_id' => 208,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2022-10-16 22:04:05',
+                'updated_at' => '2022-10-16 22:04:05',
+                'deleted_at' => NULL,
+            ),
+            407 => 
+            array (
+                'setlist_id' => 208,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2022-10-16 22:04:05',
+                'updated_at' => '2022-10-16 22:04:05',
+                'deleted_at' => NULL,
+            ),
+            408 => 
+            array (
+                'setlist_id' => 209,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2022-10-17 00:43:13',
+                'updated_at' => '2022-10-17 00:43:13',
+                'deleted_at' => NULL,
+            ),
+            409 => 
+            array (
+                'setlist_id' => 209,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2022-10-17 00:43:13',
+                'updated_at' => '2022-10-17 00:43:13',
+                'deleted_at' => NULL,
+            ),
+            410 => 
+            array (
+                'setlist_id' => 210,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2022-10-17 00:50:11',
+                'updated_at' => '2022-10-17 00:50:11',
+                'deleted_at' => NULL,
+            ),
+            411 => 
+            array (
+                'setlist_id' => 210,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2022-10-17 00:50:11',
+                'updated_at' => '2022-10-17 00:50:11',
+                'deleted_at' => NULL,
+            ),
+            412 => 
+            array (
+                'setlist_id' => 211,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2022-10-17 00:59:34',
+                'updated_at' => '2022-10-17 00:59:34',
+                'deleted_at' => NULL,
+            ),
+            413 => 
+            array (
+                'setlist_id' => 211,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2022-10-17 00:59:34',
+                'updated_at' => '2022-10-17 00:59:34',
+                'deleted_at' => NULL,
+            ),
+            414 => 
+            array (
+                'setlist_id' => 212,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2022-10-17 01:02:46',
+                'updated_at' => '2022-10-17 01:02:46',
+                'deleted_at' => NULL,
+            ),
+            415 => 
+            array (
+                'setlist_id' => 212,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2022-10-17 01:02:46',
+                'updated_at' => '2022-10-17 01:02:46',
+                'deleted_at' => NULL,
+            ),
+            416 => 
+            array (
+                'setlist_id' => 213,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2022-10-18 16:04:34',
+                'updated_at' => '2022-10-18 16:04:34',
+                'deleted_at' => NULL,
+            ),
+            417 => 
+            array (
+                'setlist_id' => 213,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2022-10-18 16:04:34',
+                'updated_at' => '2022-10-18 16:04:34',
+                'deleted_at' => NULL,
+            ),
+            418 => 
+            array (
+                'setlist_id' => 214,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2022-11-03 03:42:18',
+                'updated_at' => '2022-11-03 03:42:18',
+                'deleted_at' => NULL,
+            ),
+            419 => 
+            array (
+                'setlist_id' => 214,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2022-11-03 03:42:18',
+                'updated_at' => '2022-11-03 03:42:18',
+                'deleted_at' => NULL,
+            ),
+            420 => 
+            array (
+                'setlist_id' => 215,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2022-11-03 04:12:33',
+                'updated_at' => '2022-11-03 04:12:33',
+                'deleted_at' => NULL,
+            ),
+            421 => 
+            array (
+                'setlist_id' => 215,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2022-11-03 04:12:33',
+                'updated_at' => '2022-11-03 04:12:33',
+                'deleted_at' => NULL,
+            ),
+            422 => 
+            array (
+                'setlist_id' => 216,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2022-11-03 04:14:31',
+                'updated_at' => '2022-11-03 04:14:31',
+                'deleted_at' => NULL,
+            ),
+            423 => 
+            array (
+                'setlist_id' => 216,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2022-11-03 04:14:31',
+                'updated_at' => '2022-11-03 04:14:31',
+                'deleted_at' => NULL,
+            ),
+            424 => 
+            array (
+                'setlist_id' => 217,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2022-11-14 19:00:57',
+                'updated_at' => '2022-11-14 19:00:57',
+                'deleted_at' => NULL,
+            ),
+            425 => 
+            array (
+                'setlist_id' => 217,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2022-11-14 19:00:57',
+                'updated_at' => '2022-11-14 19:00:57',
+                'deleted_at' => NULL,
+            ),
+            426 => 
+            array (
+                'setlist_id' => 218,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2022-11-21 03:35:12',
+                'updated_at' => '2022-11-21 03:35:12',
+                'deleted_at' => NULL,
+            ),
+            427 => 
+            array (
+                'setlist_id' => 218,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2022-11-21 03:35:12',
+                'updated_at' => '2022-11-21 03:35:12',
+                'deleted_at' => NULL,
+            ),
+            428 => 
+            array (
+                'setlist_id' => 219,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2022-12-06 18:53:07',
+                'updated_at' => '2022-12-06 18:53:07',
+                'deleted_at' => NULL,
+            ),
+            429 => 
+            array (
+                'setlist_id' => 219,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2022-12-06 18:53:07',
+                'updated_at' => '2022-12-06 18:53:07',
+                'deleted_at' => NULL,
+            ),
+            430 => 
+            array (
+                'setlist_id' => 220,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2022-12-17 05:57:46',
+                'updated_at' => '2022-12-17 05:57:46',
+                'deleted_at' => NULL,
+            ),
+            431 => 
+            array (
+                'setlist_id' => 220,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2022-12-17 05:57:46',
+                'updated_at' => '2022-12-17 05:57:46',
+                'deleted_at' => NULL,
+            ),
+            432 => 
+            array (
+                'setlist_id' => 221,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2022-12-19 04:42:18',
+                'updated_at' => '2022-12-19 04:42:18',
+                'deleted_at' => NULL,
+            ),
+            433 => 
+            array (
+                'setlist_id' => 221,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2022-12-19 04:42:18',
+                'updated_at' => '2022-12-19 04:42:18',
+                'deleted_at' => NULL,
+            ),
+            434 => 
+            array (
+                'setlist_id' => 222,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-01-29 03:54:55',
+                'updated_at' => '2023-01-29 03:54:55',
+                'deleted_at' => NULL,
+            ),
+            435 => 
+            array (
+                'setlist_id' => 222,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-01-29 03:54:55',
+                'updated_at' => '2023-01-29 03:54:55',
+                'deleted_at' => NULL,
+            ),
+            436 => 
+            array (
+                'setlist_id' => 223,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-05-30 22:19:24',
+                'updated_at' => '2023-05-30 22:19:24',
+                'deleted_at' => NULL,
+            ),
+            437 => 
+            array (
+                'setlist_id' => 223,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-05-30 22:19:24',
+                'updated_at' => '2023-05-30 22:19:24',
+                'deleted_at' => NULL,
+            ),
+            438 => 
+            array (
+                'setlist_id' => 224,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-05-30 22:21:43',
+                'updated_at' => '2023-05-30 22:21:43',
+                'deleted_at' => NULL,
+            ),
+            439 => 
+            array (
+                'setlist_id' => 224,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-05-30 22:21:43',
+                'updated_at' => '2023-05-30 22:21:43',
+                'deleted_at' => NULL,
+            ),
+            440 => 
+            array (
+                'setlist_id' => 225,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-05-30 22:24:34',
+                'updated_at' => '2023-05-30 22:24:34',
+                'deleted_at' => NULL,
+            ),
+            441 => 
+            array (
+                'setlist_id' => 225,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-05-30 22:24:34',
+                'updated_at' => '2023-05-30 22:24:34',
+                'deleted_at' => NULL,
+            ),
+            442 => 
+            array (
+                'setlist_id' => 226,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-05-30 22:27:39',
+                'updated_at' => '2023-05-30 22:27:39',
+                'deleted_at' => NULL,
+            ),
+            443 => 
+            array (
+                'setlist_id' => 226,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-05-30 22:27:39',
+                'updated_at' => '2023-05-30 22:27:39',
+                'deleted_at' => NULL,
+            ),
+            444 => 
+            array (
+                'setlist_id' => 227,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-06-12 20:53:32',
+                'updated_at' => '2023-06-12 20:53:32',
+                'deleted_at' => NULL,
+            ),
+            445 => 
+            array (
+                'setlist_id' => 227,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-06-12 20:53:32',
+                'updated_at' => '2023-06-12 20:53:32',
+                'deleted_at' => NULL,
+            ),
+            446 => 
+            array (
+                'setlist_id' => 228,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-06-19 02:54:30',
+                'updated_at' => '2023-06-19 02:54:30',
+                'deleted_at' => NULL,
+            ),
+            447 => 
+            array (
+                'setlist_id' => 228,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-06-19 02:54:30',
+                'updated_at' => '2023-06-19 02:54:30',
+                'deleted_at' => NULL,
+            ),
+            448 => 
+            array (
+                'setlist_id' => 229,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-07-15 16:09:17',
+                'updated_at' => '2023-07-15 16:09:17',
+                'deleted_at' => NULL,
+            ),
+            449 => 
+            array (
+                'setlist_id' => 229,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-07-15 16:09:17',
+                'updated_at' => '2023-07-15 16:09:17',
+                'deleted_at' => NULL,
+            ),
+            450 => 
+            array (
+                'setlist_id' => 230,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-07-15 16:11:59',
+                'updated_at' => '2023-07-15 16:11:59',
+                'deleted_at' => NULL,
+            ),
+            451 => 
+            array (
+                'setlist_id' => 230,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-07-15 16:11:59',
+                'updated_at' => '2023-07-15 16:11:59',
+                'deleted_at' => NULL,
+            ),
+            452 => 
+            array (
+                'setlist_id' => 231,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-07-15 16:15:03',
+                'updated_at' => '2023-07-15 16:15:03',
+                'deleted_at' => NULL,
+            ),
+            453 => 
+            array (
+                'setlist_id' => 231,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-07-15 16:15:03',
+                'updated_at' => '2023-07-15 16:15:03',
+                'deleted_at' => NULL,
+            ),
+            454 => 
+            array (
+                'setlist_id' => 232,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-07-15 16:17:10',
+                'updated_at' => '2023-07-15 16:17:10',
+                'deleted_at' => NULL,
+            ),
+            455 => 
+            array (
+                'setlist_id' => 232,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-07-15 16:17:10',
+                'updated_at' => '2023-07-15 16:17:10',
+                'deleted_at' => NULL,
+            ),
+            456 => 
+            array (
+                'setlist_id' => 233,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-07-15 16:27:54',
+                'updated_at' => '2023-07-15 16:27:54',
+                'deleted_at' => NULL,
+            ),
+            457 => 
+            array (
+                'setlist_id' => 233,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-07-15 16:27:54',
+                'updated_at' => '2023-07-15 16:27:54',
+                'deleted_at' => NULL,
+            ),
+            458 => 
+            array (
+                'setlist_id' => 234,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-07-21 23:02:37',
+                'updated_at' => '2023-07-21 23:02:37',
+                'deleted_at' => NULL,
+            ),
+            459 => 
+            array (
+                'setlist_id' => 234,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-07-21 23:02:37',
+                'updated_at' => '2023-07-21 23:02:37',
+                'deleted_at' => NULL,
+            ),
+            460 => 
+            array (
+                'setlist_id' => 235,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-07-23 04:39:32',
+                'updated_at' => '2023-07-23 04:39:32',
+                'deleted_at' => NULL,
+            ),
+            461 => 
+            array (
+                'setlist_id' => 235,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-07-23 04:39:32',
+                'updated_at' => '2023-07-23 04:39:32',
+                'deleted_at' => NULL,
+            ),
+            462 => 
+            array (
+                'setlist_id' => 236,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-08-20 06:39:01',
+                'updated_at' => '2023-08-20 06:39:01',
+                'deleted_at' => NULL,
+            ),
+            463 => 
+            array (
+                'setlist_id' => 236,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-08-20 06:39:01',
+                'updated_at' => '2023-08-20 06:39:01',
+                'deleted_at' => NULL,
+            ),
+            464 => 
+            array (
+                'setlist_id' => 237,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-08-20 06:42:07',
+                'updated_at' => '2023-08-20 06:42:07',
+                'deleted_at' => NULL,
+            ),
+            465 => 
+            array (
+                'setlist_id' => 237,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-08-20 06:42:07',
+                'updated_at' => '2023-08-20 06:42:07',
+                'deleted_at' => NULL,
+            ),
+            466 => 
+            array (
+                'setlist_id' => 238,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-08-20 06:47:14',
+                'updated_at' => '2023-08-20 06:47:14',
+                'deleted_at' => NULL,
+            ),
+            467 => 
+            array (
+                'setlist_id' => 238,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-08-20 06:47:14',
+                'updated_at' => '2023-08-20 06:47:14',
+                'deleted_at' => NULL,
+            ),
+            468 => 
+            array (
+                'setlist_id' => 239,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-08-20 06:55:54',
+                'updated_at' => '2023-08-20 06:55:54',
+                'deleted_at' => NULL,
+            ),
+            469 => 
+            array (
+                'setlist_id' => 239,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-08-20 06:55:54',
+                'updated_at' => '2023-08-20 06:55:54',
+                'deleted_at' => NULL,
+            ),
+            470 => 
+            array (
+                'setlist_id' => 240,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-10-08 19:35:24',
+                'updated_at' => '2023-10-08 19:35:24',
+                'deleted_at' => NULL,
+            ),
+            471 => 
+            array (
+                'setlist_id' => 240,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-10-08 19:35:24',
+                'updated_at' => '2023-10-08 19:35:24',
+                'deleted_at' => NULL,
+            ),
+            472 => 
+            array (
+                'setlist_id' => 241,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-10-08 19:37:38',
+                'updated_at' => '2023-10-08 19:37:38',
+                'deleted_at' => NULL,
+            ),
+            473 => 
+            array (
+                'setlist_id' => 241,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-10-08 19:37:38',
+                'updated_at' => '2023-10-08 19:37:38',
+                'deleted_at' => NULL,
+            ),
+            474 => 
+            array (
+                'setlist_id' => 242,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-10-08 19:39:56',
+                'updated_at' => '2023-10-08 19:39:56',
+                'deleted_at' => NULL,
+            ),
+            475 => 
+            array (
+                'setlist_id' => 242,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-10-08 19:39:56',
+                'updated_at' => '2023-10-08 19:39:56',
+                'deleted_at' => NULL,
+            ),
+            476 => 
+            array (
+                'setlist_id' => 243,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-10-08 19:41:56',
+                'updated_at' => '2023-10-08 19:41:56',
+                'deleted_at' => NULL,
+            ),
+            477 => 
+            array (
+                'setlist_id' => 243,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-10-08 19:41:56',
+                'updated_at' => '2023-10-08 19:41:56',
+                'deleted_at' => NULL,
+            ),
+            478 => 
+            array (
+                'setlist_id' => 244,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-10-08 19:43:25',
+                'updated_at' => '2023-10-08 19:43:25',
+                'deleted_at' => NULL,
+            ),
+            479 => 
+            array (
+                'setlist_id' => 244,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-10-08 19:43:25',
+                'updated_at' => '2023-10-08 19:43:25',
+                'deleted_at' => NULL,
+            ),
+            480 => 
+            array (
+                'setlist_id' => 245,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-10-08 19:45:10',
+                'updated_at' => '2023-10-08 19:45:10',
+                'deleted_at' => NULL,
+            ),
+            481 => 
+            array (
+                'setlist_id' => 245,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-10-08 19:45:10',
+                'updated_at' => '2023-10-08 19:45:10',
+                'deleted_at' => NULL,
+            ),
+            482 => 
+            array (
+                'setlist_id' => 246,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-10-08 19:46:56',
+                'updated_at' => '2023-10-08 19:46:56',
+                'deleted_at' => NULL,
+            ),
+            483 => 
+            array (
+                'setlist_id' => 246,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-10-08 19:46:56',
+                'updated_at' => '2023-10-08 19:46:56',
+                'deleted_at' => NULL,
+            ),
+            484 => 
+            array (
+                'setlist_id' => 247,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-10-08 19:48:26',
+                'updated_at' => '2023-10-08 19:48:26',
+                'deleted_at' => NULL,
+            ),
+            485 => 
+            array (
+                'setlist_id' => 247,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-10-08 19:48:26',
+                'updated_at' => '2023-10-08 19:48:26',
+                'deleted_at' => NULL,
+            ),
+            486 => 
+            array (
+                'setlist_id' => 248,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-10-08 19:50:11',
+                'updated_at' => '2023-10-08 19:50:11',
+                'deleted_at' => NULL,
+            ),
+            487 => 
+            array (
+                'setlist_id' => 248,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-10-08 19:50:11',
+                'updated_at' => '2023-10-08 19:50:11',
+                'deleted_at' => NULL,
+            ),
+            488 => 
+            array (
+                'setlist_id' => 249,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-10-08 19:51:54',
+                'updated_at' => '2023-10-08 19:51:54',
+                'deleted_at' => NULL,
+            ),
+            489 => 
+            array (
+                'setlist_id' => 249,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-10-08 19:51:54',
+                'updated_at' => '2023-10-08 19:51:54',
+                'deleted_at' => NULL,
+            ),
+            490 => 
+            array (
+                'setlist_id' => 250,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-10-29 14:30:13',
+                'updated_at' => '2023-10-29 14:30:13',
+                'deleted_at' => NULL,
+            ),
+            491 => 
+            array (
+                'setlist_id' => 250,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-10-29 14:30:13',
+                'updated_at' => '2023-10-29 14:30:13',
+                'deleted_at' => NULL,
+            ),
+            492 => 
+            array (
+                'setlist_id' => 251,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-10-29 15:01:58',
+                'updated_at' => '2023-10-29 15:01:58',
+                'deleted_at' => NULL,
+            ),
+            493 => 
+            array (
+                'setlist_id' => 251,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-10-29 15:01:58',
+                'updated_at' => '2023-10-29 15:01:58',
+                'deleted_at' => NULL,
+            ),
+            494 => 
+            array (
+                'setlist_id' => 253,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-11-04 17:31:27',
+                'updated_at' => '2023-11-04 17:31:27',
+                'deleted_at' => NULL,
+            ),
+            495 => 
+            array (
+                'setlist_id' => 253,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-11-04 17:31:27',
+                'updated_at' => '2023-11-04 17:31:27',
+                'deleted_at' => NULL,
+            ),
+            496 => 
+            array (
+                'setlist_id' => 254,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-12-26 09:43:14',
+                'updated_at' => '2023-12-26 09:43:14',
+                'deleted_at' => NULL,
+            ),
+            497 => 
+            array (
+                'setlist_id' => 254,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-12-26 09:43:14',
+                'updated_at' => '2023-12-26 09:43:14',
+                'deleted_at' => NULL,
+            ),
+            498 => 
+            array (
+                'setlist_id' => 255,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2023-12-26 09:46:29',
+                'updated_at' => '2023-12-26 09:46:29',
+                'deleted_at' => NULL,
+            ),
+            499 => 
+            array (
+                'setlist_id' => 255,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2023-12-26 09:46:29',
+                'updated_at' => '2023-12-26 09:46:29',
+                'deleted_at' => NULL,
+            ),
+        ));
+        \DB::table('setlist_groups')->insert(array (
+            0 => 
+            array (
+                'setlist_id' => 256,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2024-01-16 15:35:32',
+                'updated_at' => '2024-01-16 15:35:32',
+                'deleted_at' => NULL,
+            ),
+            1 => 
+            array (
+                'setlist_id' => 256,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2024-01-16 15:35:32',
+                'updated_at' => '2024-01-16 15:35:32',
+                'deleted_at' => NULL,
+            ),
+            2 => 
+            array (
+                'setlist_id' => 257,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2024-01-16 15:37:29',
+                'updated_at' => '2024-01-16 15:37:29',
+                'deleted_at' => NULL,
+            ),
+            3 => 
+            array (
+                'setlist_id' => 257,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2024-01-16 15:37:29',
+                'updated_at' => '2024-01-16 15:37:29',
+                'deleted_at' => NULL,
+            ),
+            4 => 
+            array (
+                'setlist_id' => 258,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2024-05-09 16:40:07',
+                'updated_at' => '2024-05-09 16:40:07',
+                'deleted_at' => NULL,
+            ),
+            5 => 
+            array (
+                'setlist_id' => 258,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2024-05-09 16:40:07',
+                'updated_at' => '2024-05-09 16:40:07',
+                'deleted_at' => NULL,
+            ),
+            6 => 
+            array (
+                'setlist_id' => 259,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2024-05-09 16:44:19',
+                'updated_at' => '2024-05-09 16:44:19',
+                'deleted_at' => NULL,
+            ),
+            7 => 
+            array (
+                'setlist_id' => 259,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2024-05-09 16:44:19',
+                'updated_at' => '2024-05-09 16:44:19',
+                'deleted_at' => NULL,
+            ),
+            8 => 
+            array (
+                'setlist_id' => 260,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2024-06-02 18:52:48',
+                'updated_at' => '2024-06-02 18:52:48',
+                'deleted_at' => NULL,
+            ),
+            9 => 
+            array (
+                'setlist_id' => 260,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2024-06-02 18:52:48',
+                'updated_at' => '2024-06-02 18:52:48',
+                'deleted_at' => NULL,
+            ),
+            10 => 
+            array (
+                'setlist_id' => 261,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2024-06-29 23:13:16',
+                'updated_at' => '2024-06-29 23:13:16',
+                'deleted_at' => NULL,
+            ),
+            11 => 
+            array (
+                'setlist_id' => 261,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2024-06-29 23:13:16',
+                'updated_at' => '2024-06-29 23:13:16',
+                'deleted_at' => NULL,
+            ),
+            12 => 
+            array (
+                'setlist_id' => 262,
+                'setlist_group_seq' => 0,
+                'setlist_group_type' => 0,
+                'created_at' => '2024-07-01 11:57:44',
+                'updated_at' => '2024-07-01 11:57:44',
+                'deleted_at' => NULL,
+            ),
+            13 => 
+            array (
+                'setlist_id' => 262,
+                'setlist_group_seq' => 1,
+                'setlist_group_type' => 1,
+                'created_at' => '2024-07-01 11:57:44',
+                'updated_at' => '2024-07-01 11:57:44',
+                'deleted_at' => NULL,
+            ),
         ));
         
         
